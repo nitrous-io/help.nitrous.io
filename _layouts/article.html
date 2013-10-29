@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html class="home index">
-{% include head.html %}
-  <div class="container">
-    {% include search.html %}
-    <div class="sidebar">
-      <div class="box menu">
-        {% include menu.html %}
-      </div>
-    </div>
-    <div class="articles post-content">
-      <div class="page-title">
-        <h2> {{ page.title }} </h2>
-        <h5 class="note">Last Updated on: {{ page.date | date: "%d %B %Y" }}</h5>
-      </div>
+---
+title: Nitrous.IO Support
+layout: default
+---
+<div class="row">
+  <div class="col-md-3">
+    {% include menu.html %}
+  </div>
+
+  <div class="col-md-9">
+    <h1> {{ page.title }} </h1>
+    <h5 class="note">Last Updated on: {{ page.date | date: "%d %B %Y" }}</h5>
+     
       {{ content }}
-    </div>
+   </div>
 </div>
 {% include footer.html %}
 </body>

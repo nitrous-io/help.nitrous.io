@@ -2,60 +2,57 @@
 title: Nitrous.IO Support
 layout: default
 ---
-<div class="sidebar">
-	<div class="box menu">
-		{% include menu.html %}
-	</div>
-</div>
-<div class="articles index-main">
-	<h4 class="topic">New to Nitrous.IO?  View our <a href="/getting-started/" class="btn btn-success">Getting started</a> guide.</h4>
-	<h4>Introduction Resources</h4>
-	<div class="category-index">
-		<ul class="menu-item">
-			<li><h4><a href="/best-practices/">Best Practices</a></li>
-			<li><h4><a href="/ssh-add/">Adding SSH Keys</a></li>
-			<li><h4><a href="/ide-general/">Web IDE</a></li>
-			<li><h4><a href="/github-add-key/">Connecting to Github</a></li>
-			<li><h4><a href="/autoparts/">Installing Databases and Tools with Autoparts</a></li>
-		</ul>
-	</div>
-	<div class="categories">
-		<h4>Most Frequently Asked Questions</h4>
-		<div class="category-index">
-			<ul class="menu-item">
-				{% for post in site.categories['faq'] limit:6 %}
-				<li><h4><a href="{{ post.url }}">{{ post.title | replace: 'and', '&' | replace: 'Faq', 'FAQ' | replace: 'Ssh', 'SSH'}}</a></h4></li>
-				{% endfor %}
-			</ul>
-			<a class="view-all btn" href="/categories/faq">View all »</a>
-		</div>
-	</div>
-	<div class="categories">
-		<h4>Other Resources</h4>
-		<div class="resources">
-			<ul>
-				<li class="module">
-					<a href="https://www.nitrous.io/app#/intro/1">
-						<i class="icon-book"></i>
-						<h5>Introduction</h5>
-					</a>
-					This introduction will demonstrate some of the powerful features available to you
-				</li>
-				<li class="module resources">
-					<a href="/discussions">
-						<i class="icon-stackexchange"></i>
-						<h5>Discussions</h5>
-					</a>
-					Ask a question on Stackoverflow for help with your projects
-				</li>
-				<li class="module resources">
-					<a href="mailto:help@nitrous.io">
-						<i class="icon-envelope"></i>
-						<h5>Submit a Request</h5>
-					</a>
-					If you have any feedback or issues on Nitrous.IO, feel free to contact us
-				</li>
-			</ul>
-		</div>
-	</div>
+<div class="row">
+  <div class="col-md-3">
+    {% include menu.html %}
+  </div>
+
+  <div class="col-md-9">
+    <h1>Nitrous.IO Documentation</h1>
+    
+    <p class="highlight">
+      New to Nitrous.IO?  View our <a href="/getting-started/">Getting started</a> guide.
+    </p>
+    
+    <h2>Introduction Resources</h2>
+    <ul class="menu-item">
+      <li><a href="/best-practices/">Best Practices</a></li>
+      <li><a href="/ssh-add/">Adding SSH Keys</a></li>
+      <li><a href="/ide-general/">Web IDE</a></li>
+      <li><a href="/github-add-key/">Connecting to Github</a></li>
+      <li><a href="/autoparts/">Installing Databases and Tools with Autoparts</a></li>
+    </ul>
+
+    <h4>Most Frequently Asked Questions</h4>
+    <ul class="menu-item">
+      {% for post in site.categories['faq'] limit:6 %}
+        <li><h4><a href="{{ post.url }}">{{ post.title | replace: 'and', '&' | replace: 'Faq', 'FAQ' | replace: 'Ssh', 'SSH'}}</a></h4></li>
+      {% endfor %}
+    </ul>
+    <a class="view-all btn" href="/categories/faq">View all »</a>
+
+    <h4>Other Resources</h4>
+    <ul>
+      <li class="module">
+        <a href="https://www.nitrous.io/app#/intro/1">
+          <i class="icon-book"></i>
+          <h5>Introduction</h5>
+        </a>
+        This introduction will demonstrate some of the powerful features available to you
+      </li>
+      <li class="module resources">
+        <a href="/discussions">
+          <i class="icon-stackexchange"></i>
+          <h5>Discussions</h5>
+        </a>
+        Ask a question on Stackoverflow for help with your projects
+      </li>
+      <li class="module resources">
+        <a href="mailto:help@nitrous.io">
+          <i class="icon-envelope"></i>
+          <h5>Submit a Request</h5>
+        </a>
+        If you have any feedback or issues on Nitrous.IO, feel free to contact us
+      </li>
+    </ul>
 </div>

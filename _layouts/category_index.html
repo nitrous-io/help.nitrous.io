@@ -1,10 +1,10 @@
 ---
 layout: custom_page
 ---
-<div class="category-index">
-	<ul class="posts menu-item">
-	{% for post in site.categories[page.category] %}
-  	<li><h4><a href="{{ post.url }}">{{ post.title | replace: 'and', '&' | replace: 'Faq', 'FAQ' | replace: 'Ssh', 'SSH'}}</a></h4></li>
-	{% endfor %}
-	</ul>
-</div>
+<ul>
+  {% for post in site.categories[page.category] %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title | replace: 'and', '&' | replace: 'Faq', 'FAQ' | replace: 'Ssh', 'SSH'}}</a>
+    </li>
+  {% endfor %}
+</ul>
