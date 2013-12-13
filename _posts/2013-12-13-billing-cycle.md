@@ -1,6 +1,6 @@
 ---
 layout: article
-title: When does the Billing Cycle Begin?
+title: When does the billing cycle begin?
 published: true
 categories: [billing]
 ---
