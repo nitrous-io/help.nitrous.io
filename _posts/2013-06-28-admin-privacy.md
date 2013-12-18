@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Privacy policy
+title: Privacy Policy
 published: true
 categories: [privacy and terms]
 ---

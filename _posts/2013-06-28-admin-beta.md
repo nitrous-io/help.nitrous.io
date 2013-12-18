@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Beta agreement
+title: Beta Agreement
 published: true
 categories: [privacy and terms]
 ---

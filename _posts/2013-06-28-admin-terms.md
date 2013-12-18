@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Terms of use
+title: Terms Of Use
 published: true
 categories: [privacy and terms]
 ---

@@ -1,22 +1,33 @@
 ---
 layout: article
-title: Contact us
+title: Contact Us
 published: true
 categories: [privacy and terms]
 ---
 
 If you'd like to get in touch:
 
-Support inquiries: [support@nitrous.io](mailto:support@nitrous.io)
+####On the Internet:  
 
-By mail:
+Email Support:  [support@nitrous.io](mailto:support@nitrous.io)
+Email Partnerships: [partners@nitrous.io](mailto:partners@nitrous.io)
 
-Singapore:
+Tweet at Us: [@nitrousio](https://twitter.com/nitrousio/)
+Send us Pull Request: [action-io](https://github.com/action-io/)
+
+####Vist Us:
+
+*_Singapore_*
+
 30 Raffles Place Level 17
+
 Singapore 048622
 
-United States:
 
-535 Middlefield Road
-Menlo Park, CA 94025
+*_United States_*
+
+238 Castro St, 
+
+Mountain View, CA 94041
+
 USA
