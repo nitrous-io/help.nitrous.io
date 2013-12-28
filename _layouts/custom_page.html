@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="home index">
 {% include head.html %}
-{% include search.html %}
 <div class="container">
    <div class="row">
     <div class="col-md-3">
@@ -9,10 +8,10 @@
     </div>
     <div class="col-md-9">
       <h1>{{ page.title | capitalize | replace: 'and', '&' | replace: 'Faq', 'FAQ' | replace: 'Ssh', 'SSH'}}</h1>
+      {{ content }}
     </div>
-    {{ content }}
-   </div>
-   {% include footer.html %}
- </div>
+    {% include footer.html %}
+  </div>
+</div>
 </body>
 </html>
