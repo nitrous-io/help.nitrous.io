@@ -7,7 +7,8 @@ categories: [tutorials, node]
 
 ### Prerequisites
 
-* A Node.JS box on [Nitrous.IO](http://www.nitrous.io)
+* A Node.JS box with a minimum of 1GB storage (see the [box settings
+  guide](/box-settings/) for information on how to add more space)
 
 ### Installation
 
