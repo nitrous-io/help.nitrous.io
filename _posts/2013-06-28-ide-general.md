@@ -2,7 +2,8 @@
 layout: article
 title: Web IDE overview
 published: true
-categories: [usage]
+category: "getting started"
+mitem: ide-general
 ---
 
 The Nitrous.IO Web IDE is a powerful, one stop shop for (almost) all of your development needs.

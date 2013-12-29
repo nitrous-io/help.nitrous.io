@@ -2,7 +2,8 @@
 layout: article
 title: Included Interpreters and Tools
 published: true
-categories: [faq, boxes]
+category: boxes
+mitem: box-tools
 ---
 
 We provide extra interpreters and tools in your Nitrous boxes to help you get hacking away instantly. Here is a list of the tools we provide as well as some examples of other tools you could install yourself (without needing root access):

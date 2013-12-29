@@ -2,7 +2,8 @@
 layout: article
 title: Updating Your Nitrous.IO box
 published: true
-categories: [boxes]
+category: boxes
+mitem: box-upgrades
 ---
 
 This guide covers how to check your Nitrous box version and how to update.

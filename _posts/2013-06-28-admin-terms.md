@@ -2,7 +2,8 @@
 layout: article
 title: Terms Of Use
 published: true
-categories: [privacy and terms]
+category: resources
+mitem: terms
 ---
 
 _Effective April 1, 2013_

@@ -1,8 +1,9 @@
 ---
 title: Deploying to Nodejitsu
 published: true
-categories: [deployment]
+category: deployment
 layout: article
+mitem: nodejitsu
 ---
 
 These instructions will help you deploy your [Node.js](http://nodejs.org/) application to [Nodejitsu](http://www.nodejitsu.com/?ref=nitrous.io).

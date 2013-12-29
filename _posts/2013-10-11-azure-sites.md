@@ -1,8 +1,9 @@
 ---
 title: Deploying a Node.js App to Azure Sites
 published: true
-categories: [deployment]
+category: deployment
 layout: article
+mitem: azure
 ---
 
 These instructions will help you deploy your [node.js](http://nodejs.org/) application to [Azure](http://www.windowsazure.com/en-us/develop/nodejs/).

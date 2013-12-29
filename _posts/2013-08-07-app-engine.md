@@ -1,8 +1,9 @@
 ---
 title: Deploying to App Engine
 published: true
-categories: [deployment]
+category: deployment
 layout: article
+mitem: appengine
 ---
 
 These instructions will help you deploy your [Python](https://www.djangoproject.com/) application to [App Engine](https://cloud.google.com/console?getstarted=https://appengine.google.com).

@@ -2,7 +2,8 @@
 layout: article
 title: Box templates
 published: true
-categories: [boxes]
+category: boxes
+mitem: box-templates
 ---
 
 A **[Box Template](https://www.nitrous.io/app#/boxes/new)** is a pre-configured development environment. Box templates usually have one primary language / framework installed and occasionally a few supporting languages installed.  We recommend when customizing your templates that you only install what is necessary for your application to run appropriately to reduce the chance of runtime or configuration errors.

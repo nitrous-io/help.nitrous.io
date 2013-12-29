@@ -2,7 +2,8 @@
 layout: article
 title: Installing Databases and Tools with Autoparts
 published: true
-categories: [databases, usage]
+category: usage
+mitem: autoparts
 ---
 
 Autoparts is a package manager for Nitrous.IO which allows you to install databases and other tools on your box within your home folder.

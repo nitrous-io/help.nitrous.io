@@ -2,7 +2,8 @@
 layout: article
 title: Problems previewing my application
 published: true
-categories: [faq, previewing]
+category: previewing
+mitem: localhost
 ---
 
 Due to the way we handle network configuration on boxes, you will not be able to bind http servers to localhost (127.0.0.1).

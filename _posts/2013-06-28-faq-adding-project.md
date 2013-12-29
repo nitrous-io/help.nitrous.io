@@ -2,7 +2,8 @@
 layout: article
 title: Upload an existing application
 published: true
-categories: [faq, getting started]
+category: faq
+mitem: add-project
 ---
 
 We get a lot of emails asking how to upload applications to an Nitrous.IO box. There are many ways to do this; using SCP, installing the [Mac App](https://www.nitrous.io/mac), and in this guide SFTP and Git.

@@ -2,7 +2,8 @@
 layout: article
 title: Setting up Memcached with Autoparts
 published: true
-categories: [databases]
+category: databases
+mitem: memcached
 ---
 
 ### Prerequisites

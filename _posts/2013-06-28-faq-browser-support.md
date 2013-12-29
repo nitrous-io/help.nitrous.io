@@ -2,7 +2,8 @@
 layout: article
 title: Browser support
 published: true
-categories: [faq]
+category: faq
+mitem: browsers
 ---
 
 ### Recommended Browsers

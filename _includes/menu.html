@@ -1,76 +1,92 @@
 <ul class="snav hidden-sm hidden-xs">
-  <li {% if page.categories contains 'getting started' %} class="active" {% endif %}>
+  <li {% if page.category contains 'getting started' %} class="active" {% endif %}>
     <a href="/categories/getting-started/">Getting Started</a>
     <ul class="nav">
-    <li><a href="/github-add-key/">Connecting to Github</a></li>
-    <li><a href="/ide-general/">Web IDE Overview</a></li>
-    <li><a href="/best-practices">Best Practices</a></li>
-   </ul>
+      <li {% if page.mitem contains 'github' %} class="mi_active" {% endif %}><a href="/github-add-key">Connecting to Github</a></li>
+      <li {% if page.mitem contains 'ide-general' %} class="mi_active" {% endif %}><a href="/ide-general">Web IDE Overview</a></li>
+      <li {% if page.mitem contains 'best-practices' %} class="mi_active" {% endif %}><a href="/best-practices">Best Practices</a></li>
+      <li {% if page.mitem contains 'new-account' %} class="mi_active" {% endif %}><a href="/account-new">Creating an Account</a></li>
+    </ul>
   </li>
   
-  <li {% if page.categories contains 'ssh' %} class="active" {% endif %}>
-    <a href="/categories/ssh/">Adding SSH Keys</a>
+  <li {% if page.category contains 'ssh' %} class="active" {% endif %}>
+    <a href="/categories/ssh/">SSH Keys</a>
+    <ul class="nav">
+      <li {% if page.mitem contains 'ssh-add' %} class="mi_active" {% endif %}><a href="/ssh-add/">Adding SSH Keys (Mac)</a></li>
+      <li {% if page.mitem contains 'ssh-win' %} class="mi_active" {% endif %}><a href="/ssh-windows/">Adding SSH Keys (Windows)</a></li>
+    </ul>    
   </li>
 
-  <li {% if page.categories contains 'boxes' %} class="active" {% endif %}>
+  <li {% if page.category contains 'boxes' %} class="active" {% endif %}>
     <a href="/categories/boxes/">Boxes</a>
     <ul class="nav">
-      <li><a href="/box-new">Create a Box</a></li>
-      <li><a href="/box-settings/">Box Memory & Storage</a></li>
-      <li><a href="/box-templates/">Box Templates</a></li>
-      <li><a href="/box-interpreters-and-tools/">Included Tools</a></li>
-      <li><a href="/upgrade-box">Update Box</a></li>
+      <li {% if page.mitem contains 'create-box' %} class="mi_active" {% endif %}><a href="/box-new">Create a Box</a></li>
+      <li {% if page.mitem contains 'box-settings' %} class="mi_active" {% endif %}><a href="/box-settings/">Box Memory & Storage</a></li>
+      <li {% if page.mitem contains 'box-templates' %} class="mi_active" {% endif %}><a href="/box-templates/">Box Templates</a></li>
+      <li {% if page.mitem contains 'box-tools' %} class="mi_active" {% endif %}><a href="/box-interpreters-and-tools/">Included Tools</a></li>
+      <li {% if page.mitem contains 'box-upgrades' %} class="mi_active" {% endif %}><a href="/upgrade-box">Update Box</a></li>
     </ul>
   </li>
 
-  <li {% if page.categories contains 'usage' %} class="active" {% endif %}>
+  <li {% if page.category contains 'usage' or page.categories contains 'usage' %} class="active" {% endif %}>
     <a href="/categories/usage/">Usage</a>
     <ul class="nav">
-      <li><a href="/autoparts/">Package Manager</a></li>
-      <li><a href="/mac-preferences/">Mac Preferences</a></li>
-      <li><a href="/ide-shortcuts/">Keyboard Shortcuts</a></li>
-      <li><a href="/new-file/">Create New File</a></li>
-      <li><a href="/ide-file-uploads/">Uploading via Web IDE</a></li>
-      <li><a href="/collab">Collaboration</a></li>
+      <li {% if page.mitem contains 'autoparts' %} class="mi_active" {% endif %}><a href="/autoparts/">Autoparts Package Manager</a></li>
+      <li {% if page.mitem contains 'mac-pref' %} class="mi_active" {% endif %}><a href="/mac-preferences/">Mac Preferences</a></li>
+      <li {% if page.mitem contains 'keyboard' %} class="mi_active" {% endif %}><a href="/ide-shortcuts/">Keyboard Shortcuts</a></li>
+      <li {% if page.mitem contains 'new-file' %} class="mi_active" {% endif %}><a href="/new-file/">Create New File</a></li>
+      <li {% if page.mitem contains 'uploading' %} class="mi_active" {% endif %}><a href="/ide-file-uploads/">Uploading via Web IDE</a></li>
+      <li {% if page.mitem contains 'collab' %} class="mi_active" {% endif %}><a href="/collab">Collaboration</a></li>
     </ul>
   </li>
 
-  <li {% if page.categories contains 'databases' %} class="active" {% endif %}>
+  <li {% if page.category contains 'databases' %} class="active" {% endif %}>
     <a href="/categories/databases/">Databases</a>
     <ul class="nav">
-      <li><a href="/memcached/">Memcached</a></li>
-      <li><a href="/mongodb/">MongoDB</a></li>
-      <li><a href="/mysql/">MySQL</a></li>
-      <li><a href="/postgresql/">PostgreSQL</a></li>
-      <li><a href="/redis/">Redis</a></li>
+      <li {% if page.mitem contains 'memcached' %} class="mi_active" {% endif %}><a href="/memcached/">Memcached</a></li>
+      <li {% if page.mitem contains 'mongodb' %} class="mi_active" {% endif %}><a href="/mongodb/">MongoDB</a></li>
+      <li {% if page.mitem contains 'mysql' %} class="mi_active" {% endif %}><a href="/mysql/">MySQL</a></li>
+      <li {% if page.mitem contains 'postgres' %} class="mi_active" {% endif %}><a href="/postgresql/">PostgreSQL</a></li>
+      <li {% if page.mitem contains 'redis' %} class="mi_active" {% endif %}><a href="/redis/">Redis</a></li>
     </ul>
   </li>
 
-  <li {% if page.categories contains 'previewing' %} class="active" {% endif %}>
+  <li {% if page.category contains 'previewing' %} class="active" {% endif %}>
     <a href="/categories/previewing/">Preview</a>
     <ul class="nav">
-      <li><a href="/preview">Previewing Your App</a></li>
-      <li><a href="/faq-websockets">Websockets</a></li>
-      <li><a href="/faq-disconnect">Run App Continuously</a></li>
-      <li><a href="/faq-localhost">Preview Issues</a></li>
+      <li {% if page.mitem contains 'preview' %} class="mi_active" {% endif %}><a href="/preview">Previewing Your App</a></li>
+      <li {% if page.mitem contains 'websockets' %} class="mi_active" {% endif %}><a href="/faq-websockets">Websockets</a></li>
+      <li {% if page.mitem contains 'localhost' %} class="mi_active" {% endif %}><a href="/faq-localhost">Preview Issues</a></li>
+    </ul>
+  </li>
+  
+  <li {% if page.category contains 'faq' %} class="active" {% endif %}>
+    <a href="/categories/faq/">Frequently Asked Questions</a>
+    <ul class="nav">      
+      <li {% if page.mitem contains 'add-project' %} class="mi_active" {% endif %}><a href="/faq-adding-project">Add an Existing Project</a></li>
+      <li {% if page.mitem contains 'disconnect' %} class="mi_active" {% endif %}><a href="/faq-disconnect">Nitrous.IO Keeps Disconnecting</a></li>
+      <li {% if page.mitem contains 'browsers' %} class="mi_active" {% endif %}><a href="/faq-browser-support">Browser Support</a></li>
     </ul>
   </li>
 
-  <li {% if page.categories contains 'deployment' %} class="active" {% endif %}>
-    <a href="/categories/deployment/">Deploy</a>
+  <li {% if page.category contains 'deployment' %} class="active" {% endif %}>
+    <a href="/categories/deployment/">Deployment</a>
     <ul class="nav">
-      <li><a href="/heroku/">Heroku</a></li>
-      <li><a href="/app-engine">App Engine</a></li>
-      <li><a href="/azure-sites">Azure Sites</a></li>
-      <li><a href="/nodejitsu">Nodejitsu</a></li>
+      <li {% if page.mitem contains 'heroku' %} class="mi_active" {% endif %}><a href="/heroku/">Heroku</a></li>
+      <li {% if page.mitem contains 'appengine' %} class="mi_active" {% endif %}><a href="/app-engine">App Engine</a></li>
+      <li {% if page.mitem contains 'azure' %} class="mi_active" {% endif %}><a href="/azure-sites">Azure Sites</a></li>
+      <li {% if page.mitem contains 'nodejitsu' %} class="mi_active" {% endif %}><a href="/nodejitsu">Nodejitsu</a></li>
     </ul>
   </li>
 
-  <li {% if page.categories contains 'resources' %} class="active" {% endif %}>
-    <a href="#">Additional Resources</a>
+  <li {% if page.category contains 'resources' %} class="active" {% endif %}>
+    <a href="/categories/resources/">Additional Resources</a>
     <ul class="nav">
-      <li><a href="/categories/faq">FAQ</a></li>
-      <li><a href="/categories/privacy-and-terms/">Privacy & Terms</a></li>
+      <li {% if page.mitem contains 'beta' %} class="mi_active" {% endif %}><a href="/admin-beta">Beta Agreement</a></li>
+      <li {% if page.mitem contains 'aup' %} class="mi_active" {% endif %}><a href="/admin-aup">Acceptable Use Policy</a></li>
+      <li {% if page.mitem contains 'privacy' %} class="mi_active" {% endif %}><a href="/admin-privacy">Privacy &amp; Terms</a></li>
+      <li {% if page.mitem contains 'security' %} class="mi_active" {% endif %}><a href="/admin-security">Nitrous.IO Security</a></li>
+      <li {% if page.mitem contains 'terms' %} class="mi_active" {% endif %}><a href="/admin-terms">Terms of Use</a></li>
     </ul>
   </li>
 </ul>

@@ -2,7 +2,8 @@
 layout: article
 title: Mac App Preferences
 published: true
-categories: [usage]
+category: usage
+mitem: mac-pref
 ---
 
 Your [Nitrous.IO for Mac](https://nitrous.io/mac) preferences allow you to configure the connection between your computer and your boxes running on Nitrous.IO. For example, you can add/remove SSH keys, setup port forwarding to preview applications you are developing, and manage shared folders for local editing.

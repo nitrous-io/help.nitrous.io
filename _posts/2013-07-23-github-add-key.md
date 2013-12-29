@@ -2,7 +2,8 @@
 layout: article
 title: Add SSH key to GitHub
 published: true
-categories: [ssh, public keys]
+category: "getting started"
+mitem: github
 ---
 
 For those developers using [Github](http://github.com), Action lets you easily add your box's ssh keys so managing your repositories is a breeze.

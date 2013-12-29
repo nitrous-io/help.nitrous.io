@@ -2,7 +2,8 @@
 layout: article
 title: Configuring Box Memory & Storage
 published: true
-categories: [getting started, boxes, faq]
+category: boxes
+mitem: box-settings
 ---
 
 At any point you can change the memory/storage configuration of your

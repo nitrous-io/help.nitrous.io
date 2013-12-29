@@ -2,7 +2,8 @@
 layout: article
 title: Setting up PostgreSQL with Autoparts
 published: true
-categories: [databases]
+category: databases
+mitem: postgres
 ---
 
 ### Prerequisites
