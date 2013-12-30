@@ -7,29 +7,33 @@ layout: default
     {% include menu.html %}
   </div>
 
-  <div class="col-md-9">    
-    <p class="alert alert-warning">
-      New to Nitrous.IO?  View our <a href="/getting-started/">Getting started</a> guide.
-    </p>
-    
-    <h2>Introduction Resources</h2>
-    <ul class="menu-item">
+  <div class="col-md-4">      
+    <h3>Introduction Resources</h3>
+    <ul class="toc">
       <li><a href="/best-practices/">Best Practices</a></li>
       <li><a href="/ssh-add/">Adding SSH Keys</a></li>
       <li><a href="/ide-general/">Web IDE</a></li>
       <li><a href="/github-add-key/">Connecting to Github</a></li>
       <li><a href="/autoparts/">Installing Databases and Tools with Autoparts</a></li>
     </ul>
-
-    <h2>Most Frequently Asked Questions</h2>
-    <ul class="menu-item">
+  </div>
+  
+  <div class="col-md-4 offset-1">
+    <h3>Frequently Asked Questions</h3>
+    <ul class="toc">
       {% for post in site.categories['faq'] limit:6 %}
         <li><a href="{{ post.url }}">{{ post.title | replace: 'and', '&' | replace: 'Faq', 'FAQ' | replace: 'Ssh', 'SSH'}}</a></li>
       {% endfor %}
     </ul>
-    <a class="view-all btn" href="/categories/faq">View all »</a>
-
-    <h2>Other Resources</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    &nbsp;
+  </div>
+  
+  <div class="col-md-9">
+    <h3>Other Resources</h3>
     <ul>
       <li class="module">
         <a href="https://www.nitrous.io/app#/intro/1">
@@ -50,4 +54,5 @@ layout: default
         If you have any feedback or issues on Nitrous.IO, feel free to contact us
       </li>
     </ul>
+  </div>
 </div>

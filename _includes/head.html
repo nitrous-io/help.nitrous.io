@@ -30,11 +30,15 @@
   
       <div class="collapse navbar-collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav">
-          <li class="hidden-sm"><a href="/categories/boxes/">Boxes</a></li>
-          <li class="hidden-sm"><a href="/categories/usage/">Usage</a></li>
-          <li class="hidden-sm"><a href="/categories/databases/">Databases</a></li>
-          <li><a href="/categories/deployment/">Deploy</a></li>
-          <li><a href="/discussions">Discuss</a></li>        
+          <li class="hidden-sm"><a href="/categories/boxes/" {% if page.category contains 'boxes' %} class="active" {% endif %}>Boxes</a></li>
+          <li class="hidden-sm"><a href="/categories/usage/" {% if page.category contains 'usage' %} class="active" {% endif %}>Usage</a></li>
+          <li class="hidden-sm"><a href="/categories/databases/" {% if page.category contains 'databases' %} class="active" {% endif %}>Databases</a></li>
+          <li><a href="/categories/deployment/" {% if page.category contains 'deployment' %} class="active" {% endif %}>Deploy</a></li>
+          <li>
+            <a href="/discussions" class="stack-exchange" {% if page.category contains 'discussions' %} class="stack-exchange active" {% endif %}>
+              <i class="fa fa-stack-exchange"></i>Discuss
+            </a>
+          </li>        
         </ul>
 
         <form class="navbar-form navbar-right" role="search" action="/search.html">
