@@ -87,12 +87,6 @@ Port scanning is prohibited and every reported instance is investigated by our i
 
 Each development box on Nitrous.IO runs within its own isolated environment and cannot interact with other applications or areas of the system. This restrictive operating environment is designed to prevent security and stability issues.  These self-contained environments isolate processes, memory, and the file system using LXC while host-based firewalls restrict applications from establishing local network connections.
 
-### Add-ons
-
-Customers can extend the functionality of applications by using Nitrous.IO add-ons. Add-ons are offered and managed by 3rd party companies and implement their own security controls and processes.
-
-For additional information see: https://addons.nitrous.io
-
 ### System Security
 
 #### System Configuration
