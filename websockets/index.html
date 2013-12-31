@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>WebSockets</title>
+  <meta name="author" content="Nitrous.IO" />
+  <link href="http://feeds.feedburner.com/actionioblog" rel="alternate" title="Nitrous.IO Blog" type="application/atom+xml" />
+  <meta content='Nitrous.IO Support Documentation. Tutorials, FAQ, and other guides for building your apps directly on Nitrous.IO' name='description'>
+  <meta content='Nitrous.IO' name='author'>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
+  <link rel='stylesheet' href='/css/bootstrap3/css/bootstrap.css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="/css/action.css" media="screen, projection" rel="stylesheet">
+  <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Nitrous<span>docs</span></a>
+      </div>
+  
+      <div class="collapse navbar-collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+          <li class="hidden-sm"><a href="/categories/boxes/" >Boxes</a></li>
+          <li class="hidden-sm"><a href="/categories/usage/" >Usage</a></li>
+          <li class="hidden-sm"><a href="/categories/databases/" >Databases</a></li>
+          <li><a href="/categories/deployment/" >Deploy</a></li>
+          <li>
+            <a href="/discussions" class="stack-exchange" >
+              <i class="fa fa-stack-exchange"></i>Discuss
+            </a>
+          </li>        
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search" action="/search.html">
+          <input type="text" name="q" class="form-control" placeholder="Search Docs">
+        </form>
+
+        <ul class="nav navbar-nav pull-right hidden-sm hidden-xs">
+          <li><a href="https://nitrous.io/users/sign_in">Sign in</a></li>
+          <li>
+            <a href="https://www.nitrous.io" class="signup">
+              <i class="fa fa-plus"></i>Sign up
+            </a></li>
+        </ul>       
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-3">
+    <ul class="snav hidden-sm hidden-xs">
+  <li >
+    <a href="/categories/getting-started/">Getting Started</a>
+    <ul class="nav">
+      <li ><a href="/github-add-key">Connecting to Github</a></li>
+      <li ><a href="/ide-general">Web IDE Overview</a></li>
+      <li ><a href="/best-practices">Best Practices</a></li>
+      <li ><a href="/account-new">Creating an Account</a></li>
+    </ul>
+  </li>
+  
+  <li >
+    <a href="/categories/ssh/">SSH Keys</a>
+    <ul class="nav">
+      <li ><a href="/ssh-add/">Adding SSH Keys (Mac)</a></li>
+      <li ><a href="/ssh-windows/">Adding SSH Keys (Windows)</a></li>
+    </ul>    
+  </li>
+
+  <li >
+    <a href="/categories/boxes/">Boxes</a>
+    <ul class="nav">
+      <li ><a href="/box-new">Create a Box</a></li>
+      <li ><a href="/box-settings/">Box Memory & Storage</a></li>
+      <li ><a href="/box-templates/">Box Templates</a></li>
+      <li ><a href="/box-interpreters-and-tools/">Included Tools</a></li>
+      <li ><a href="/upgrade-box">Update Box</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/usage/">Usage</a>
+    <ul class="nav">
+      <li ><a href="/autoparts/">Autoparts Package Manager</a></li>
+      <li ><a href="/mac-preferences/">Mac Preferences</a></li>
+      <li ><a href="/ide-shortcuts/">Keyboard Shortcuts</a></li>
+      <li ><a href="/new-file/">Create New File</a></li>
+      <li ><a href="/ide-file-uploads/">Uploading via Web IDE</a></li>
+      <li ><a href="/collab">Collaboration</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/databases/">Databases</a>
+    <ul class="nav">
+      <li ><a href="/memcached/">Memcached</a></li>
+      <li ><a href="/mongodb/">MongoDB</a></li>
+      <li ><a href="/mysql/">MySQL</a></li>
+      <li ><a href="/postgresql/">PostgreSQL</a></li>
+      <li ><a href="/redis/">Redis</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/previewing/">Preview</a>
+    <ul class="nav">
+      <li ><a href="/preview">Previewing Your App</a></li>
+      <li ><a href="/faq-websockets">Websockets</a></li>
+      <li ><a href="/faq-localhost">Preview Issues</a></li>
+    </ul>
+  </li>
+  
+  <li >
+    <a href="/categories/faq/">Frequently Asked Questions</a>
+    <ul class="nav">      
+      <li ><a href="/faq-adding-project">Add an Existing Project</a></li>
+      <li ><a href="/faq-disconnect">Nitrous.IO Keeps Disconnecting</a></li>
+      <li ><a href="/faq-browser-support">Browser Support</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/deployment/">Deployment</a>
+    <ul class="nav">
+      <li ><a href="/heroku/">Heroku</a></li>
+      <li ><a href="/app-engine">App Engine</a></li>
+      <li ><a href="/azure-sites">Azure Sites</a></li>
+      <li ><a href="/nodejitsu">Nodejitsu</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/resources/">Additional Resources</a>
+    <ul class="nav">
+      <li ><a href="/admin-beta">Beta Agreement</a></li>
+      <li ><a href="/admin-aup">Acceptable Use Policy</a></li>
+      <li ><a href="/admin-privacy">Privacy &amp; Terms</a></li>
+      <li ><a href="/admin-security">Nitrous.IO Security</a></li>
+      <li ><a href="/admin-terms">Terms of Use</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+
+  <div class="col-md-9">
+    <h1 class="article-title">WebSockets</h1>
+    <h5 class="note">Last Updated on: 03 November 2013</h5>
+     
+    <h3 id='introduction'>Introduction</h3>
+
+<p>WebSockets allow bi-directional communication over HTTP between the client and server. This allows you to create multiplayer games, chat rooms, and other collaborative apps.</p>
+
+<h3 id='implementation'>Implementation</h3>
+
+<p>The WebSocket functionality is supported by default on all Nitrous boxes. You do not need to make any special configurations when <a href='/preview/'>previewing</a> the app.</p>
+
+<h3 id='examples'>Examples</h3>
+
+<p>The following examples utilize minimal code to show you how to use WebSockets.</p>
+
+<ul>
+<li><a href='https://github.com/nitrous-examples/node-websockets'>Node.JS</a></li>
+
+<li><a href='https://github.com/nitrous-examples/ruby-websockets'>Ruby</a></li>
+</ul>
+  </div>
+</div>
+
+</div>
+
+  <footer>
+    <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
+    <script src='/css/bootstrap3/js/bootstrap.js'></script>
+  </footer>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43081980-1', 'nitrous.io');
+            ga('require', 'linkid', 'linkid.js');
+            ga('send', 'pageview');
+
+</script>
+</body>
+</html>
