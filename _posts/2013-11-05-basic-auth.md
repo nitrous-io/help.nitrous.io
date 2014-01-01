@@ -2,7 +2,7 @@
 layout: article
 title: Basic Access Authentication
 published: true
-categories: [tutorials, rails, django, faq]
+category: tutorials
 ---
 
 ### Introduction

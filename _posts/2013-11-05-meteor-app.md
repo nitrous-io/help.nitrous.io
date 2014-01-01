@@ -2,7 +2,8 @@
 layout: article
 title: Building a Meteor App
 published: true
-categories: [tutorials, node]
+category: tutorials
+mitem: meteor-app
 ---
 
 ### Prerequisites

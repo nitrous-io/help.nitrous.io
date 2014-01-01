@@ -2,7 +2,8 @@
 layout: article
 title: Start hacking on discourse in 60 seconds
 published: true
-categories: [tutorials,rails]
+category: tutorials
+mitem: discourse
 ---
 
 [Discourse](https://www.discourse.org) is a powerful, open source forum application built on top of [ruby on rails](https://www.rubyonrails.org) & [ember.js](https://www.emberjs.com).  

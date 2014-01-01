@@ -1,7 +1,7 @@
 ---
-title: WebSockets
+title: Using WebSockets on Nitrous.IO
 published: true
-categories: [tutorials, previewing, node, rails]
+category: tutorials
 layout: article
 ---
 

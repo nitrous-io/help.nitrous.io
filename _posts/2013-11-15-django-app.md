@@ -2,7 +2,8 @@
 layout: article
 title: Building a Django App
 published: true
-categories: [tutorials, django]
+category: tutorials
+mitem: django-app
 ---
 
 This article covers building a Django application on [Nitrous.IO](http://www.nitrous.io) with Python 3.3.
