@@ -2,8 +2,7 @@
 layout: article
 title: Building a Meteor App
 published: true
-category: tutorials
-mitem: meteor-app
+categories: [tutorials, node]
 ---
 
 ### Prerequisites
@@ -18,6 +17,14 @@ Meteor can be installed on the Nitrous box via [Autoparts](http://help.nitrous.i
     parts install meteor
 
 This will setup a Meteor installation along with MongoDB.
+
+### Installing Meteorite
+
+Meteorite utilizes [Atmosphere](https://atmosphere.meteor.com/) which contains 3rd party packages which are not available within the Meteor core packages. To install Meteorite we will need to use NPM:
+
+    npm install -g meteorite
+
+Although this guide does not utilize Meteorite for getting started, it will be handy to have tools such as [Iron Router](https://github.com/EventedMind/iron-router) once you start developing your own web app.
 
 ### Creating a New Meteor App
 
