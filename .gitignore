@@ -1,4 +1,4 @@
-_site
+_site/
 
 .bundle
 tmp/
@@ -43,4 +43,7 @@ tags
 auto-save-list
 tramp
 .\#*
+
+# Sass
+.sass-cache
 
