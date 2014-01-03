@@ -44,3 +44,6 @@ auto-save-list
 tramp
 .\#*
 
+# Sass
+.sass-cache
+
