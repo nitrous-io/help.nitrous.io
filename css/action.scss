@@ -53,7 +53,7 @@ ul.toc {
     color: #fb9446;
     margin-left: 4px;
   }
-}   
+}
 
 .navbar.navbar-inverse {
   background-color: #252a38;
@@ -91,14 +91,14 @@ ul.toc {
   .navbar-brand {
     color: #fff;
   }
-  
+
   .navbar-collapse.navbar-responsive-collapse.collapse {
     padding-right: 2px;
   }
 
   form.navbar-form.navbar-right {
     padding-right: 0;
-  
+
     input {
       background-image: url('../images/fa-search.png');
       background-position: 5px center;
@@ -110,7 +110,7 @@ ul.toc {
       -webkit-border-radius: 2px;
     }
   }
-  
+
   .navbar-nav li.pull-right {
     &:last-of-type {
       a {
@@ -131,7 +131,7 @@ ul.toc {
     .nav {
       display: none;
     }
-    
+
     a {
       display: block;
       color: #716b7a;
@@ -141,13 +141,13 @@ ul.toc {
         background: #e5e3e9;
       }
     }
-    
+
     &.active {
-      > a {        
+      > a {
         color: #413b4a;
         font-weight: bold;
       }
-      
+
       .nav {
         display: block;
         margin: 0 0 8px;
@@ -159,7 +159,7 @@ ul.toc {
             }
           }
           a {
-            padding-left: 32px;            
+            padding-left: 32px;
             font-size: 12px;
           }
         }
@@ -222,6 +222,7 @@ h5.note {
 
 .btn {
   &.ask {
+    margin-left: 1rem;
     margin-top: 26px;
     background: #777;
     color: #fff;
@@ -249,7 +250,7 @@ h5.note {
       padding: 12px 0;
       border-bottom: 1px solid #ececec;
       font-size: 13px;
-    
+
       a {
         font-weight: bold;
         font-family: Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif;
