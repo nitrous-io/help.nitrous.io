@@ -39,7 +39,7 @@ Navigate in your menubar to 'My Resources' > 'Manage', and from there click on y
 
 ![Redis Cloud Settings](/images/articles/redis-cloud-settings.png)
 
-Grab each of the values and assign them to environment variables to a file called ".env" within your project folder like so: 
+Grab each of the values and assign them to environment variables to a file called `.env` within your project folder like so: 
 
 ![Env Variables](/images/articles/redis-bashrc.png)
 
