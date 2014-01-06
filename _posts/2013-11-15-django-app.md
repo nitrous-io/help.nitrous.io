@@ -6,18 +6,18 @@ category: tutorials
 mitem: django-app
 ---
 
-This article covers building a Django application on [Nitrous.IO](http://www.nitrous.io) with Python 3.3.
+This article covers building a Django application on [Nitrous.IO](http://www.nitrous.io) with Python 2.7, or any Python version you want to use.
 
 ### Prerequisites
 
 * A [Nitrous.IO account](https://www.nitrous.io)
-* A [Box](http://help.action.io/customer/portal/articles/802603-create-a-box) on Nitrous.IO. The Django box template will include Python 2.7 with the use of Virtualenv.
+* A [Python Box](http://help.action.io/customer/portal/articles/802603-create-a-box) on Nitrous.IO.
 
 ### Creating a isolated environment with Virtualenv
 
 Virtualenv allows you to create an isolated environment in order to install specific versions and dependencies.
 
-To view the available versions of Python available, run `ls /usr/bin/python*`. Create a new environment with Python 3.3 by running the following 2 commands:
+To view the available versions of Python available, run `ls /usr/bin/python*`. Create a new environment with Python 2.7 by running the following command:
 
     $ virtualenv -p /usr/bin/python2.7 py27env
 
