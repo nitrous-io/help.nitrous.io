@@ -203,11 +203,19 @@
 
 <p><img alt='Redis Cloud Settings' src='/images/articles/redis-cloud-settings.png' /></p>
 
-<p>Grab each of the values and assign them to environment variables in your &#8220;~/.bashrc&#8221; file on your Nitrous.IO box. This will ensure that every time you log into your Nitrous.IO box, your database credentials will be available as environment variables to use in any of your apps. It is good practice to namespace your environment variables with the environment that you want to use your database in (development or test), like so:</p>
+<p>Grab each of the values and assign them to environment variables to a file called &#8220;.env&#8221; within your project folder like so:</p>
 
 <p><img alt='Env Variables' src='/images/articles/redis-bashrc.png' /></p>
 
-<p>If you want the environment variables to be loaded immediately, run: source ~/.bashrc</p>
+<blockquote>
+<p>If you are going to add your project to a git repo, add <code>.env</code> to your <code>.gitignore</code> file to ensure these credentials aren&#8217;t pushed with the rest of your code.</p>
+</blockquote>
+
+<p>Once your environment variables have been saved, run the following command within your project folder:</p>
+
+<pre><code>export $(cat .env)</code></pre>
+
+<p>You can now test these variables by running <code>echo REDIS_CLOUD_HOST</code> in the console to see if the corresponding value is returned.</p>
 
 <p>Within your Rails app, update your Gemfile to include the <a href='http://github.com/redis/redis-rb'>redis-rb</a> client:</p>
 
