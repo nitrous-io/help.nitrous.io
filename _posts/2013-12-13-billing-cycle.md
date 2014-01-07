@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Billing cycle
+title: Billing Cycle
 published: true
 category: billing
 mitem: cycle

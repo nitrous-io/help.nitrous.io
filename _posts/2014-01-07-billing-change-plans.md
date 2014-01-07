@@ -1,5 +1,5 @@
 ---
-title: Upgrading, downgrading, or cancelling subscription
+title: Upgrading, Downgrading, or Cancelling your Subscription
 published: true
 category: billing
 mitem: changes

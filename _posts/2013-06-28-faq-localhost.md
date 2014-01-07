@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Problems previewing my application
+title: Problems Previewing my Application
 published: true
 category: previewing
 mitem: localhost

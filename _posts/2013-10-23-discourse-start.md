@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Start hacking on discourse in 60 seconds
+title: Start Hacking on Discourse in 60 Seconds
 published: true
 category: tutorials
 mitem: discourse

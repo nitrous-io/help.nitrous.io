@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Web IDE overview
+title: Web IDE Overview
 published: true
 category: "getting started"
 mitem: ide-general

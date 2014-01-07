@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Create an account"
+title: "Create an Account"
 published: true
 category: "getting started"
 mitem: new-account
