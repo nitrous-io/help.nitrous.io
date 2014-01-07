@@ -11,7 +11,7 @@ To get started, sign up with [Redis Cloud](http://redis-cloud.com/). Once signed
 
 ![Redis Cloud Subscription](/images/articles/redis-cloud-subscription.png)
 
-From there you will want to select your plan, and specify a resource name and password.
+From there you will want to select your plan, and specify a resource name and password. The password field is optional, and if left empty you will not want to reference a password in the configurations.
 
 ![Redis Cloud Configuration](/images/articles/redis-cloud-configure.png)
 
@@ -26,7 +26,9 @@ To ensure you have set this up to connect properly we will be testing the connec
 Run the following command with your Redis Cloud's db configuration. You can obtain the host (public DNS), port, and password in your Redis Cloud account in the navigation menu under ‘My Resources’ > ‘Manage’ ([view example](/images/articles/redis-cloud-settings.png)):
 
     redis-cli -h REDIS_CLOUD_HOST -p REDIS_CLOUD_PORT -a REDIS_CLOUD_PASSWORD
-    
+
+>If you did not include a password in your Redis db configuration, do not include the -a or password in the command. Passing an empty value would cause issues when connecting.
+
 After running redis-cli, you can set and get keys. Here is an example of output which you should see when setting and getting keys:
 
 ![Redis-cli-connection](/images/articles/redis-cli.png)
