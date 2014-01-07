@@ -1,8 +1,9 @@
 ---
 layout: article
-title: When does the billing cycle begin?
+title: Billing cycle
 published: true
-categories: [billing]
+category: billing
+mitem: cycle
 ---
 
 The billing cycle starts on the day you upgrade your account and is billed every month on the anniversary of when your account was created.

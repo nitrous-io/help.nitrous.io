@@ -88,7 +88,17 @@
       <li {% if page.mitem contains 'nodejitsu' %} class="mi_active" {% endif %}><a href="/nodejitsu">Nodejitsu</a></li>
     </ul>
   </li>
-
+  
+  <li {% if page.category contains 'billing' %} class="active" {% endif %}>
+    <a href="/categories/billing/">Billing</a>
+    <ul class="nav">
+      <li {% if page.mitem contains 'cycle' %} class="mi_active" {% endif %}><a href="/billing-cycle/">Billing Cycle</a></li>
+      <li {% if page.mitem contains 'changes' %} class="mi_active" {% endif %}><a href="/billing-change-plans/">Changing Subscription</a></li>
+      <li {% if page.mitem contains 'renewal' %} class="mi_active" {% endif %}><a href="/billing-n2o-renewal/">N2O Renewal</a></li>
+      <li {% if page.mitem contains 'lifespan' %} class="mi_active" {% endif %}><a href="/billing-n2o-lifespan/">N2O Lifespan</a></li>
+    </ul>
+  </li>
+  
   <li {% if page.category contains 'resources' %} class="active" {% endif %}>
     <a href="/categories/resources/">Additional Resources</a>
     <ul class="nav">
