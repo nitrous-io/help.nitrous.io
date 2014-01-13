@@ -180,50 +180,50 @@
     <h1 class="article-title">Amazon RDS</h1>
     <h5 class="note">Last Updated on: 02 August 2013</h5>
      
-    <p>With <a href='http://aws.amazon.com/rds/'>Amazon RDS</a> you can quickly and easily provision and maintain a MySQL, Oracle, or Microsoft SQL Server instance in the cloud.</p>
+    <p>With <a href="http://aws.amazon.com/rds/">Amazon RDS</a> you can quickly and easily provision and maintain a MySQL, Oracle, or Microsoft SQL Server instance in the cloud.</p>
 
-<h3 id='prerequisites'>Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 
 <ul>
-<li>A Nitrous Box within the same region as the database you will create. View the <a href='/faq-aws-region-settings/'>Region Settings</a> guide for more information on this.</li>
+<li>A Nitrous Box within the same region as the database you will create. View the <a href="/faq-aws-region-settings/">Region Settings</a> guide for more information on this.</li>
 
-<li>You will need to first sign up with <a href='http://aws.amazon.com/'>Amazon Web Services</a>.</li>
+<li>You will need to first sign up with <a href="http://aws.amazon.com/">Amazon Web Services</a>.</li>
 </ul>
 
-<h3 id='adding_a_security_group_with_amazon_rds'>Adding a Security Group with Amazon RDS</h3>
+<h3 id="adding_a_security_group_with_amazon_rds">Adding a Security Group with Amazon RDS</h3>
 
-<p>Login to your <a href='https://console.aws.amazon.com/rds/home'>Amazon RDS Console</a>, navigate to Security Groups and create a new Connection Type with the following EC2 Security Group Details:</p>
+<p>Login to your <a href="https://console.aws.amazon.com/rds/home">Amazon RDS Console</a>, navigate to Security Groups and create a new Connection Type with the following EC2 Security Group Details:</p>
 
 <pre><code>AWS Account ID: 643018315983
 EC2 Security Group (name): box_host</code></pre>
 
-<p><img alt='Security Group Details' src='/images/articles/amazon_rds_security_group.png' /></p>
+<p><img src="/images/articles/amazon_rds_security_group.png" alt="Security Group Details" /></p>
 
-<h3 id='setting_up_a_new_instance_with_amazon_rds'>Setting Up a New Instance with Amazon RDS</h3>
+<h3 id="setting_up_a_new_instance_with_amazon_rds">Setting Up a New Instance with Amazon RDS</h3>
 
-<p>Within your <a href='https://console.aws.amazon.com/rds/home'>Amazon RDS Console</a> you will want to navigate to Instances and Launch a new DB Instance. When prompted, select the MySQL Database Engine.</p>
+<p>Within your <a href="https://console.aws.amazon.com/rds/home">Amazon RDS Console</a> you will want to navigate to Instances and Launch a new DB Instance. When prompted, select the MySQL Database Engine.</p>
 
 <p>On the Additinal Configuration page, ensure the <strong>Availability Zone</strong> matches the region of your Nitrous box. In this example, the Nitrous box is in the US West region and we have selected <strong>us-west-1a</strong> for the Availability Zone.</p>
 
 <p>Select the DB Security Group you have just created, and also remember your password for connecting later.</p>
 
-<p><img alt='Amazon RDS Settings' src='/images/articles/amazon_instance_setting.png' /></p>
+<p><img src="/images/articles/amazon_instance_setting.png" alt="Amazon RDS Settings" /></p>
 
-<h3 id='setting_up_the_database_configuration_rubyrails'>Setting up the Database configuration (Ruby/Rails)</h3>
+<h3 id="setting_up_the_database_configuration_rubyrails">Setting up the Database configuration (Ruby/Rails)</h3>
 
 <p>If you are building a Rails app, follow this step to connect your app to Amazon RDS.</p>
 
-<p>In the Instances tab of your <a href='https://console.aws.amazon.com/rds/home'>Amazon RDS Console</a>, you will see all of the database credentials needed to login (except for your password which you created):</p>
+<p>In the Instances tab of your <a href="https://console.aws.amazon.com/rds/home">Amazon RDS Console</a>, you will see all of the database credentials needed to login (except for your password which you created):</p>
 
-<p><img alt='Amazon RDS Instance Settings' src='/images/articles/amazon-rds-instance-details.png' /></p>
+<p><img src="/images/articles/amazon-rds-instance-details.png" alt="Amazon RDS Instance Settings" /></p>
 
-<p>Grab each of the values and assign them to environment variables in your &#8220;~/.bashrc&#8221; file on your Nitrous.IO box. This will ensure that every time you log into your Nitrous.IO box, your database credentials will be available as environment variables to use in any of your apps. It is good practice to namespace your environment variables with the environment that you want to use your database in (development or test), like so:</p>
+<p>Grab each of the values and assign them to environment variables in your “~/.bashrc” file on your Nitrous.IO box. This will ensure that every time you log into your Nitrous.IO box, your database credentials will be available as environment variables to use in any of your apps. It is good practice to namespace your environment variables with the environment that you want to use your database in (development or test), like so:</p>
 
-<p><img alt='Env Variables' src='/images/articles/rds-bashrc.png' /></p>
+<p><img src="/images/articles/rds-bashrc.png" alt="Env Variables" /></p>
 
 <p>If you want the environment variables to be loaded immediately, run: source ~/.bashrc</p>
 
-<p>Within config/database.yml, configure your development environment to use your database instance&#8217;s configuration details:</p>
+<p>Within config/database.yml, configure your development environment to use your database instance’s configuration details:</p>
 
 <pre><code>development:
  adapter: mysql2

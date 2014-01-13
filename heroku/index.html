@@ -181,64 +181,64 @@
     <h5 class="note">Last Updated on: 28 June 2013</h5>
      
     <blockquote>
-<p>An example of deloying a Rails app to Heroku may be found on the <a href='/heroku-rails/'>Heroku Rails guide</a>.</p>
+<p>An example of deloying a Rails app to Heroku may be found on the <a href="/heroku-rails/">Heroku Rails guide</a>.</p>
 </blockquote>
 
 <p>Nitrous.IO integrates with Heroku for convenient and easy application deployment. Connecting your Nitrous.IO box to Heroku is easy:</p>
 
-<h3 id='1_login_to_your_nitrousio_account'>1. <a href='https://www.nitrous.io/login'>Login</a> to your Nitrous.IO account</h3>
+<h3 id="1_login_to_your_nitrousio_account">1. <a href="https://www.nitrous.io/login">Login</a> to your Nitrous.IO account</h3>
 
-<p>If you don&#8217;t already have an account, <a href='https://www.nitrous.io'>sign up for an invite</a></p>
+<p>If you don’t already have an account, <a href="https://www.nitrous.io">sign up for an invite</a></p>
 
-<h3 id='2_create_a_development_box'>2. Create a Development Box</h3>
+<h3 id="2_create_a_development_box">2. Create a Development Box</h3>
 
-<p>If you don&#8217;t already have a box created, you&#8217;ll need to create one on a platform that runs on Heroku. Luckily, Heroku supports most environments.</p>
+<p>If you don’t already have a box created, you’ll need to create one on a platform that runs on Heroku. Luckily, Heroku supports most environments.</p>
 
-<p>You can read about <a href='/box-new'>creating development boxes here</a></p>
+<p>You can read about <a href="/box-new">creating development boxes here</a></p>
 
-<p><img alt='New Box Button' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/new-box-button.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/new-box-button.png" alt="New Box Button" /></p>
 
-<h3 id='3_connect_your_box_to_github'>3. Connect your Box to Github</h3>
+<h3 id="3_connect_your_box_to_github">3. Connect your Box to Github</h3>
 
-<p>If you haven&#8217;t already connected to Github, <a href='/github-add-key'>Generate a public key for your newly created development box and add it to Github</a></p>
+<p>If you haven’t already connected to Github, <a href="/github-add-key">Generate a public key for your newly created development box and add it to Github</a></p>
 
-<p><img alt='Reveal Public Key' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/reveal-public-key.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/reveal-public-key.png" alt="Reveal Public Key" /></p>
 
-<h3 id='4_authenticate_with_heroku'>4. Authenticate with Heroku</h3>
+<h3 id="4_authenticate_with_heroku">4. Authenticate with Heroku</h3>
 
 <pre><code> heroku login
  username: aj@nitrous.io
  password: ********</code></pre>
 
-<h3 id='5_add_your_ssh_key_to_heroku'>5. Add your ssh key to heroku</h3>
+<h3 id="5_add_your_ssh_key_to_heroku">5. Add your ssh key to heroku</h3>
 
 <pre><code> heroku keys:add</code></pre>
 
-<h3 id='6_configure_git'>6. Configure git</h3>
+<h3 id="6_configure_git">6. Configure git</h3>
 
 <pre><code> git config --global user.email “(your git email)”
  git config --global user.name “(your git username)”</code></pre>
 
-<h3 id='7_clone_a_project'>7. Clone a Project</h3>
+<h3 id="7_clone_a_project">7. Clone a Project</h3>
 
-<p>Since we&#8217;ve authenticated with Github, lets clone a git project that we&#8217;ll be deploying to Heroku</p>
+<p>Since we’ve authenticated with Github, lets clone a git project that we’ll be deploying to Heroku</p>
 
 <pre><code> git clone git@github.com:(username)/(reponame).git
  cd (repository name)
  (repository name)$: bundle install</code></pre>
 
-<h3 id='8_add_the_heroku_remote_url'>8. Add the Heroku remote url</h3>
+<h3 id="8_add_the_heroku_remote_url">8. Add the Heroku remote url</h3>
 
 <pre><code> (reponame)$: git remote add heroku git@heroku.com:(heroku-app-name).git</code></pre>
 
-<h3 id='9_update_the_upstream_git_branches'>9. Update the upstream git branches</h3>
+<h3 id="9_update_the_upstream_git_branches">9. Update the upstream git branches</h3>
 
 <pre><code> (reponame)$: git branch --set-upstream master origin/master
  (reponame)$: git branch --set-upstream master heroku/master</code></pre>
 
-<p>And that&#8217;s it! Your development box will now be connected to your Heroku account and you can deploy as you would on your local machine.</p>
+<p>And that’s it! Your development box will now be connected to your Heroku account and you can deploy as you would on your local machine.</p>
 
-<p>Of course, if you&#8217;re having trouble, you can always <a href='mailto:support@nitrous.io?subject=Heroku%20Authenticaion%20Issues'>talk to a real human</a>.</p>
+<p>Of course, if you’re having trouble, you can always <a href="mailto:support@nitrous.io?subject=Heroku%20Authenticaion%20Issues">talk to a real human</a>.</p>
   </div>
 </div>
 

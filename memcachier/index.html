@@ -180,25 +180,25 @@
     <h1 class="article-title">MemCachier</h1>
     <h5 class="note">Last Updated on: 20 August 2013</h5>
      
-    <h3 id='creating_a_cache_at_memcachier'>Creating a Cache at MemCachier</h3>
+    <h3 id="creating_a_cache_at_memcachier">Creating a Cache at MemCachier</h3>
 
 <p>MemCachier manages and scales clusters of memcache servers so you can focus on your app.</p>
 
-<p>To get started, signup with <a href='http://memcachier.com/'>MemCachier</a>.</p>
+<p>To get started, signup with <a href="http://memcachier.com/">MemCachier</a>.</p>
 
-<p><a href='https://www.memcachier.com/caches/new'>Create a new cache</a> and select an EC2 instance, a pricing plan of your choice, and a region. This region should be close to the region of your Nitrous box to ensure a low latency.</p>
+<p><a href="https://www.memcachier.com/caches/new">Create a new cache</a> and select an EC2 instance, a pricing plan of your choice, and a region. This region should be close to the region of your Nitrous box to ensure a low latency.</p>
 
-<p><img alt='Creating a New Cache' src='/images/articles/memcachier-ec2-config.png' /></p>
+<p><img src="/images/articles/memcachier-ec2-config.png" alt="Creating a New Cache" /></p>
 
-<p>Once the cache has been created, you will be provided with the cache&#8217;s credentials.</p>
+<p>Once the cache has been created, you will be provided with the cache’s credentials.</p>
 
-<p><img alt='Cache Configuration' src='/images/articles/memcachier-config.png' /></p>
+<p><img src="/images/articles/memcachier-config.png" alt="Cache Configuration" /></p>
 
 <p>Grab the server, username, and password, and assign them to environment variables in your <code>~/.bashrc</code> file on your Nitrous.IO box.</p>
 
 <p>It is good practice to namespace your environment variables variables with the environment that you want to use your database in (development or test), like so:</p>
 
-<p><img alt='Env Variables' src='/images/articles/memcachier-env-variables.png' /></p>
+<p><img src="/images/articles/memcachier-env-variables.png" alt="Env Variables" /></p>
 
 <p>If you want the environment variables to be loaded immediately, run:</p>
 
@@ -208,10 +208,10 @@
 
 <pre><code>$ echo $MEMCACHIER_SERVERS</code></pre>
 
-<h3 id='connecting_to_your_rails_app'>Connecting to Your Rails App</h3>
+<h3 id="connecting_to_your_rails_app">Connecting to Your Rails App</h3>
 
 <blockquote>
-<p>To learn how to connect with apps other than Rails, please visit MemCachier&#8217;s <a href='https://www.memcachier.com/documentation'>documentation</a>.</p>
+<p>To learn how to connect with apps other than Rails, please visit MemCachier’s <a href="https://www.memcachier.com/documentation">documentation</a>.</p>
 </blockquote>
 
 <p>Start by adding the dalli gem to your Gemfile.</p>
@@ -239,7 +239,7 @@
 <pre><code>Rails.cache.write(&quot;foo&quot;, &quot;bar&quot;)
 puts Rails.cache.read(&quot;foo&quot;)</code></pre>
 
-<p>MemCachier has built a small Rails example here: <a href='https://github.com/memcachier/examples-rails'>MemCachier Rails sample app</a>.</p>
+<p>MemCachier has built a small Rails example here: <a href="https://github.com/memcachier/examples-rails">MemCachier Rails sample app</a>.</p>
   </div>
 </div>
 

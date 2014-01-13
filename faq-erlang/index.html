@@ -180,11 +180,11 @@
     <h1 class="article-title">Installing Erlang</h1>
     <h5 class="note">Last Updated on: 01 August 2013</h5>
      
-    <p>Although the Nitrous boxes include a number of <a href='/box-interpreters-and-tools/'>interpreters and tools</a>, we don&#8217;t have everything covered. Fortunately many languages can be installed (Clojure, Dart, Haskell, Erlang, Scala, etc). This guide will cover how to setup your box to support Erlang.</p>
+    <p>Although the Nitrous boxes include a number of <a href="/box-interpreters-and-tools/">interpreters and tools</a>, we don’t have everything covered. Fortunately many languages can be installed (Clojure, Dart, Haskell, Erlang, Scala, etc). This guide will cover how to setup your box to support Erlang.</p>
 
-<h3 id='downloading_erlang'>Downloading Erlang</h3>
+<h3 id="downloading_erlang">Downloading Erlang</h3>
 
-<p>Since you can&#8217;t create folders outside your home folder, you will need to install Erlang within it. Create a hidden folder called .tools:</p>
+<p>Since you can’t create folders outside your home folder, you will need to install Erlang within it. Create a hidden folder called .tools:</p>
 
 <pre><code>mkdir ~/.tools</code></pre>
 
@@ -195,14 +195,14 @@
 wget https://elearning.erlang-solutions.com/binaries/sources/otp_src_R16B01.tar.gz</code></pre>
 
 <blockquote>
-<p>Note: Other versions of Erlang may be found on <a href='https://www.erlang-solutions.com/downloads/download-erlang-otp'>erlang-solutions.com</a></p>
+<p>Note: Other versions of Erlang may be found on <a href="https://www.erlang-solutions.com/downloads/download-erlang-otp">erlang-solutions.com</a></p>
 </blockquote>
 
 <p>Now you will want to extract this file which will create the folder <code>otp_src_R16B01/</code> inside.</p>
 
 <pre><code>gunzip -c otp_src_R16B01.tar.gz | tar xfp -</code></pre>
 
-<h3 id='setting_up_path'>Setting up PATH</h3>
+<h3 id="setting_up_path">Setting up PATH</h3>
 
 <p>Once the tar file is extracted, edit <code>~/.bashrc</code> and add the bin directory to your PATH:</p>
 
@@ -210,7 +210,7 @@ wget https://elearning.erlang-solutions.com/binaries/sources/otp_src_R16B01.tar.
 
 <p>Reload the ~/.bashrc file by running <code>source ~/.bashrc</code>, and verify the .tools folder was added to your PATH with <code>echo $PATH</code>.</p>
 
-<h3 id='installing'>Installing</h3>
+<h3 id="installing">Installing</h3>
 
 <p>Navigate to the Erlang directory <code>cd ~/.tools/otp_src_R16B01/</code> and run the following command:</p>
 

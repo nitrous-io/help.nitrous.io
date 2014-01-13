@@ -180,19 +180,19 @@
     <h1 class="article-title">Setting up MySQL with Autoparts</h1>
     <h5 class="note">Last Updated on: 09 December 2013</h5>
      
-    <h3 id='prerequisites'>Prerequisites</h3>
+    <h3 id="prerequisites">Prerequisites</h3>
 
 <ul>
-<li>Nitrous.IO box with the package manager Autoparts installed. To ensure Autoparts is installed, run the command <code>parts</code> within the terminal. Take a look at the <a href='/autoparts/'>Autoparts guide</a> for installation instructions.</li>
+<li>Nitrous.IO box with the package manager Autoparts installed. To ensure Autoparts is installed, run the command <code>parts</code> within the terminal. Take a look at the <a href="/autoparts/">Autoparts guide</a> for installation instructions.</li>
 </ul>
 
-<h3 id='install_mysql'>Install MySQL</h3>
+<h3 id="install_mysql">Install MySQL</h3>
 
 <p>You can quickly install MySQL using Autoparts. Within the terminal, run the following command to install:</p>
 
 <pre><code>parts install mysql</code></pre>
 
-<h3 id='starting_mysql'>Starting MySQL</h3>
+<h3 id="starting_mysql">Starting MySQL</h3>
 
 <p>To start up MySQL, run the following command:</p>
 
@@ -202,7 +202,7 @@
 
 <pre><code>mysql -u root</code></pre>
 
-<h3 id='connecting_via_rails'>Connecting via Rails</h3>
+<h3 id="connecting_via_rails">Connecting via Rails</h3>
 
 <p>By default, sqlite3 will be setup on Rails and will automatically setup as the configuration is. If you want to create a MySQL database using the mysql2 gem, you will first need to add this line to your <code>Gemfile</code>:</p>
 
@@ -244,10 +244,10 @@ production:
   pool: 5
   timeout: 5000</code></pre>
 
-<p>View our <a href='http://blog.nitrous.io/2013/07/02/building-a-rails-4.0-app-on-nitrous-io.html'>Rails 4 guide</a> for information on building an app.</p>
+<p>View our <a href="http://blog.nitrous.io/2013/07/02/building-a-rails-4.0-app-on-nitrous-io.html">Rails 4 guide</a> for information on building an app.</p>
 
 <blockquote>
-<p>For information on connecting to an external MySQL database, please view our <a href='/amazon-rds/'>Amazon RDS guide</a>.</p>
+<p>For information on connecting to an external MySQL database, please view our <a href="/amazon-rds/">Amazon RDS guide</a>.</p>
 </blockquote>
   </div>
 </div>

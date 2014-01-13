@@ -185,7 +185,7 @@
   <li class='selected'>Mac</li>
   <li><a href='/ssh-windows/'>Windows</a></li>
 </ul>
-<h3 id='1_generate_a_new_ssh_key'>1: Generate a new SSH key</h3>
+<h3 id="1_generate_a_new_ssh_key">1: Generate a new SSH key</h3>
 
 <p>On your personal computer (<em>i.e. not on your Nitrous box</em>) enter the code below. We want the default settings so when asked to enter a file in which to save the key, just press enter.</p>
 
@@ -206,7 +206,7 @@ Which should give you something like this:
 # The key fingerprint is:
 # 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@youremail.com</code></pre>
 
-<h3 id='2_add_your_ssh_key_to_nitrousio'>2: Add your SSH key to Nitrous.IO</h3>
+<h3 id="2_add_your_ssh_key_to_nitrousio">2: Add your SSH key to Nitrous.IO</h3>
 
 <p>Run the following code to copy the key to your clipboard.</p>
 
@@ -215,33 +215,33 @@ Which should give you something like this:
 
 <p>Make sure you copy the key <em>exactly</em> without newlines or whitespace. The <code>pbcopy</code> command helps copy just the contents with no extraneous characters.</p>
 
-<p>If you don&#8217;t have the <code>pbcopy</code> command, copy the output of the following command:</p>
+<p>If you don’t have the <code>pbcopy</code> command, copy the output of the following command:</p>
 
 <pre><code>cat ~/.ssh/id_rsa.pub</code></pre>
 
-<p>Next, <a href='https://www.nitrous.io/users/sign_in'>Login</a> to your Nitrous.IO account and click &#8221;<a href='https://www.nitrous.io/app#/public_keys'>Public Keys</a>&#8221; in the top right navigation. You shouldn&#8217;t have any keys listed if this is the first key you are adding. Click the &#8220;Add Public key&#8221; button:</p>
+<p>Next, <a href="https://www.nitrous.io/users/sign_in">Login</a> to your Nitrous.IO account and click ”<a href="https://www.nitrous.io/app#/public_keys">Public Keys</a>” in the top right navigation. You shouldn’t have any keys listed if this is the first key you are adding. Click the “Add Public key” button:</p>
 
-<p><img alt='Public Key Button' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/add-public-key-button.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/add-public-key-button.png" alt="Public Key Button" /></p>
 
-<p>Next, add a name for the SSH key e.g. &#8220;AJ&#8217;s MBA&#8221;. This is helpful to identify which machines you&#8217;ve given access to your action boxes, so make it descriptive.</p>
+<p>Next, add a name for the SSH key e.g. “AJ’s MBA”. This is helpful to identify which machines you’ve given access to your action boxes, so make it descriptive.</p>
 
-<p>Then, paste your key into the &#8220;Key&#8221; field that you copied in section 2. of the article and click the &#8220;Add key&#8221;.</p>
+<p>Then, paste your key into the “Key” field that you copied in section 2. of the article and click the “Add key”.</p>
 
-<p><img alt='Public Key Form' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/public-key-form.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/public-key-form.png" alt="Public Key Form" /></p>
 
-<h3 id='3_make_sure_it_works'>3. Make sure it works</h3>
+<h3 id="3_make_sure_it_works">3. Make sure it works</h3>
 
-<p>To make sure everything works we&#8217;ll now SSH into your box. You&#8217;ll be asked to authenticate this action using your password, which is the passphrase you created earlier.</p>
+<p>To make sure everything works we’ll now SSH into your box. You’ll be asked to authenticate this action using your password, which is the passphrase you created earlier.</p>
 
-<p>Click the &#8221;<a href='https://www.nitrous.io/app#/boxes'>boxes</a>&#8221; link in the top navigation. Then click any box you&#8217;ve created to expand its details:</p>
+<p>Click the ”<a href="https://www.nitrous.io/app#/boxes">boxes</a>” link in the top navigation. Then click any box you’ve created to expand its details:</p>
 
-<p><img alt='Box Details' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/box-details.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/box-details.png" alt="Box Details" /></p>
 
 <p>Click the SSH URI link, it should look something like the link in the screenshot above.</p>
 
-<p>Your browser will attempt to open a local terminal session. If there&#8217;s a prompt like this, just click &#8220;Allow&#8221;:</p>
+<p>Your browser will attempt to open a local terminal session. If there’s a prompt like this, just click “Allow”:</p>
 
-<p><img alt='SSH Prompt' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/ssh-confirm-prompt.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/ssh-confirm-prompt.png" alt="SSH Prompt" /></p>
 
 <p>In your terminal, you might see something like this:</p>
 
@@ -249,12 +249,12 @@ Which should give you something like this:
 RSA key fingerprint is 57:b7:dd:50:04:09:e8:f8:e5:93:e1:2d:2f:46:a5:f5.
 Are you sure you want to continue connecting (yes/no)? yes</code></pre>
 
-<p>Don&#8217;t worry, this is supposed to happen. Verify that the fingerprint matches the one here and type &#8220;yes&#8221;. This will add your Nitrous box to your known_hosts ssh file.</p>
+<p>Don’t worry, this is supposed to happen. Verify that the fingerprint matches the one here and type “yes”. This will add your Nitrous box to your known_hosts ssh file.</p>
 
 <pre><code>Warning: Permanently added &#39;[apse1.actionbox.io]:10253, [54.251.42.128]:10253&#39; (RSA) to the list of known hosts.
 Welcome to Nitrous.IO (GNU/Linux 3.2.0-31-virtual x86_64)</code></pre>
 
-<p>Now you&#8217;ve got your SSH keys setup so you can connect via Terminal and use Vim or Emacs to code!</p>
+<p>Now you’ve got your SSH keys setup so you can connect via Terminal and use Vim or Emacs to code!</p>
   </div>
 </div>
 
