@@ -26,4 +26,6 @@ The following people have helped us keep Nitrous.IO safe for everyone.  We appre
 * [Shahee Mirza](http://twitter.com/shaheemirza)
 * [Sahil Saif](http://www.facebook.com/bewithsahilsaif)
 * [Ali Hasan Ghauri](https://twitter.com/alihasanghauri)
+* [Ashish B Dhaduk](https://twitter.com/ashishbdhaduk)
+* [Timofey Ermilov](https://twitter.com/yamalight)
 
