@@ -10,21 +10,13 @@ Nitrous Desktop is an app which can be installed on your desktop or laptop. The 
 
 #### Mac
 
-First you will need to change your security settings on your Mac. Navigate to the System Preferences by clicking the Apple icon in the top left menu bar, and select **System Preferences**.
-
-![Security and Privacy Settings](/images/articles/security-and-privacy.png)
-
-Next, unlock the settings by clicking the lock icon at the bottom left of the System Preferences window. Under 'Allow apps downloaded from', select **Anywhere**.
-
-![Mac App Security Settings](/images/articles/mac-app-security-settings.png)
-
-You can now [download](http://www.nitrous.io/mac) the archived app, and extract it to your Applications folder. 
+You can [download](http://www.nitrous.io/mac) the archived app, and extract it to your Applications folder. 
 
 Once you run the app you will see an 'N' in the menu bar. Click on it and select **Open Nitrous Desktop** to view the settings.
 
 ![Nitrous Desktop Menubar Icon](/images/articles/nitrous-desktop-menubar-icon.png)
 
-### File Syncing
+### <a name="file-sync"></a>File Syncing
 
 Nitrous Desktop will create a new folder on your local machine titled 'Nitrous', and will be found in your home folder within Finder. The content within your `~/workspace/` folder will be synced into the newly created Nitrous folder once enabled.
 
@@ -36,7 +28,7 @@ Next, click on the **File Sync** button to begin syncing. This will continue to 
 
 ![Nitrous Desktop File Sync](/images/articles/nitrous-desktop-file-sync.png)
 
-### Port Forwarding
+### <a name="port-forwarding"></a>Port Forwarding
 
 Port forwarding will allow you to forward any port to your localhost.
 
