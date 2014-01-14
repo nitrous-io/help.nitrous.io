@@ -16,7 +16,7 @@ Once you run the app you will see an 'N' in the menu bar. Click on it and select
 
 ![Nitrous Desktop Menubar Icon](/images/articles/nitrous-desktop-menubar-icon.png)
 
-### <a name="file-sync"></a>File Syncing
+### File Syncing
 
 Nitrous Desktop will create a new folder on your local machine titled 'Nitrous', and will be found in your home folder within Finder. The content within your `~/workspace/` folder will be synced into the newly created Nitrous folder once enabled.
 
@@ -28,7 +28,7 @@ Next, click on the **File Sync** button to begin syncing. This will continue to 
 
 ![Nitrous Desktop File Sync](/images/articles/nitrous-desktop-file-sync.png)
 
-### <a name="port-forwarding"></a>Port Forwarding
+### Port Forwarding
 
 Port forwarding will allow you to forward any port to your localhost.
 
