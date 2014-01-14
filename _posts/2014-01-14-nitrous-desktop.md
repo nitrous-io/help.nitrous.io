@@ -1,0 +1,43 @@
+---
+layout: article
+title: Nitrous Desktop Overview
+published: true
+---
+
+Nitrous Desktop is an app which can be installed on your desktop or laptop. The only version supported at this time is Mac, but Windows support will come soon.
+
+### Installation
+
+#### Mac
+
+First you will need to change your security settings on your Mac. Navigate to the System Preferences by clicking the Apple icon in the top left menu bar, and select **System Preferences**.
+
+![Security and Privacy Settings](/images/articles/security-and-privacy.png)
+
+Next, unlock the settings by clicking the lock icon at the bottom left of the System Preferences window. Under 'Allow apps downloaded from', select **Anywhere**.
+
+![Mac App Security Settings](/images/articles/mac-app-security-settings.png)
+
+You can now [download](http://www.nitrous.io/mac) the archived app, and extract it to your Applications folder. 
+
+Once you run the app you will see an 'N' in the menu bar. Click on it and select **Open Nitrous Desktop** to view the settings.
+
+![Nitrous Desktop Menubar Icon](/images/articles/nitrous-desktop-menubar-icon.png)
+
+### File Syncing
+
+Nitrous Desktop will create a new folder on your local machine titled 'Nitrous', and will be found in your home folder within Finder. The content within your `~/workspace/` folder will be synced into the newly created Nitrous folder once enabled.
+
+**Enable**: To enable File Sync, open Nitrous Desktop by clicking on the 'N' within the menu bar, and select **Open Nitrous Desktop**.
+
+![Nitrous Desktop Security Settings](/images/articles/nitrous-desktop-menubar-icon.png)
+
+Next, click on the **File Sync** button to begin syncing. This will continue to monitor and sync any future changes.
+
+![Nitrous Desktop File Sync](/images/articles/nitrous-desktop-file-sync.png)
+
+### Port Forwarding
+
+Port forwarding will allow you to forward any port to your localhost.
+
+![Nitrous Desktop Port Forwarding](/images/articles/nitrous-desktop-port-forwarding.png)
