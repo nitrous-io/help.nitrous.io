@@ -16,7 +16,7 @@ Once you run the app you will see an 'N' in the menu bar. Click on it and select
 
 ![Nitrous Desktop Menubar Icon](/images/articles/nitrous-desktop-menubar-icon.png)
 
-### File Syncing
+### File Sync
 
 Nitrous Desktop will create a new folder on your local machine titled 'Nitrous', and will be found in your home folder within Finder. The content within your `~/workspace/` folder will be synced into the newly created Nitrous folder once enabled.
 
