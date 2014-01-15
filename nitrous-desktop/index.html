@@ -186,7 +186,7 @@
 
 <h4 id="mac">Mac</h4>
 
-<p>You can <a href="http://www.nitrous.io/mac">download</a> the archived app, and extract it to your Applications folder.</p>
+<p>To install, <a href="http://www.nitrous.io/mac">download</a> the archived app, and extract it to your Applications folder.</p>
 
 <p>Once you run the app you will see an ‘N’ in the menu bar. Click on it and select <strong>Open Nitrous Desktop</strong> to view the settings.</p>
 
@@ -206,9 +206,37 @@
 
 <h3 id="port_forwarding">Port Forwarding</h3>
 
-<p>Port forwarding will allow you to forward any port to your localhost.</p>
+<p>Port forwarding allows for network communications within your Nitrous box to be forwarded to your private local area network.</p>
 
-<p><img src="/images/articles/nitrous-desktop-port-forwarding.png" alt="Nitrous Desktop Port Forwarding" /></p>
+<p><strong>Enable</strong>: To enable Port Forwarding, click on the <code>+</code> just below the Port Forwarding button within the Nitrous Desktop window. Type the port number you would like to forward, and press Return/Enter once finished. You can do this mulitple times to forward multiple ports.</p>
+
+<p><img src="/images/articles/nitrous-desktop-add-ports.png" alt="Nitrous Desktop Security Settings" /></p>
+
+<p>Once you have added the ports you wish to forward, click on the Port Forwarding button to enable:</p>
+
+<p><img src="/images/articles/nitrous-desktop-port-forwarding-enable.png" alt="Nitrous Desktop Security Settings" /></p>
+
+<h3 id="adding_an_ssh_key">Adding an SSH Key</h3>
+
+<p>If you have not already <a href="/categories/ssh/">added a SSH key</a> to your <a href="https://www.nitrous.io/app#/public_keys">Public Keys</a>, you can do this with Nitrous Desktop.</p>
+
+<p>Open the preferences by clicking on the ‘N’ within the menu bar, and select <strong>Preferences</strong>.</p>
+
+<p><img src="/images/articles/nitrous-desktop-preferences-menu.png" alt="Nitrous Desktop Preferences" /></p>
+
+<p>The screenshot below displays a scenario where you don’t have a private or public SSH key within <code>~/.ssh/</code>:</p>
+
+<p><img src="/images/articles/nitrous-desktop-ssh-1.png" alt="Nitrous Desktop Preferences View SSH Key" /></p>
+
+<p>If you do not have a private and public SSH key, click on <strong>Generate SSH Key Pair</strong>:</p>
+
+<p><img src="/images/articles/nitrous-desktop-ssh-2.png" alt="Nitrous Desktop Preferences Generate SSH Key" /></p>
+
+<p>Once you have both the SSH Keys available, click <strong>Register Public Key</strong>. You should receive an email confirmation that a new key has been added, and you should also see a new key within the Public Keys section of the app.</p>
+
+<p><img src="/images/articles/nitrous-desktop-ssh-3.png" alt="Nitrous Desktop Preferences Register SSH Key" /></p>
+
+<p>You should now be able to utilize all features within Nitrous Desktop.</p>
   </div>
 </div>
 
