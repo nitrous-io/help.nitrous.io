@@ -180,7 +180,9 @@
     <h1 class="article-title">Nitrous Desktop Overview</h1>
     <h5 class="note">Last Updated on: 14 January 2014</h5>
      
-    <p>Nitrous Desktop is an app which can be installed on your desktop or laptop. The only version supported at this time is Mac, but Windows support will come soon.</p>
+    <p>Nitrous Desktop is an app which can be installed on your desktop or laptop. This adds more functionality to your Nitrous account, including File Sync, Port Forwarding, SSH Key mangement, and the ability to Start/Stop/Restart your boxes.</p>
+
+<p><em>Windows users: A version for Windows is not yet available, but will be coming soon.</em></p>
 
 <h3 id="installation">Installation</h3>
 
@@ -188,7 +190,7 @@
 
 <p>To install, <a href="http://www.nitrous.io/mac">download</a> the archived app, and extract it to your Applications folder.</p>
 
-<p>Once you run the app you will see an ‘N’ in the menu bar. Click on it and select <strong>Open Nitrous Desktop</strong> to view the settings.</p>
+<p>Once you run the app you will see an <strong>N</strong> icon in the menu bar. Click on it and select <strong>Open Nitrous Desktop</strong> to view the settings.</p>
 
 <p><img src="/images/articles/nitrous-desktop-menubar-icon.png" alt="Nitrous Desktop Menubar Icon" /></p>
 
@@ -196,7 +198,7 @@
 
 <p>Nitrous Desktop will create a new folder on your local machine titled ‘Nitrous’, and will be found in your home folder within Finder. The content within your <code>~/workspace/</code> folder will be synced into the newly created Nitrous folder once enabled.</p>
 
-<p><strong>Enable</strong>: To enable File Sync, open Nitrous Desktop by clicking on the ‘N’ within the menu bar, and select <strong>Open Nitrous Desktop</strong>.</p>
+<p><strong>Enable</strong>: To enable File Sync, open Nitrous Desktop by clicking on the <strong>N</strong> icon within the menu bar, and select <strong>Open Nitrous Desktop</strong>.</p>
 
 <p><img src="/images/articles/nitrous-desktop-menubar-icon.png" alt="Nitrous Desktop Security Settings" /></p>
 
@@ -208,7 +210,7 @@
 
 <p>Port forwarding allows for network communications within your Nitrous box to be forwarded to your private local area network.</p>
 
-<p><strong>Enable</strong>: To enable Port Forwarding, click on the <code>+</code> just below the Port Forwarding button within the Nitrous Desktop window. Type the port number you would like to forward, and press Return/Enter once finished. You can do this mulitple times to forward multiple ports.</p>
+<p><strong>Enable</strong>: To enable Port Forwarding, click on the <code>+</code> icon just below the Port Forwarding button. Enter in the port number you would like to forward, and press Return once finished. You can do this mulitple times to forward multiple ports.</p>
 
 <p><img src="/images/articles/nitrous-desktop-add-ports.png" alt="Nitrous Desktop Security Settings" /></p>
 
@@ -220,23 +222,23 @@
 
 <p>If you have not already <a href="/categories/ssh/">added a SSH key</a> to your <a href="https://www.nitrous.io/app#/public_keys">Public Keys</a>, you can do this with Nitrous Desktop.</p>
 
-<p>Open the preferences by clicking on the ‘N’ within the menu bar, and select <strong>Preferences</strong>.</p>
-
-<p><img src="/images/articles/nitrous-desktop-preferences-menu.png" alt="Nitrous Desktop Preferences" /></p>
-
-<p>The screenshot below displays a scenario where you don’t have a private or public SSH key within <code>~/.ssh/</code>:</p>
+<p>When Nitrous Desktop is opened, you will be prompted to generate and register new SSH keys if not already completed.</p>
 
 <p><img src="/images/articles/nitrous-desktop-ssh-1.png" alt="Nitrous Desktop Preferences View SSH Key" /></p>
 
-<p>If you do not have a private and public SSH key, click on <strong>Generate SSH Key Pair</strong>:</p>
+<p>If you need to access the settings for your SSH keys, open the preferences by clicking on the <strong>N</strong> icon within the menu bar and select <strong>Preferences</strong>.</p>
+
+<p><img src="/images/articles/nitrous-desktop-preferences-menu.png" alt="Nitrous Desktop Preferences" /></p>
+
+<p>You can generate a new SSH Key by clicking on <strong>Generate SSH Key Pair</strong>:</p>
 
 <p><img src="/images/articles/nitrous-desktop-ssh-2.png" alt="Nitrous Desktop Preferences Generate SSH Key" /></p>
 
-<p>Once you have both the SSH Keys available, click <strong>Register Public Key</strong>. You should receive an email confirmation that a new key has been added, and you should also see a new key within the Public Keys section of the app.</p>
+<p>If you have both the SSH Keys available, click <strong>Register Public Key</strong>. You should receive an email confirmation that a new key has been added. You will also see a new key within the Public Keys section of the app.</p>
 
 <p><img src="/images/articles/nitrous-desktop-ssh-3.png" alt="Nitrous Desktop Preferences Register SSH Key" /></p>
 
-<p>You should now be able to utilize all features within Nitrous Desktop.</p>
+<p>Once an SSH key pair is established, you will be able to utilize all features within Nitrous Desktop.</p>
   </div>
 </div>
 
