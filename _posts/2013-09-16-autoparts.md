@@ -10,7 +10,7 @@ Autoparts is a package manager for Nitrous.IO which allows you to install databa
 
 ### Installing Autoparts
 
-Autoparts is available on all boxes with version `bran` which were created after 9-17-2013.
+Autoparts is available on all `bran`, `cersei` and `drogo` boxes created after 17 Sep 2013.
 
 Run the following command in your terminal to see if Autoparts is installed:
 
@@ -21,7 +21,7 @@ If you do not see information for the Autoparts package manager you can install 
     ruby -e "$(curl -fsSL https://raw.github.com/action-io/autoparts/master/setup.rb)"
     exec $SHELL -l
 
-You can also check the [boxes page](https://www.nitrous.io/app#/boxes) to see which version you are running on. The screenshot below shows version `bran` under the stack information:
+You can also check the [boxes page](https://www.nitrous.io/app#/boxes) to see which version you are running on. The screenshot below shows a `bran` box under the "Stack" section:
 
 ![Bran version Nitrous Box](/images/articles/bran-box.png)
 
