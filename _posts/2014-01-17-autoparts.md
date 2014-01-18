@@ -10,7 +10,7 @@ Autoparts is a package manager for Nitrous.IO which allows you to install databa
 
 *Autoparts is available on all Nitrous boxes created after September 17th, 2013. If your box was created prior to this, please view the README within the [Github Repo](https://github.com/action-io/autoparts) for installation instructions.*
 
-### Usage
+### Installing Packages
 
 You can install a new package by navigating to `Autoparts > Install Parts...` within the menu bar.
 
@@ -20,13 +20,19 @@ Once opened, you can filter or scroll through the available packages which are a
 
 ![Autoparts UI Packages](/images/articles/autoparts-ui-packages.png)
 
-If a database is installed, you will need to start the database after installation. Navigate to `Autoparts > Start/Stop Parts...` in order to start the database.
+### Starting and Stopping Parts
 
-*Note: If your Nitrous box is shutdown at any point, you will need to start the database back up the next time the box is started.*
+*Some parts, such as databases, need to be started after installation.*
+
+If you have installed a database, initialize it by navigating to `Autoparts > Start/Stop Parts...`. Click `Start` next to the parts you wish to run, keeping in mind of the [memory resources](/box-settings/) they will utilize.
 
 ![Autoparts UI Packages](/images/articles/autoparts-ui-start-package.png)
 
+*Note: If your Nitrous box is shutdown at any point, you will need to start the database back up the next time the box is started.*
+
 ### Command-Line Interface
+
+You can also launch Autoparts from the command line. This is helpful if you are connecting to your Nitrous box via [SSH](/categories/ssh/).
 
 To view all of the packages available to install, run the following command:
 
