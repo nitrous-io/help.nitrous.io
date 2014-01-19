@@ -63,3 +63,21 @@ If you have both the SSH Keys available, click **Register Public Key**. You shou
 ![Nitrous Desktop Preferences Register SSH Key](/images/articles/nitrous-desktop-ssh-3.png)
 
 Once an SSH key pair is established, you will be able to utilize all features within Nitrous Desktop.
+
+### Files not Synced
+
+There are certain file types which will not be synced by Nitrous Desktop. Files such as .git may cause conflicts if utilized locally, and other files may not be of any use on your local machine. Here are a list of file types which are ignored:
+
+* `.unison`
+* `.git`
+* `.svn`
+* `.hg`
+* `CVS`
+* `.DS_Store`
+* `.AppleDouble`
+* `.LSOverride`
+* `.Spotlight-V100`
+* `.Trashes`
+* `*.sock`
+* `*.sw?`
+* `._*` , `*~`
