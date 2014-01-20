@@ -1,8 +1,9 @@
 ---
 title: Using WebSockets on Nitrous.IO
 published: true
-category: tutorials
 layout: article
+category: previewing
+mitem: websockets
 ---
 
 ### Introduction

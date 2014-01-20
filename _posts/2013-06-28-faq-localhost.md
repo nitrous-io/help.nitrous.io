@@ -52,3 +52,7 @@ Launch the Web IDE for your box, click the "Preview" menu and select the port wh
 In your list of boxes, click the box name to toggle it's details, copy the Preview URL and paste it in your browser. Change the port to 3000 or the applicable port where your server is running.
 
 ![Box Preview URL](https://raw.github.com/action-io/action-assets/master/support/screenshots/box-preview-url.png)
+
+### "My office firewall blocks all ports except port 80"
+
+We do forward requests received on port 80 to port 3000. If you are behind a firewall, you can bind your server to port 3000 and use the Preview URL without any port (eg. _http://yourboxname.use1.nitrousbox.com_) to access your site.
