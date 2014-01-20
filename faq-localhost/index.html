@@ -117,9 +117,10 @@
     <a href="/categories/previewing/">Preview</a>
     <ul class="nav">
       <li ><a href="/preview">Previewing Your App</a></li>
-      <li ><a href="/faq-websockets">Websockets</a></li>
-      <li  class="mi_active" ><a href="/faq-localhost">Preview Issues</a></li>
+      <li ><a href="/websockets">Websockets</a></li>
       <li ><a href="/ssl">SSL</a></li>
+      <li ><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
+      <li  class="mi_active" ><a href="/faq-localhost">Preview Issues</a></li>
     </ul>
   </li>
   
@@ -185,7 +186,7 @@
 
 <p>Your application will need to run on 0.0.0.0 or a specific IP address. Listening on port 3000 will allow you to use our preview menu for a shortcut.</p>
 
-<h3 id="nodejs_example">Node.js example</h3>
+<h3 id='nodejs_example'>Node.js example</h3>
 
 <p>Setting up a hello world web server on port 3000 using node.js.</p>
 <pre class='prettyprint lang-javascript'>
@@ -200,29 +201,33 @@
 
 <pre><code>node helloworld.js</code></pre>
 
-<h3 id="python_example">Python example</h3>
+<h3 id='python_example'>Python example</h3>
 
-<p>When running a simple development server with <a href="https://docs.djangoproject.com/en/dev/intro/">Django</a>, we recommend:</p>
+<p>When running a simple development server with <a href='https://docs.djangoproject.com/en/dev/intro/'>Django</a>, we recommend:</p>
 
 <pre><code>python manage.py runserver 0.0.0.0:3000</code></pre>
 
-<h3 id="python_on_google_app_engine">Python on Google App Engine</h3>
+<h3 id='python_on_google_app_engine'>Python on Google App Engine</h3>
 
-<p>When running the development app server on <a href="https://developers.google.com/appengine/docs/python/gettingstarted/">Google App Engine</a>, we recommend:</p>
+<p>When running the development app server on <a href='https://developers.google.com/appengine/docs/python/gettingstarted/'>Google App Engine</a>, we recommend:</p>
 
 <pre><code>dev_appserver.py --host=0.0.0.0 --port=3000</code></pre>
 
-<h3 id="previewing_the_application">Previewing the application</h3>
+<h3 id='previewing_the_application'>Previewing the application</h3>
 
 <p>We supply some sensible default ports to enable you to preview your work in the browser. You can get your preview link in 1 of 2 ways:</p>
 
-<p>Launch the Web IDE for your box, click the “Preview” menu and select the port where your web server is running.</p>
+<p>Launch the Web IDE for your box, click the &#8220;Preview&#8221; menu and select the port where your web server is running.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/preview-menu.png" alt="Preview Menu" /></p>
+<p><img alt='Preview Menu' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/preview-menu.png' /></p>
 
-<p>In your list of boxes, click the box name to toggle it’s details, copy the Preview URL and paste it in your browser. Change the port to 3000 or the applicable port where your server is running.</p>
+<p>In your list of boxes, click the box name to toggle it&#8217;s details, copy the Preview URL and paste it in your browser. Change the port to 3000 or the applicable port where your server is running.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/box-preview-url.png" alt="Box Preview URL" /></p>
+<p><img alt='Box Preview URL' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/box-preview-url.png' /></p>
+
+<h3 id='my_office_firewall_blocks_all_ports_except_port_80'>&#8220;My office firewall blocks all ports except port 80&#8221;</h3>
+
+<p>We do forward requests received on port 80 to port 3000. If you are behind a firewall, you can bind your server to port 3000 and use the Preview URL without any port (eg. <em>http://yourboxname.use1.nitrousbox.com</em>) to access your site.</p>
   </div>
 </div>
 

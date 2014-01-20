@@ -117,9 +117,10 @@
     <a href="/categories/previewing/">Preview</a>
     <ul class="nav">
       <li ><a href="/preview">Previewing Your App</a></li>
-      <li ><a href="/faq-websockets">Websockets</a></li>
-      <li ><a href="/faq-localhost">Preview Issues</a></li>
+      <li ><a href="/websockets">Websockets</a></li>
       <li ><a href="/ssl">SSL</a></li>
+      <li ><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
+      <li ><a href="/faq-localhost">Preview Issues</a></li>
     </ul>
   </li>
   
@@ -181,17 +182,17 @@
     <h1 class="article-title">Building a Django App</h1>
     <h5 class="note">Last Updated on: 15 November 2013</h5>
      
-    <p>This article covers building a Django application on <a href="http://www.nitrous.io">Nitrous.IO</a> with Python 2.7, or any Python version you want to use.</p>
+    <p>This article covers building a Django application on <a href='http://www.nitrous.io'>Nitrous.IO</a> with Python 2.7, or any Python version you want to use.</p>
 
-<h3 id="prerequisites">Prerequisites</h3>
+<h3 id='prerequisites'>Prerequisites</h3>
 
 <ul>
-<li>A <a href="https://www.nitrous.io">Nitrous.IO account</a></li>
+<li>A <a href='https://www.nitrous.io'>Nitrous.IO account</a></li>
 
-<li>A <a href="http://help.action.io/customer/portal/articles/802603-create-a-box">Python Box</a> on Nitrous.IO.</li>
+<li>A <a href='http://help.action.io/customer/portal/articles/802603-create-a-box'>Python Box</a> on Nitrous.IO.</li>
 </ul>
 
-<h3 id="creating_a_isolated_environment_with_virtualenv">Creating a isolated environment with Virtualenv</h3>
+<h3 id='creating_a_isolated_environment_with_virtualenv'>Creating a isolated environment with Virtualenv</h3>
 
 <p>Virtualenv allows you to create an isolated environment in order to install specific versions and dependencies.</p>
 
@@ -211,7 +212,7 @@
 <p>If you decide you want to disconnect from this environment at any point, type <code>deactivate</code> in the console.</p>
 </blockquote>
 
-<h3 id="creating_a_new_project">Creating a new project</h3>
+<h3 id='creating_a_new_project'>Creating a new project</h3>
 
 <p>For this example, we will first want to create a project. You can create multiple apps within the project, but we will get to that later. cd into your <code>~/workspace/</code> folder and run the following command to create a new project:</p>
 
@@ -223,15 +224,15 @@
 
 <p>After a moment you should see that the app is running on port 3000. Navigate in the menu bar to <strong>Preview &gt; Port 3000</strong>.</p>
 
-<p><img src="/images/articles/preview-port-3000.png" alt="Preview Port 3000" /></p>
+<p><img alt='Preview Port 3000' src='/images/articles/preview-port-3000.png' /></p>
 
 <blockquote>
 <p>Note: To preview apps on Nitrous.IO, you will need to ensure it is running with the host 0.0.0.0 instead of localhost/127.0.0.1. You can also run it on any port between 1024 - 9999.</p>
 </blockquote>
 
-<h3 id="configuring_mysql_optional">Configuring MySQL (Optional)</h3>
+<h3 id='configuring_mysql_optional'>Configuring MySQL (Optional)</h3>
 
-<p>The Django project is configured to use SQLite by default, but you can change this to use other databases such as MySQL and PostgreSQL. If you you want to go the MySQL route, you will first need to install it. Nitrous offers a package manager, <a href="/autoparts/">Autoparts</a>, which will allow you to install <a href="http://help.nitrous.io/mysql/">MySQL</a> directly on your Nitrous box. Run the following command to install MySQL:</p>
+<p>The Django project is configured to use SQLite by default, but you can change this to use other databases such as MySQL and PostgreSQL. If you you want to go the MySQL route, you will first need to install it. Nitrous offers a package manager, <a href='/autoparts/'>Autoparts</a>, which will allow you to install <a href='http://help.nitrous.io/mysql/'>MySQL</a> directly on your Nitrous box. Run the following command to install MySQL:</p>
 
 <pre><code>$ parts install mysql</code></pre>
 
@@ -280,11 +281,11 @@ Creating table django_session
 You just installed Django&#39;s auth system, which means you don&#39;t have any superusers defined.
 Would you like to create one now? (yes/no): yes</code></pre>
 
-<h3 id="creating_an_app">Creating an App</h3>
+<h3 id='creating_an_app'>Creating an App</h3>
 
-<p>You already have the project <code>mysite</code> setup, along with an established database. This section will summarize part 1 and 2 of <a href="https://docs.djangoproject.com/en/dev/intro/tutorial01/">Djangoproject’s tutorial</a> to help you get started with it on Nitrous, but we strongly encourage you to follow that tutorial for the best learning experience.</p>
+<p>You already have the project <code>mysite</code> setup, along with an established database. This section will summarize part 1 and 2 of <a href='https://docs.djangoproject.com/en/dev/intro/tutorial01/'>Djangoproject&#8217;s tutorial</a> to help you get started with it on Nitrous, but we strongly encourage you to follow that tutorial for the best learning experience.</p>
 
-<p>Let’s create a polls app by navigating into the <code>/mysite</code> folder and running the following command:</p>
+<p>Let&#8217;s create a polls app by navigating into the <code>/mysite</code> folder and running the following command:</p>
 
 <pre><code>python manage.py startapp polls</code></pre>
 
@@ -301,7 +302,7 @@ class Choice(models.Model):
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)</code></pre>
 
-<p>You will need to add the blog app to your project. To to this, edit <code>mysite/settings.py</code> and include the string ‘polls’ within the INSTALLED_APPS setting:</p>
+<p>You will need to add the blog app to your project. To to this, edit <code>mysite/settings.py</code> and include the string &#8216;polls&#8217; within the INSTALLED_APPS setting:</p>
 
 <pre><code>INSTALLED_APPS = (
     &#39;django.contrib.admin&#39;,
@@ -339,10 +340,10 @@ class QuestionAdmin(admin.ModelAdmin):
 admin.site.register(Question, QuestionAdmin)</code></pre>
 
 <blockquote>
-<p>If you want a more in depth explanation on how the <code>polls/admin.py</code> builds the admin form, read the tutorial at <a href="https://docs.djangoproject.com/en/dev/intro/tutorial02/">djangoproject.com</a>.</p>
+<p>If you want a more in depth explanation on how the <code>polls/admin.py</code> builds the admin form, read the tutorial at <a href='https://docs.djangoproject.com/en/dev/intro/tutorial02/'>djangoproject.com</a>.</p>
 </blockquote>
 
-<h3 id="connecting_to_the_app">Connecting to the app</h3>
+<h3 id='connecting_to_the_app'>Connecting to the app</h3>
 
 <p>Run your project again with the following command:</p>
 
@@ -350,23 +351,23 @@ admin.site.register(Question, QuestionAdmin)</code></pre>
 
 <p>Navigate in the menu bar to <strong>Preview &gt; Port 3000</strong>, and add <code>/admin</code> to the end of the URL within the address bar. You should see the login page below.</p>
 
-<p><img src="/images/articles/django-admin-login.png" alt="Django Admin Login" /></p>
+<p><img alt='Django Admin Login' src='/images/articles/django-admin-login.png' /></p>
 
 <p>Use the superuser login credentials you created earlier. If you did not select your own username then the default is <code>action</code>, and the password was created by you when running syncdb.</p>
 
-<p><img src="/images/articles/django-admin-page.png" alt="Django Admin Page" /></p>
+<p><img alt='Django Admin Page' src='/images/articles/django-admin-page.png' /></p>
 
 <p>Once you are in the Admin section, click <strong>Questions</strong> within the Polls section. Add a question to this section along with 3 choices, and save your changes.</p>
 
-<p><img src="/images/articles/django-poll-admin.png" alt="Django Poll Admin" /></p>
+<p><img alt='Django Poll Admin' src='/images/articles/django-poll-admin.png' /></p>
 
 <p>You have now built your fist question within the app.</p>
 
-<p>At this point you have configured an app which utilizes <a href="/mysql/">MySQL</a> and has the admin section established. You should be familiar with <a href="/autoparts/">Autoparts</a>, Virtualenv, and how to <a href="/preview/">preview</a> your app on Nitrous. To learn about the next steps on creating the public interface, jump back to <a href="https://docs.djangoproject.com/en/dev/intro/tutorial03/">part 3</a> of DjangoProject’s guide.</p>
+<p>At this point you have configured an app which utilizes <a href='/mysql/'>MySQL</a> and has the admin section established. You should be familiar with <a href='/autoparts/'>Autoparts</a>, Virtualenv, and how to <a href='/preview/'>preview</a> your app on Nitrous. To learn about the next steps on creating the public interface, jump back to <a href='https://docs.djangoproject.com/en/dev/intro/tutorial03/'>part 3</a> of DjangoProject&#8217;s guide.</p>
 
-<h3 id="deployment">Deployment</h3>
+<h3 id='deployment'>Deployment</h3>
 
-<p>To deploy to production, we recommend using <a href="https://developers.google.com/appengine/">Google App Engine</a>. To learn how to deploy to App Engine, take a look at our <a href="http://help.nitrous.io/app-engine/">deployment guide</a>.</p>
+<p>To deploy to production, we recommend using <a href='https://developers.google.com/appengine/'>Google App Engine</a>. To learn how to deploy to App Engine, take a look at our <a href='http://help.nitrous.io/app-engine/'>deployment guide</a>.</p>
   </div>
 </div>
 

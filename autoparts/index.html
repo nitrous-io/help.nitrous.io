@@ -117,9 +117,10 @@
     <a href="/categories/previewing/">Preview</a>
     <ul class="nav">
       <li ><a href="/preview">Previewing Your App</a></li>
-      <li ><a href="/faq-websockets">Websockets</a></li>
-      <li ><a href="/faq-localhost">Preview Issues</a></li>
+      <li ><a href="/websockets">Websockets</a></li>
       <li ><a href="/ssl">SSL</a></li>
+      <li ><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
+      <li ><a href="/faq-localhost">Preview Issues</a></li>
     </ul>
   </li>
   
@@ -179,34 +180,35 @@
 
   <div class="col-md-9">
     <h1 class="article-title">Installing Databases and Tools with Autoparts</h1>
-    <h5 class="note">Last Updated on: 16 September 2013</h5>
+    <h5 class="note">Last Updated on: 17 January 2014</h5>
      
     <p>Autoparts is a package manager for Nitrous.IO which allows you to install databases and other tools on your box within your home folder.</p>
 
-<h3 id="installing_autoparts">Installing Autoparts</h3>
+<p><em>Autoparts is available on all Nitrous boxes created after September 17th, 2013. If your box was created prior to this, please view the README within the <a href='https://github.com/action-io/autoparts'>Github Repo</a> for installation instructions.</em></p>
 
-<p>Autoparts is available on all <code>bran</code>, <code>cersei</code> and <code>drogo</code> boxes created after 17 Sep 2013.</p>
+<h3 id='installing_packages'>Installing Packages</h3>
 
-<p>Run the following command in your terminal to see if Autoparts is installed:</p>
+<p>You can install a new package by navigating to <code>Autoparts &gt; Install Parts...</code> within the menu bar.</p>
 
-<pre><code>parts</code></pre>
+<p><img alt='Autoparts UI Install' src='/images/articles/autoparts-ui-install.png' /></p>
 
-<p>If you do not see information for the Autoparts package manager you can install it with the following two commands:</p>
+<p>Once opened, you can filter or scroll through the available packages which are available for installation.</p>
 
-<pre><code>ruby -e &quot;$(curl -fsSL https://raw.github.com/action-io/autoparts/master/setup.rb)&quot;
-exec $SHELL -l</code></pre>
+<p><img alt='Autoparts UI Packages' src='/images/articles/autoparts-ui-packages.png' /></p>
 
-<p>You can also check the <a href="https://www.nitrous.io/app#/boxes">boxes page</a> to see which version you are running on. The screenshot below shows a <code>bran</code> box under the “Stack” section:</p>
+<h3 id='starting_and_stopping_parts'>Starting and Stopping Parts</h3>
 
-<p><img src="/images/articles/bran-box.png" alt="Bran version Nitrous Box" /></p>
+<p><em>Some parts, such as databases, need to be started after installation.</em></p>
 
-<h3 id="updating_autoparts">Updating Autoparts</h3>
+<p>If you have installed a database, initialize it by navigating to <code>Autoparts &gt; Start/Stop Parts...</code>. Click <code>Start</code> next to the parts you wish to run, keeping in mind of the <a href='/box-settings/'>memory resources</a> they will utilize.</p>
 
-<p>New tools, interpreters, and databases are always being added to Autoparts. To update Autoparts with the latest changes, run the following command:</p>
+<p><img alt='Autoparts UI Packages' src='/images/articles/autoparts-ui-start-package.png' /></p>
 
-<pre><code>parts update</code></pre>
+<p><em>Note: If your Nitrous box is shutdown at any point, you will need to start the database back up the next time the box is started.</em></p>
 
-<h3 id="installing_a_package">Installing a Package</h3>
+<h3 id='commandline_interface'>Command-Line Interface</h3>
+
+<p>You can also launch Autoparts from the command line. This is helpful if you are connecting to your Nitrous box via <a href='/categories/ssh/'>SSH</a>.</p>
 
 <p>To view all of the packages available to install, run the following command:</p>
 
@@ -223,6 +225,20 @@ phantomjs (1.9.1)          PhantomJS: A headless WebKit scriptable wit...</code>
 <p>Ex: To install MySQL, run the following command:</p>
 
 <pre><code>parts install mysql</code></pre>
+
+<p>Once MySQL is installed, you will need to start the database. This step is necessary for any database.</p>
+
+<pre><code>parts start mysql</code></pre>
+
+<h3 id='updating_autoparts'>Updating Autoparts</h3>
+
+<p>New tools, interpreters, and databases are always being added to Autoparts. To update Autoparts with the latest changes, run the following command within the console:</p>
+
+<pre><code>parts update</code></pre>
+
+<h3 id='additional_parts'>Additional Parts</h3>
+
+<p>If you are wanting to install a tool which is not available within Autoparts, you can <a href='/autoparts-packages/'>create a new parts package</a> by submitting a pull request. The Nitrous team is actively contributing as well, so feel free to <a href='mailto:support@nitrous.io'>contact us</a> with your request.</p>
   </div>
 </div>
 

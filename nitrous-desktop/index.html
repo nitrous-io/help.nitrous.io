@@ -117,9 +117,10 @@
     <a href="/categories/previewing/">Preview</a>
     <ul class="nav">
       <li ><a href="/preview">Previewing Your App</a></li>
-      <li ><a href="/faq-websockets">Websockets</a></li>
-      <li ><a href="/faq-localhost">Preview Issues</a></li>
+      <li ><a href="/websockets">Websockets</a></li>
       <li ><a href="/ssl">SSL</a></li>
+      <li ><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
+      <li ><a href="/faq-localhost">Preview Issues</a></li>
     </ul>
   </li>
   
@@ -185,61 +186,93 @@
 
 <p><em>Windows users: A version for Windows is not yet available, but will be coming soon.</em></p>
 
-<h3 id="installation">Installation</h3>
+<h3 id='installation'>Installation</h3>
 
-<h4 id="mac">Mac</h4>
+<h4 id='mac'>Mac</h4>
 
-<p>To install, <a href="http://www.nitrous.io/mac">download</a> the archived app, and extract it to your Applications folder.</p>
+<p>To install, <a href='http://www.nitrous.io/mac'>download</a> the archived app, and extract it to your Applications folder.</p>
 
 <p>Once you run the app you will see an <strong>N</strong> icon in the menu bar. Click on it and select <strong>Open Nitrous Desktop</strong> to view the settings.</p>
 
-<p><img src="/images/articles/nitrous-desktop-menubar-icon.png" alt="Nitrous Desktop Menubar Icon" /></p>
+<p><img alt='Nitrous Desktop Menubar Icon' src='/images/articles/nitrous-desktop-menubar-icon.png' /></p>
 
-<h3 id="file_sync">File Sync</h3>
+<h3 id='file_sync'>File Sync</h3>
 
-<p>Nitrous Desktop will create a new folder on your local machine titled ‘Nitrous’, and will be found in your home folder within Finder. The content within your <code>~/workspace/</code> folder will be synced into the newly created Nitrous folder once enabled.</p>
+<p>Nitrous Desktop will create a new folder on your local machine titled &#8216;Nitrous&#8217;, and will be found in your home folder within Finder. The content within your <code>~/workspace/</code> folder will be synced into the newly created Nitrous folder once enabled.</p>
 
 <p><strong>Enable</strong>: To enable File Sync, open Nitrous Desktop by clicking on the <strong>N</strong> icon within the menu bar, and select <strong>Open Nitrous Desktop</strong>.</p>
 
-<p><img src="/images/articles/nitrous-desktop-menubar-icon.png" alt="Nitrous Desktop Security Settings" /></p>
+<p><img alt='Nitrous Desktop Security Settings' src='/images/articles/nitrous-desktop-menubar-icon.png' /></p>
 
 <p>Next, click on the <strong>File Sync</strong> button to begin syncing. This will continue to monitor and sync any future changes.</p>
 
-<p><img src="/images/articles/nitrous-desktop-file-sync.png" alt="Nitrous Desktop File Sync" /></p>
+<p><img alt='Nitrous Desktop File Sync' src='/images/articles/nitrous-desktop-file-sync.png' /></p>
 
-<h3 id="port_forwarding">Port Forwarding</h3>
+<h3 id='port_forwarding'>Port Forwarding</h3>
 
 <p>Port forwarding allows for network communications within your Nitrous box to be forwarded to your private local area network.</p>
 
 <p><strong>Enable</strong>: To enable Port Forwarding, click on the <code>+</code> icon just below the Port Forwarding button. Enter in the port number you would like to forward, and press Return once finished. You can do this mulitple times to forward multiple ports.</p>
 
-<p><img src="/images/articles/nitrous-desktop-add-ports.png" alt="Nitrous Desktop Security Settings" /></p>
+<p><img alt='Nitrous Desktop Security Settings' src='/images/articles/nitrous-desktop-add-ports.png' /></p>
 
 <p>Once you have added the ports you wish to forward, click on the Port Forwarding button to enable:</p>
 
-<p><img src="/images/articles/nitrous-desktop-port-forwarding-enable.png" alt="Nitrous Desktop Security Settings" /></p>
+<p><img alt='Nitrous Desktop Security Settings' src='/images/articles/nitrous-desktop-port-forwarding-enable.png' /></p>
 
-<h3 id="adding_an_ssh_key">Adding an SSH Key</h3>
+<h3 id='adding_an_ssh_key'>Adding an SSH Key</h3>
 
-<p>If you have not already <a href="/categories/ssh/">added a SSH key</a> to your <a href="https://www.nitrous.io/app#/public_keys">Public Keys</a>, you can do this with Nitrous Desktop.</p>
+<p>If you have not already <a href='/categories/ssh/'>added a SSH key</a> to your <a href='https://www.nitrous.io/app#/public_keys'>Public Keys</a>, you can do this with Nitrous Desktop.</p>
 
 <p>When Nitrous Desktop is opened, you will be prompted to generate and register new SSH keys if not already completed.</p>
 
-<p><img src="/images/articles/nitrous-desktop-ssh-1.png" alt="Nitrous Desktop Preferences View SSH Key" /></p>
+<p><img alt='Nitrous Desktop Preferences View SSH Key' src='/images/articles/nitrous-desktop-ssh-1.png' /></p>
 
 <p>If you need to access the settings for your SSH keys, open the preferences by clicking on the <strong>N</strong> icon within the menu bar and select <strong>Preferences</strong>.</p>
 
-<p><img src="/images/articles/nitrous-desktop-preferences-menu.png" alt="Nitrous Desktop Preferences" /></p>
+<p><img alt='Nitrous Desktop Preferences' src='/images/articles/nitrous-desktop-preferences-menu.png' /></p>
 
 <p>You can generate a new SSH Key by clicking on <strong>Generate SSH Key Pair</strong>:</p>
 
-<p><img src="/images/articles/nitrous-desktop-ssh-2.png" alt="Nitrous Desktop Preferences Generate SSH Key" /></p>
+<p><img alt='Nitrous Desktop Preferences Generate SSH Key' src='/images/articles/nitrous-desktop-ssh-2.png' /></p>
 
 <p>If you have both the SSH Keys available, click <strong>Register Public Key</strong>. You should receive an email confirmation that a new key has been added. You will also see a new key within the Public Keys section of the app.</p>
 
-<p><img src="/images/articles/nitrous-desktop-ssh-3.png" alt="Nitrous Desktop Preferences Register SSH Key" /></p>
+<p><img alt='Nitrous Desktop Preferences Register SSH Key' src='/images/articles/nitrous-desktop-ssh-3.png' /></p>
 
 <p>Once an SSH key pair is established, you will be able to utilize all features within Nitrous Desktop.</p>
+
+<h3 id='files_not_synced'>Files not Synced</h3>
+
+<p>There are certain file types which will not be synced by Nitrous Desktop. Files such as .git may cause conflicts if utilized locally, and other files may not be of any use on your local machine. Here are a list of file types which are ignored:</p>
+
+<ul>
+<li><code>.unison</code></li>
+
+<li><code>.git</code></li>
+
+<li><code>.svn</code></li>
+
+<li><code>.hg</code></li>
+
+<li><code>CVS</code></li>
+
+<li><code>.DS_Store</code></li>
+
+<li><code>.AppleDouble</code></li>
+
+<li><code>.LSOverride</code></li>
+
+<li><code>.Spotlight-V100</code></li>
+
+<li><code>.Trashes</code></li>
+
+<li><code>*.sock</code></li>
+
+<li><code>*.sw?</code></li>
+
+<li><code>._*</code> , <code>*~</code></li>
+</ul>
   </div>
 </div>
 

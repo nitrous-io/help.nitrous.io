@@ -117,9 +117,10 @@
     <a href="/categories/previewing/">Preview</a>
     <ul class="nav">
       <li ><a href="/preview">Previewing Your App</a></li>
-      <li ><a href="/faq-websockets">Websockets</a></li>
-      <li ><a href="/faq-localhost">Preview Issues</a></li>
+      <li ><a href="/websockets">Websockets</a></li>
       <li ><a href="/ssl">SSL</a></li>
+      <li ><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
+      <li ><a href="/faq-localhost">Preview Issues</a></li>
     </ul>
   </li>
   
@@ -181,29 +182,29 @@
     <h1 class="article-title">Upload an existing application</h1>
     <h5 class="note">Last Updated on: 28 June 2013</h5>
      
-    <p>We get a lot of emails asking how to upload applications to an Nitrous.IO box. There are many ways to do this; using SCP, installing the <a href="https://www.nitrous.io/mac">Mac App</a>, and in this guide SFTP and Git.</p>
+    <p>We get a lot of emails asking how to upload applications to an Nitrous.IO box. There are many ways to do this; using SCP, installing the <a href='https://www.nitrous.io/mac'>Mac App</a>, and in this guide SFTP and Git.</p>
 
-<h3 id="uploading_your_project_via_sftp">Uploading your project via SFTP</h3>
+<h3 id='uploading_your_project_via_sftp'>Uploading your project via SFTP</h3>
 
 <p>Uploading via SFTP requires that you have set up your public / private keypair on your machine and added your public key to Nitrous.IO. To do this, we recommend that you use PuttyGen. Visit this link and look for the PuttyGen download:</p>
 
-<p><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a></p>
+<p><a href='http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html'>http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a></p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/puttygen.png" alt="PuTTYgen" /></p>
+<p><img alt='PuTTYgen' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/puttygen.png' /></p>
 
 <p>Click the <strong>PuTTYgen.exe</strong> link to download the application.</p>
 
-<p>Open PuTTYgen and click the <strong>Generate</strong> button next to “Generate a public/private keypair”.</p>
+<p>Open PuTTYgen and click the <strong>Generate</strong> button next to &#8220;Generate a public/private keypair&#8221;.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/putty-keygen.png" alt="keygen button" /></p>
+<p><img alt='keygen button' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/putty-keygen.png' /></p>
 
-<p>You’ll be asked to move your mouse around to help PuTTY generate a random keypair for you.</p>
+<p>You&#8217;ll be asked to move your mouse around to help PuTTY generate a random keypair for you.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/putty-random.png" alt="keygen random" /></p>
+<p><img alt='keygen random' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/putty-random.png' /></p>
 
-<p>Once your keys are generated, you’ll want to save them someplace private. Click the “Save Public Key” and “Save Private Key” buttons to save the files.</p>
+<p>Once your keys are generated, you&#8217;ll want to save them someplace private. Click the &#8220;Save Public Key&#8221; and &#8220;Save Private Key&#8221; buttons to save the files.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/putty-key.png" alt="putty save keys" /></p>
+<p><img alt='putty save keys' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/putty-key.png' /></p>
 
 <p>PuTTY will automatically save the private key as a .ppk file, which is a putty private key file that contains some additional encoded information about your key. Keep the .ppk extension for this file.</p>
 
@@ -213,55 +214,55 @@
 <p>You want to save these keys someplace safe because if someone were to find your private key, they could authenticate with any services where you utilize public key authentication.</p>
 </blockquote>
 
-<p>Okay, so now we have our keypairs set up, let’s go ahead and add our public keys to Nitrous.IO.</p>
+<p>Okay, so now we have our keypairs set up, let&#8217;s go ahead and add our public keys to Nitrous.IO.</p>
 
 <ol>
-<li>Signin to your <a href="https://nitrous.io">Nitrous.IO</a> account</li>
+<li>Signin to your <a href='https://nitrous.io'>Nitrous.IO</a> account</li>
 
-<li>Click the “Public Keys” link in the top navigation</li>
+<li>Click the &#8220;Public Keys&#8221; link in the top navigation</li>
 
-<li>Create a name for your public key – something that identifies the machine. I’ll use “AJ’s Windows XP”.</li>
+<li>Create a name for your public key &#8211; something that identifies the machine. I&#8217;ll use &#8220;AJ&#8217;s Windows XP&#8221;.</li>
 
 <li>Paste your public key in the text area.</li>
 </ol>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/win-key.png" alt="action key" /></p>
+<p><img alt='action key' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/win-key.png' /></p>
 
-<h3 id="download_sftp_client">Download SFTP Client</h3>
+<h3 id='download_sftp_client'>Download SFTP Client</h3>
 
-<p>Next, you’ll need to download an SFTP client. For this article we’ll use <a href="http://filezilla-project.org/">Filezilla</a>, but if you’re on a Mac you can also check out <a href="http://panic.com/transmit/">Transmit</a>. Filezilla is free, so go ahead and download it now.</p>
+<p>Next, you&#8217;ll need to download an SFTP client. For this article we&#8217;ll use <a href='http://filezilla-project.org/'>Filezilla</a>, but if you&#8217;re on a Mac you can also check out <a href='http://panic.com/transmit/'>Transmit</a>. Filezilla is free, so go ahead and download it now.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-win-download.png" alt="filezilla download" /></p>
+<p><img alt='filezilla download' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-win-download.png' /></p>
 
 <p>Now we need to tell Filezilla to connect via SSH using our SSH keypair that we just generated. First, click <strong>Edit &gt; Settings</strong> in the top menu.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-settings.png" alt="filezilla settings" /></p>
+<p><img alt='filezilla settings' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-settings.png' /></p>
 
-<p>Once in the settings pane, click <strong>Connection &gt; FTP &gt; SFTP</strong> and click the <strong>Add keyfile</strong> button.</p>
+<p>Once in the settings pane, click <strong>Connection &gt; FTP &gt; SFTP</strong> and click the <strong>Add keyfile&#8230;</strong> button.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-sftp.png" alt="filezilla settings sftp" /></p>
+<p><img alt='filezilla settings sftp' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-sftp.png' /></p>
 
-<p>Then we’ll want to add the private key that we just created and put in our safe folder.</p>
+<p>Then we&#8217;ll want to add the private key that we just created and put in our safe folder.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-privatekey.png" alt="filezilla settings sftp privatekey" /></p>
+<p><img alt='filezilla settings sftp privatekey' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-privatekey.png' /></p>
 
 <p>Then click the <strong>OK</strong> button.</p>
 
-<h3 id="setup_site_profile_to_connect_to_nitrousio">Setup site profile to connect to Nitrous.IO</h3>
+<h3 id='setup_site_profile_to_connect_to_nitrousio'>Setup site profile to connect to Nitrous.IO</h3>
 
-<p>Ok, now that we’ve added the key to Filezilla, lets go ahead and add the connection details.</p>
+<p>Ok, now that we&#8217;ve added the key to Filezilla, lets go ahead and add the connection details.</p>
 
-<h4 id="1_click_file__site_manager_in_the_application_menu">1. Click File &gt; Site Manager in the application menu</h4>
+<h4 id='1_click_file__site_manager_in_the_application_menu'>1. Click File &gt; Site Manager in the application menu</h4>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-sitemanager.png" alt="filezilla site manager" /></p>
+<p><img alt='filezilla site manager' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-sitemanager.png' /></p>
 
-<h4 id="2_click_the_new_site_button_and_name_the_connection_profile_im_going_to_name_it_the_same_as_my_box_on_nitrousio">2. Click the <strong>New Site</strong> button and name the connection profile. I’m going to name it the same as my box on Nitrous.IO</h4>
+<h4 id='2_click_the_new_site_button_and_name_the_connection_profile_im_going_to_name_it_the_same_as_my_box_on_nitrousio'>2. Click the <strong>New Site</strong> button and name the connection profile. I&#8217;m going to name it the same as my box on Nitrous.IO</h4>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-newsite.png" alt="filezilla new site" /></p>
+<p><img alt='filezilla new site' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-newsite.png' /></p>
 
-<h4 id="3_type_in_action_as_the_username_and_the_relevant_host_and_port_information_from_your_box_details_page_on_nitrousio">3. Type in <strong>action</strong> as the username and the relevant <strong>host</strong> and <strong>port</strong> information from your box details page on Nitrous.IO:</h4>
+<h4 id='3_type_in_action_as_the_username_and_the_relevant_host_and_port_information_from_your_box_details_page_on_nitrousio'>3. Type in <strong>action</strong> as the username and the relevant <strong>host</strong> and <strong>port</strong> information from your box details page on Nitrous.IO:</h4>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/box-details.png" alt="filezilla box details" /></p>
+<p><img alt='filezilla box details' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/box-details.png' /></p>
 
 <ul>
 <li>Protocol: SFTP - SSH File Transfer Protocol</li>
@@ -277,31 +278,31 @@
 
 <p>Then click the <strong>Connect</strong> button. You might see an alert box telling you the host is unknown. Click the checkbox to let filezilla know this is a trusted host, and click OK.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/host-unknown.png" alt="filezilla unknown host" /></p>
+<p><img alt='filezilla unknown host' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/host-unknown.png' /></p>
 
-<p>You’ll see the connection details streaming in the filezilla status menu and then you should see that you’re all connected! Congratulations!</p>
+<p>You&#8217;ll see the connection details streaming in the filezilla status menu and then you should see that you&#8217;re all connected! Congratulations!</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-connected.png" alt="filezilla connected" /></p>
+<p><img alt='filezilla connected' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-connected.png' /></p>
 
-<h3 id="uploading_your_project_via_git">Uploading your project via Git</h3>
+<h3 id='uploading_your_project_via_git'>Uploading your project via Git</h3>
 
 <p>If you have git installed on your machine, you can easily push a code repository to github (or another repository hosting service), then clone the repository on your Nitrous.IO box.</p>
 
 <p>Prerequisites:</p>
 
 <ul>
-<li>Installed <a href="http://git-scm.com/">Git</a></li>
+<li>Installed <a href='http://git-scm.com/'>Git</a></li>
 
-<li>Working knowledge of <a href="http://try.github.com/levels/1/challenges/1">Git commands</a></li>
+<li>Working knowledge of <a href='http://try.github.com/levels/1/challenges/1'>Git commands</a></li>
 </ul>
 
 <p>Read this article about how to connect your github account to Nitrous.IO:</p>
 
-<p><strong>Mac:</strong> <a href="/github-add-key">Adding your keys to Github</a></p>
+<p><strong>Mac:</strong> <a href='/github-add-key'>Adding your keys to Github</a></p>
 
-<p><strong>Windows:</strong> <a href="/ssh-windows">Adding SSH Keys on Windows</a></p>
+<p><strong>Windows:</strong> <a href='/ssh-windows'>Adding SSH Keys on Windows</a></p>
 
-<p>Once you’ve successfully setup your SSH keys, you can easily clone repositories from Github to your Nitrous.IO boxes.</p>
+<p>Once you&#8217;ve successfully setup your SSH keys, you can easily clone repositories from Github to your Nitrous.IO boxes.</p>
   </div>
 </div>
 

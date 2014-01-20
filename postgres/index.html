@@ -117,9 +117,10 @@
     <a href="/categories/previewing/">Preview</a>
     <ul class="nav">
       <li ><a href="/preview">Previewing Your App</a></li>
-      <li ><a href="/faq-websockets">Websockets</a></li>
-      <li ><a href="/faq-localhost">Preview Issues</a></li>
+      <li ><a href="/websockets">Websockets</a></li>
       <li ><a href="/ssl">SSL</a></li>
+      <li ><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
+      <li ><a href="/faq-localhost">Preview Issues</a></li>
     </ul>
   </li>
   
@@ -183,43 +184,43 @@
      
     <p>This guide walks through how you can setup a Heroku Postgres database on your Nitrous.IO box.</p>
 
-<h3 id="create_a_database_on_heroku_postgres">Create a Database on Heroku Postgres</h3>
+<h3 id='create_a_database_on_heroku_postgres'>Create a Database on Heroku Postgres</h3>
 
-<p>In: <a href="https://postgres.heroku.com">Heroku Postgres</a></p>
+<p>In: <a href='https://postgres.heroku.com'>Heroku Postgres</a></p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/hpgres.png" alt="Heroku Postgres Homepage" /></p>
+<p><img alt='Heroku Postgres Homepage' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/hpgres.png' /></p>
 
-<p>Go ahead and sign into Heroku Postgres. Once in the dashboard, you’ll see a list of any databases you’ve already created. Click the “Create Database” button on the top-right of the screen. You’ll see a bunch of professional plans appear below. You can ignore these until you’ve deployed your new world-changing application to production and you have millions of customers and can afford them.</p>
+<p>Go ahead and sign into Heroku Postgres. Once in the dashboard, you&#8217;ll see a list of any databases you&#8217;ve already created. Click the &#8220;Create Database&#8221; button on the top-right of the screen. You&#8217;ll see a bunch of professional plans appear below. You can ignore these until you&#8217;ve deployed your new world-changing application to production and you have millions of customers and can afford them.</p>
 
-<p>Heroku knows we need something lightweight to get our feet wet, so for now we’ll just pick the “Dev Plan (free)” option.</p>
+<p>Heroku knows we need something lightweight to get our feet wet, so for now we&#8217;ll just pick the &#8220;Dev Plan (free)&#8221; option.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/dev-plan.png" alt="Dev Plan Button" /></p>
+<p><img alt='Dev Plan Button' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/dev-plan.png' /></p>
 
-<p>You’ll see your new database at the top of your list of databases (or just one if you just created an account). Heroku will create a zen name for you, the one we created happens to have the name “salty-water-676”.</p>
+<p>You&#8217;ll see your new database at the top of your list of databases (or just one if you just created an account). Heroku will create a zen name for you, the one we created happens to have the name &#8220;salty-water-676&#8221;.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/create-database.png" alt="Create Database" /></p>
+<p><img alt='Create Database' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/create-database.png' /></p>
 
-<p>For clarity lets rename the database so we know it’s a development database. Click the database you just created to navigate to the database dashboard. Click the database title and a modal will appear where you can change the name of your database. Rename it something relevant to your application, for e.g. if you were to make a to-do app, you can rename it to “todo-app-dev”.</p>
+<p>For clarity lets rename the database so we know it&#8217;s a development database. Click the database you just created to navigate to the database dashboard. Click the database title and a modal will appear where you can change the name of your database. Rename it something relevant to your application, for e.g. if you were to make a to-do app, you can rename it to &#8220;todo-app-dev&#8221;.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/database-rename.png" alt="Rename Database" /></p>
+<p><img alt='Rename Database' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/database-rename.png' /></p>
 
-<h3 id="heroku_postgres_connection_settings">Heroku Postgres Connection Settings</h3>
+<h3 id='heroku_postgres_connection_settings'>Heroku Postgres Connection Settings</h3>
 
-<p>In the <em>Heroku Postgres</em> website, click your database name (todo-app-dev) to get to the database dashboard. You will see your database connection settings listed, including “Host”, “Database”, “User”, “Port”, “Password” (you will need to click ‘Show’ to reveal your password).</p>
+<p>In the <em>Heroku Postgres</em> website, click your database name (todo-app-dev) to get to the database dashboard. You will see your database connection settings listed, including &#8220;Host&#8221;, &#8220;Database&#8221;, &#8220;User&#8221;, &#8220;Port&#8221;, &#8220;Password&#8221; (you will need to click &#8216;Show&#8217; to reveal your password).</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/heroku-settings.png" alt="Heroku Settings" /></p>
+<p><img alt='Heroku Settings' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/heroku-settings.png' /></p>
 
-<p>Grab each of the values and assign them to environment variables in your “~/.bashrc” file on your Nitrous.IO box. This will ensure that every time you log into your Nitrous.IO box, your database credentials will be available as environment variables to use in any of your apps. It is good practice to namespace your environment variables with the environment that you want to use your database in (development or test), like so:</p>
+<p>Grab each of the values and assign them to environment variables in your &#8220;~/.bashrc&#8221; file on your Nitrous.IO box. This will ensure that every time you log into your Nitrous.IO box, your database credentials will be available as environment variables to use in any of your apps. It is good practice to namespace your environment variables with the environment that you want to use your database in (development or test), like so:</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/env-variables.png" alt="Env Variables" /></p>
+<p><img alt='Env Variables' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/env-variables.png' /></p>
 
 <p>If you want the environment variables to be loaded immediately, run: source ~/.bashrc</p>
 
 <p>You can verify that your Postgres credentials are loaded correctly by running: echo $TODO_APP_DEV_HOST</p>
 
-<p>This should return “ec2-107-22-164-225.compute-1.amazonaws.com”</p>
+<p>This should return &#8220;ec2-107-22-164-225.compute-1.amazonaws.com&#8221;</p>
 
-<h4 id="railsruby">Rails/Ruby</h4>
+<h4 id='railsruby'>Rails/Ruby</h4>
 
 <p>You can now access your database in your Rails application by doing the following:</p>
 
@@ -229,17 +230,17 @@ ENV[&#39;TODO_APP_DEV_USER&#39;]
 ENV[&#39;TODO_APP_DEV_PASSWORD&#39;]
 ENV[&#39;TODO_APP_DEV_DATABASE&#39;]</code></pre>
 
-<p>(Please note, you’ll probably need to install the <a href="http://rubygems.org/gems/pg">pg</a> Rubygem before you use Postgres in a Rails app, using the following command:</p>
+<p>(Please note, you&#8217;ll probably need to install the <a href='http://rubygems.org/gems/pg'>pg</a> Rubygem before you use Postgres in a Rails app, using the following command:</p>
 
 <pre><code>gem install pg</code></pre>
 
-<p>Here’s an example of database.yml file used in Rails which uses the environment variables to connect to the Heroku Postgres database you created.</p>
+<p>Here&#8217;s an example of database.yml file used in Rails which uses the environment variables to connect to the Heroku Postgres database you created.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/database-ruby.png" alt="Rails Postgres Settings" /></p>
+<p><img alt='Rails Postgres Settings' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/database-ruby.png' /></p>
 
-<p>A more detailed tutorial is present on the <a href="http://blog.nitrous.io/2013/02/11/postgres-action-io-3.html">Nitrous.IO blog</a></p>
+<p>A more detailed tutorial is present on the <a href='http://blog.nitrous.io/2013/02/11/postgres-action-io-3.html'>Nitrous.IO blog</a></p>
 
-<h4 id="nodejs">Node.JS</h4>
+<h4 id='nodejs'>Node.JS</h4>
 
 <p>In Node.JS, you can access each of the environment variables by using:</p>
 
@@ -249,15 +250,15 @@ process.env.TODO_APP_DEV_USER
 process.env.TODO_APP_DEV_PASSWORD
 process.env.TODO_APP_DEV_DATABASE</code></pre>
 
-<p>(Please note, you’ll probably need to install the <a href="https://npmjs.org/package/pg">pg</a> NPM before you use Postgres in a Node.JS app, using the following command:</p>
+<p>(Please note, you&#8217;ll probably need to install the <a href='https://npmjs.org/package/pg'>pg</a> NPM before you use Postgres in a Node.JS app, using the following command:</p>
 
 <pre><code>npm install -g pg</code></pre>
 
-<p>Here’s an example nodejs code to connect to Heroku Postgres using the environment variables we have set up.</p>
+<p>Here&#8217;s an example nodejs code to connect to Heroku Postgres using the environment variables we have set up.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/database-nodejs.png" alt="Postgres Settings" /></p>
+<p><img alt='Postgres Settings' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/database-nodejs.png' /></p>
 
-<h4 id="djangopython">Django/Python</h4>
+<h4 id='djangopython'>Django/Python</h4>
 
 <p>In Python, you can access each of the environment variables by using:</p>
 
@@ -267,13 +268,13 @@ os.environ[&#39;TODO_APP_DEV_USER&#39;]
 os.environ[&#39;TODO_APP_DEV_PASSWORD&#39;]
 os.environ[&#39;TODO_APP_DEV_DATABASE&#39;]</code></pre>
 
-<p>(Please note, you’ll probably need to install the <a href="http://initd.org/psycopg/">psycopg2</a> module before you use Postgres in a Django app, using the following command:</p>
+<p>(Please note, you&#8217;ll probably need to install the <a href='http://initd.org/psycopg/'>psycopg2</a> module before you use Postgres in a Django app, using the following command:</p>
 
 <pre><code>pip install --user psycopg2</code></pre>
 
-<p>Here’s an example of a settings.py file which initializes the Heroku Postgres credentials for use within a Django app.</p>
+<p>Here&#8217;s an example of a settings.py file which initializes the Heroku Postgres credentials for use within a Django app.</p>
 
-<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/database-python.png" alt="Postgres Settings" /></p>
+<p><img alt='Postgres Settings' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/postgres/database-python.png' /></p>
   </div>
 </div>
 
