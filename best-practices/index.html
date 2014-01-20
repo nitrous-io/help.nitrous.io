@@ -182,19 +182,19 @@
     <h1 class="article-title">Best Practices</h1>
     <h5 class="note">Last Updated on: 23 August 2013</h5>
      
-    <p>You have gone through our <a href='/getting-started/'>Getting Started Guide</a>, and can now <a href='/ssh-add/'>SSH</a> from your computer as well as connect to Github. Now the question is, what&#8217;s the best way to use Nitrous.IO?</p>
+    <p>You have gone through our <a href="/getting-started/">Getting Started Guide</a>, and can now <a href="/ssh-add/">SSH</a> from your computer as well as connect to Github. Now the question is, what’s the best way to use Nitrous.IO?</p>
 
-<h3 id='building_projects'>Building Projects</h3>
+<h3 id="building_projects">Building Projects</h3>
 
 <p>You can create as many projects as you would like within a single Nitrous box. The only limitations to this is the amount of storage space you use, which not only counts the project files but also modules, different versions of Ruby installed, etc.</p>
 
 <p>Below you will see a screenshot of how you could setup your directories within Nitrous. All projects should be places within the <code>~/workspace</code> folder, and configuration files can be placed in your home directory <code>~/</code>.</p>
 
-<p><img alt='Nitrous Box Directory' src='/images/articles/directory-tree.png' /></p>
+<p><img src="/images/articles/directory-tree.png" alt="Nitrous Box Directory" /></p>
 
-<h3 id='previewing_an_app'>Previewing an App</h3>
+<h3 id="previewing_an_app">Previewing an App</h3>
 
-<p>Once you have built an app (ex. a <a href='http://blog.nitrous.io/2013/02/21/build-meteor-apps-in-the-browser-with-actionio-and-mongolab.html'>Meteor app</a> or a <a href='http://blog.nitrous.io/2013/07/02/building-a-rails-4.0-app-on-nitrous-io.html'>Rails app</a>), you will want to run the app with the appropriate command within the console. Here is an example of running a Rails app with the command <code>rails server</code>:</p>
+<p>Once you have built an app (ex. a <a href="http://blog.nitrous.io/2013/02/21/build-meteor-apps-in-the-browser-with-actionio-and-mongolab.html">Meteor app</a> or a <a href="http://blog.nitrous.io/2013/07/02/building-a-rails-4.0-app-on-nitrous-io.html">Rails app</a>), you will want to run the app with the appropriate command within the console. Here is an example of running a Rails app with the command <code>rails server</code>:</p>
 
 <pre><code>	action@ruby-rails-10201:~/workspace/projects/rails-app$ rails server
 	=&gt; Booting WEBrick
@@ -209,39 +209,39 @@
 
 <p>Since this app is running on Port 3000 we will navigate in the web IDE to <code>Preview &gt; Port 3000</code> to view the app running in the browser.</p>
 
-<p><img alt='Preview App' src='/images/articles/preview-port-3000.png' /></p>
+<p><img src="/images/articles/preview-port-3000.png" alt="Preview App" /></p>
 
 <p>If you need to switch to a different port, you can do this by editing the URL in the address bar.</p>
 
-<p><img alt='Changing the Port' src='/images/articles/address-bar-port.png' /></p>
+<p><img src="/images/articles/address-bar-port.png" alt="Changing the Port" /></p>
 
-<h3 id='using_the_ide_console'>Using the IDE Console</h3>
+<h3 id="using_the_ide_console">Using the IDE Console</h3>
 
 <p>If you prefer to work within the console, you can make it fullscreen within the web IDE by pressing <code>Shift + Ctrl + F</code>.</p>
 
-<p><img alt='Fullscreen Console' src='/images/articles/web-ide-fullscreen.png' /></p>
+<p><img src="/images/articles/web-ide-fullscreen.png" alt="Fullscreen Console" /></p>
 
-<h3 id='connecting_via_ssh'>Connecting via SSH</h3>
+<h3 id="connecting_via_ssh">Connecting via SSH</h3>
 
-<p>If you want to work from your local console you can use <a href='/ssh-add/'>SSH</a>. One easy strategy for Mac users would be to use <a href='http://www.iterm2.com/'>iTerm 2</a> and setup a <code>Profile</code> with your SSH credentials. To setup a profile, navigate to your <a href='https://www.nitrous.io/app#/boxes'>boxes</a> page and copy your SSH URI:</p>
+<p>If you want to work from your local console you can use <a href="/ssh-add/">SSH</a>. One easy strategy for Mac users would be to use <a href="http://www.iterm2.com/">iTerm 2</a> and setup a <code>Profile</code> with your SSH credentials. To setup a profile, navigate to your <a href="https://www.nitrous.io/app#/boxes">boxes</a> page and copy your SSH URI:</p>
 
-<p><img alt='SSH URI' src='/images/articles/ssh-uri.png' /></p>
+<p><img src="/images/articles/ssh-uri.png" alt="SSH URI" /></p>
 
 <p>Next, open up Iterm2 and navigate to <strong>Preferences &gt; Profiles</strong>. Create a new profile and fill in your SSH URI into the <strong>Command</strong> field. The format should be <code>ssh action@YOUR_REGION.actionbox.io -p YOUR_PORT</code></p>
 
-<p><img alt='Iterm 2 Profile' src='/images/articles/iterm2-profile.png' /></p>
+<p><img src="/images/articles/iterm2-profile.png" alt="Iterm 2 Profile" /></p>
 
 <blockquote>
 <p>Tip: In the iTerm2 Profile settings you can also assign a Shortcut key to launch your Nitrous SSH session.</p>
 </blockquote>
 
-<h3 id='working_locally'>Working locally</h3>
+<h3 id="working_locally">Working locally</h3>
 
-<p>If you want ability to use <a href='http://www.sublimetext.com/'>Sublime Text</a> or any other editor, you will want to work locally and sync with your Nitrous box.</p>
+<p>If you want ability to use <a href="http://www.sublimetext.com/">Sublime Text</a> or any other editor, you will want to work locally and sync with your Nitrous box.</p>
 
-<p>Nitrous offers a <a href='http://www.nitrous.io/mac'>Mac app</a> to do this, with Windows and Linux support coming soon.</p>
+<p>Nitrous offers a <a href="http://www.nitrous.io/mac">Mac app</a> to do this, with Windows and Linux support coming soon.</p>
 
-<p>For help using the Mac App please view the <a href='/mac-preferences/'>Mac preferences guide</a>.</p>
+<p>For help using the Mac App please view the <a href="/mac-preferences/">Mac preferences guide</a>.</p>
   </div>
 </div>
 
