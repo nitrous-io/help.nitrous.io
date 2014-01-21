@@ -2,6 +2,7 @@
 layout: article
 title: Nitrous Desktop Overview
 published: true
+category: usage
 ---
 
 Nitrous Desktop is an app which can be installed on your desktop or laptop. This adds more functionality to your Nitrous account, including File Sync, Port Forwarding, SSH Key mangement, and the ability to Start/Stop/Restart your boxes.
