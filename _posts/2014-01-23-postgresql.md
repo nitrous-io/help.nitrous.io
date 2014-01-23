@@ -28,7 +28,7 @@ To create a Rails app with PostgreSQL configured, run the following command:
 
 View our [Postgres + Nitrous blog post](http://blog.nitrous.io/2013/02/11/postgres-action-io-3.html) for information on building a Rails app with PostgreSQL.
 
-Here is the configuration necessary to connect to your local PostgreSQL database:
+Here is the configuration necessary to connect to your local PostgreSQL database.
 
 In `config/database.yml`:
 
@@ -41,14 +41,11 @@ In `config/database.yml`:
       username: action
       password:
 
-    test:
-      adapter: postgresql
-      database: appname-test
-      pool: 5
-      host: localhost
-      username: action
-      password:
+Once these configurations have been made, run the following commands:
 
-To create the databases one the configuration has been made, run `rake db:create`.
+    rake db:create:all
+    rake db:migrate
+
+You can verify the database has been sucessfully created by running `psql` to open the PostgresQL terminal, followed by `\list` which will display all the existing databases.
 
 >For information on connecting to an external PostgreSQL database, please view our [Heroku Postgres guide](/postgres/).
