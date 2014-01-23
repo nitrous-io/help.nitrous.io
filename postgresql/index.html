@@ -180,7 +180,7 @@
 
   <div class="col-md-9">
     <h1 class="article-title">Setting up PostgreSQL with Autoparts</h1>
-    <h5 class="note">Last Updated on: 04 October 2013</h5>
+    <h5 class="note">Last Updated on: 23 January 2014</h5>
      
     <h3 id="prerequisites">Prerequisites</h3>
 
@@ -206,7 +206,7 @@
 
 <p>View our <a href="http://blog.nitrous.io/2013/02/11/postgres-action-io-3.html">Postgres + Nitrous blog post</a> for information on building a Rails app with PostgreSQL.</p>
 
-<p>Here is the configuration necessary to connect to your local PostgreSQL database:</p>
+<p>Here is the configuration necessary to connect to your local PostgreSQL database.</p>
 
 <p>In <code>config/database.yml</code>:</p>
 
@@ -217,17 +217,14 @@
   pool: 5
   host: localhost
   username: action
-  password:
-
-test:
-  adapter: postgresql
-  database: appname-test
-  pool: 5
-  host: localhost
-  username: action
   password:</code></pre>
 
-<p>To create the databases one the configuration has been made, run <code>rake db:create</code>.</p>
+<p>Once these configurations have been made, run the following commands:</p>
+
+<pre><code>rake db:create:all
+rake db:migrate</code></pre>
+
+<p>You can verify the database has been sucessfully created by running <code>psql</code> to open the PostgresQL terminal, followed by <code>\list</code> which will display all the existing databases.</p>
 
 <blockquote>
 <p>For information on connecting to an external PostgreSQL database, please view our <a href="/postgres/">Heroku Postgres guide</a>.</p>
