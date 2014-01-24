@@ -2,7 +2,6 @@
 layout: article
 title: Creating a New Package for Autoparts
 published: true
-category: usage
 ---
 
 ### Creating the Package
