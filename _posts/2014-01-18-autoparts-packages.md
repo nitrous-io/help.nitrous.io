@@ -56,7 +56,7 @@ For a new package to be created, a Ruby file will need to reflect this layout wi
 #### Items to note:
 
 * A compile method may not be needed depending on the package.
-* The install method (and compile method if needed) should assume that the machine has root access, and includes all console commands needed to install the package on Ubuntu 12.04.
+* The install method (and compile method if needed) should include all console commands needed to install the package on Ubuntu 12.04.
 
 ### Submitting the Package
 
