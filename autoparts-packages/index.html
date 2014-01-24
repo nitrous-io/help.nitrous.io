@@ -213,8 +213,6 @@
       source_url &#39;http://jonas.nitro.dk/tig/releases/tig-1.2.1.tar.gz&#39;
       source_sha1 &#39;5755bae7342debf94ef33973e0eaff6207e623dc&#39;
       source_filetype &#39;tar.gz&#39;
-      binary_url &#39;https://nitrousio-autoparts-use1.s3.amazonaws.com/tig-1.2.1-binary.tar.gz&#39;
-      binary_sha1 &#39;124ca210166fe03b9a4b7d134d3ecf9f7a25a63c&#39;
 
       def compile
         Dir.chdir(name_with_version) do
@@ -244,8 +242,6 @@ end</code></pre>
 
 <ul>
 <li>A compile method may not be needed depending on the package.</li>
-
-<li>The <code>binary_url</code> and <code>binary_sha1</code> fields are both something you may ignore, as this step is added later by Nitrous.</li>
 
 <li>The install method (and compile method if needed) should assume that the machine has root access, and includes all console commands needed to install the package on Ubuntu 12.04.</li>
 </ul>
