@@ -28,8 +28,6 @@ Let's take a look at a previous example within the [Github repo](https://github.
           source_url 'http://jonas.nitro.dk/tig/releases/tig-1.2.1.tar.gz'
           source_sha1 '5755bae7342debf94ef33973e0eaff6207e623dc'
           source_filetype 'tar.gz'
-          binary_url 'https://nitrousio-autoparts-use1.s3.amazonaws.com/tig-1.2.1-binary.tar.gz'
-          binary_sha1 '124ca210166fe03b9a4b7d134d3ecf9f7a25a63c'
     
           def compile
             Dir.chdir(name_with_version) do
@@ -57,8 +55,7 @@ For a new package to be created, a Ruby file will need to reflect this layout wi
 
 #### Items to note:
 
-* A compile method may not be needed depending on the package. 
-* The `binary_url` and `binary_sha1` fields are both something you may ignore, as this step is added later by Nitrous.
+* A compile method may not be needed depending on the package.
 * The install method (and compile method if needed) should assume that the machine has root access, and includes all console commands needed to install the package on Ubuntu 12.04.
 
 ### Submitting the Package
