@@ -3,6 +3,7 @@ layout: article
 title: Web IDE keyboard shortcuts
 published: true
 categories: [usage]
+mitem: keyboard
 ---
 
 **Copy**
@@ -31,7 +32,7 @@ categories: [usage]
 
 **Find Previous**
 
-    Windows: Shift + Control + G 
+    Windows: Shift + Control + G
 
     Mac: Shift + Command + G
 
