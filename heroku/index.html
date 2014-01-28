@@ -3,7 +3,7 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Heroku Integration</title>
+  <title>Deploying to Heroku</title>
   <meta name="author" content="Nitrous.IO" />
   <link href="http://feeds.feedburner.com/actionioblog" rel="alternate" title="Nitrous.IO Blog" type="application/atom+xml" />
   <meta content='Nitrous.IO Support Documentation. Tutorials, FAQ, and other guides for building your apps directly on Nitrous.IO' name='description'>
@@ -179,20 +179,12 @@
   </div>
 
   <div class="col-md-9">
-    <h1 class="article-title">Heroku Integration</h1>
-    <h5 class="note">Last Updated on: 28 June 2013</h5>
+    <h1 class="article-title">Deploying to Heroku</h1>
+    <h5 class="note">Last Updated on: 27 January 2014</h5>
      
-    <blockquote>
-<p>An example of deloying a Rails app to Heroku may be found on the <a href="/heroku-rails/">Heroku Rails guide</a>.</p>
-</blockquote>
+    <p>The following guide covers the steps needed to integrate with <a href="http://www.heroku.com">Heroku</a>, as well as deploying a Rails app to your <a href="http://www.heroku.com">Heroku</a> account.</p>
 
-<p>Nitrous.IO integrates with Heroku for convenient and easy application deployment. Connecting your Nitrous.IO box to Heroku is easy:</p>
-
-<h3 id="1_login_to_your_nitrousio_account">1. <a href="https://www.nitrous.io/login">Login</a> to your Nitrous.IO account</h3>
-
-<p>If you don’t already have an account, <a href="https://www.nitrous.io">sign up for an invite</a></p>
-
-<h3 id="2_create_a_development_box">2. Create a Development Box</h3>
+<h3 id="create_a_development_box">Create a Development Box</h3>
 
 <p>If you don’t already have a box created, you’ll need to create one on a platform that runs on Heroku. Luckily, Heroku supports most environments.</p>
 
@@ -200,47 +192,91 @@
 
 <p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/new-box-button.png" alt="New Box Button" /></p>
 
-<h3 id="3_connect_your_box_to_github">3. Connect your Box to Github</h3>
+<h3 id="connect_your_box_to_github">Connect your Box to Github</h3>
 
 <p>If you haven’t already connected to Github, <a href="/github-add-key">Generate a public key for your newly created development box and add it to Github</a></p>
 
 <p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/reveal-public-key.png" alt="Reveal Public Key" /></p>
 
-<h3 id="4_authenticate_with_heroku">4. Authenticate with Heroku</h3>
+<h3 id="authenticate_with_heroku">Authenticate with Heroku</h3>
 
 <pre><code> heroku login
  username: aj@nitrous.io
  password: ********</code></pre>
 
-<h3 id="5_add_your_ssh_key_to_heroku">5. Add your ssh key to heroku</h3>
+<h3 id="add_your_ssh_key_to_heroku">Add your ssh key to heroku</h3>
 
 <pre><code> heroku keys:add</code></pre>
 
-<h3 id="6_configure_git">6. Configure git</h3>
+<h3 id="create_a_rails_application">Create a Rails application</h3>
 
-<pre><code> git config --global user.email “(your git email)”
- git config --global user.name “(your git username)”</code></pre>
+<p>If you’re importing an existing application, you can <a href="/github-add-key">connect your Github account</a> to easily clone projects. For this example, let’s create a simple hello application:</p>
 
-<h3 id="7_clone_a_project">7. Clone a Project</h3>
+<pre><code>$ rails new hello-app --database=postgresql
+$ cd hello-app</code></pre>
 
-<p>Since we’ve authenticated with Github, lets clone a git project that we’ll be deploying to Heroku</p>
+<h3 id="database_support">Database Support</h3>
 
-<pre><code> git clone git@github.com:(username)/(reponame).git
- cd (repository name)
- (repository name)$: bundle install</code></pre>
+<p>Nitrous.IO boxes come with Sqlite3 support by default. However, for more complex applications, you might want to use Postgres, MySQL, MongoDB, etc…</p>
+<p class='note'>Heroku highly recommends using PostgreSQL during development to maintain parity between development and production environments.</p>
+<p>Since we’re deploying the application to Heroku, let’s use Postgres.</p>
 
-<h3 id="8_add_the_heroku_remote_url">8. Add the Heroku remote url</h3>
+<p>Appending the <strong>–database</strong> flag when creating the app will create the appropriate postgres variables in database.yml and will include the pg gem in your Gemfile.</p>
 
-<pre><code> (reponame)$: git remote add heroku git@heroku.com:(heroku-app-name).git</code></pre>
+<p>Next, we need to create a development database on <a href="https://postgres.heroku.com">Heroku Postgres</a>. This way you don’t need to install Postgres and worry about any issues between your development database and production database. Follow the steps from <a href="/postgres">the Postgres article</a>.</p>
 
-<h3 id="9_update_the_upstream_git_branches">9. Update the upstream git branches</h3>
+<blockquote>
+<p>For development on Nitrous you can always quickly setup a variety of databases with <a href="/autoparts/">Autoparts</a> (e.g. <a href="/postgresql/">PostgreSQL</a> and <a href="/mysql/">MySQL</a>). Sqlite3 is pre-installed in all Nitrous boxes.</p>
+</blockquote>
 
-<pre><code> (reponame)$: git branch --set-upstream master origin/master
- (reponame)$: git branch --set-upstream master heroku/master</code></pre>
+<h3 id="setup_git">Setup Git</h3>
 
-<p>And that’s it! Your development box will now be connected to your Heroku account and you can deploy as you would on your local machine.</p>
+<p>Since we use git to package and push your application to Heroku, lets go ahead and setup git for this application:</p>
 
-<p>Of course, if you’re having trouble, you can always <a href="mailto:support@nitrous.io?subject=Heroku%20Authenticaion%20Issues">talk to a real human</a>.</p>
+<pre><code>$ git init
+$ git add .
+$ git commit -m &quot;initializing git&quot;</code></pre>
+
+<h3 id="deploy_to_heroku">Deploy to Heroku</h3>
+
+<p>First, you’ll need to create the app namespace and initialize the app on heroku. Replace <code>[appname]</code> with a unique app name not used by Heroku, or exclude it from the command to have Heroku automatically choose an app name.</p>
+
+<pre><code>$ heroku create [appname]
+Creating vast-brushlands-7106... done, stack is cedar
+http://vast-brushlands-7106.herokuapp.com git@heroku.com:vast-brushlands-7106.git</code></pre>
+
+<p>Then deploy your code:</p>
+
+<pre><code>$ git push heroku master
+Counting objects: 63, done.
+Compressing objects: 100% (49/49), done.
+Writing objects: 100% (63/63), 26.35 KiB, done.
+Total 63 (delta 2), reused 0 (delta 0)
+-----&gt; Ruby/Rails app detected
+-----&gt; Installing dependencies using Bundler version 1.3.0.pre.5
+Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin --deployment
+Fetching gem metadata from https://rubygems.org/.....
+Installing builder (3.0.4)
+Installing activemodel (3.2.11)
+Installing rails (3.2.11)
+Your bundle is complete! It was installed into ./vendor/bundle
+-----&gt; Writing config/database.yml to read from DATABASE_URL
+-----&gt; Preparing app for Rails asset pipeline
+Running: rake assets:precompile
+Asset precompilation completed (15.19s)
+-----&gt; Discovering process types
+-----&gt; Compiled slug size: 9.0MB
+-----&gt; Launching... done, v6
+http://vast-brushlands-7106.herokuapp.com deployed to Heroku
+To git@heroku.com:vast-brushlands-7106.git
+* [new branch]      master -&gt; master</code></pre>
+
+<p>If you have a database established with your rails app then you will need to run the following rake commands:</p>
+
+<pre><code>$ heroku run rake db:migrate
+$ heroku run rake db:seed</code></pre>
+
+<p>Congratulations – You’ve deployed your application to Heroku. We encourage you to read up on <a href="https://devcenter.heroku.com/">Heroku’s documentation</a> to handle resource scaling, check processes, logs, etc…</p>
   </div>
 </div>
 
