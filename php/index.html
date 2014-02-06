@@ -202,6 +202,36 @@
 <h3 id="configuring_apache">Configuring Apache</h3>
 
 <p>For configuring the Apache web service we recommend making changes to <code>httpd.conf</code>, located within your Nitrous box at <code>/home/action/.parts/etc/apache2/httpd.conf</code>. To locate <code>httpd.conf</code> within the file browser, ensure you are viewing hidden files by clicking <strong>Show Hidden</strong> just below the file tree.</p>
+
+<h3 id="faqs">FAQs</h3>
+
+<h4 id="composer_needs_the_zip_tool_in_order_to_install_certain_tools_how_do_i_install_the_zip_tool">Composer needs the Zip tool in order to install certain tools. How do I install the Zip tool?</h4>
+
+<p>You can install the Zip tool by pointing PEAR and PECL to the active php.ini config. Simply run the following commands in the console:</p>
+
+<pre><code>$ pear config-set php_ini /home/action/.parts/etc/php5/php.ini
+$ pecl config-set php_ini /home/action/.parts/etc/php5/php.ini     
+$ pecl install zip</code></pre>
+
+<p>Once you restart Apache everything will be ready to go.</p>
+
+<pre><code>$ parts restart apache2</code></pre>
+
+<h4 id="how_can_i_enable_rewriteengine">How can I enable RewriteEngine?</h4>
+
+<p>The RewriteEngine module is already compiled in, but you will need to turn it on. You can do this by adding the following code to the end of the active <code>httpd.conf</code> file located in <code>/home/action/.parts/etc/apache2/</code></p>
+
+<pre><code>&lt;IfModule mod_rewrite&gt;
+    RewriteEngine On
+&lt;/IfModule&gt;</code></pre>
+
+<p>Alternatively you can edit your <code>.htaccess</code> file at the application level to include the following code:</p>
+
+<pre><code>RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]</code></pre>
   </div>
 </div>
 
