@@ -8,7 +8,7 @@ mitem: autoparts
 
 Autoparts is a package manager for Nitrous.IO which allows you to install databases and other tools on your box within your home folder.
 
-*Autoparts is available on all Nitrous boxes created after September 17th, 2013. If your box was created prior to this, please view the README within the [Github Repo](https://github.com/action-io/autoparts) for installation instructions.*
+*Autoparts is available on all Nitrous.IO boxes created after September 17th, 2013. If your box was created prior to this, please view the README within the [Github Repo](https://github.com/action-io/autoparts) for installation instructions.*
 
 ### Installing Packages
 
@@ -28,11 +28,11 @@ If you have installed a database, initialize it by navigating to `Autoparts > St
 
 ![Autoparts UI Packages](/images/articles/autoparts-ui-start-package.png)
 
-*Note: If your Nitrous box is shutdown at any point, you will need to start the database back up the next time the box is started.*
+*Note: If your Nitrous.IO box is shutdown at any point, you will need to start the database back up the next time the box is started.*
 
 ### Command-Line Interface
 
-You can also launch Autoparts from the command line. This is helpful if you are connecting to your Nitrous box via [SSH](/categories/ssh/).
+You can also launch Autoparts from the command line. This is helpful if you are connecting to your Nitrous.IO box via [SSH](/categories/ssh/).
 
 To view all of the packages available to install, run the following command:
 
@@ -62,4 +62,4 @@ New tools, interpreters, and databases are always being added to Autoparts. To u
 
 ### Additional Parts
 
-If you are wanting to install a tool which is not available within Autoparts, you can [create a new parts package](/autoparts-packages/) by submitting a pull request. The Nitrous team is actively contributing as well, so feel free to [contact us](mailto:support@nitrous.io) with your request.
+If you are wanting to install a tool which is not available within Autoparts, you can [create a new parts package](/autoparts-packages/) by submitting a pull request. The Nitrous.IO team is actively contributing as well, so feel free to [contact us](mailto:support@nitrous.io) with your request.
