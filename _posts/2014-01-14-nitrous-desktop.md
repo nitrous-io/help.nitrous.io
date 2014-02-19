@@ -3,18 +3,19 @@ layout: article
 title: Nitrous Desktop (Mac)
 published: true
 category: usage
-mitem: desktop
+mitem: desktop-mac
 ---
 
 Nitrous Desktop is an app which can be installed on your desktop or laptop. This adds more functionality to your Nitrous account, including File Sync, Port Forwarding, SSH Key mangement, and the ability to Start/Stop/Restart your boxes.
 
-*Windows users: A version for Windows is not yet available, but will be coming soon.*
+<ul class="inline choices">
+  <li class="selected">Mac</li>
+  <li><a href="/nitrous-desktop-win/">Windows</a></li>
+</ul>
 
-### Installation
+### Mac OSX Installation
 
-#### Mac
-
-To install, [download](http://www.nitrous.io/mac) the archived app, and extract it to your Applications folder. 
+To install, [download](http://www.nitrous.io/windows) the archived app, and extract it to your Applications folder. 
 
 Once you run the app you will see an **N** icon in the menu bar. Click on it and select **Open Nitrous Desktop** to view the settings.
 
@@ -46,7 +47,7 @@ Once you have added the ports you wish to forward, click on the Port Forwarding 
 
 ### Adding an SSH Key
 
-If you have not already [added a SSH key](/categories/ssh/) to your [Public Keys](https://www.nitrous.io/app#/public_keys), you can do this with Nitrous Desktop.
+If you have not already [added a SSH key](/ssh/) to your [Public Keys](https://www.nitrous.io/app#/public_keys), you can do this with Nitrous Desktop.
 
 When Nitrous Desktop is opened, you will be prompted to generate and register new SSH keys if not already completed.
 
