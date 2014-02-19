@@ -1,14 +1,13 @@
 ## File Naming
 
-Prefix support file titles by topic: 
+Prefix support file titles by topic:
 
 e.g. topic-this-is-my-file-name.md
 
 ## Screenshots
 
-Put screenshots in /screenshots directory with filename:
+Put screenshots in /images/articles directory with filename:
 
-screenshots/topic-this-is-my-file-name.png
-screenshots/topic-this-is-my-file-name.jpg
+/images/articles/topic-this-is-my-file-name.png
 
-Screenshots should be a maximum of 600px wide. 
+Screenshots should be a maximum of 600px wide.
