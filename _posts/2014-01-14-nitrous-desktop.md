@@ -8,11 +8,6 @@ mitem: desktop-mac
 
 Nitrous Desktop is an app which can be installed on your desktop or laptop. This adds more functionality to your Nitrous account, including File Sync, Port Forwarding, SSH Key mangement, and the ability to Start/Stop/Restart your boxes.
 
-<ul class="inline choices">
-  <li class="selected">Mac</li>
-  <li><a href="/nitrous-desktop-win/">Windows</a></li>
-</ul>
-
 ### Mac OSX Installation
 
 To install, [download](http://www.nitrous.io/windows) the archived app, and extract it to your Applications folder. 

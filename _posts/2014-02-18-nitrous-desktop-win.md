@@ -15,13 +15,15 @@ Nitrous Desktop is an app which can be installed on your desktop or laptop. This
 
 ### Windows Installation
 
-To install, [download](http://www.nitrous.io/mac) the archived app, and extract it to your "Program Files" directory. Open `Nitrous Desktop.exe` to run the app.
+To install, [download](http://www.nitrous.io/mac) the archived app, and extract it to any directory of your choice. Open `nitrousdesktop.exe` to run the app.
 
-When you run the app for the first time you will see a security alert. If you are running Windows 7/8, you will need to click **Allow Access** when the Windows Security Alert displays.
+When you run the app for the first time you will see a Windows Security Alert. You will need to ensure **Private Networks** and **Public Networks** are checked if available, and you can save these settings by clicking **Allow Access**.
+
+If you are running Windows 7 or 8 the alert will look like the following image:
 
 ![Allow Nitrous Desktop Firewall](/images/articles/nitrous-desktop-win-firewall.png)
 
-If you are running an earlier version of Windows then you may see a Windows Security Alert. Ensure you click **Unblock** in order for the app to function.
+If you are running an earlier version of Windows then you may see a different Windows Security Alert. Ensure you click **Unblock** in order for the app to function.
 
 ![Allow Nitrous Desktop Windows Security](/images/articles/nitrous-desktop-win-security.png)
 
@@ -76,6 +78,10 @@ If you have both the SSH Keys available, click **Register Public Key**. You shou
 ![Nitrous Desktop Preferences Register SSH Key](/images/articles/nitrous-desktop-ssh-3.png)
 
 Once an SSH key pair is established, you will be able to utilize all features within Nitrous Desktop.
+
+### Web IDE
+
+The Web IDE link will open up your default web browser, and take you to the Web IDE of the box selected. It is recommended to have Google Chrome or Firefox installed.
 
 ### Files not Synced
 
