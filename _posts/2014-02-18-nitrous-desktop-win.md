@@ -15,17 +15,13 @@ Nitrous Desktop is an app which can be installed on your desktop or laptop. This
 
 ### Windows Installation
 
-To install, [download](http://www.nitrous.io/mac) the archived app, and extract it to any directory of your choice. Open `nitrousdesktop.exe` to run the app.
+First, make sure that a modern web browser like [Google
+Chrome](https://www.google.com/chrome) or [Mozilla
+Firefox](https://www.mozilla.org/firefox) is installed and set as the
+default web browser. A modern web browser is required for Nitrous
+Desktop to function properly.
 
-When you run the app for the first time you will see a Windows Security Alert. You will need to ensure **Private Networks** and **Public Networks** are checked if available, and you can save these settings by clicking **Allow Access**.
-
-If you are running Windows 7 or 8 the alert will look like the following image:
-
-![Allow Nitrous Desktop Firewall](/images/articles/nitrous-desktop-win-firewall.png)
-
-If you are running an earlier version of Windows then you may see a different Windows Security Alert. Ensure you click **Unblock** in order for the app to function.
-
-![Allow Nitrous Desktop Windows Security](/images/articles/nitrous-desktop-win-security.png)
+To install Nitrous Desktop, [download](http://www.nitrous.io/mac) the archived app, and extract it to any directory of your choice. Open `NitrousDesktop.exe` to run the app.
 
 Once the app is running, you will see an **N** icon in the taskbar. Right click on the icon and select **Open Nitrous Desktop...** to view the settings.
 
@@ -39,7 +35,7 @@ Nitrous Desktop will create a new folder on your local machine titled `Nitrous`,
 
 **Enable**: To enable File Sync, open Nitrous Desktop by right clicking on the **N** icon within the taskbar, and selecting **Open Nitrous Desktop...**.
 
-![Nitrous Desktop Security Settings](/images/articles/nitrous-desktop-win-menu-bar-icon.png)
+![Nitrous Desktop Menubar Icon](/images/articles/nitrous-desktop-win-menu-bar-icon.png)
 
 Next, click on the **File Sync** button to begin syncing. This will continue to monitor and sync any future changes.
 
@@ -51,11 +47,21 @@ Port forwarding allows for network communications within your Nitrous box to be 
 
 **Enable**: To enable Port Forwarding, click the **Add..** button located below the Port Forwarding field. Enter in the port number you would like to forward, and press Return once finished. You can do this mulitple times to forward multiple ports.
 
-![Nitrous Desktop Security Settings](/images/articles/nitrous-desktop-win-port-forwarding-add.png)
+![Add Port Forwarding](/images/articles/nitrous-desktop-win-port-forwarding-add.png)
 
 Once you have added the ports you wish to forward, click on the Port Forwarding button to enable:
 
-![Nitrous Desktop Security Settings](/images/articles/nitrous-desktop-win-port-forwarding-enable.png)
+![Enable Port Forwarding](/images/articles/nitrous-desktop-win-port-forwarding-enable.png)
+
+When you set up port forwarding, you will see a Windows Security Alert. You will need to ensure **Private Networks** and **Public Networks** are checked if available, and you can save these settings by clicking **Allow Access**.
+
+If you are running Windows 7 or 8 the alert will look like the following image:
+
+![Allow Nitrous Desktop Firewall](/images/articles/nitrous-desktop-win-firewall.png)
+
+If you are running an earlier version of Windows then you may see a different window. Ensure you click **Unblock** in order for the app to function.
+
+![Allow Nitrous Desktop Windows Security](/images/articles/nitrous-desktop-win-security.png)
 
 ### Adding an SSH Key
 
@@ -81,7 +87,12 @@ Once an SSH key pair is established, you will be able to utilize all features wi
 
 ### Web IDE
 
-The Web IDE link will open up your default web browser, and take you to the Web IDE of the box selected. It is recommended to have Google Chrome or Firefox installed.
+The Web IDE link will open up your default web browser, and take you to the Web IDE of the box selected. A modern web browser such as [Google Chrome](https://www.google.com/chrome) or [Mozilla Firefox](https://www.mozilla.org/firefox) needs to be installed and set as the default web browser.
+
+### Shell
+
+The Shell link lets you access your boxes' command line by initiating a
+secure shell connection.
 
 ### Files not Synced
 
