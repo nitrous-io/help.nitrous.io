@@ -70,13 +70,13 @@
       <li ><a href="/account-new">Creating an Account</a></li>
     </ul>
   </li>
-  
+
   <li >
     <a href="/categories/ssh/">SSH Keys</a>
     <ul class="nav">
       <li ><a href="/ssh-add/">Adding SSH Keys (Mac)</a></li>
       <li ><a href="/ssh-windows/">Adding SSH Keys (Windows)</a></li>
-    </ul>    
+    </ul>
   </li>
 
   <li >
@@ -94,8 +94,8 @@
     <a href="/categories/usage/">Usage</a>
     <ul class="nav">
       <li ><a href="/autoparts/">Autoparts Package Manager</a></li>
+      <li ><a href="/nitrous-desktop-win/">Nitrous Desktop (Windows)</a></li>
       <li ><a href="/nitrous-desktop/">Nitrous Desktop (Mac)</a></li>
-      <!--<li ><a href="/nitrous-desktop-win/">Nitrous Desktop (Windows)</a></li>-->
       <li ><a href="/ide-shortcuts/">Keyboard Shortcuts</a></li>
       <li ><a href="/new-file/">Create New File</a></li>
       <li ><a href="/ide-file-uploads/">Uploading via Web IDE</a></li>
@@ -124,24 +124,24 @@
       <li ><a href="/faq-localhost">Preview Issues</a></li>
     </ul>
   </li>
-  
+
   <li >
     <a href="/categories/faq/">Frequently Asked Questions</a>
-    <ul class="nav">      
+    <ul class="nav">
       <li ><a href="/faq-adding-project">Add an Existing Project</a></li>
       <li ><a href="/faq-disconnect">Nitrous.IO Keeps Disconnecting</a></li>
       <li ><a href="/faq-browser-support">Browser Support</a></li>
     </ul>
   </li>
-  
+
   <li >
     <a href="/categories/tutorials/">Tutorials</a>
-    <ul class="nav">    
+    <ul class="nav">
       <li ><a href="/meteor-app">Getting Started with Meteor</a></li>
       <li ><a href="/rails-app">Building a Rails 4.0 App</a></li>
       <li ><a href="/django-app">Building a Django App</a></li>
-      <li ><a href="/php">PHP Overview</a></li>            
-      <li ><a href="/discourse-start">Getting Started with Discourse</a></li>            
+      <li ><a href="/php">PHP Overview</a></li>
+      <li ><a href="/discourse-start">Getting Started with Discourse</a></li>
     </ul>
   </li>
 
@@ -154,7 +154,7 @@
       <li ><a href="/nodejitsu">Nodejitsu</a></li>
     </ul>
   </li>
-  
+
   <li >
     <a href="/categories/billing/">Billing</a>
     <ul class="nav">
@@ -165,7 +165,7 @@
       <li ><a href="/billing-n2o-lifespan/">N2O Lifespan</a></li>
     </ul>
   </li>
-  
+
   <li >
     <a href="/categories/resources/">Additional Resources</a>
     <ul class="nav">
@@ -204,13 +204,15 @@
 
 <p>Within the console you can bring up the MySQL prompt with the following command:</p>
 
-<pre><code>mysql -u root</code></pre>
+<pre><code>mysql -u root -p</code></pre>
+
+<p>When prompted for a password you will just want to leave it blank and press enter.</p>
 
 <h3 id="connecting_via_rails">Connecting via Rails</h3>
 
 <p>By default, sqlite3 will be setup on Rails and will automatically setup as the configuration is. If you want to create a MySQL database using the mysql2 gem, you will first need to add this line to your <code>Gemfile</code>:</p>
 
-<pre><code>gem &#39;mysql2&#39; </code></pre>
+<pre><code>gem &#39;mysql2&#39;</code></pre>
 
 <p>Once this has been added, run the following within the terminal:</p>
 

@@ -70,13 +70,13 @@
       <li ><a href="/account-new">Creating an Account</a></li>
     </ul>
   </li>
-  
+
   <li >
     <a href="/categories/ssh/">SSH Keys</a>
     <ul class="nav">
       <li ><a href="/ssh-add/">Adding SSH Keys (Mac)</a></li>
       <li ><a href="/ssh-windows/">Adding SSH Keys (Windows)</a></li>
-    </ul>    
+    </ul>
   </li>
 
   <li >
@@ -94,8 +94,8 @@
     <a href="/categories/usage/">Usage</a>
     <ul class="nav">
       <li ><a href="/autoparts/">Autoparts Package Manager</a></li>
+      <li  class="mi_active" ><a href="/nitrous-desktop-win/">Nitrous Desktop (Windows)</a></li>
       <li ><a href="/nitrous-desktop/">Nitrous Desktop (Mac)</a></li>
-      <!--<li  class="mi_active" ><a href="/nitrous-desktop-win/">Nitrous Desktop (Windows)</a></li>-->
       <li ><a href="/ide-shortcuts/">Keyboard Shortcuts</a></li>
       <li ><a href="/new-file/">Create New File</a></li>
       <li ><a href="/ide-file-uploads/">Uploading via Web IDE</a></li>
@@ -124,24 +124,24 @@
       <li ><a href="/faq-localhost">Preview Issues</a></li>
     </ul>
   </li>
-  
+
   <li >
     <a href="/categories/faq/">Frequently Asked Questions</a>
-    <ul class="nav">      
+    <ul class="nav">
       <li ><a href="/faq-adding-project">Add an Existing Project</a></li>
       <li ><a href="/faq-disconnect">Nitrous.IO Keeps Disconnecting</a></li>
       <li ><a href="/faq-browser-support">Browser Support</a></li>
     </ul>
   </li>
-  
+
   <li >
     <a href="/categories/tutorials/">Tutorials</a>
-    <ul class="nav">    
+    <ul class="nav">
       <li ><a href="/meteor-app">Getting Started with Meteor</a></li>
       <li ><a href="/rails-app">Building a Rails 4.0 App</a></li>
       <li ><a href="/django-app">Building a Django App</a></li>
-      <li ><a href="/php">PHP Overview</a></li>            
-      <li ><a href="/discourse-start">Getting Started with Discourse</a></li>            
+      <li ><a href="/php">PHP Overview</a></li>
+      <li ><a href="/discourse-start">Getting Started with Discourse</a></li>
     </ul>
   </li>
 
@@ -154,7 +154,7 @@
       <li ><a href="/nodejitsu">Nodejitsu</a></li>
     </ul>
   </li>
-  
+
   <li >
     <a href="/categories/billing/">Billing</a>
     <ul class="nav">
@@ -165,7 +165,7 @@
       <li ><a href="/billing-n2o-lifespan/">N2O Lifespan</a></li>
     </ul>
   </li>
-  
+
   <li >
     <a href="/categories/resources/">Additional Resources</a>
     <ul class="nav">
@@ -191,17 +191,9 @@
 </ul>
 <h3 id="windows_installation">Windows Installation</h3>
 
-<p>To install, <a href="http://www.nitrous.io/mac">download</a> the archived app, and extract it to any directory of your choice. Open <code>nitrousdesktop.exe</code> to run the app.</p>
+<p>First, make sure that a modern web browser like <a href="https://www.google.com/chrome">Google Chrome</a> or <a href="https://www.mozilla.org/firefox">Mozilla Firefox</a> is installed and set as the default web browser. A modern web browser is required for Nitrous Desktop to function properly.</p>
 
-<p>When you run the app for the first time you will see a Windows Security Alert. You will need to ensure <strong>Private Networks</strong> and <strong>Public Networks</strong> are checked if available, and you can save these settings by clicking <strong>Allow Access</strong>.</p>
-
-<p>If you are running Windows 7 or 8 the alert will look like the following image:</p>
-
-<p><img src="/images/articles/nitrous-desktop-win-firewall.png" alt="Allow Nitrous Desktop Firewall" /></p>
-
-<p>If you are running an earlier version of Windows then you may see a different Windows Security Alert. Ensure you click <strong>Unblock</strong> in order for the app to function.</p>
-
-<p><img src="/images/articles/nitrous-desktop-win-security.png" alt="Allow Nitrous Desktop Windows Security" /></p>
+<p>To install Nitrous Desktop, <a href="http://www.nitrous.io/mac">download</a> the archived app, and extract it to any directory of your choice. Open <code>NitrousDesktop.exe</code> to run the app.</p>
 
 <p>Once the app is running, you will see an <strong>N</strong> icon in the taskbar. Right click on the icon and select <strong>Open Nitrous Desktop</strong> to view the settings.</p>
 
@@ -217,7 +209,7 @@
 
 <p><strong>Enable</strong>: To enable File Sync, open Nitrous Desktop by right clicking on the <strong>N</strong> icon within the taskbar, and selecting <strong>Open Nitrous Desktop</strong>.</p>
 
-<p><img src="/images/articles/nitrous-desktop-win-menu-bar-icon.png" alt="Nitrous Desktop Security Settings" /></p>
+<p><img src="/images/articles/nitrous-desktop-win-menu-bar-icon.png" alt="Nitrous Desktop Menubar Icon" /></p>
 
 <p>Next, click on the <strong>File Sync</strong> button to begin syncing. This will continue to monitor and sync any future changes.</p>
 
@@ -229,11 +221,21 @@
 
 <p><strong>Enable</strong>: To enable Port Forwarding, click the <strong>Add..</strong> button located below the Port Forwarding field. Enter in the port number you would like to forward, and press Return once finished. You can do this mulitple times to forward multiple ports.</p>
 
-<p><img src="/images/articles/nitrous-desktop-win-port-forwarding-add.png" alt="Nitrous Desktop Security Settings" /></p>
+<p><img src="/images/articles/nitrous-desktop-win-port-forwarding-add.png" alt="Add Port Forwarding" /></p>
 
 <p>Once you have added the ports you wish to forward, click on the Port Forwarding button to enable:</p>
 
-<p><img src="/images/articles/nitrous-desktop-win-port-forwarding-enable.png" alt="Nitrous Desktop Security Settings" /></p>
+<p><img src="/images/articles/nitrous-desktop-win-port-forwarding-enable.png" alt="Enable Port Forwarding" /></p>
+
+<p>When you set up port forwarding, you will see a Windows Security Alert. You will need to ensure <strong>Private Networks</strong> and <strong>Public Networks</strong> are checked if available, and you can save these settings by clicking <strong>Allow Access</strong>.</p>
+
+<p>If you are running Windows 7 or 8 the alert will look like the following image:</p>
+
+<p><img src="/images/articles/nitrous-desktop-win-firewall.png" alt="Allow Nitrous Desktop Firewall" /></p>
+
+<p>If you are running an earlier version of Windows then you may see a different window. Ensure you click <strong>Unblock</strong> in order for the app to function.</p>
+
+<p><img src="/images/articles/nitrous-desktop-win-security.png" alt="Allow Nitrous Desktop Windows Security" /></p>
 
 <h3 id="adding_an_ssh_key">Adding an SSH Key</h3>
 
@@ -259,7 +261,11 @@
 
 <h3 id="web_ide">Web IDE</h3>
 
-<p>The Web IDE link will open up your default web browser, and take you to the Web IDE of the box selected. It is recommended to have Google Chrome or Firefox installed.</p>
+<p>The Web IDE link will open up your default web browser, and take you to the Web IDE of the box selected. A modern web browser such as <a href="https://www.google.com/chrome">Google Chrome</a> or <a href="https://www.mozilla.org/firefox">Mozilla Firefox</a> needs to be installed and set as the default web browser.</p>
+
+<h3 id="shell">Shell</h3>
+
+<p>The Shell link lets you access your boxes’ command line by initiating a secure shell connection.</p>
 
 <h3 id="files_not_synced">Files not Synced</h3>
 
