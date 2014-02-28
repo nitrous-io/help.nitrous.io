@@ -6,11 +6,11 @@ category: usage
 mitem: uploading
 ---
 
-Uploading files to Nitrous.IO is quick and easy. There's no need to FTP or SCP files to your development box (although you can, if you want to).
+*Uploading files to Nitrous.IO is quick and easy. There's no need to FTP or SCP files to your development box (although you can, and it is explained at the end of this guide).*
 
-<p class="alert">This article describes how to upload individual files. If you need to upload an entire project / complex directory structure, please read [this article]()</p>
+### Uploading Individual Files
 
-In the file browser, right-click the destination directory where you'd like to upload the image and click "Upload files to \[your folder name\]".
+In the file browser, right-click the destination directory where you'd like to upload the image and click "Upload files to **folder name**".
 
 ![Directory Menu](https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-1.png)
 
@@ -38,7 +38,7 @@ If you want to view an image in the browser, simply click the image to open a pr
 
 ![Airmax](https://raw.github.com/action-io/action-assets/master/support/screenshots/airmaxpair.png)
 
-#Upload a directory via the Web IDE
+### Uploading a directory
 
 The File Upload/ide-file-uploads feature on the Web IDE is intended for individual files.
 
@@ -63,3 +63,24 @@ Then unzip the package using the "unzip" command:
     unzip help-articles.zip
 
 <p class="note">Make sure you've moved the archive into the desired directory before unzipping.</p>
+
+#Alternative Methods
+
+### Nitrous Desktop
+
+If you are wanting to sync your projects locally or just use an app to upload larger amounts of data, take a look at [Nitrous Desktop](https://www.nitrous.io/desktop). More information on how to use this can be found in the [Nitrous Desktop guide](/nitrous-desktop).
+
+### SCP
+
+You can also upload and download content via SCP. To do this, you will need to [add an SSH Key](http://help.nitrous.io/ssh-add/) to your account.
+
+Next, run the command below on your local machine, replacing {PORT} with the port # assigned to your Nitrous.IO box, and also changing `usw1` with the proper region found in the SSH URI of your [boxes page](https://www.nitrous.io/app#/boxes).
+
+To Upload:
+
+    scp -P{PORT} -r path/to/yourFolder action@usw1.nitrousbox.com:~/workspace
+
+To Download:
+
+    scp -P{PORT} -r action@usw1.nitrousbox.com:~/workspace path/to/yourLocalFolder
+
