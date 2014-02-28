@@ -182,11 +182,13 @@
 
   <div class="col-md-9">
     <h1 class="article-title">Uploading files via the Web IDE</h1>
-    <h5 class="note">Last Updated on: 28 June 2013</h5>
+    <h5 class="note">Last Updated on: 28 February 2014</h5>
      
-    <p>Uploading files to Nitrous.IO is quick and easy. There’s no need to FTP or SCP files to your development box (although you can, if you want to).</p>
-<p class='alert'>This article describes how to upload individual files. If you need to upload an entire project / complex directory structure, please read [this article]()</p>
-<p>In the file browser, right-click the destination directory where you’d like to upload the image and click “Upload files to [your folder name]”.</p>
+    <p><em>Uploading files to Nitrous.IO is quick and easy. There’s no need to FTP or SCP files to your development box (although you can, and it is explained at the end of this guide).</em></p>
+
+<h3 id="uploading_individual_files">Uploading Individual Files</h3>
+
+<p>In the file browser, right-click the destination directory where you’d like to upload the image and click “Upload files to <strong>folder name</strong>”.</p>
 
 <p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-1.png" alt="Directory Menu" /></p>
 
@@ -212,7 +214,7 @@
 
 <p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/airmaxpair.png" alt="Airmax" /></p>
 
-<h1 id="upload_a_directory_via_the_web_ide">Upload a directory via the Web IDE</h1>
+<h3 id="uploading_a_directory">Uploading a directory</h3>
 
 <p>The File Upload/ide-file-uploads feature on the Web IDE is intended for individual files.</p>
 
@@ -234,6 +236,25 @@
 
 <pre><code>unzip help-articles.zip</code></pre>
 <p class='note'>Make sure you've moved the archive into the desired directory before unzipping.</p>
+<h1 id="alternative_methods">Alternative Methods</h1>
+
+<h3 id="nitrous_desktop">Nitrous Desktop</h3>
+
+<p>If you are wanting to sync your projects locally or just use an app to upload larger amounts of data, take a look at <a href="https://www.nitrous.io/desktop">Nitrous Desktop</a>. More information on how to use this can be found in the <a href="/nitrous-desktop">Nitrous Desktop guide</a>.</p>
+
+<h3 id="scp">SCP</h3>
+
+<p>You can also upload and download content via SCP. To do this, you will need to <a href="http://help.nitrous.io/ssh-add/">add an SSH Key</a> to your account.</p>
+
+<p>Next, run the command below on your local machine, replacing {PORT} with the port # assigned to your Nitrous.IO box, and also changing <code>usw1</code> with the proper region found in the SSH URI of your <a href="https://www.nitrous.io/app#/boxes">boxes page</a>.</p>
+
+<p>To Upload:</p>
+
+<pre><code>scp -P{PORT} -r path/to/yourFolder action@usw1.nitrousbox.com:~/workspace</code></pre>
+
+<p>To Download:</p>
+
+<pre><code>scp -P{PORT} -r action@usw1.nitrousbox.com:~/workspace path/to/yourLocalFolder</code></pre>
   </div>
 </div>
 
