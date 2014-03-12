@@ -182,7 +182,7 @@
 
   <div class="col-md-9">
     <h1 class="article-title">Setting up PostgreSQL with Autoparts</h1>
-    <h5 class="note">Last Updated on: 23 January 2014</h5>
+    <h5 class="note">Last Updated on: 12 March 2014</h5>
      
     <h3 id="prerequisites">Prerequisites</h3>
 
@@ -216,6 +216,24 @@
   adapter: postgresql
   encoding: unicode
   database: appname-dev
+  pool: 5
+  host: localhost
+  username: action
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: appname-test
+  pool: 5
+  host: localhost
+  username: action
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: appname-prod
   pool: 5
   host: localhost
   username: action
