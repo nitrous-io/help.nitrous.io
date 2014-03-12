@@ -40,6 +40,24 @@ In `config/database.yml`:
       host: localhost
       username: action
       password:
+    
+    test:
+      adapter: postgresql
+      encoding: unicode
+      database: appname-test
+      pool: 5
+      host: localhost
+      username: action
+      password:
+
+    production:
+      adapter: postgresql
+      encoding: unicode
+      database: appname-prod
+      pool: 5
+      host: localhost
+      username: action
+      password:
 
 Once these configurations have been made, run the following commands:
 
