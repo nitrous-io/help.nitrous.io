@@ -220,6 +220,13 @@ h5.note {
   border: 1px solid #E0DCBF;
 }
 
+blockquote{
+  background-color: rgb(234, 186, 130);
+  p{
+    font-size: 16px;
+  }
+}
+
 .btn {
   &.ask {
     margin-left: 1rem;
