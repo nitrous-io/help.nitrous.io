@@ -59,3 +59,5 @@ To preview your app with your domain, simply run the app within the console with
 Ports 1024 - 10,000 are open within your Nitrous box. To view the app on a specific port just add `:port-number` to the end of your domain when visiting it (e.g. your.domain.com:4000). 
 
 If you wish to view your app directly on your domain (e.g. domain.com), run the app on port 3000. The Nitrous boxes automatically forward this to port 80, eliminating the need for specifying a port within the URI.
+
+>Note: SSL security is not currently available when using custom domains.
