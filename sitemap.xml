@@ -13,6 +13,12 @@
   </url>
   
   <url>
+      <loc>http://help.nitrous.io/autoparts</loc>
+      <lastmod>2014-03-27</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
       <loc>http://help.nitrous.io/postgresql</loc>
       <lastmod>2014-03-12</lastmod>
       <changefreq>monthly</changefreq>
@@ -56,12 +62,6 @@
   
   <url>
       <loc>http://help.nitrous.io/basic-auth-preview</loc>
-      <lastmod>2014-01-17</lastmod>
-      <changefreq>monthly</changefreq>
-  </url>
-  
-  <url>
-      <loc>http://help.nitrous.io/autoparts</loc>
       <lastmod>2014-01-17</lastmod>
       <changefreq>monthly</changefreq>
   </url>
