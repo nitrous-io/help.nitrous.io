@@ -60,6 +60,6 @@ New tools, interpreters, and databases are always being added to Autoparts. To u
 
     parts update
 
-### Additional Parts
+### Contributing to Autoparts
 
-If you are wanting to install a tool which is not available within Autoparts, you can [create a new parts package](/autoparts-packages/) by submitting a pull request. The Nitrous.IO team is actively contributing as well, so feel free to [contact us](mailto:support@nitrous.io) with your request.
+If you are wanting to install a tool which is not available within Autoparts, you can [create a new parts package](/contributing-to-autoparts/) by submitting a pull request. The Nitrous.IO team is actively contributing as well, so feel free to [contact us](mailto:support@nitrous.io) with your request.
