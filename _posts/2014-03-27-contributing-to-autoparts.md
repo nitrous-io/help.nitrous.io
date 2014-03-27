@@ -10,14 +10,14 @@ Before building a new part ensure you have updated the repo. Run `parts update` 
 
 ### Package Guidelines
 
-Autoparts packages are located in `lib/autoparts/packages`. Please follow the [Ruby Styleguide](https://github.com/styleguide/ruby) when building a part.
+Autoparts packages are located in the [Autoparts repo](https://github.com/nitrous-io/autoparts) under `lib/autoparts/packages`. Please follow the [Ruby Styleguide](https://github.com/styleguide/ruby) when building a part.
 
 In order to create a new package you will need to provide the following information when creating a pull request:
 
 * Package Name
 * Version
 * Description
-* Category (A list of categories can be found within [lib/autoparts/category.rb](https://github.com/nitrous-io/autoparts/blob/master/lib/autoparts/category.rb))
+* Category (A list of categories can be found in the [Autoparts repo](https://github.com/nitrous-io/autoparts) within [lib/autoparts/category.rb](https://github.com/nitrous-io/autoparts/blob/master/lib/autoparts/category.rb))
 * Source URL (official release source which package will always be located at)
 * Source filetype (the extension of the source file)
 * SHA-1 hash of the source package (You can run `sha1sum` against the source file or [generate](http://hash.online-convert.com/sha1-generator) a SHA-1 hash with the source file)
@@ -34,7 +34,7 @@ There are a few requirements if the part requires additional configuration:
 
 ### Contributing a New Part
 
-Take a look at [docs/example-part.rb](https://github.com/nitrous-io/autoparts/tree/master/docs/example-part.rb) for details on how a package is built.
+Within the [Autoparts repo](https://github.com/nitrous-io/autoparts), take a look at [docs/example-part.rb](https://github.com/nitrous-io/autoparts/tree/master/docs/example-part.rb) for details on how a package is built.
 
 Follow this workflow to contribute an Autoparts package:
 
