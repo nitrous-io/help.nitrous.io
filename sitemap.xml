@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+      <loc>http://help.nitrous.io</loc>
+      <changefreq>daily</changefreq>
+      <priority>1</priority>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/contributing-to-autoparts</loc>
+      <lastmod>2014-03-27</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/postgresql</loc>
+      <lastmod>2014-03-12</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/custom-domains</loc>
+      <lastmod>2014-03-12</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/ide-file-uploads</loc>
+      <lastmod>2014-02-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/nitrous-desktop-win</loc>
+      <lastmod>2014-02-18</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/wordpress</loc>
+      <lastmod>2014-02-10</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/php</loc>
+      <lastmod>2014-02-05</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/heroku</loc>
+      <lastmod>2014-01-27</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/basic-auth-preview</loc>
+      <lastmod>2014-01-17</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/autoparts</loc>
+      <lastmod>2014-01-17</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/ssl</loc>
+      <lastmod>2014-01-16</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/nitrous-desktop</loc>
+      <lastmod>2014-01-14</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/billing-payment-info</loc>
+      <lastmod>2014-01-07</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/billing-n2o-renewal</loc>
+      <lastmod>2014-01-07</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/billing-n2o-lifespan</loc>
+      <lastmod>2014-01-07</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/billing-credit-card-declined</loc>
+      <lastmod>2014-01-07</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/billing-change-plans</loc>
+      <lastmod>2014-01-07</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/redis-cloud</loc>
+      <lastmod>2014-01-06</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/meteor-app</loc>
+      <lastmod>2014-01-02</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/billing-cycle</loc>
+      <lastmod>2013-12-13</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/cloud66</loc>
+      <lastmod>2013-12-10</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/mysql</loc>
+      <lastmod>2013-12-09</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/faq-unable-to-connect-to-web-ide</loc>
+      <lastmod>2013-12-05</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/box-interpreters-and-tools</loc>
+      <lastmod>2013-11-25</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/django-app</loc>
+      <lastmod>2013-11-15</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/ide-shortcuts</loc>
+      <lastmod>2013-11-12</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/rails-app</loc>
+      <lastmod>2013-11-05</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/basic-auth</loc>
+      <lastmod>2013-11-05</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/websockets</loc>
+      <lastmod>2013-11-03</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/discourse-start</loc>
+      <lastmod>2013-10-23</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/sql-database-management</loc>
+      <lastmod>2013-10-18</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/nodejitsu</loc>
+      <lastmod>2013-10-14</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/azure-sites</loc>
+      <lastmod>2013-10-11</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/redis</loc>
+      <lastmod>2013-10-04</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/memcached</loc>
+      <lastmod>2013-10-04</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/preview</loc>
+      <lastmod>2013-09-27</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/upgrade-box</loc>
+      <lastmod>2013-09-17</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/mongodb</loc>
+      <lastmod>2013-09-15</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/connecting-to-mongolabs</loc>
+      <lastmod>2013-09-15</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/python-versions-with-virtualenv</loc>
+      <lastmod>2013-09-04</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/logos</loc>
+      <lastmod>2013-09-03</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/getting-started</loc>
+      <lastmod>2013-08-23</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/best-practices</loc>
+      <lastmod>2013-08-23</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/memcachier</loc>
+      <lastmod>2013-08-20</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/faq-copy-paste</loc>
+      <lastmod>2013-08-20</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/app-engine</loc>
+      <lastmod>2013-08-07</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/faq-aws-region-settings</loc>
+      <lastmod>2013-08-06</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/amazon-rds</loc>
+      <lastmod>2013-08-02</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/faq-erlang</loc>
+      <lastmod>2013-08-01</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/admin-security-response</loc>
+      <lastmod>2013-07-26</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/github-add-key</loc>
+      <lastmod>2013-07-23</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/box-settings</loc>
+      <lastmod>2013-07-15</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/support-channels</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/ssh-windows</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/ssh-add</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/postgres</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/node-connect-server</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/new-file</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/mac-preferences</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/ide-upload-directory</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/ide-refresh</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/ide-general</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/ide-fullscreen</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/faq-localhost</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/faq-disconnect</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/faq-browser-support</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/faq-adding-project</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/contact-us</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/collab</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/box-templates</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/box-new</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/admin-terms</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/admin-security</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/admin-privacy</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/admin-beta</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/admin-aup</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/account-new</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/N2O</loc>
+      <lastmod>2013-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+</urlset>

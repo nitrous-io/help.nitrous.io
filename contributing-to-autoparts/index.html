@@ -3,7 +3,7 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Creating a New Package for Autoparts</title>
+  <title>Contributing to Autoparts</title>
   <meta name="author" content="Nitrous.IO" />
   <link href="http://feeds.feedburner.com/actionioblog" rel="alternate" title="Nitrous.IO Blog" type="application/atom+xml" />
   <meta content='Nitrous.IO Support Documentation. Tutorials, FAQ, and other guides for building your apps directly on Nitrous.IO' name='description'>
@@ -182,10 +182,16 @@
   </div>
 
   <div class="col-md-9">
-    <h1 class="article-title">Creating a New Package for Autoparts</h1>
-    <h5 class="note">Last Updated on: 18 January 2014</h5>
+    <h1 class="article-title">Contributing to Autoparts</h1>
+    <h5 class="note">Last Updated on: 27 March 2014</h5>
      
-    <h3 id="creating_the_package">Creating the Package</h3>
+    <h3 id="getting_started">Getting Started</h3>
+
+<p>Before building a new part ensure you have updated the repo. Run <code>parts update</code> within your Nitrous box in order to do this.</p>
+
+<h3 id="package_guidelines">Package Guidelines</h3>
+
+<p>Autoparts packages are located in <code>lib/autoparts/packages</code>. Please follow the <a href="https://github.com/styleguide/ruby">Ruby Styleguide</a> when building a part.</p>
 
 <p>In order to create a new package you will need to provide the following information when creating a pull request:</p>
 
@@ -196,62 +202,80 @@
 
 <li>Description</li>
 
+<li>Category (A list of categories can be found within <a href="https://github.com/nitrous-io/autoparts/blob/master/lib/autoparts/category.rb">lib/autoparts/category.rb</a>)</li>
+
 <li>Source URL (official release source which package will always be located at)</li>
 
-<li>Filetype (the extension of the file)</li>
+<li>Source filetype (the extension of the source file)</li>
 
-<li>SHA-1 hash (hash should be available on same page as package. If not you can <a href="http://hash.online-convert.com/sha1-generator">generate</a> a SHA-1 hash with the source file)</li>
+<li>SHA-1 hash of the source package (You can run <code>sha1sum</code> against the source file or <a href="http://hash.online-convert.com/sha1-generator">generate</a> a SHA-1 hash with the source file)</li>
+
+<li>Dependencies (if any)</li>
 
 <li>Compile / Installation commands</li>
+
+<li>(Optional) Start/Stop commands. This is needed only if building a part for a database or another tool that runs as a service.</li>
 </ul>
 
-<p>Let’s take a look at a previous example within the <a href="https://github.com/action-io/autoparts/blob/master/lib/autoparts/packages/tig.rb">Github repo</a>.</p>
-
-<pre><code>module Autoparts
-  module Packages
-    class Tig &lt; Package
-      name &#39;tig&#39;
-      version &#39;1.2.1&#39;
-      description &#39;Tig: An ncurses-based text-mode interface for git&#39;
-      source_url &#39;http://jonas.nitro.dk/tig/releases/tig-1.2.1.tar.gz&#39;
-      source_sha1 &#39;5755bae7342debf94ef33973e0eaff6207e623dc&#39;
-      source_filetype &#39;tar.gz&#39;
-
-      def compile
-        Dir.chdir(name_with_version) do
-          args = [
-            &quot;--prefix=#{prefix_path}&quot;,
-            &quot;--sysconfdir=#{Path.etc}&quot;
-          ]
-          execute &#39;./configure&#39;, *args
-        end
-      end
-
-      def install
-        Dir.chdir(name_with_version) do
-          bin_path.mkpath
-          execute &#39;make install&#39;
-        end
-      end
-    end
-  end
-end</code></pre>
-
-<h4 id="file_layout">File Layout</h4>
-
-<p>For a new package to be created, a Ruby file will need to reflect this layout with all the fields previously mentioned along with an <code>install</code> method.</p>
-
-<h4 id="items_to_note">Items to note:</h4>
+<p>There are a few requirements if the part requires additional configuration:</p>
 
 <ul>
-<li>A compile method may not be needed depending on the package.</li>
+<li>Post-installation setup tasks (e.g. creating conf file, generating empty database file) should be done in <code>post_install</code> method.</li>
 
-<li>The install method (and compile method if needed) should include all console commands needed to install the package on Ubuntu 12.04.</li>
+<li>Configuration files should be placed in <code>Path.etc</code> (e.g. <code>~/.parts/etc</code>) or <code>Path.etc + name</code> (e.g. <code>~/.parts/etc/postgresql</code>).</li>
+
+<li>Data files (e.g. database files) should be placed in <code>Path.var + name</code> (e.g. <code>~/.parts/var/postgresql</code>).</li>
+
+<li>Log files should be placed in <code>Path.var + &#39;log&#39; + &quot;#{name}.log&quot;</code> (e.g. <code>~/.parts/var/log/postgresql.log</code>).</li>
 </ul>
 
-<h3 id="submitting_the_package">Submitting the Package</h3>
+<h3 id="contributing_a_new_part">Contributing a New Part</h3>
 
-<p>To submit a package, create a <a href="https://help.github.com/articles/creating-a-pull-request">pull request</a> on the <a href="https://github.com/action-io/autoparts">Github repo</a>. This pull request should include only a new <code>*.rb</code> file within <code>autoparts/lib/autoparts/packages</code>, or a modified file if you are updating a version of an existing package. The pull request may be submitted on the master branch or a separate branch.</p>
+<p>Take a look at <a href="https://github.com/nitrous-io/autoparts/tree/master/docs/example-part.rb">docs/example-part.rb</a> for details on how a package is built.</p>
+
+<p>Follow this workflow to contribute an Autoparts package:</p>
+
+<ol>
+<li>Fork the <a href="https://github.com/nitrous-io/autoparts">Autoparts repo</a> in GitHub.</li>
+
+<li>Create a new box in Nitrous.IO.</li>
+
+<li>cd to <code>~/.parts/autoparts</code></li>
+
+<li>Add the fork repo as a a git remote: <code>git remote add myfork git@github.com:YOUR-USERNAME/autoparts.git</code></li>
+
+<li>Create the new package file in <code>~/.parts/autoparts/lib/autoparts/packages/mypackage.rb</code></li>
+
+<li>Open a new console tab and check if the package works as expected.</li>
+</ol>
+
+<ul>
+<li>parts search (see if the new package you created is listed)</li>
+
+<li>parts install mypackage</li>
+
+<li>parts start (if applicable)</li>
+
+<li>parts stop</li>
+
+<li>parts uninstall mypackage</li>
+</ul>
+
+<ol>
+<li>Reload the IDE and see if the above actions also works via the UI.</li>
+
+<li>After you’re confident that the package works, commit and push the change to your fork.</li>
+</ol>
+
+<ul>
+<li>git commit -m “Added MyPackage.”</li>
+
+<li>git push myfork master</li>
+</ul>
+
+<ol>
+<li>Last, open a pull request via GitHub with a <a href="http://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message">descriptive commit message</a>. We will quickly review the part to be merged.</li>
+</ol>
   </div>
 </div>
 
