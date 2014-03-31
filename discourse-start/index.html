@@ -224,12 +224,9 @@ parts start postgresql</code></pre>
 <p>First, we’ll need to move into the <code>discourse</code> folder and run bundle install:</p>
 
 <pre><code>cd workspace/discourse
-bundle install </code></pre>
+bundle install</code></pre>
 
 <p>This is probably going to be the most time consuming task of the entire post since discourse uses about 10,000 gems. Of course, we’re not complaining…</p>
-
-<pre><code>cp config/database.yml.development-sample config/database.yml
-cp config/redis.yml.sample config/redis.yml</code></pre>
 
 <h3 id="5_configure_postgres_and_install_seed_data">5. Configure Postgres and Install Seed Data</h3>
 
