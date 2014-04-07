@@ -14,6 +14,7 @@
   <link rel='stylesheet' href='/css/bootstrap3/css/bootstrap.css'>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <link href="/css/action.css" media="screen, projection" rel="stylesheet">
+  <link href="/css/highlight.js/railscasts.css" media="screen, projection" rel="stylesheet">
   <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
 </head>
 <body>
@@ -185,7 +186,9 @@
     <h1 class="article-title">Included Interpreters and Tools</h1>
     <h5 class="note">Last Updated on: 25 November 2013</h5>
      
-    <p>We provide extra interpreters and tools in your Nitrous boxes to help you get hacking away instantly. Here is a list of the tools we provide as well as some examples of other tools you could install yourself (without needing root access):</p>
+    <p>We provide extra interpreters and tools in your Nitrous boxes to help you get hacking away instantly.</p>
+
+<p>Here is a list of the tools we provide as well as some examples of other tools you could install yourself (without needing root access):</p>
 
 <h2 id="tools_available_on_all_nitrous_boxes">Tools Available on All Nitrous Boxes</h2>
 
@@ -215,6 +218,56 @@
 <li>Parse Command Line Tool</li>
 </ul>
 
+<h3 id="available_in_autoparts">Available in Autoparts</h3>
+
+<p><a href="/autoparts">Autoparts</a> is a open source package manager which allows you to install databases and tools within a single command. Here is a list of the</p>
+
+<ul>
+<li>Composer</li>
+
+<li>PHP5</li>
+
+<li>Erlang</li>
+
+<li>Go</li>
+
+<li>Google App Engine</li>
+
+<li>Leiningen</li>
+
+<li>Lua</li>
+
+<li>Maven</li>
+
+<li>Memcached</li>
+
+<li>Meteor</li>
+
+<li>MongoDB</li>
+
+<li>MySQL</li>
+
+<li>Node.JS</li>
+
+<li>Phantom.JS</li>
+
+<li>PHPMyAdmin</li>
+
+<li>Pip</li>
+
+<li>Python2/3</li>
+
+<li>Redis</li>
+
+<li>Scala</li>
+
+<li>Tmux</li>
+
+<li>Zsh</li>
+</ul>
+
+<p>For a full list of parts, run <code>parts search</code> within the console of your Nitrous box.</p>
+
 <h3 id="possible_to_install_yourself_just_examples_you_can_do_more">Possible to Install Yourself (Just examples, you can do more)</h3>
 
 <ul>
@@ -223,10 +276,6 @@
 <li>Dart</li>
 
 <li>Haskell</li>
-
-<li>Erlang</li>
-
-<li>Scala</li>
 </ul>
 
 <h3 id="system_tools">System Tools</h3>
@@ -346,6 +395,8 @@
   <footer>
     <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
+    <script src='/javascripts/highlight.js/highlight.pack.js'></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </footer>
 
   <script>
