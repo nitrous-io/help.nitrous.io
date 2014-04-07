@@ -6,7 +6,9 @@ category: boxes
 mitem: box-tools
 ---
 
-We provide extra interpreters and tools in your Nitrous boxes to help you get hacking away instantly. Here is a list of the tools we provide as well as some examples of other tools you could install yourself (without needing root access):
+We provide extra interpreters and tools in your Nitrous boxes to help you get hacking away instantly. 
+
+Here is a list of the tools we provide as well as some examples of other tools you could install yourself (without needing root access):
 
 ## Tools Available on All Nitrous Boxes
 
@@ -24,12 +26,39 @@ We provide extra interpreters and tools in your Nitrous boxes to help you get ha
 * Heroku Toolbelt
 * Parse Command Line Tool
 
+### Available in Autoparts
+
+[Autoparts](/autoparts) is a open source package manager which allows you to install databases and tools within a single command. Here is a list of the 
+
+* Composer
+* PHP5
+* Erlang
+* Go
+* Google App Engine
+* Leiningen
+* Lua
+* Maven
+* Memcached
+* Meteor
+* MongoDB
+* MySQL
+* Node.JS
+* Phantom.JS
+* PHPMyAdmin
+* Pip
+* Python2/3
+* Redis
+* Scala
+* Tmux
+* Zsh
+
+For a full list of parts, run `parts search` within the console of your Nitrous box.
+
 ### Possible to Install Yourself (Just examples, you can do more)
+
 * Clojure
 * Dart
 * Haskell
-* Erlang
-* Scala
 
 ### System Tools
 
