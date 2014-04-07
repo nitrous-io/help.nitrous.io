@@ -221,7 +221,10 @@ h5.note {
 }
 
 blockquote{
-  background-color: rgb(234, 186, 130);
+  padding: 20px;
+  padding-left: 60px;
+  border-left: 5px solid #80E1FF;
+  background: #C0F5FF url(/images/info-icon.png) no-repeat left center;
   p{
     font-size: 16px;
   }
