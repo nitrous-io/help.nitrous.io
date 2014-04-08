@@ -6,4 +6,12 @@ mitem: changes
 layout: article
 ---
 
-The monthly subscription cost will be pro-rated if changed to another plan, but not if the plan is canceled.
+### Remaining Balance
+
+We will consider the remaining balance in your subscription and pro-rate accordingly when you change plans (upgrade or downgrade).
+
+However, any remaining balance will not refunded when you cancel a subscription.
+
+### What happens to my boxes if I cancel the subscription?
+
+You will be able to retain a free box based on the remaining N2O balance after cancelation. Any additional boxes must be terminated, before cancelling the subscription.
