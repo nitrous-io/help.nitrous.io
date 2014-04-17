@@ -6,7 +6,7 @@ category: previewing
 mitem: customdomains
 ---
 
-*The [Start and Shift plans](https://www.nitrous.io/app/#/n2o/upgrade) allow you to associate 1 custom domain with your Nitrous box, allowing you to run your app and preview it on your own domain.*
+*The [Shift and Turbo plans](https://www.nitrous.io/app/#/n2o/upgrade) allow you to associate 1 custom domain with your Nitrous box, allowing you to run your app and preview it on your own domain.*
 
 ### Setting Up Your Custom Domain
 
@@ -36,7 +36,7 @@ When using a subdomain, like `www.your-domain.com`, create a **CNAME** record po
 
 Once the CNAME record is created, you could forward your domain `your-domain.com` to your subdomain `www.your-domain.com` if your DNS provider supports this. Doing this will ensure both the **www** subdomain and **non-www** domain are supported.
 
-View the [Google Support Guide](https://support.google.com/a/topic/1615038?hl=en&ref_topic=1687211) for information on setting up a CNAME record with your DNS provider. 
+View the [Google Support Guide](https://support.google.com/a/topic/1615038?hl=en&ref_topic=1687211) for information on setting up a CNAME record with your DNS provider.
 
 #### Apex Domains (Alias Records)
 
@@ -56,7 +56,7 @@ If using a DNS above (or one with these capabilities), point the ALIAS or ANAME 
 
 To preview your app with your domain, simply run the app within the console with the appropriate command (e.g. rails server).
 
-Ports 1024 - 10,000 are open within your Nitrous box. To view the app on a specific port just add `:port-number` to the end of your domain when visiting it (e.g. your.domain.com:4000). 
+Ports 1024 - 10,000 are open within your Nitrous box. To view the app on a specific port just add `:port-number` to the end of your domain when visiting it (e.g. your.domain.com:4000).
 
 If you wish to view your app directly on your domain (e.g. domain.com), run the app on port 3000. The Nitrous boxes automatically forward this to port 80, eliminating the need for specifying a port within the URI.
 
