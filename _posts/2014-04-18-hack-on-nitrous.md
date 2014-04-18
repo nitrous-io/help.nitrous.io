@@ -11,7 +11,7 @@ category: usage
 
 You can quickly add a 'Hack' button to your own blog, tutorial, or project repository. All that is required is a [public Github repository](https://help.github.com/articles/creating-a-new-repository) which you will be creating the button for. Once this has been done, visit the Hack Button Embed page:
 
-**Hack Button:** [https://www.nitrous.io/embed](https://www.nitrous.io/embed)
+**Hack Button:** [https://www.nitrous.io/embed](https://www.nitrous.io/embed?utm_source=help.nitrous.io&utm_medium=guide&utm_campaign=hackguide)
 
 On the Hack Button Embed page you will see 5 steps: Button Size, Select Stack, Github Repo Name, Path to File, and Embed Code.
 
