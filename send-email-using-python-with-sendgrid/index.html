@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Send Email with Python Using SendGrid</title>
+  <meta name="author" content="Nitrous.IO" />
+  <link href="http://feeds.feedburner.com/actionioblog" rel="alternate" title="Nitrous.IO Blog" type="application/atom+xml" />
+  <meta content='Nitrous.IO Support Documentation. Tutorials, FAQ, and other guides for building your apps directly on Nitrous.IO' name='description'>
+  <meta content='Nitrous.IO' name='author'>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
+  <link rel='stylesheet' href='/css/bootstrap3/css/bootstrap.css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="/css/action.css" media="screen, projection" rel="stylesheet">
+  <link href="/css/highlight.js/railscasts.css" media="screen, projection" rel="stylesheet">
+  <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Nitrous<span>docs</span></a>
+      </div>
+  
+      <div class="collapse navbar-collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+          <li class="hidden-sm"><a href="/categories/boxes/" >Boxes</a></li>
+          <li class="hidden-sm"><a href="/categories/usage/" >Usage</a></li>
+          <li class="hidden-sm"><a href="/categories/databases/" >Databases</a></li>
+          <li><a href="/categories/deployment/" >Deploy</a></li>
+          <li>
+            <a href="/discussions" class="stack-exchange" >
+              <i class="fa fa-stack-exchange"></i>Discuss
+            </a>
+          </li>        
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search" action="/search.html">
+          <input type="text" name="q" class="form-control" placeholder="Search Docs">
+        </form>
+
+        <ul class="nav navbar-nav pull-right hidden-sm hidden-xs">
+          <li><a href="https://nitrous.io/users/sign_in">Sign in</a></li>
+          <li>
+            <a href="https://www.nitrous.io" class="signup">
+              <i class="fa fa-plus"></i>Sign up
+            </a></li>
+        </ul>       
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-3">
+    <ul class="snav hidden-sm hidden-xs">
+  <li >
+    <a href="/categories/getting-started/">Getting Started</a>
+    <ul class="nav">
+      <li ><a href="/github-add-key">Connecting to Github</a></li>
+      <li ><a href="/ide-general">Web IDE Overview</a></li>
+      <li ><a href="/best-practices">Best Practices</a></li>
+      <li ><a href="/account-new">Creating an Account</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/ssh/">SSH Keys</a>
+    <ul class="nav">
+      <li ><a href="/ssh-add/">Adding SSH Keys (Mac)</a></li>
+      <li ><a href="/ssh-windows/">Adding SSH Keys (Windows)</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/boxes/">Boxes</a>
+    <ul class="nav">
+      <li ><a href="/box-new">Create a Box</a></li>
+      <li ><a href="/box-settings/">Box Memory & Storage</a></li>
+      <li ><a href="/box-templates/">Box Templates</a></li>
+      <li ><a href="/box-interpreters-and-tools/">Included Tools</a></li>
+      <li ><a href="/upgrade-box">Update Box</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/usage/">Usage</a>
+    <ul class="nav">
+      <li ><a href="/autoparts/">Autoparts Package Manager</a></li>
+      <li ><a href="/nitrous-desktop-win/">Nitrous Desktop (Windows)</a></li>
+      <li ><a href="/nitrous-desktop/">Nitrous Desktop (Mac)</a></li>
+      <li ><a href="/ide-shortcuts/">Keyboard Shortcuts</a></li>
+      <li ><a href="/new-file/">Create New File</a></li>
+      <li ><a href="/ide-file-uploads/">Uploading via Web IDE</a></li>
+      <li ><a href="/collab">Collaboration</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/databases/">Databases</a>
+    <ul class="nav">
+      <li ><a href="/memcached/">Memcached</a></li>
+      <li ><a href="/mongodb/">MongoDB</a></li>
+      <li ><a href="/mysql/">MySQL</a></li>
+      <li ><a href="/postgresql/">PostgreSQL</a></li>
+      <li ><a href="/redis/">Redis</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/previewing/">Preview</a>
+    <ul class="nav">
+      <li ><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
+      <li ><a href="/custom-domains">Custom Domains</a></li>
+      <li ><a href="/preview">Previewing Your App</a></li>
+      <li ><a href="/faq-localhost">Preview Issues</a></li>
+      <li ><a href="/ssl">SSL</a></li>
+      <li ><a href="/websockets">Websockets</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/faq/">Frequently Asked Questions</a>
+    <ul class="nav">
+      <li ><a href="/faq-adding-project">Add an Existing Project</a></li>
+      <li ><a href="/faq-disconnect">Nitrous.IO Keeps Disconnecting</a></li>
+      <li ><a href="/faq-browser-support">Browser Support</a></li>
+    </ul>
+  </li>
+
+  <li  class="active" >
+    <a href="/categories/tutorials/">Tutorials</a>
+    <ul class="nav">
+      <li ><a href="/meteor-app">Getting Started with Meteor</a></li>
+      <li ><a href="/rails-app">Building a Rails 4.0 App</a></li>
+      <li ><a href="/django-app">Building a Django App</a></li>
+      <li ><a href="/php">PHP Overview</a></li>
+      <li ><a href="/discourse-start">Getting Started with Discourse</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/deployment/">Deployment</a>
+    <ul class="nav">
+      <li ><a href="/heroku/">Heroku</a></li>
+      <li ><a href="/app-engine">App Engine</a></li>
+      <li ><a href="/azure-sites">Azure Sites</a></li>
+      <li ><a href="/nodejitsu">Nodejitsu</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/billing/">Billing</a>
+    <ul class="nav">
+      <li ><a href="/billing-cycle/">Billing Cycle</a></li>
+      <li ><a href="/billing-payment-info/">Payment Information</a></li>
+      <li ><a href="/billing-change-plans/">Changing Subscription</a></li>
+      <li ><a href="/billing-n2o-renewal/">N2O Renewal</a></li>
+      <li ><a href="/billing-n2o-lifespan/">N2O Lifespan</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/resources/">Additional Resources</a>
+    <ul class="nav">
+      <li ><a href="/logos">Nitrous.IO Logos</a></li>
+      <li ><a href="/admin-aup">Acceptable Use Policy</a></li>
+      <li ><a href="/admin-privacy">Privacy &amp; Terms</a></li>
+      <li ><a href="/admin-security">Nitrous.IO Security</a></li>
+      <li ><a href="/admin-terms">Terms of Use</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+
+  <div class="col-md-9">
+    <h1 class="article-title">Send Email with Python Using SendGrid</h1>
+    <h5 class="note">Last Updated on: 25 April 2014</h5>
+     
+    <p><em>SendGrid’s cloud-based email infrastructure relieves businesses of the cost and complexity of maintaining custom email systems. SendGrid provides reliable delivery, scalability and real-time analytics along with flexible API’s that make custom integration a breeze.</em></p>
+
+<p>In this tutorial we’ll use the <a href="https://github.com/sendgrid/sendgrid-python-django-sample-app">SendGrid Django Sample App</a> to show how easy it is to send email. You’ll want to <a href="sendgrid.com/partners/nitrous-io">create a free SendGrid account</a> and follow these steps:</p>
+
+<h3 id="create_an_account">Create an Account</h3>
+
+<p>From the <a href="https://www.nitrous.io/app#/boxes/new/?utm_source=sendgrid&utm_campaign=partnership&utm_medium=blog">Nitrous New Boxes Page</a>, create a new box using Python/Django.</p>
+
+<p><img src="/images/articles/sendgrid/create-new-python-box.png" alt="Create Python Box" /></p>
+
+<p>Launch the IDE and go to the workspace folder in the Nitrous.IO terminal console.</p>
+
+<pre><code>cd ~/workspace</code></pre>
+
+<h3 id="clone_and_configure_the_sample_app">Clone and Configure the Sample App</h3>
+
+<p>Clone the SendGrid sample application:</p>
+
+<pre><code>git clone https://github.com/sendgrid/sendgrid-python-django-sample-app.git</code></pre>
+
+<p>Install the SendGrid Python Library:</p>
+
+<pre><code>pip install --user sendgrid==0.3.1</code></pre>
+
+<blockquote>
+<p>The Python package manager will already be installed because Nitrous.IO pre-configures the boxes with software needed for each environment.</p>
+</blockquote>
+
+<p>In the Nitrous.IO file browser, open <code>~/workspace/sendgrid-python-django-sample-app/SGapp/settings.py</code> and change the username/password data to be your SendGrid credentials.</p>
+
+<h3 id="run_the_app">Run the App</h3>
+
+<p>In the console go to <code>~/workspace/sendgrid-python-django-sample-app</code> folder:</p>
+
+<pre><code>cd sendgrid-python-django-sample-app</code></pre>
+
+<p>Now you can start the Python server:</p>
+
+<pre><code>python manage.py runserver 0.0.0.0:8080</code></pre>
+
+<p>Go to ‘Preview’ menu and select <code>Port 8080</code> and the sample application will be opened in your browser.</p>
+
+<p><img src="/images/articles/sendgrid/preview-port-8080.png" alt="Preview Port 8080" /></p>
+
+<p><img src="/images/articles/sendgrid/sendgrid-form.png" alt="SendGrid form" /></p>
+
+<p>Send your first email through SendGrid/Nitrous.IO by filling out the form. Now go check your email.</p>
+
+<p><img src="/images/articles/sendgrid/sendgrid-email.png" alt="SendGrid Email" /></p>
+
+<p>Your message will be there, waiting for you. This is obviously a simple example application. When you use SendGrid in your production Python apps, you’ll likely be sending social notifications, password resets and other <a href="sendgrid.com/transactional-email/">transactional email</a>. Use this project as a starting point or reference for sending email with SendGrid in Python on Nitrous.IO.</p>
+
+<p><strong>Getting started is simple. Sign up with a free <a href="sendgrid.com/partners/nitrous-io">SendGrid</a> account and claim your free cloud dev environment in 60 seconds with a <a href="https://www.nitrous.io/?utm_source=sendgrid&utm_campaign=partnership&utm_medium=blog">Nitrous.IO account</a>.</strong></p>
+  </div>
+</div>
+
+</div>
+
+  <footer>
+    <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
+    <script src='/css/bootstrap3/js/bootstrap.js'></script>
+    <script src='/javascripts/highlight.js/highlight.pack.js'></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </footer>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43081980-1', 'nitrous.io');
+            ga('require', 'linkid', 'linkid.js');
+            ga('send', 'pageview');
+
+</script>
+</body>
+</html>
