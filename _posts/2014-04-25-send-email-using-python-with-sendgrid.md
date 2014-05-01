@@ -8,7 +8,7 @@ category: tutorials
 *SendGrid's cloud-based email infrastructure relieves businesses of the cost and complexity of maintaining custom email systems.
 SendGrid provides reliable delivery, scalability and real-time analytics along with flexible API's that make custom integration a breeze.*
 
-In this tutorial we’ll use the [SendGrid Django Sample App](https://github.com/sendgrid/sendgrid-python-django-sample-app) to show how easy it is to send email. You’ll want to [create a free SendGrid account](sendgrid.com/partners/nitrous-io) and follow these steps:
+In this tutorial we’ll use the [SendGrid Django Sample App](https://github.com/sendgrid/sendgrid-python-django-sample-app) to show how easy it is to send email. You’ll want to [create a free SendGrid account](http://sendgrid.com/partners/nitrous-io) and follow these steps:
 
 ### Create an Account
 
@@ -54,6 +54,6 @@ Send your first email through SendGrid/Nitrous.IO by filling out the form. Now g
 
 ![SendGrid Email](/images/articles/sendgrid/sendgrid-email.png)
 
-Your message will be there, waiting for you. This is obviously a simple example application. When you use SendGrid in your production Python apps, you’ll likely be sending social notifications, password resets and other [transactional email](sendgrid.com/transactional-email/). Use this project as a starting point or reference for sending email with SendGrid in Python on Nitrous.IO.
+Your message will be there, waiting for you. This is obviously a simple example application which utilizes SendGrid's SMTP relay services. When you use SendGrid in your production Python apps, you’ll likely be sending social notifications, password resets and other [transactional email](sendgrid.com/transactional-email/). Use this project as a starting point or reference for sending email with SendGrid in Python on Nitrous.IO.
 
 **Getting started is simple. Sign up with a free [SendGrid](sendgrid.com/partners/nitrous-io) account and claim your free cloud dev environment in 60 seconds with a [Nitrous.IO account](https://www.nitrous.io/?utm_source=sendgrid&utm_campaign=partnership&utm_medium=blog).**
