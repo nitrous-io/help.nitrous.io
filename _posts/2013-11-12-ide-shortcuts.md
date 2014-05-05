@@ -8,13 +8,13 @@ mitem: keyboard
 
 **Copy**
 
-    Windows: Shift + Ctrl + c
+    Windows: Shift + Control + c
 
-    Mac: Shift + Ctrl + v
+    Mac: Command + c
 
 **Paste**
 
-    Windows: Command + c
+    Windows: Shift + Control + v
 
     Mac: Command + v
 
