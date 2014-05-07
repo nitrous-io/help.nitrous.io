@@ -1,4 +1,13 @@
-<ul class="snav hidden-sm hidden-xs">
+<hr>
+  <form class="navbar-form" role="search" action="/search.html">
+    <input type="text" name="q" class="form-control" placeholder="Search Docs">
+  </form>
+  <div class="docs hidden-sm hidden-xs">
+    <h3>
+      Guides
+    </h3>
+  </div>
+  <ul class="snav hidden-sm hidden-xs">
   <li {% if page.category contains 'getting started' %} class="active" {% endif %}>
     <a href="/categories/getting-started/">Getting Started</a>
     <ul class="nav">
