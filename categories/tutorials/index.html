@@ -20,7 +20,7 @@
   <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-inverse" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -28,33 +28,33 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Nitrous<span>docs</span></a>
+        <h1>
+          <a id="logo" href="https://www.nitrous.io">Nitrous<span>.IO</span></a>
+        </h1>
       </div>
   
       <div class="collapse navbar-collapse navbar-responsive-collapse">
-        <ul class="nav navbar-nav">
-          <li class="hidden-sm"><a href="/categories/boxes/" >Boxes</a></li>
-          <li class="hidden-sm"><a href="/categories/usage/" >Usage</a></li>
-          <li class="hidden-sm"><a href="/categories/databases/" >Databases</a></li>
-          <li><a href="/categories/deployment/" >Deploy</a></li>
+        <ul class="nav navbar-nav pull-right">
           <li>
             <a href="/discussions" class="stack-exchange" >
               <i class="fa fa-stack-exchange"></i>Discuss
             </a>
-          </li>        
-        </ul>
-
-        <form class="navbar-form navbar-right" role="search" action="/search.html">
-          <input type="text" name="q" class="form-control" placeholder="Search Docs">
-        </form>
-
-        <ul class="nav navbar-nav pull-right hidden-sm hidden-xs">
-          <li><a href="https://nitrous.io/users/sign_in">Sign in</a></li>
+          </li>
+          <li><a href="http://www.nitrous.io/chat" >Group Chat</a>
+          </li>
+          <li><a href="mailto:support@nitrous.io">Contact Support</a></li>
+          <li class="break hidden-xs"><a href="https://nitrous.io/users/sign_in">Sign in</a></li>
           <li>
             <a href="https://www.nitrous.io" class="signup">
               <i class="fa fa-plus"></i>Sign up
-            </a></li>
-        </ul>       
+            </a>
+          </li>      
+        </ul>     
+      </div>
+    </div>
+    <div class="mast" id="promo-main">
+      <div class="container header-title">
+        <h2><a href="/">Documentation</a></h2>
       </div>
     </div>
   </nav>
@@ -62,7 +62,16 @@
 <div class="container">
    <div class="row">
     <div class="col-md-3">
-      <ul class="snav hidden-sm hidden-xs">
+      <hr>
+  <form class="navbar-form" role="search" action="/search.html">
+    <input type="text" name="q" class="form-control" placeholder="Search Docs">
+  </form>
+  <div class="docs hidden-sm hidden-xs">
+    <h3>
+      Guides
+    </h3>
+  </div>
+  <ul class="snav hidden-sm hidden-xs">
   <li >
     <a href="/categories/getting-started/">Getting Started</a>
     <ul class="nav">
