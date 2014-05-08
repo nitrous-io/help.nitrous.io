@@ -197,31 +197,31 @@
      
     <p><em>This guide contains an overview of how to setup PHP5, Apache2, and other PHP related tools on Nitrous.IO. If you are having specific configuration issues, take a look at the FAQ section below.</em></p>
 
-<h3 id="creating_a_php_box_template">Creating a PHP Box Template</h3>
+<h3 id='creating_a_php_box_template'>Creating a PHP Box Template</h3>
 
-<p>To create a new PHP box, login to your <a href="https://www.nitrous.io">Nitrous.IO</a> account and create a new box on the <a href="https://www.nitrous.io/app#/boxes/new">box template</a> page. Select the PHP template and the region which is closest to your location.</p>
+<p>To create a new PHP box, login to your <a href='https://www.nitrous.io'>Nitrous.IO</a> account and create a new box on the <a href='https://www.nitrous.io/app#/boxes/new'>box template</a> page. Select the PHP template and the region which is closest to your location.</p>
 
-<p><img src="/images/articles/php-template.png" alt="PHP Template" /></p>
+<p><img alt='PHP Template' src='/images/articles/php-template.png' /></p>
 
-<h3 id="installing_tools_with_autoparts">Installing tools with Autoparts</h3>
+<h3 id='installing_tools_with_autoparts'>Installing tools with Autoparts</h3>
 
-<p>If you are not using a PHP box template, you can install PHP and PHP related tools with <a href="/autoparts">Autoparts</a>. To install any of these parts you will need to navigate to <strong>Autoparts &gt; Install Parts</strong> within the menu bar.</p>
+<p>If you are not using a PHP box template, you can install PHP and PHP related tools with <a href='/autoparts'>Autoparts</a>. To install any of these parts you will need to navigate to <strong>Autoparts &gt; Install Parts&#8230;</strong> within the menu bar.</p>
 
-<p><img src="/images/articles/autoparts-ui-install.png" alt="Autoparts Install" /></p>
+<p><img alt='Autoparts Install' src='/images/articles/autoparts-ui-install.png' /></p>
 
-<p>From there you can view all the parts available. PHP related parts include PHP5, Apache2, and Composer. If you’ve already installed these tools then they may not display in the install section.</p>
+<p>From there you can view all the parts available. PHP related parts include PHP5, Apache2, and Composer. If you&#8217;ve already installed these tools then they may not display in the install section.</p>
 
-<h3 id="starting_apache">Starting Apache</h3>
+<h3 id='starting_apache'>Starting Apache</h3>
 
-<p>Once Apache is installed you will need to start it with <a href="/autoparts">Autoparts</a>. You can do this by running <code>parts start apache2</code> in the console. Alternatively you can navigate within the menu to <code>Autoparts &gt; Start/Stop Parts...</code>, and start the Apache Web Server.</p>
+<p>Once Apache is installed you will need to start it with <a href='/autoparts'>Autoparts</a>. You can do this by running <code>parts start apache2</code> in the console. Alternatively you can navigate within the menu to <code>Autoparts &gt; Start/Stop Parts...</code>, and start the Apache Web Server.</p>
 
-<p><img src="/images/articles/autoparts-start-apache.png" alt="Autoparts Start Apache" /></p>
+<p><img alt='Autoparts Start Apache' src='/images/articles/autoparts-start-apache.png' /></p>
 
-<h3 id="configuring_apache">Configuring Apache</h3>
+<h3 id='configuring_apache'>Configuring Apache</h3>
 
 <p>For configuring the Apache web service we recommend making changes to <code>httpd.conf</code>, located within your Nitrous box at <code>/home/action/.parts/etc/apache2/httpd.conf</code>. To locate <code>httpd.conf</code> within the file browser, ensure you are viewing hidden files by clicking <strong>Show Hidden</strong> just below the file tree.</p>
 
-<h3 id="some_important_paths">Some important paths</h3>
+<h3 id='some_important_paths'>Some important paths</h3>
 
 <p>php.ini config: <code>/home/action/.parts/etc/php5/php.ini</code></p>
 
@@ -229,32 +229,32 @@
 
 <p>Apache2 document root: <code>~/workspace/www</code></p>
 
-<h3 id="faqs">FAQs</h3>
+<h3 id='faqs'>FAQs</h3>
 
-<h4 id="how_do_i_install_php_extensions">How do I install PHP extensions?</h4>
+<h4 id='how_do_i_install_php_extensions'>How do I install PHP extensions?</h4>
 
-<p>Our default PHP installation is quite lean and comes with a minimal number of extensions installed. You can install the extensions you need for your PHP application using <a href="http://pecl.php.net/">PECL</a>.</p>
+<p>Our default PHP installation is quite lean and comes with a minimal number of extensions installed. You can install the extensions you need for your PHP application using <a href='http://pecl.php.net/'>PECL</a>.</p>
 
-<p>We’ll walk through setting up the <a href="http://www.php.net/manual/en/book.zip.php">Zip extension</a> on a Nitrous.IO box as an example.</p>
+<p>We&#8217;ll walk through setting up the <a href='http://www.php.net/manual/en/book.zip.php'>Zip extension</a> on a Nitrous.IO box as an example.</p>
 
-<h5 id="example_installing_the_php_zip_extension">Example: Installing the PHP Zip Extension</h5>
+<h5 id='example_installing_the_php_zip_extension'>Example: Installing the PHP Zip Extension</h5>
 
-<p>First, you’ll need to point PEAR and PECL to the active php.ini config:</p>
+<p>First, you&#8217;ll need to point PEAR and PECL to the active php.ini config:</p>
 
 <pre><code>pear config-set php_ini /home/action/.parts/etc/php5/php.ini
 pecl config-set php_ini /home/action/.parts/etc/php5/php.ini</code></pre>
 
-<p>Then, use the <code>pecl</code> cli tool to install the extension — this should take awhile to compile so grab a cup of coffee/tea/soy latte:</p>
+<p>Then, use the <code>pecl</code> cli tool to install the extension &#8212; this should take awhile to compile so grab a cup of coffee/tea/soy latte:</p>
 
 <pre><code>pecl install zip</code></pre>
 
-<p>If the installation went well, great! If it failed and you can’t figure out why, contact us at <a href="mailto:support@nitrous.io">support@nitrous.io</a> with the extension you were trying to install and the problems you ran into.</p>
+<p>If the installation went well, great! If it failed and you can&#8217;t figure out why, contact us at <a href='mailto:support@nitrous.io'>support@nitrous.io</a> with the extension you were trying to install and the problems you ran into.</p>
 
-<p>Now, if your Apache server was already running, you’ll need to restart it to load the zip extension:</p>
+<p>Now, if your Apache server was already running, you&#8217;ll need to restart it to load the zip extension:</p>
 
 <pre><code>parts restart apache2</code></pre>
 
-<h4 id="how_can_i_enable_rewriteengine">How can I enable RewriteEngine?</h4>
+<h4 id='how_can_i_enable_rewriteengine'>How can I enable RewriteEngine?</h4>
 
 <p>The RewriteEngine module is already compiled in, but you will need to turn it on. You can do this by adding the following code to the end of the active <code>httpd.conf</code> file located in <code>/home/action/.parts/etc/apache2/</code></p>
 
@@ -270,10 +270,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]</code></pre>
 
-<h4 id="what_was_php_compiled_with">What was PHP compiled with?</h4>
+<h4 id='what_was_php_compiled_with'>What was PHP compiled with?</h4>
 
 <p>If you need to know exactly how PHP was compiled, create a file that contains</p>
-<?php phpinfo() ?>
+
+<pre><code>&lt;?php phpinfo() ?&gt;</code></pre>
+
 <p>and load it using Apache2 like so:</p>
 
 <pre><code>cd ~/workspace/www
@@ -281,9 +283,9 @@ touch phpinfo.php
 echo &#39;&lt;?php phpinfo() ?&gt;&#39; &gt; phpinfo.php
 parts start apache2</code></pre>
 
-<p>Use the <a href="/preview/">Preview feature</a> to load the page — you should see something like this:</p>
+<p>Use the <a href='/preview/'>Preview feature</a> to load the page &#8212; you should see something like this:</p>
 
-<p><img src="/images/articles/phpinfo.png" alt="phpinfo() screencap" /></p>
+<p><img alt='phpinfo() screencap' src='/images/articles/phpinfo.png' /></p>
   </div>
 </div>
 

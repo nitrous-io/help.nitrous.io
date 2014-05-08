@@ -195,59 +195,59 @@
     <h1 class="article-title">Custom Domains</h1>
     <h5 class="note">Last Updated on: 12 March 2014</h5>
      
-    <p><em>The <a href="https://www.nitrous.io/app/#/n2o/upgrade">Shift and Turbo plans</a> allow you to associate 1 custom domain with your Nitrous box, allowing you to run your app and preview it on your own domain.</em></p>
+    <p><em>The <a href='https://www.nitrous.io/app/#/n2o/upgrade'>Shift and Turbo plans</a> allow you to associate 1 custom domain with your Nitrous box, allowing you to run your app and preview it on your own domain.</em></p>
 
-<h3 id="setting_up_your_custom_domain">Setting Up Your Custom Domain</h3>
+<h3 id='setting_up_your_custom_domain'>Setting Up Your Custom Domain</h3>
 
-<p>Assuming you have registered a domain name, let’s get started.</p>
+<p>Assuming you have registered a domain name, let&#8217;s get started.</p>
 
-<p>Navigate to the <a href="https://www.nitrous.io/app#/boxes">boxes page</a>, and click <strong>Settings</strong> within your box information.</p>
+<p>Navigate to the <a href='https://www.nitrous.io/app#/boxes'>boxes page</a>, and click <strong>Settings</strong> within your box information.</p>
 
-<p><img src="/images/articles/box-settings.png" alt="Box Settings" /></p>
+<p><img alt='Box Settings' src='/images/articles/box-settings.png' /></p>
 
 <p>On the box settings page, look for the <strong>Custom Domain</strong> tab. On this tab you will be able to enter in the custom domain of your choice.</p>
 
-<p><img src="/images/articles/custom-domain.png" alt="Custom Domain" /></p>
+<p><img alt='Custom Domain' src='/images/articles/custom-domain.png' /></p>
 
-<h3 id="creating_a_dns_record">Creating a DNS Record</h3>
+<h3 id='creating_a_dns_record'>Creating a DNS Record</h3>
 
 <p>Next, you will need to set up changed with your DNS provider. DNS changes made with your provider may take up to 24 hours to propagate.</p>
 
-<p>Within your domain registrar you will need to create either a CNAME or ALIAS record with your DNS provider. Let’s go over both methods.</p>
+<p>Within your domain registrar you will need to create either a CNAME or ALIAS record with your DNS provider. Let&#8217;s go over both methods.</p>
 
-<h4 id="subdomains_cname_records">Subdomains (CNAME Records)</h4>
+<h4 id='subdomains_cname_records'>Subdomains (CNAME Records)</h4>
 
-<p>CNAME records must point to a subdomain, which allows the DNS to automatically adjust if the server’s IP is ever changed.</p>
+<p>CNAME records must point to a subdomain, which allows the DNS to automatically adjust if the server&#8217;s IP is ever changed.</p>
 
-<p>When using a subdomain, like <code>www.your-domain.com</code>, create a <strong>CNAME</strong> record pointing <code>www</code> to the Nitrous box’s subdomain. The Nitrous subdomain can be found on the <strong>Custom Domains</strong> page and it will include the region your box runs within (e.g. <code>usw1-2.nitrousbox.com</code>).</p>
+<p>When using a subdomain, like <code>www.your-domain.com</code>, create a <strong>CNAME</strong> record pointing <code>www</code> to the Nitrous box&#8217;s subdomain. The Nitrous subdomain can be found on the <strong>Custom Domains</strong> page and it will include the region your box runs within (e.g. <code>usw1-2.nitrousbox.com</code>).</p>
 
-<p><img src="/images/articles/custom-domain-setup.png" alt="Custom Domain Setup" /></p>
+<p><img alt='Custom Domain Setup' src='/images/articles/custom-domain-setup.png' /></p>
 
 <p>Once the CNAME record is created, you could forward your domain <code>your-domain.com</code> to your subdomain <code>www.your-domain.com</code> if your DNS provider supports this. Doing this will ensure both the <strong>www</strong> subdomain and <strong>non-www</strong> domain are supported.</p>
 
-<p>View the <a href="https://support.google.com/a/topic/1615038?hl=en&ref_topic=1687211">Google Support Guide</a> for information on setting up a CNAME record with your DNS provider.</p>
+<p>View the <a href='https://support.google.com/a/topic/1615038?hl=en&amp;ref_topic=1687211'>Google Support Guide</a> for information on setting up a CNAME record with your DNS provider.</p>
 
-<h4 id="apex_domains_alias_records">Apex Domains (Alias Records)</h4>
+<h4 id='apex_domains_alias_records'>Apex Domains (Alias Records)</h4>
 
 <p>Some DNS hosts provide a way to get CNAME-like functionality at the zone apex using ALIAS or ANAME record types. Such records include:</p>
 
 <ul>
-<li><a href="http://support.dnsimple.com/articles/alias-record">ALIAS at DNSimple</a></li>
+<li><a href='http://support.dnsimple.com/articles/alias-record'>ALIAS at DNSimple</a></li>
 
-<li><a href="http://www.dnsmadeeasy.com/technology/aname-records/">ANAME at DNS Made Easy</a></li>
+<li><a href='http://www.dnsmadeeasy.com/technology/aname-records/'>ANAME at DNS Made Easy</a></li>
 
-<li><a href="http://docs.easydns.com/aname-records/">ANAME at easyDNS</a></li>
+<li><a href='http://docs.easydns.com/aname-records/'>ANAME at easyDNS</a></li>
 </ul>
 
-<p>If using a DNS above (or one with these capabilities), point the ALIAS or ANAME record for your apex domain to the Nitrous box’s subdomain. The Nitrous subdomain can be found on the <strong>Custom Domains</strong> page and it will include the region your box runs within (e.g. <code>usw1-2.nitrousbox.com</code>).</p>
+<p>If using a DNS above (or one with these capabilities), point the ALIAS or ANAME record for your apex domain to the Nitrous box&#8217;s subdomain. The Nitrous subdomain can be found on the <strong>Custom Domains</strong> page and it will include the region your box runs within (e.g. <code>usw1-2.nitrousbox.com</code>).</p>
 
-<p><img src="/images/articles/custom-domain-setup.png" alt="Custom Domain Setup" /></p>
+<p><img alt='Custom Domain Setup' src='/images/articles/custom-domain-setup.png' /></p>
 
 <blockquote>
 <p>Note: If your DNS does not support the ALIAS or ANAME records mentioned above, try using CNAME records as this is recommended. There is also a method of using A-records to configure apex domains (aka bare, naked, or root domains), but it is not recommended as this requires a hard-coded IP address within your DNS configuration. This prevents your infrastructure provider from assigning your box a new IP address when adverse conditions arise.</p>
 </blockquote>
 
-<h3 id="previewing_your_app">Previewing Your App</h3>
+<h3 id='previewing_your_app'>Previewing Your App</h3>
 
 <p>To preview your app with your domain, simply run the app within the console with the appropriate command (e.g. rails server).</p>
 

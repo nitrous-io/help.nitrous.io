@@ -195,15 +195,15 @@
     <h1 class="article-title">Deploying to Shelly Cloud</h1>
     <h5 class="note">Last Updated on: 25 April 2014</h5>
      
-    <h1 id="deploying_a_rails_app_to_shelly_cloud">Deploying a Rails app to Shelly Cloud</h1>
+    <h1 id='deploying_a_rails_app_to_shelly_cloud'>Deploying a Rails app to Shelly Cloud</h1>
 
-<p><a href="https://shellycloud.com/">Shelly Cloud</a> is a PaaS (Platform as a Service) hosting provider, dedicated for Ruby on Rails apps.</p>
+<p><a href='https://shellycloud.com/'>Shelly Cloud</a> is a PaaS (Platform as a Service) hosting provider, dedicated for Ruby on Rails apps.</p>
 
-<p>This tutorial assumes you have already initialized a git repository – take a look at the <a href="https://help.github.com/articles/set-up-git">Github’s guide</a> if that isn’t the case. If you get stuck at any point in this guide, take a look at the <a href="https://shellycloud.com/documentation/quick_start">docs</a> or use one of our <a href="https://shellycloud.com/support">support channels</a>.</p>
+<p>This tutorial assumes you have already initialized a git repository – take a look at the <a href='https://help.github.com/articles/set-up-git'>Github&#8217;s guide</a> if that isn&#8217;t the case. If you get stuck at any point in this guide, take a look at the <a href='https://shellycloud.com/documentation/quick_start'>docs</a> or use one of our <a href='https://shellycloud.com/support'>support channels</a>.</p>
 
-<h2 id="1_prepare_your_app_for_deployment">1. Prepare your app for deployment</h2>
+<h2 id='1_prepare_your_app_for_deployment'>1. Prepare your app for deployment</h2>
 
-<p>First, make sure your app uses one of Shelly Cloud’s <a href="https://shellycloud.com/documentation/supported_databases">supported databases</a>. Second, you are advised to use the <code>shelly-dependecies</code> gem to take care of <a href="https://shellycloud.com/documentation/requirements#shelly-dependencies">gem dependencies</a>. Add the following lines to your <code>Gemfile</code>:</p>
+<p>First, make sure your app uses one of Shelly Cloud&#8217;s <a href='https://shellycloud.com/documentation/supported_databases'>supported databases</a>. Second, you are advised to use the <code>shelly-dependecies</code> gem to take care of <a href='https://shellycloud.com/documentation/requirements#shelly-dependencies'>gem dependencies</a>. Add the following lines to your <code>Gemfile</code>:</p>
 
 <pre><code>group :production do
   gem &#39;shelly-dependencies&#39;
@@ -213,9 +213,9 @@ end</code></pre>
 
 <pre><code>bundle install</code></pre>
 
-<h2 id="2_sign_up_for_shelly_cloud">2. Sign up for Shelly Cloud</h2>
+<h2 id='2_sign_up_for_shelly_cloud'>2. Sign up for Shelly Cloud</h2>
 
-<p>You can sign up for Shelly Cloud using the <a href="https://shellycloud.com/sign_up">sign-up form</a>. Clicking on the link in the confirmation email will complete your sign-up process. You can now install the <code>shelly</code> gem:</p>
+<p>You can sign up for Shelly Cloud using the <a href='https://shellycloud.com/sign_up'>sign-up form</a>. Clicking on the link in the confirmation email will complete your sign-up process. You can now install the <code>shelly</code> gem:</p>
 
 <pre><code>$ gem install shelly</code></pre>
 
@@ -228,24 +228,24 @@ Login successful
 Uploading your public SSH key</code></pre>
 
 <blockquote>
-<p>Tip: By default the <code>shelly</code> gem will look for a public SSH key in your <code>~/.ssh</code> directory, choosing either a DSA key <code>id_dsa.pub</code> or a RSA key <code>id_rsa.pub</code>. To specify another key, use the <code>--key PATH</code> option. If you’re not sure if you have a SSH key already, take a look at this helpful <a href="https://help.github.com/articles/generating-ssh-keys">Github article</a>.</p>
+<p>Tip: By default the <code>shelly</code> gem will look for a public SSH key in your <code>~/.ssh</code> directory, choosing either a DSA key <code>id_dsa.pub</code> or a RSA key <code>id_rsa.pub</code>. To specify another key, use the <code>--key PATH</code> option. If you&#8217;re not sure if you have a SSH key already, take a look at this helpful <a href='https://help.github.com/articles/generating-ssh-keys'>Github article</a>.</p>
 </blockquote>
 
-<h2 id="3_create_your_cloud">3. Create your cloud</h2>
+<h2 id='3_create_your_cloud'>3. Create your cloud</h2>
 
-<p>All the information needed for your app to work with Shelly Cloud will be stored in the <code>Cloudfile</code> that should be placed in your app’s main directory. A default <code>Cloudfile</code> will be generated when you create new cloud with the <code>shelly</code> gem. Run:</p>
+<p>All the information needed for your app to work with Shelly Cloud will be stored in the <code>Cloudfile</code> that should be placed in your app&#8217;s main directory. A default <code>Cloudfile</code> will be generated when you create new cloud with the <code>shelly</code> gem. Run:</p>
 
 <pre><code>$ shelly add --cloud your-cloud-name</code></pre>
 
 <p>where <code>your-cloud-name</code> is the name for your new cloud, and follow the instructions.</p>
 
 <blockquote>
-<p>Tip: If you need a specific Ruby version or want to use a different database, check out the <a href="https://shellycloud.com/documentation/cloudfile">Cloudfile documentation</a> to help you set it up.</p>
+<p>Tip: If you need a specific Ruby version or want to use a different database, check out the <a href='https://shellycloud.com/documentation/cloudfile'>Cloudfile documentation</a> to help you set it up.</p>
 </blockquote>
 
-<p>Don’t forget to commit your new <code>Cloudfile</code>!</p>
+<p>Don&#8217;t forget to commit your new <code>Cloudfile</code>!</p>
 
-<h2 id="4_push_to_production">4. Push to production</h2>
+<h2 id='4_push_to_production'>4. Push to production</h2>
 
 <p>You put your app in the cloud using <code>git push</code> (<code>shelly</code> gem takes care of setting the right remotes):</p>
 
@@ -272,9 +272,9 @@ Starting cloud successful</code></pre>
 <p>Tip: If you make changes to your app, you can just commit them and use <code>git push shelly master</code> to redeploy.</p>
 </blockquote>
 
-<h2 id="5_celebrate">5. Celebrate!</h2>
+<h2 id='5_celebrate'>5. Celebrate!</h2>
 
-<p>Your app is now live at <a href="http://your-cloud-name.shellyapp.com">http://your-cloud-name.shellyapp.com</a>, ready to share it with the world.</p>
+<p>Your app is now live at <a href='http://your-cloud-name.shellyapp.com'>http://your-cloud-name.shellyapp.com</a>, ready to share it with the world.</p>
   </div>
 </div>
 
