@@ -16,7 +16,7 @@
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  text-decoration: none; 
+  text-decoration: none;
 
   span {
     color: #1ebef7;
@@ -179,16 +179,16 @@ ul.toc {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     opacity: 0.3;
-  } 
+  }
 }
 
 /* Menu Bar */
 
 .navbar-nav {
   margin: 12px 0 0 0;
-  
+
   li {
-    line-height: 46px; 
+    line-height: 46px;
   }
 
   li.pull-right {
@@ -344,7 +344,7 @@ pre{
 }
 
 code {
-    border-radius: 4px;
+    border-radius: 1px;
 }
 
 .btn {
