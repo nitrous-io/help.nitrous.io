@@ -30,9 +30,13 @@
           <a id="logo" href="https://www.nitrous.io">Nitrous<span>.IO</span></a>
         </h1>
       </div>
-  
+
       <div class="collapse navbar-collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav pull-right">
+         <li class="show-xs hidden-sm hidden-md hidden-lg"><a href="/categories/boxes/" >Boxes</a></li>
+          <li class="show-xs hidden-sm hidden-md hidden-lg"><a href="/categories/usage/" >Usage</a></li>
+          <li class="show-xs hidden-sm hidden-md hidden-lg"><a href="/categories/databases/" >Databases</a></li>
+          <li class="show-xs hidden-sm hidden-md hidden-lg"><a href="/categories/deployment/" >Deploy</a></li>
           <li>
             <a href="/discussions" class="stack-exchange" >
               <i class="fa fa-stack-exchange"></i>Discuss
@@ -46,8 +50,8 @@
             <a href="https://www.nitrous.io" class="signup">
               <i class="fa fa-plus"></i>Sign up
             </a>
-          </li>      
-        </ul>     
+          </li>
+        </ul>
       </div>
     </div>
     <div class="mast" id="promo-main">
@@ -262,9 +266,9 @@
 
 <h3 id="connect-via-ssh">Connect via SSH</h3>
 
-<p>With SSH Established you can open a local terminal and code directly on your Nitrous box. If you use this method to develop then you may want to consider using Vim to edit your code. </p>
+<p>With SSH Established you can open a local terminal and code directly on your Nitrous box. If you use this method to develop then you may want to consider using Vim to edit your code.</p>
 
-<p>To utilize SSH, you will first need to add your public key (<code>~/.ssh/id_rsa.pub</code>) to the <a href="https://www.nitrous.io/app#/public_keys">Public Keys</a> page. </p>
+<p>To utilize SSH, you will first need to add your public key (<code>~/.ssh/id_rsa.pub</code>) to the <a href="https://www.nitrous.io/app#/public_keys">Public Keys</a> page.</p>
 
 <p>For assistance on setting up SSH, take a look at one of the following guides:</p>
 
@@ -279,7 +283,7 @@
 
 <p><img src="/images/articles/ssh-uri.png" alt="SSH URI" /></p>
 
-<p>Next, open up Iterm 2 and navigate to <strong>Preferences &gt; Profiles</strong>. Create a new profile and fill in your SSH URI into the Command field. The format should be <code>ssh action@YOUR_REGION.nitrousbox.com -p YOUR_PORT</code> (<a href="/images/articles/iterm2-profile.png">view screenshot</a>).</p>
+<p>Next, open up Iterm 2 and navigate to <strong>Preferences &gt; Profiles</strong>. Create a new profile and fill in your SSH URI into the Command field. The format should be <strong>ssh action@YOUR_REGION.nitrousbox.com -p YOUR_PORT</strong> (<a href="/images/articles/iterm2-profile.png">view screenshot</a>).</p>
 
 <h3 id="sync-with-nitrous-desktop">Sync with Nitrous Desktop</h3>
 
@@ -322,7 +326,7 @@
 
 <p><img src="/images/articles/preview-menu.png" alt="Preview Menu" /></p>
 
-<p>Ports 1024 - 10,000 are open for HTTP, and port 80 is forwarded to port 3000. If your app is running on port 80 in the terminal, navigate to ‘Preview &gt; Port 3000’ in the menu. </p>
+<p>Ports 1024 - 10,000 are open for HTTP, and port 80 is forwarded to port 3000. If your app is running on port 80 in the terminal, navigate to ‘Preview &gt; Port 3000’ in the menu.</p>
 
 <p>If the app is running on another port not found in the menu then you will need to change this within the address bar (e.g. http://ruby-21200.usw1-2.nitrousbox.com:8080).</p>
 
