@@ -40,6 +40,32 @@ mitem: keyboard
 
     Command + S
 
+**Jump to matching bracket**
+
+    Control + M
+
+**Comment/un-comment**
+
+    Windows: Control + /
+
+    Mac: Command + /
+
+**Fold**
+
+    Windows: Control + [
+
+    Mac: Command + Option + [
+
+**Unfold**
+
+    Windows: Ctrl + ]
+
+    Mac: Command + Option + ]
+
+**Show completions**
+
+    Ctrl + Space
+
 **Refresh directory tree**
 
     Control + Shift + R
