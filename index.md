@@ -66,9 +66,9 @@ From here you can now push and pull from your Github repos. If you want to confi
 
 ### Connect via SSH
 
-With SSH Established you can open a local terminal and code directly on your Nitrous box. If you use this method to develop then you may want to consider using Vim to edit your code. 
+With SSH Established you can open a local terminal and code directly on your Nitrous box. If you use this method to develop then you may want to consider using Vim to edit your code.
 
-To utilize SSH, you will first need to add your public key (`~/.ssh/id_rsa.pub`) to the [Public Keys](https://www.nitrous.io/app#/public_keys) page. 
+To utilize SSH, you will first need to add your public key (`~/.ssh/id_rsa.pub`) to the [Public Keys](https://www.nitrous.io/app#/public_keys) page.
 
 For assistance on setting up SSH, take a look at one of the following guides:
 
@@ -81,7 +81,7 @@ One easy strategy for Mac users would be to use [iTerm 2](http://www.iterm2.com/
 
 ![SSH URI](/images/articles/ssh-uri.png)
 
-Next, open up Iterm 2 and navigate to **Preferences > Profiles**. Create a new profile and fill in your SSH URI into the Command field. The format should be `ssh action@YOUR_REGION.nitrousbox.com -p YOUR_PORT` ([view screenshot](/images/articles/iterm2-profile.png)).
+Next, open up Iterm 2 and navigate to **Preferences > Profiles**. Create a new profile and fill in your SSH URI into the Command field. The format should be **ssh action@YOUR_REGION.nitrousbox.com -p YOUR_PORT** ([view screenshot](/images/articles/iterm2-profile.png)).
 
 ### Sync with Nitrous Desktop
 
@@ -122,7 +122,7 @@ The **Preview** menu in the Web IDE displays links to some common default ports,
 
 ![Preview Menu](/images/articles/preview-menu.png)
 
-Ports 1024 - 10,000 are open for HTTP, and port 80 is forwarded to port 3000. If your app is running on port 80 in the terminal, navigate to ‘Preview > Port 3000’ in the menu. 
+Ports 1024 - 10,000 are open for HTTP, and port 80 is forwarded to port 3000. If your app is running on port 80 in the terminal, navigate to ‘Preview > Port 3000’ in the menu.
 
 If the app is running on another port not found in the menu then you will need to change this within the address bar (e.g. http://ruby-21200.usw1-2.nitrousbox.com:8080).
 
