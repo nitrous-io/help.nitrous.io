@@ -10,7 +10,7 @@ The Nitrous.IO Web IDE is a powerful, one stop shop for (almost) all of your dev
 
 ### File Browser
 
-Like most IDEs, the action file browser sits at the left-hand side of the window. You'll see the box-name at the top of the file browser, followed by a directory tree of your application.
+Like most IDEs, the file browser sits at the left-hand side of the window. You'll see the box-name at the top of the file browser, followed by a directory tree of your application.
 
 Directories will have a small > arrow icon and can be clicked to be expanded.
 
@@ -49,7 +49,7 @@ To upload a file, simply click the "Upload Files" button at the bottom of the fi
 
 ![File Uploads](https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-1.png)
 
-### Action Console
+### Nitrous.IO Console
 
 The Nitrous.IO Web IDE also provides a full shell at the bottom of the screen. This allows you to handle your command line tasks with your code editing all in one place.
 

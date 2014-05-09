@@ -13,7 +13,7 @@ Email Support:  [support@nitrous.io](mailto:support@nitrous.io)
 Email Partnerships: [partners@nitrous.io](mailto:partners@nitrous.io)
 
 Tweet at Us: [@nitrousio](https://twitter.com/nitrousio/)
-Send us Pull Request: [action-io](https://github.com/action-io/)
+Send us Pull Request: [action-io](https://github.com/nitrous-io/)
 
 ####Vist Us:
 

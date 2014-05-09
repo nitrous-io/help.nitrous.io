@@ -48,7 +48,7 @@ Okay, so now we have our keypairs set up, let's go ahead and add our public keys
 
 >Note: The Putty Key Generator may add a line similar to 'the comment: "rsa-key-20130101"' to your public RSA key. You will need to remove this line before pasting it into the text area within your Nitrous.IO account.
 
-![action key](https://raw.github.com/action-io/action-assets/master/support/screenshots/win-key.png)
+![Nitrous key](https://raw.github.com/action-io/action-assets/master/support/screenshots/win-key.png)
 
 Now let's connect to one of our development boxes. For this, we're going to use the [PuTTY SSH client](http://www.chiark.greenend.org.uk/~sgtatham/putty/).
 

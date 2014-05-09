@@ -6,7 +6,7 @@ category: "getting started"
 mitem: github
 ---
 
-For those developers using [Github](http://github.com), Action lets you easily add your box's ssh keys so managing your repositories is a breeze.
+For those developers using [Github](http://github.com), Nitrous.IO lets you easily add your box's ssh keys so managing your repositories is a breeze.
 
 ### 1. Connect your Github Account
 
@@ -44,4 +44,4 @@ _Account Settings >> SSH Keys_
 
 You should see the key you added via Nitrous.IO.
 
-![Action Box Key](https://raw.github.com/action-io/action-assets/master/support/screenshots/github-action-key.png)
+![Nitrous Box Key](https://raw.github.com/action-io/action-assets/master/support/screenshots/github-action-key.png)

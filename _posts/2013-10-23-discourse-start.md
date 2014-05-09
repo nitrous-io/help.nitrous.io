@@ -53,7 +53,7 @@ This is probably going to be the most time consuming task of the entire post sin
 
 Next, we'll create the development and test databases.  We're going to just keep the legacy `vagrant` user, even though we're not using vagrant.  You can just copy and paste the following commands one-by-one into the terminal on your Nitrous.IO box:
 
-    createuser --createdb --superuser -Uaction vagrant
+    createuser --createdb --superuser -U action vagrant
     psql -c "ALTER USER vagrant WITH PASSWORD 'password';"
     psql -c "create database discourse_development owner vagrant encoding 'UTF8' TEMPLATE template0;"
     psql -c "create database discourse_test        owner vagrant encoding 'UTF8' TEMPLATE template0;"

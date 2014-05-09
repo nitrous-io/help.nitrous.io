@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Server disconnects on browser close
+title: Server Disconnects When Browser is Closed
 published: true
 category: faq
 mitem: disconnect
