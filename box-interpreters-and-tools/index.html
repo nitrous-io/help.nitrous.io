@@ -57,11 +57,10 @@
     </div>
   </nav>
 
-
 <div class="container">
   <div class="row">
-  <div class="col-md-3">
-    <hr>
+    <div class="col-md-3">
+      <hr>
   <form class="navbar-form" role="search" action="/search.html">
     <input type="text" name="q" class="form-control" placeholder="Search Docs">
   </form>
@@ -72,12 +71,18 @@
   </div>
   <ul class="snav hidden-sm hidden-xs">
   <li >
-    <a href="/categories/getting-started/">Getting Started</a>
+    <a href="/">Getting Started</a>
     <ul class="nav">
-      <li ><a href="/github-add-key">Connecting to Github</a></li>
-      <li ><a href="/ide-general">Web IDE Overview</a></li>
-      <li ><a href="/best-practices">Best Practices</a></li>
-      <li ><a href="/account-new">Creating an Account</a></li>
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
     </ul>
   </li>
 
@@ -189,226 +194,163 @@
   </li>
 </ul>
 
-  </div>
+    </div>
 
-  <div class="col-md-9">
-    <h1 class="article-title">Included Interpreters and Tools</h1>
-    <h5 class="note">Last Updated on: 25 November 2013</h5>
-     
-    <p>We provide extra interpreters and tools in your Nitrous boxes to help you get hacking away instantly.</p>
+    <div class="col-md-9">
+      <div class="container article">
+        <h1 class="article-title">Included Interpreters and Tools</h1>
+<h5 class="note">Last Updated on: 25 November 2013</h5>
+<p>We provide extra interpreters and tools in your Nitrous boxes to help you get hacking away instantly. </p>
 
 <p>Here is a list of the tools we provide as well as some examples of other tools you could install yourself (without needing root access):</p>
 
-<h2 id='tools_available_on_all_nitrous_boxes'>Tools Available on All Nitrous Boxes</h2>
+<h2 id="tools-available-on-all-nitrous-boxes">Tools Available on All Nitrous Boxes</h2>
 
-<h3 id='development_tools'>Development Tools</h3>
+<h3 id="development-tools">Development Tools</h3>
 
 <ul>
-<li>C</li>
-
-<li>C++</li>
-
-<li>JVM</li>
-
-<li>Perl</li>
-
-<li>PhantomJS</li>
-
-<li>Python (isolated environments with virtualenv only on Python box)</li>
-
-<li>Ruby (version control with RVM only available on Ruby box)</li>
-
-<li>Golang</li>
-
-<li>automake</li>
-
-<li>Heroku Toolbelt</li>
-
-<li>Parse Command Line Tool</li>
+  <li>C</li>
+  <li>C++</li>
+  <li>JVM</li>
+  <li>Perl</li>
+  <li>PhantomJS</li>
+  <li>Python (isolated environments with virtualenv only on Python box)</li>
+  <li>Ruby (version control with RVM only available on Ruby box)</li>
+  <li>Golang</li>
+  <li>automake</li>
+  <li>Heroku Toolbelt</li>
+  <li>Parse Command Line Tool</li>
 </ul>
 
-<h3 id='available_in_autoparts'>Available in Autoparts</h3>
+<h3 id="available-in-autoparts">Available in Autoparts</h3>
 
-<p><a href='/autoparts'>Autoparts</a> is a open source package manager which allows you to install databases and tools within a single command. Here is a list of the</p>
+<p><a href="/autoparts">Autoparts</a> is a open source package manager which allows you to install databases and tools within a single command. Here is a list of the </p>
 
 <ul>
-<li>Composer</li>
-
-<li>PHP5</li>
-
-<li>Erlang</li>
-
-<li>Go</li>
-
-<li>Google App Engine</li>
-
-<li>Leiningen</li>
-
-<li>Lua</li>
-
-<li>Maven</li>
-
-<li>Memcached</li>
-
-<li>Meteor</li>
-
-<li>MongoDB</li>
-
-<li>MySQL</li>
-
-<li>Node.JS</li>
-
-<li>Phantom.JS</li>
-
-<li>PHPMyAdmin</li>
-
-<li>Pip</li>
-
-<li>Python2/3</li>
-
-<li>Redis</li>
-
-<li>Scala</li>
-
-<li>Tmux</li>
-
-<li>Zsh</li>
+  <li>Composer</li>
+  <li>PHP5</li>
+  <li>Erlang</li>
+  <li>Go</li>
+  <li>Google App Engine</li>
+  <li>Leiningen</li>
+  <li>Lua</li>
+  <li>Maven</li>
+  <li>Memcached</li>
+  <li>Meteor</li>
+  <li>MongoDB</li>
+  <li>MySQL</li>
+  <li>Node.JS</li>
+  <li>Phantom.JS</li>
+  <li>PHPMyAdmin</li>
+  <li>Pip</li>
+  <li>Python2/3</li>
+  <li>Redis</li>
+  <li>Scala</li>
+  <li>Tmux</li>
+  <li>Zsh</li>
 </ul>
 
 <p>For a full list of parts, run <code>parts search</code> within the console of your Nitrous box.</p>
 
-<h3 id='possible_to_install_yourself_just_examples_you_can_do_more'>Possible to Install Yourself (Just examples, you can do more)</h3>
+<h3 id="possible-to-install-yourself-just-examples-you-can-do-more">Possible to Install Yourself (Just examples, you can do more)</h3>
 
 <ul>
-<li>Clojure</li>
-
-<li>Dart</li>
-
-<li>Haskell</li>
+  <li>Clojure</li>
+  <li>Dart</li>
+  <li>Haskell</li>
 </ul>
 
-<h3 id='system_tools'>System Tools</h3>
+<h3 id="system-tools">System Tools</h3>
 
 <ul>
-<li>git</li>
-
-<li>hg</li>
-
-<li>build-essential</li>
-
-<li>wget</li>
-
-<li>curl</li>
-
-<li>base-files</li>
-
-<li>base-passwd</li>
-
-<li>binutils</li>
-
-<li>bzip2</li>
-
-<li>file</li>
-
-<li>gnupg</li>
-
-<li>whiptail</li>
-
-<li>util-linux</li>
-
-<li>tsconf</li>
-
-<li>unzip</li>
-
-<li>unison</li>
-
-<li>ack-grep</li>
-
-<li>traceroute</li>
-
-<li>psmisc</li>
-
-<li>openssl</li>
-
-<li>update-motd</li>
-
-<li>man-db</li>
-
-<li>getopt</li>
+  <li>git</li>
+  <li>hg</li>
+  <li>build-essential</li>
+  <li>wget</li>
+  <li>curl</li>
+  <li>base-files</li>
+  <li>base-passwd</li>
+  <li>binutils</li>
+  <li>bzip2</li>
+  <li>file</li>
+  <li>gnupg</li>
+  <li>whiptail</li>
+  <li>util-linux</li>
+  <li>tsconf</li>
+  <li>unzip</li>
+  <li>unison</li>
+  <li>ack-grep</li>
+  <li>traceroute</li>
+  <li>psmisc</li>
+  <li>openssl</li>
+  <li>update-motd</li>
+  <li>man-db</li>
+  <li>getopt</li>
 </ul>
 
-<h3 id='image_manipulation_tools'>Image Manipulation Tools</h3>
+<h3 id="image-manipulation-tools">Image Manipulation Tools</h3>
 
 <ul>
-<li>ImageMagick</li>
+  <li>ImageMagick</li>
 </ul>
 
-<h3 id='text_editors'>Text Editors</h3>
+<h3 id="text-editors">Text Editors</h3>
 
 <ul>
-<li>nano</li>
-
-<li>emaccs23-nox</li>
-
-<li>vim-nox</li>
+  <li>nano</li>
+  <li>emaccs23-nox</li>
+  <li>vim-nox</li>
 </ul>
 
-<h3 id='remote_sessions'>Remote Sessions</h3>
+<h3 id="remote-sessions">Remote Sessions</h3>
 
 <ul>
-<li>SSH</li>
-
-<li>tmux</li>
-
-<li>screen</li>
+  <li>SSH</li>
+  <li>tmux</li>
+  <li>screen</li>
 </ul>
 
-<h2 id='rubyrails_box_additional_tools'>Ruby/Rails Box (Additional Tools)</h2>
+<h2 id="rubyrails-box-additional-tools">Ruby/Rails Box (Additional Tools)</h2>
 
-<h3 id='development_tools'>Development Tools</h3>
-
+<h3 id="development-tools-1">Development Tools</h3>
 <ul>
-<li>Node.js (version control with NVM)</li>
-
-<li>Ruby (version control with RVM)</li>
+  <li>Node.js (version control with NVM)</li>
+  <li>Ruby  (version control with RVM)</li>
 </ul>
 
-<h2 id='nodejs_box_additional_tools'>Node.js Box (Additional Tools)</h2>
+<h2 id="nodejs-box-additional-tools">Node.js Box (Additional Tools)</h2>
 
-<h3 id='development_tools'>Development Tools</h3>
-
+<h3 id="development-tools-2">Development Tools</h3>
 <ul>
-<li>Node.js (version control with NVM)</li>
+  <li>Node.js (version control with NVM)</li>
 </ul>
 
-<h2 id='pythondjango_box_additional_tools'>Python/Django Box (Additional Tools)</h2>
+<h2 id="pythondjango-box-additional-tools">Python/Django Box (Additional Tools)</h2>
 
-<h3 id='development_tools'>Development Tools</h3>
-
+<h3 id="development-tools-3">Development Tools</h3>
 <ul>
-<li>Python</li>
+  <li>Python</li>
 </ul>
 
-<h2 id='go_box_additional_tools'>Go Box (Additional Tools)</h2>
+<h2 id="go-box-additional-tools">Go Box (Additional Tools)</h2>
 
-<h3 id='development_tools'>Development Tools</h3>
-
+<h3 id="development-tools-4">Development Tools</h3>
 <ul>
-<li>Go</li>
+  <li>Go</li>
 </ul>
+
+
+      </div>
+    </div>
   </div>
 </div>
-
-</div>
-
   <footer>
     <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </footer>
-
-  <script>
+    <script src='/javascripts/smoothscroll.js'></script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -419,5 +361,7 @@
             ga('send', 'pageview');
 
 </script>
+  </footer>
 </body>
 </html>
+

@@ -3,7 +3,7 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Server disconnects on browser close</title>
+  <title>Server Disconnects When Browser is Closed</title>
   <meta name="author" content="Nitrous.IO" />
   <link href="http://feeds.feedburner.com/actionioblog" rel="alternate" title="Nitrous.IO Blog" type="application/atom+xml" />
   <meta content='Nitrous.IO Support Documentation. Tutorials, FAQ, and other guides for building your apps directly on Nitrous.IO' name='description'>
@@ -57,11 +57,10 @@
     </div>
   </nav>
 
-
 <div class="container">
   <div class="row">
-  <div class="col-md-3">
-    <hr>
+    <div class="col-md-3">
+      <hr>
   <form class="navbar-form" role="search" action="/search.html">
     <input type="text" name="q" class="form-control" placeholder="Search Docs">
   </form>
@@ -72,12 +71,18 @@
   </div>
   <ul class="snav hidden-sm hidden-xs">
   <li >
-    <a href="/categories/getting-started/">Getting Started</a>
+    <a href="/">Getting Started</a>
     <ul class="nav">
-      <li ><a href="/github-add-key">Connecting to Github</a></li>
-      <li ><a href="/ide-general">Web IDE Overview</a></li>
-      <li ><a href="/best-practices">Best Practices</a></li>
-      <li ><a href="/account-new">Creating an Account</a></li>
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
     </ul>
   </li>
 
@@ -189,67 +194,75 @@
   </li>
 </ul>
 
-  </div>
+    </div>
 
-  <div class="col-md-9">
-    <h1 class="article-title">Server disconnects on browser close</h1>
-    <h5 class="note">Last Updated on: 28 June 2013</h5>
-     
-    <p>If you&#8217;re running a server or long-running process that you don&#8217;t want to interrupt when you mistakenly close your browser window, we suggest using a terminal multiplexer like <a href='http://www.gnu.org/software/screen/'>screen</a> or <a href='http://tmux.sourceforge.net/'>tmux</a> and creating a persistent session to which you can reconnect.</p>
+    <div class="col-md-9">
+      <div class="container article">
+        <h1 class="article-title">Server Disconnects When Browser is Closed</h1>
+<h5 class="note">Last Updated on: 28 June 2013</h5>
+<p>If you’re running a server or long-running process that you don’t want to interrupt when you mistakenly close your browser window, we suggest using a terminal multiplexer like <a href="http://www.gnu.org/software/screen/">screen</a> or <a href="http://tmux.sourceforge.net/">tmux</a> and creating a persistent session to which you can reconnect.</p>
 
-<p>We pre-install tmux on all boxes, so you&#8217;re ready to go out of the gate. You can access tmux via the terminal in <a href='ide-general#console'>the Web IDE</a> or by <a href='/categories/ssh'>SSHing into your box</a>.</p>
+<p>We pre-install tmux on all boxes, so you’re ready to go out of the gate. You can access tmux via the terminal in <a href="ide-general#console">the Web IDE</a> or by <a href="/categories/ssh">SSHing into your box</a>.</p>
 
-<h3 id='getting_started_with_tmux'>Getting started with tmux</h3>
+<h3 id="getting-started-with-tmux">Getting started with tmux</h3>
 
-<p>At it&#8217;s core, tmux is made of <em>sessions</em> which contain any number of <em>windows</em> which can be split into <em>panes</em>. That&#8217;s pretty much it.</p>
+<p>At it’s core, tmux is made of <em>sessions</em> which contain any number of <em>windows</em> which can be split into <em>panes</em>. That’s pretty much it.</p>
 
 <p><strong>Create a new Session</strong></p>
 
-<p>In a Web IDE console window, you can create a new tmux session named &#8220;my_session&#8221; like so:</p>
+<p>In a Web IDE console window, you can create a new tmux session named “my_session” like so:</p>
 
-<pre><code>tmux new -s my_session</code></pre>
+<pre><code>tmux new -s my_session
+</code></pre>
 
 <p><strong>List sessions</strong></p>
 
-<pre><code>tmux ls</code></pre>
+<pre><code>tmux ls
+</code></pre>
 
 <p><strong>Attach to a session</strong></p>
 
-<pre><code>tmux attach -t my_session</code></pre>
+<pre><code>tmux attach -t my_session
+</code></pre>
 
 <p><strong>Detach a session</strong></p>
 
-<pre><code>tmux detach</code></pre>
+<pre><code>tmux detach
+</code></pre>
 
 <p><strong>Create window</strong></p>
 
-<pre><code>tmux new-window</code></pre>
+<pre><code>tmux new-window
+</code></pre>
 
-<h3 id='navigating_tmux'>Navigating tmux</h3>
+<h3 id="navigating-tmux">Navigating tmux</h3>
 
 <p>The exact key bindings will depend on your operating system and keyboard setup. To see the current key bindings, type:</p>
 
-<pre><code>tmux list-keys</code></pre>
+<pre><code>tmux list-keys
+</code></pre>
 
 <p>To get a list of tmux commands:</p>
 
-<pre><code>tmux list-commands</code></pre>
-<p class='alert'>
+<pre><code>tmux list-commands
+</code></pre>
+
+<p class="alert">
 Note that navigating in tmux will take a bit of time to master. Switching windows and creating different pane layouts isn't as easy as dragging windows in a GUI so you'll want to customize your tmux configuration file (~/.tmux.conf).
 </p>
+
+
+      </div>
+    </div>
   </div>
 </div>
-
-</div>
-
   <footer>
     <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </footer>
-
-  <script>
+    <script src='/javascripts/smoothscroll.js'></script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -260,5 +273,7 @@ Note that navigating in tmux will take a bit of time to master. Switching window
             ga('send', 'pageview');
 
 </script>
+  </footer>
 </body>
 </html>
+

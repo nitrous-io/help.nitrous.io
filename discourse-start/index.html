@@ -57,11 +57,10 @@
     </div>
   </nav>
 
-
 <div class="container">
   <div class="row">
-  <div class="col-md-3">
-    <hr>
+    <div class="col-md-3">
+      <hr>
   <form class="navbar-form" role="search" action="/search.html">
     <input type="text" name="q" class="form-control" placeholder="Search Docs">
   </form>
@@ -72,12 +71,18 @@
   </div>
   <ul class="snav hidden-sm hidden-xs">
   <li >
-    <a href="/categories/getting-started/">Getting Started</a>
+    <a href="/">Getting Started</a>
     <ul class="nav">
-      <li ><a href="/github-add-key">Connecting to Github</a></li>
-      <li ><a href="/ide-general">Web IDE Overview</a></li>
-      <li ><a href="/best-practices">Best Practices</a></li>
-      <li ><a href="/account-new">Creating an Account</a></li>
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
     </ul>
   </li>
 
@@ -189,126 +194,135 @@
   </li>
 </ul>
 
-  </div>
+    </div>
 
-  <div class="col-md-9">
-    <h1 class="article-title">Start Hacking on Discourse in 60 Seconds</h1>
-    <h5 class="note">Last Updated on: 23 October 2013</h5>
-     
-    <p><a href='https://www.discourse.org'>Discourse</a> is a powerful, open source forum application built on top of <a href='https://www.rubyonrails.org'>ruby on rails</a> &amp; <a href='https://www.emberjs.com'>ember.js</a>.</p>
+    <div class="col-md-9">
+      <div class="container article">
+        <h1 class="article-title">Start Hacking on Discourse in 60 Seconds</h1>
+<h5 class="note">Last Updated on: 23 October 2013</h5>
+<p><a href="https://www.discourse.org">Discourse</a> is a powerful, open source forum application built on top of <a href="https://www.rubyonrails.org">ruby on rails</a> &amp; <a href="https://www.emberjs.com">ember.js</a>.</p>
 
-<p>After playing around with <a href='https://discussion.heroku.com/'>some sites</a> <a href='http://discuss.howtogeek.com/'>already running</a> the <a href='http://bbs.boingboing.net/'>software</a>, I decided to migrate a forum that I host to Discourse.</p>
+<p>After playing around with <a href="https://discussion.heroku.com/">some sites</a> <a href="http://discuss.howtogeek.com/">already running</a> the <a href="http://bbs.boingboing.net/">software</a>, I decided to migrate a forum that I host to Discourse.</p>
 
-<h2 id='setting_up_the_development_environment'>Setting up the Development Environment</h2>
+<h2 id="setting-up-the-development-environment">Setting up the Development Environment</h2>
 
-<p>Discourse is a robust application with a lot of moving parts. Vagrant seems like overkill as I don&#8217;t want to have to install VirtualBox and Vagrant on my machine. Vagrant is a great tool, but the separate images take up too much space on my SSD and running vagrant takes too long.</p>
+<p>Discourse is a robust application with a lot of moving parts.  Vagrant seems like overkill as I don’t want to have to install VirtualBox and Vagrant on my machine.  Vagrant is a great tool, but the separate images take up too much space on my SSD and running vagrant takes too long.</p>
 
-<h3 id='1_create_a_new_box'>1. Create a new box</h3>
+<h3 id="create-a-new-box">1. Create a new box</h3>
 
-<p>Discourse runs multiple services and consumes a fair bit of RAM and storage. I&#8217;m going to boot up a box on <a href='https://www.nitrous.io'>Nitrous.IO</a> with 768MB of RAM and 1.5GB of storage to get me started. Discourse recommends <a href='https://github.com/ajhit406/discourse/blob/master/docs/INSTALL-ubuntu.md'>2 GB of RAM</a> but I&#8217;ll try this out for development. I can always allocate additional resources later.</p>
+<p>Discourse runs multiple services and consumes a fair bit of RAM and storage.  I’m going to boot up a box on <a href="https://www.nitrous.io">Nitrous.IO</a> with 768MB of RAM and 1.5GB of storage to get me started.  Discourse recommends <a href="https://github.com/ajhit406/discourse/blob/master/docs/INSTALL-ubuntu.md">2 GB of RAM</a> but I’ll try this out for development. I can always allocate additional resources later.</p>
 
-<p><img alt='New Box' src='/images/articles/discourse/new-box.png' /></p>
+<p><img src="/images/articles/discourse/new-box.png" alt="New Box" /></p>
 
-<h3 id='2_fork_discourse'>2. Fork Discourse</h3>
+<h3 id="fork-discourse">2. Fork Discourse</h3>
 
-<p>If you want to do any customizing of discourse (why wouldn&#8217;t you?), you&#8217;ll want to fork the discourse repo.</p>
+<p>If you want to do any customizing of discourse (why wouldn’t you?), you’ll want to fork the discourse repo.</p>
 
-<p><a href='https://github.com/discourse/discourse/fork'>Click here to Fork Discourse</a></p>
+<p><a href="https://github.com/discourse/discourse/fork">Click here to Fork Discourse</a></p>
 
-<p>Once you&#8217;ve forked the repo, you can jump into the Nitrous.IO IDE and clone it to your box.</p>
+<p>Once you’ve forked the repo, you can jump into the Nitrous.IO IDE and clone it to your box.</p>
 
-<p><img alt='Clone Discourse' src='/images/articles/discourse/cloned.png' /></p>
+<p><img src="/images/articles/discourse/cloned.png" alt="Clone Discourse" /></p>
 
-<h3 id='3_install_dependencies'>3. Install Dependencies</h3>
+<h3 id="install-dependencies">3. Install Dependencies</h3>
 
-<p>Next we&#8217;ll use the Nitrous.IO <a href='http://blog.nitrous.io/2013/09/18/introducing-autoparts-for-nitrous-io.html'>Autoparts</a> package manager to install redis &amp; postgres. This is as easy as running:</p>
+<p>Next we’ll use the Nitrous.IO <a href="http://blog.nitrous.io/2013/09/18/introducing-autoparts-for-nitrous-io.html">Autoparts</a> package manager to install redis &amp; postgres.  This is as easy as running:</p>
 
 <pre><code>parts install redis
 parts start redis
 
 parts install postgresql
-parts start postgresql</code></pre>
+parts start postgresql
+</code></pre>
 
-<h3 id='4_configure_rails_app'>4. Configure Rails App</h3>
+<h3 id="configure-rails-app">4. Configure Rails App</h3>
 
-<p>First, we&#8217;ll need to move into the <code>discourse</code> folder and run bundle install:</p>
+<p>First, we’ll need to move into the <code>discourse</code> folder and run bundle install:</p>
 
 <pre><code>cd workspace/discourse
-bundle install</code></pre>
+bundle install
+</code></pre>
 
-<p>This is probably going to be the most time consuming task of the entire post since discourse uses about 10,000 gems. Of course, we&#8217;re not complaining…</p>
+<p>This is probably going to be the most time consuming task of the entire post since discourse uses about 10,000 gems.  Of course, we’re not complaining…</p>
 
-<h3 id='5_configure_postgres_and_install_seed_data'>5. Configure Postgres and Install Seed Data</h3>
+<h3 id="configure-postgres-and-install-seed-data">5. Configure Postgres and Install Seed Data</h3>
 
-<p>Next, we&#8217;ll create the development and test databases. We&#8217;re going to just keep the legacy <code>vagrant</code> user, even though we&#8217;re not using vagrant. You can just copy and paste the following commands one-by-one into the terminal on your Nitrous.IO box:</p>
+<p>Next, we’ll create the development and test databases.  We’re going to just keep the legacy <code>vagrant</code> user, even though we’re not using vagrant.  You can just copy and paste the following commands one-by-one into the terminal on your Nitrous.IO box:</p>
 
-<pre><code>createuser --createdb --superuser -Uaction vagrant
-psql -c &quot;ALTER USER vagrant WITH PASSWORD &#39;password&#39;;&quot;
-psql -c &quot;create database discourse_development owner vagrant encoding &#39;UTF8&#39; TEMPLATE template0;&quot;
-psql -c &quot;create database discourse_test        owner vagrant encoding &#39;UTF8&#39; TEMPLATE template0;&quot;
-psql -d discourse_development -c &quot;CREATE EXTENSION hstore;&quot;
-psql -d discourse_development -c &quot;CREATE EXTENSION pg_trgm;&quot;</code></pre>
+<pre><code>createuser --createdb --superuser -U action vagrant
+psql -c "ALTER USER vagrant WITH PASSWORD 'password';"
+psql -c "create database discourse_development owner vagrant encoding 'UTF8' TEMPLATE template0;"
+psql -c "create database discourse_test        owner vagrant encoding 'UTF8' TEMPLATE template0;"
+psql -d discourse_development -c "CREATE EXTENSION hstore;"
+psql -d discourse_development -c "CREATE EXTENSION pg_trgm;"
+</code></pre>
 
-<p>When you&#8217;re done, load the seed data:</p>
+<p>When you’re done, load the seed data:</p>
 
-<pre><code>psql -d discourse_development &lt; pg_dumps/development-image.sql</code></pre>
+<pre><code>psql -d discourse_development &lt; pg_dumps/development-image.sql
+</code></pre>
 
-<p>Finally, we&#8217;ll want to load the database migration in rails:</p>
+<p>Finally, we’ll want to load the database migration in rails:</p>
 
-<pre><code>bundle exec rake db:migrate db:test:prepare db:seed_fu</code></pre>
+<pre><code>bundle exec rake db:migrate db:test:prepare db:seed_fu
+</code></pre>
 
-<h3 id='6_starting_up_discourse'>6. Starting up Discourse</h3>
+<h3 id="starting-up-discourse">6. Starting up Discourse</h3>
 
-<p>Now we&#8217;ve got our app cloned, gems installed, database created and seed data imported, we&#8217;re ready to run the app and check out the preview. In the app&#8217;s root directory, run:</p>
+<p>Now we’ve got our app cloned, gems installed, database created and seed data imported, we’re ready to run the app and check out the preview.  In the app’s root directory, run:</p>
 
-<pre><code>rails s</code></pre>
+<pre><code>rails s
+</code></pre>
 
 <p>Then, in the preview menu at the top of the web IDE, click <code>preview &gt; Port 3000</code></p>
 
-<p><img alt='Preview Menu' src='/images/articles/discourse/preview-menu.png' /></p>
+<p><img src="/images/articles/discourse/preview-menu.png" alt="Preview Menu" /></p>
 
-<p>And you&#8217;ll see that we&#8217;re up and running! w00t!</p>
+<p>And you’ll see that we’re up and running!  w00t!</p>
 
-<p><img alt='Discourse Home' src='/images/articles/discourse/main.png' /></p>
+<p><img src="/images/articles/discourse/main.png" alt="Discourse Home" /></p>
 
-<p>(Note that the first time the app loads, it might take anywhere from 10-20 seconds. This is because discourse has a large amount of client-side code that needs to be downloaded before the app can run)</p>
+<p>(Note that the first time the app loads, it might take anywhere from 10-20 seconds.  This is because discourse has a large amount of client-side code that needs to be downloaded before the app can run)</p>
 
-<h3 id='7_customizing_discourse'>7. Customizing Discourse</h3>
+<h3 id="customizing-discourse">7. Customizing Discourse</h3>
 
 <p>This is a fully functional development environment, and you have your own fork of discourse running so you can customize it as you please, then merge upstream changes as the discourse team continues to improve the system.</p>
 
-<p>Let&#8217;s go ahead and kill those rounded corners on the tables, they&#8217;re so not web flat.0:</p>
+<p>Let’s go ahead and kill those rounded corners on the tables, they’re so not web flat.0:</p>
 
 <p>Change line 43 of <code>app/assets/stylesheets/desktop/topic-list.scss</code>:</p>
 
-<pre><code>@include border-radius-all(0 0 0 0);</code></pre>
+<pre><code>@include border-radius-all(0 0 0 0);
+</code></pre>
 
 <p>Line 85:</p>
 
-<pre><code>@include border-radius-all(0 0 0 0);</code></pre>
+<pre><code>@include border-radius-all(0 0 0 0);
+</code></pre>
 
 <p>Line 88:</p>
 
-<pre><code>@include border-radius-all(0 0 0 0);</code></pre>
+<pre><code>@include border-radius-all(0 0 0 0);
+</code></pre>
 
-<p>And we have square corners on all the topic lists. Very web 3.0, if I don&#8217;t say so myself&#8230;</p>
+<p>And we have square corners on all the topic lists.  Very web 3.0, if I don’t say so myself…</p>
 
-<p><img alt='Sharp edges' src='/images/articles/discourse/new-icon.png' /></p>
+<p><img src="/images/articles/discourse/new-icon.png" alt="Sharp edges" /></p>
 
-<p>That was easy. Stay tuned to <a href='https://www.twitter.com/nitrousio'>@nitrousio</a>, we&#8217;ve got an even easier way to install discourse that is going to blow your mind.</p>
+<p>That was easy.  Stay tuned to <a href="https://www.twitter.com/nitrousio">@nitrousio</a>, we’ve got an even easier way to install discourse that is going to blow your mind.</p>
+
+
+      </div>
+    </div>
   </div>
 </div>
-
-</div>
-
   <footer>
     <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </footer>
-
-  <script>
+    <script src='/javascripts/smoothscroll.js'></script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -319,5 +333,7 @@ psql -d discourse_development -c &quot;CREATE EXTENSION pg_trgm;&quot;</code></p
             ga('send', 'pageview');
 
 </script>
+  </footer>
 </body>
 </html>
+

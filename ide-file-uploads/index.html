@@ -57,11 +57,10 @@
     </div>
   </nav>
 
-
 <div class="container">
   <div class="row">
-  <div class="col-md-3">
-    <hr>
+    <div class="col-md-3">
+      <hr>
   <form class="navbar-form" role="search" action="/search.html">
     <input type="text" name="q" class="form-control" placeholder="Search Docs">
   </form>
@@ -72,12 +71,18 @@
   </div>
   <ul class="snav hidden-sm hidden-xs">
   <li >
-    <a href="/categories/getting-started/">Getting Started</a>
+    <a href="/">Getting Started</a>
     <ul class="nav">
-      <li ><a href="/github-add-key">Connecting to Github</a></li>
-      <li ><a href="/ide-general">Web IDE Overview</a></li>
-      <li ><a href="/best-practices">Best Practices</a></li>
-      <li ><a href="/account-new">Creating an Account</a></li>
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
     </ul>
   </li>
 
@@ -189,43 +194,45 @@
   </li>
 </ul>
 
-  </div>
+    </div>
 
-  <div class="col-md-9">
-    <h1 class="article-title">Uploading files via the Web IDE</h1>
-    <h5 class="note">Last Updated on: 28 February 2014</h5>
-     
-    <p><em>Uploading files to Nitrous.IO is quick and easy. There&#8217;s no need to FTP or SCP files to your development box (although you can, and it is explained at the end of this guide).</em></p>
+    <div class="col-md-9">
+      <div class="container article">
+        <h1 class="article-title">Uploading files via the Web IDE</h1>
+<h5 class="note">Last Updated on: 28 February 2014</h5>
+<p><em>Uploading files to Nitrous.IO is quick and easy. There’s no need to FTP or SCP files to your development box (although you can, and it is explained at the end of this guide).</em></p>
 
-<h3 id='uploading_individual_files'>Uploading Individual Files</h3>
+<h3 id="uploading-individual-files">Uploading Individual Files</h3>
 
-<p>In the file browser, right-click the destination directory where you&#8217;d like to upload the image and click &#8220;Upload files to <strong>folder name</strong>&#8221;.</p>
+<p>In the file browser, right-click the destination directory where you’d like to upload the image and click “Upload files to <strong>folder name</strong>”.</p>
 
-<p><img alt='Directory Menu' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-1.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-1.png" alt="Directory Menu" /></p>
 
 <p>A file upload modal will appear, where you can drag &amp; drop multiple files or browse for files manually. You can upload a bunch of files at once, so feel free to add up to 5 files at a time.</p>
 
-<p><img alt='File Upload Modal' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-2.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-2.png" alt="File Upload Modal" /></p>
 
-<p>Once you&#8217;ve dropped the files you want to upload, click the &#8220;Upload&#8221; button at the bottom right-hand side of the modal.</p>
+<p>Once you’ve dropped the files you want to upload, click the “Upload” button at the bottom right-hand side of the modal.</p>
 
-<p>You&#8217;ll see the status of each file uploaded via the progress bar to the right of the filename.</p>
+<p>You’ll see the status of each file uploaded via the progress bar to the right of the filename.</p>
 
-<p><img alt='File Upload Status' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-3.png' /></p>
-<div class='alert alert-notice'>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-3.png" alt="File Upload Status" /></p>
+
+<div class="alert alert-notice">
   We support .png, .jpeg, .gif, and .pdf file uploads
 </div>
-<p>After each file is uploaded successfully, the modal will disapear and you&#8217;ll be back in the Nitrous.IO IDE. The file browser should refresh automatically and you should see your uploaded files in the correct directory.</p>
 
-<p><img alt='File Directory' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-4.png' /></p>
+<p>After each file is uploaded successfully, the modal will disapear and you’ll be back in the Nitrous.IO IDE. The file browser should refresh automatically and you should see your uploaded files in the correct directory.</p>
 
-<p>If you don&#8217;t see the files you&#8217;ve uploaded, you can right click and select &#8220;Refresh&#8221; to refresh the contents of a folder, or click the refresh icon at the top of the file browser to refresh the entire tree.</p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-4.png" alt="File Directory" /></p>
+
+<p>If you don’t see the files you’ve uploaded, you can right click and select “Refresh” to refresh the contents of a folder, or click the refresh icon at the top of the file browser to refresh the entire tree.</p>
 
 <p>If you want to view an image in the browser, simply click the image to open a preview tab inside of the web ide.</p>
 
-<p><img alt='Airmax' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/airmaxpair.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/airmaxpair.png" alt="Airmax" /></p>
 
-<h3 id='uploading_a_directory'>Uploading a directory</h3>
+<h3 id="uploading-a-directory">Uploading a directory</h3>
 
 <p>The File Upload/ide-file-uploads feature on the Web IDE is intended for individual files.</p>
 
@@ -233,52 +240,61 @@
 
 <p>First, zip up your project using your favorite archving application. On later versions of Mac OS X and Windows this is built in.</p>
 
-<p><img alt='Compress' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/compress-menu.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/compress-menu.png" alt="Compress" /></p>
 
-<p>Then, open up the IDE in your box on Nitrous.IO and below the file browser, click the &#8220;Upload Files&#8221; button.</p>
+<p>Then, open up the IDE in your box on Nitrous.IO and below the file browser, click the “Upload Files” button.</p>
 
-<p><img alt='IDE Upload' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/ide-upload.png' /></p>
-<p class='alert'>The file upload tool in the web IDE has a size limit of 20MB. If you have a large project, we suggest uploading the file via SFTP or Git</p>
-<p>Once you have your archive uploaded, you&#8217;ll need to unzip it using the console. Click into the console and navigate to your directory:</p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/ide-upload.png" alt="IDE Upload" /></p>
 
-<pre><code>cd workspace</code></pre>
+<p class="alert">The file upload tool in the web IDE has a size limit of 20MB. If you have a large project, we suggest uploading the file via SFTP or Git</p>
 
-<p>Then unzip the package using the &#8220;unzip&#8221; command:</p>
+<p>Once you have your archive uploaded, you’ll need to unzip it using the console. Click into the console and navigate to your directory:</p>
 
-<pre><code>unzip help-articles.zip</code></pre>
-<p class='note'>Make sure you've moved the archive into the desired directory before unzipping.</p>
-<h1 id='alternative_methods'>Alternative Methods</h1>
+<pre><code>cd workspace
+</code></pre>
 
-<h3 id='nitrous_desktop'>Nitrous Desktop</h3>
+<p>Then unzip the package using the “unzip” command:</p>
 
-<p>If you are wanting to sync your projects locally or just use an app to upload larger amounts of data, take a look at <a href='https://www.nitrous.io/desktop'>Nitrous Desktop</a>. More information on how to use this can be found in the <a href='/nitrous-desktop'>Nitrous Desktop guide</a>.</p>
+<pre><code>unzip help-articles.zip
+</code></pre>
 
-<h3 id='scp'>SCP</h3>
+<p class="note">Make sure you've moved the archive into the desired directory before unzipping.</p>
 
-<p>You can also upload and download content via SCP. To do this, you will need to <a href='http://help.nitrous.io/ssh-add/'>add an SSH Key</a> to your account.</p>
+<h1 id="alternative-methods">Alternative Methods</h1>
 
-<p>Next, run the command below on your local machine, replacing {PORT} with the port # assigned to your Nitrous.IO box, and also changing <code>usw1</code> with the proper region found in the SSH URI of your <a href='https://www.nitrous.io/app#/boxes'>boxes page</a>.</p>
+<h3 id="nitrous-desktop">Nitrous Desktop</h3>
+
+<p>If you are wanting to sync your projects locally or just use an app to upload larger amounts of data, take a look at <a href="https://www.nitrous.io/desktop">Nitrous Desktop</a>. More information on how to use this can be found in the <a href="/nitrous-desktop">Nitrous Desktop guide</a>.</p>
+
+<h3 id="scp">SCP</h3>
+
+<p>You can also upload and download content via SCP. To do this, you will need to <a href="http://help.nitrous.io/ssh-add/">add an SSH Key</a> to your account.</p>
+
+<p>Next, run the command below on your local machine, replacing {PORT} with the port # assigned to your Nitrous.IO box, and also changing <code>usw1</code> with the proper region found in the SSH URI of your <a href="https://www.nitrous.io/app#/boxes">boxes page</a>.</p>
 
 <p>To Upload:</p>
 
-<pre><code>scp -P{PORT} -r path/to/yourFolder action@usw1.nitrousbox.com:~/workspace</code></pre>
+<pre><code>scp -P{PORT} -r path/to/yourFolder action@usw1.nitrousbox.com:~/workspace
+</code></pre>
 
 <p>To Download:</p>
 
-<pre><code>scp -P{PORT} -r action@usw1.nitrousbox.com:~/workspace path/to/yourLocalFolder</code></pre>
+<pre><code>scp -P{PORT} -r action@usw1.nitrousbox.com:~/workspace path/to/yourLocalFolder
+</code></pre>
+
+
+
+      </div>
+    </div>
   </div>
 </div>
-
-</div>
-
   <footer>
     <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </footer>
-
-  <script>
+    <script src='/javascripts/smoothscroll.js'></script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -289,5 +305,7 @@
             ga('send', 'pageview');
 
 </script>
+  </footer>
 </body>
 </html>
+

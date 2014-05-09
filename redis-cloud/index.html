@@ -57,11 +57,10 @@
     </div>
   </nav>
 
-
 <div class="container">
   <div class="row">
-  <div class="col-md-3">
-    <hr>
+    <div class="col-md-3">
+      <hr>
   <form class="navbar-form" role="search" action="/search.html">
     <input type="text" name="q" class="form-control" placeholder="Search Docs">
   </form>
@@ -72,12 +71,18 @@
   </div>
   <ul class="snav hidden-sm hidden-xs">
   <li >
-    <a href="/categories/getting-started/">Getting Started</a>
+    <a href="/">Getting Started</a>
     <ul class="nav">
-      <li ><a href="/github-add-key">Connecting to Github</a></li>
-      <li ><a href="/ide-general">Web IDE Overview</a></li>
-      <li ><a href="/best-practices">Best Practices</a></li>
-      <li ><a href="/account-new">Creating an Account</a></li>
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
     </ul>
   </li>
 
@@ -189,88 +194,93 @@
   </li>
 </ul>
 
-  </div>
+    </div>
 
-  <div class="col-md-9">
-    <h1 class="article-title">Redis Cloud</h1>
-    <h5 class="note">Last Updated on: 06 January 2014</h5>
-     
-    <p><a href='http://redis-cloud.com/'>Redis Cloud</a> is a fully-automated cloud service for hosting your Redis dataset.</p>
+    <div class="col-md-9">
+      <div class="container article">
+        <h1 class="article-title">Redis Cloud</h1>
+<h5 class="note">Last Updated on: 06 January 2014</h5>
+<p><a href="http://redis-cloud.com/">Redis Cloud</a> is a fully-automated cloud service for hosting your Redis dataset.</p>
 
-<p>To get started, sign up with <a href='http://redis-cloud.com/'>Redis Cloud</a>. Once signed up, login and click on New Redis Subscription:</p>
+<p>To get started, sign up with <a href="http://redis-cloud.com/">Redis Cloud</a>. Once signed up, login and click on New Redis Subscription:</p>
 
-<p><img alt='Redis Cloud Subscription' src='/images/articles/redis-cloud-subscription.png' /></p>
+<p><img src="/images/articles/redis-cloud-subscription.png" alt="Redis Cloud Subscription" /></p>
 
 <p>From there you will want to select your plan, and specify a resource name and password. The password field is optional, and if left empty you will not want to reference a password in the configurations.</p>
 
-<p><img alt='Redis Cloud Configuration' src='/images/articles/redis-cloud-configure.png' /></p>
+<p><img src="/images/articles/redis-cloud-configure.png" alt="Redis Cloud Configuration" /></p>
 
 <p>Next you will want to select the region which is closest to you.</p>
 
-<p><img alt='Redis Cloud Region' src='/images/articles/redis-cloud-region.png' /></p>
+<p><img src="/images/articles/redis-cloud-region.png" alt="Redis Cloud Region" /></p>
 
-<h3 id='testing_connectivity_with_rediscli'>Testing Connectivity with Redis-cli</h3>
+<h3 id="testing-connectivity-with-redis-cli">Testing Connectivity with Redis-cli</h3>
 
-<p>To ensure you have set this up to connect properly we will be testing the connection in with <a href='http://redis.io/topics/quickstart'>redis-cli</a>. This is pre-installed on your Nitrous box so there is no extra setup needed.</p>
+<p>To ensure you have set this up to connect properly we will be testing the connection in with <a href="http://redis.io/topics/quickstart">redis-cli</a>. This is pre-installed on your Nitrous box so there is no extra setup needed.</p>
 
-<p>Run the following command with your Redis Cloud&#8217;s db configuration. You can obtain the host (public DNS), port, and password in your Redis Cloud account in the navigation menu under ‘My Resources’ &gt; ‘Manage’ (<a href='/images/articles/redis-cloud-settings.png'>view example</a>):</p>
+<p>Run the following command with your Redis Cloud’s db configuration. You can obtain the host (public DNS), port, and password in your Redis Cloud account in the navigation menu under ‘My Resources’ &gt; ‘Manage’ (<a href="/images/articles/redis-cloud-settings.png">view example</a>):</p>
 
-<pre><code>redis-cli -h REDIS_CLOUD_HOST -p REDIS_CLOUD_PORT -a REDIS_CLOUD_PASSWORD</code></pre>
+<pre><code>redis-cli -h REDIS_CLOUD_HOST -p REDIS_CLOUD_PORT -a REDIS_CLOUD_PASSWORD
+</code></pre>
 
 <blockquote>
-<p>If you did not include a password in your Redis db configuration, do not include the -a or password in the command. Passing an empty value would cause issues when connecting.</p>
+  <p>If you did not include a password in your Redis db configuration, do not include the -a or password in the command. Passing an empty value would cause issues when connecting.</p>
 </blockquote>
 
 <p>After running redis-cli, you can set and get keys. Here is an example of output which you should see when setting and getting keys:</p>
 
-<p><img alt='Redis-cli-connection' src='/images/articles/redis-cli.png' /></p>
+<p><img src="/images/articles/redis-cli.png" alt="Redis-cli-connection" /></p>
 
-<h3 id='setting_up_the_database_configuration_rubyrails'>Setting up the Database configuration (Ruby/Rails)</h3>
+<h3 id="setting-up-the-database-configuration-rubyrails">Setting up the Database configuration (Ruby/Rails)</h3>
 
 <p>If you are building a Rails app, follow this step to connect your app to Redis Cloud.</p>
 
-<p>Navigate in your menubar to &#8216;My Resources&#8217; &gt; &#8216;Manage&#8217;, and from there click on your new database. You will be taken to the settings page which will provide you with the host, port, and password needed for your app.</p>
+<p>Navigate in your menubar to ‘My Resources’ &gt; ‘Manage’, and from there click on your new database. You will be taken to the settings page which will provide you with the host, port, and password needed for your app.</p>
 
-<p><img alt='Redis Cloud Settings' src='/images/articles/redis-cloud-settings.png' /></p>
+<p><img src="/images/articles/redis-cloud-settings.png" alt="Redis Cloud Settings" /></p>
 
-<p>Grab each of the values and assign them to environment variables to a file called <code>.env</code> within your project folder like so:</p>
+<p>Grab each of the values and assign them to environment variables to a file called <code>.env</code> within your project folder like so: </p>
 
-<p><img alt='Env Variables' src='/images/articles/redis-bashrc.png' /></p>
+<p><img src="/images/articles/redis-bashrc.png" alt="Env Variables" /></p>
 
 <blockquote>
-<p>If you are going to add your project to a git repo, add <code>.env</code> to your <code>.gitignore</code> file to ensure these credentials aren&#8217;t pushed with the rest of your code.</p>
+  <p>If you are going to add your project to a git repo, add <code>.env</code> to your <code>.gitignore</code> file to ensure these credentials aren’t pushed with the rest of your code.</p>
 </blockquote>
 
 <p>Once your environment variables have been saved, run the following command within your project folder:</p>
 
-<pre><code>export $(cat .env)</code></pre>
+<pre><code>export $(cat .env)
+</code></pre>
 
 <p>You can now test these variables by running <code>echo REDIS_CLOUD_HOST</code> in the console to see if the corresponding value is returned.</p>
 
-<p>Within your Rails app, update your Gemfile to include the <a href='http://github.com/redis/redis-rb'>redis-rb</a> client:</p>
+<p>Within your Rails app, update your Gemfile to include the <a href="http://github.com/redis/redis-rb">redis-rb</a> client:</p>
 
-<pre><code>gem &#39;redis&#39;</code></pre>
+<pre><code>gem 'redis'
+</code></pre>
 
 <p>Next you will want to install the gem via Bundler:</p>
 
-<pre><code>bundle install</code></pre>
+<pre><code>bundle install
+</code></pre>
 
 <p>Create a new redis.rb initializer in config/initializers/ and add the following code:</p>
 
-<pre><code>$redis = Redis.new(:host =&gt; ENV[&#39;REDIS_CLOUD_HOST&#39;], :port =&gt; ENV[&#39;REDIS_CLOUD_PORT&#39;], :password =&gt; ENV[&#39;REDIS_CLOUD_PASSWORD&#39;])</code></pre>
+<pre><code>$redis = Redis.new(:host =&gt; ENV['REDIS_CLOUD_HOST'], :port =&gt; ENV['REDIS_CLOUD_PORT'], :password =&gt; ENV['REDIS_CLOUD_PASSWORD'])
+</code></pre>
+
+
+      </div>
+    </div>
   </div>
 </div>
-
-</div>
-
   <footer>
     <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </footer>
-
-  <script>
+    <script src='/javascripts/smoothscroll.js'></script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -281,5 +291,7 @@
             ga('send', 'pageview');
 
 </script>
+  </footer>
 </body>
 </html>
+

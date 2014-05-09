@@ -3,7 +3,7 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Nitrous.IO Support</title>
+  <title>Nitrous.IO Documentation</title>
   <meta name="author" content="Nitrous.IO" />
   <link href="http://feeds.feedburner.com/actionioblog" rel="alternate" title="Nitrous.IO Blog" type="application/atom+xml" />
   <meta content='Nitrous.IO Support Documentation. Tutorials, FAQ, and other guides for building your apps directly on Nitrous.IO' name='description'>
@@ -57,11 +57,10 @@
     </div>
   </nav>
 
-
 <div class="container">
   <div class="row">
-  <div class="col-md-3">
-    <hr>
+    <div class="col-md-3">
+      <hr>
   <form class="navbar-form" role="search" action="/search.html">
     <input type="text" name="q" class="form-control" placeholder="Search Docs">
   </form>
@@ -71,13 +70,19 @@
     </h3>
   </div>
   <ul class="snav hidden-sm hidden-xs">
-  <li >
-    <a href="/categories/getting-started/">Getting Started</a>
+  <li  class="active" >
+    <a href="/">Getting Started</a>
     <ul class="nav">
-      <li ><a href="/github-add-key">Connecting to Github</a></li>
-      <li ><a href="/ide-general">Web IDE Overview</a></li>
-      <li ><a href="/best-practices">Best Practices</a></li>
-      <li ><a href="/account-new">Creating an Account</a></li>
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
     </ul>
   </li>
 
@@ -189,126 +194,166 @@
   </li>
 </ul>
 
-  </div>
+    </div>
 
-  <div class="col-md-4">      
-    <h3>Introduction Resources</h3>
-    <ul class="toc">
-      <li>
-        <a href="/best-practices/">
-          <i class="fa fa-star-o"></i>Best Practices
-        </a>
-      </li>
-      <li>
-        <a href="/ssh-add/">
-          <i class="fa fa-key"></i>Adding SSH Keys
-        </a>
-      </li>
-      <li>
-        <a href="/ide-general/">
-          <i class="fa fa-code"></i>Web IDE
-        </a>
-      </li>
-      <li>
-        <a href="/github-add-key/">
-          <i class="fa fa-github"></i>Connecting to Github
-        </a>
-      </li>
-      <li>
-        <a href="/autoparts/">
-          <i class="fa fa-bars"></i>Install Databases with Autoparts
-        </a>
-      </li>
-      <li>
-        <a href="/collab/">
-          <i class="fa fa-users"></i>Collaborative Coding Overview
-        </a>
-      </li>
-    </ul>
-  </div>
-  
-  <div class="col-md-5">
-    <h3>Frequently Asked Questions</h3>
-    <ul class="toc">
-      
-        <li>
-          <a href="/faq-unable-to-connect-to-web-ide">
-            <i class="fa fa-question-circle"></i>Unable to connect to Web IDE
-          </a>
-        </li>
-      
-        <li>
-          <a href="/python-versions-with-virtualenv">
-            <i class="fa fa-question-circle"></i>Changing Python versions with virtualenv
-          </a>
-        </li>
-      
-        <li>
-          <a href="/faq-copy-paste">
-            <i class="fa fa-question-circle"></i>Copy/Paste within the Web IDE
-          </a>
-        </li>
-      
-        <li>
-          <a href="/faq-aws-region-settings">
-            <i class="fa fa-question-circle"></i>AWS Region Settings
-          </a>
-        </li>
-      
-        <li>
-          <a href="/faq-erlang">
-            <i class="fa fa-question-circle"></i>Installing Erlang
-          </a>
-        </li>
-      
-        <li>
-          <a href="/node-connect-server">
-            <i class="fa fa-question-circle"></i>Run a static site with NodeJS
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-3">
-    &nbsp;
-  </div>
-  
-  <div class="col-md-9 resources">
-    <h3>Helpful Resources</h3>
-    <div class="row">
-      <div class="col-md-4">
-        <a href="https://www.nitrous.io/app#/intro/1">
-          <h4>Introduction</h4>
-          <p>Learn about some of the powerful features on Nitrous.IO.</p>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="/discussions">
-          <h4>Discussions</h4>        
-          <p>Browse community questions or ask your own.</p>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="mailto:help@nitrous.io">
-          <h4>Submit a Request</h4>
-          <p>Contact a real human if you have any questions or feedback.</p>
-        </a>
+    <div class="col-md-9">
+      <div class="container article">
+        <h1 id="getting-started">Getting Started</h1>
+
+<p>Nitrous is a backend development platform which helps software developers save time by cutting out the repetitive parts of creating development environments and automating them.</p>
+
+<p>Once you create your ﬁrst development environment, there are many features which will make development easier.</p>
+
+<h3 id="sign-up">Sign Up</h3>
+
+<p>Nitrous.IO offers free accounts with basic functionality. Code on Nitrous.IO for as long as you want, and if you feel the need for more speed and a faster box with additional features, you can upgrade to take things to the next level.</p>
+
+<ul>
+  <li>Select “Signup” from the top menu or just <a href="https://www.nitrous.io">visit the homepage</a>.</li>
+  <li>Enter your email address, username and password. We utilize your username in various places around the platform, so pick something memorable, simple and meaningful.</li>
+  <li>If you already know you want more speed then you can opt for a dedicated box. All the pricing can be found on the <a href="https://www.nitrous.io/pricing">pricing page</a></li>
+</ul>
+
+<h3 id="create-a-new-box">Create a New Box</h3>
+
+<p>To create a new box, just click the “New Box” button on your <a href="https://www.nitrous.io/app#/boxes">dashboard</a> after signing in.</p>
+
+<p><img src="/images/articles/new-box-button.png" alt="New Box Button" /></p>
+
+<p>You will be prompted to select a stack, box name, and a region closest to your location. You can later install other tools and language support with <a href="/autoparts/">Autoparts</a>.</p>
+
+<h3 id="autoparts-package-manager">Autoparts Package Manager</h3>
+
+<p>Every box comes with the open source package manager, <a href="/autoparts/">Autoparts</a>. You can utilize Autoparts to install databases and tools, which includes packages like PostgreSQL, Redis, Node.JS, Meteor, PHP, Apache, and more.</p>
+
+<p>You can install a new package by navigating to <strong>Autoparts &gt; Manage Packages…</strong> within the <a href="/ide-general/">Web IDE</a> menu bar. Some services (e.g. databases) must be started within this menu after installation.</p>
+
+<p>You can also access Autoparts within the terminal. Run <code>parts help</code> within the terminal to view all of the available guides.</p>
+
+<p>Read the <a href="/autoparts/">Autoparts guide</a> for more information on usage.</p>
+
+<h2 id="accessing-your-code">Accessing Your Code</h2>
+
+<h3 id="connect-to-github">Connect to Github</h3>
+
+<p>For those developers using Github, Nitrous.IO lets you easily add your box’s ssh keys. This makes managing your repositories is a breeze.</p>
+
+<h4 id="authenticating">Authenticating</h4>
+
+<p>First, you’ll need to authenticate your Github account so we’re allowed to add ssh keys to your profile on Github.</p>
+
+<p>Visit the <a href="https://www.nitrous.io/app#/n2o/bonus">bonus page</a> and click the <strong>Connect to Github</strong> button. You’ll be redirected to the Github authentication page, where you can review the policies and select <strong>Allow</strong>.</p>
+
+<p><img src="/images/articles/n2o-bonus-page-github.png" alt="Github Bonus Page" /></p>
+
+<h4 id="add-box-ssh-key-to-github">Add Box SSH Key to Github</h4>
+
+<p>Now that you’ve successfully authenticated your Github account, you’ll be able to add your SSH keys from your Nitrous.IO to your Github account. This will allow you to easily work with your repositories on Github.</p>
+
+<p>Navigate back to the <a href="https://www.nitrous.io/app#/boxes">Dashboard</a> by clicking the <strong>Boxes</strong> link in the top navigation.</p>
+
+<p>Click any of your boxes to toggle it’s details and click the <strong>Reveal Public Key</strong> link.</p>
+
+<p><img src="/images/articles/reveal-public-key.png" alt="Reveal Public Key" /></p>
+
+<p>Once your public key is revealed, you simply need to click the <strong>Add to Github</strong> link to the right of the key. After a few seconds, you should see the link be replaced with a status message that reads “Added to Github!”.</p>
+
+<p>From here you can now push and pull from your Github repos. If you want to confirm that the key has been added, sign into your Github account and click the <strong>Account Settings</strong> link in the top right navigation, and then <strong>SSH Keys</strong> on the left nav.</p>
+
+<h3 id="connect-via-ssh">Connect via SSH</h3>
+
+<p>With SSH Established you can open a local terminal and code directly on your Nitrous box. If you use this method to develop then you may want to consider using Vim to edit your code. </p>
+
+<p>To utilize SSH, you will first need to add your public key (<code>~/.ssh/id_rsa.pub</code>) to the <a href="https://www.nitrous.io/app#/public_keys">Public Keys</a> page. </p>
+
+<p>For assistance on setting up SSH, take a look at one of the following guides:</p>
+
+<ul>
+  <li><a href="/ssh-add/">Mac</a></li>
+  <li><a href="/ssh-add-win/">Windows</a></li>
+</ul>
+
+<h4 id="using-iterm2-with-mac">Using iTerm2 with Mac</h4>
+
+<p>One easy strategy for Mac users would be to use <a href="http://www.iterm2.com/">iTerm 2</a> and setup a profile with your SSH credentials. To setup a profile, navigate to your <a href="https://www.nitrous.io/app#/boxes">dashboard</a> and copy your SSH URI:</p>
+
+<p><img src="/images/articles/ssh-uri.png" alt="SSH URI" /></p>
+
+<p>Next, open up Iterm 2 and navigate to <strong>Preferences &gt; Profiles</strong>. Create a new profile and fill in your SSH URI into the Command field. The format should be <code>ssh action@YOUR_REGION.nitrousbox.com -p YOUR_PORT</code> (<a href="/images/articles/iterm2-profile.png">view screenshot</a>).</p>
+
+<h3 id="sync-with-nitrous-desktop">Sync with Nitrous Desktop</h3>
+
+<p>With Nitrous Desktop you can sync your files locally, allowing you to edit code on your Nitrous box with your favorite text editor (e.g. Sublime Text). You can also enable port forwarding, start/shutdown boxes, and more.</p>
+
+<p>If you are running Mac or Windows, visit the <a href="https://www.nitrous.io/desktop">download page</a> and install the application. From there you can follow either of these guides for information on how to use the app:</p>
+
+<ul>
+  <li><a href="/nitrous-desktop/">Mac</a></li>
+  <li><a href="/nitrous-desktop-win/">Windows</a></li>
+</ul>
+
+<h2 id="build-your-app">Build Your App</h2>
+
+<p>You can create as many projects as you would like within a single Nitrous box. The only limitations to this is the amount of storage space you use, which not only counts the project files but also modules, different versions of Ruby installed, etc.</p>
+
+<p>Below you will see a screenshot of how you could setup your directories within Nitrous. All projects should be places within the <code>~/workspace</code> folder, and configuration files can be placed in your home directory <code>~/</code>.</p>
+
+<p><img src="/images/articles/directory-tree.png" alt="Directory Tree" /></p>
+
+<p>Build your app just as you normally would on your local environment. If you install any databases by Autoparts, set any database configurations to utilize <code>localhost</code>.</p>
+
+<h3 id="collaborate-with-others">Collaborate with Others</h3>
+
+<p>If you want to work on a project with another developer, invite them to collaborate on your Nitrous box. You will be able to work on the same code at the same time, and even view the what other collaborator’s are typing in real time.</p>
+
+<p>View the <a href="/collab/">collaboration guide</a> for details on using this feature.</p>
+
+<h3 id="tutorials">Tutorials</h3>
+
+<p>You can use any tutorial found on the web to get started, but remember that you don’t have root access. For certain tools that may ask you to run ‘sudo apt-get’, check <a href="/autoparts">Autoparts</a> to see if the package exists there.</p>
+
+<p>Build your first app by <a href="/categories/tutorials/">following one of these tutorials</a>.</p>
+
+<h2 id="preview-your-app">Preview Your App</h2>
+
+<p>You can preview and share your web app on a public URL while it is running within your active session.</p>
+
+<p>The <strong>Preview</strong> menu in the Web IDE displays links to some common default ports, which you can click to open a new window in your browser.</p>
+
+<p><img src="/images/articles/preview-menu.png" alt="Preview Menu" /></p>
+
+<p>Ports 1024 - 10,000 are open for HTTP, and port 80 is forwarded to port 3000. If your app is running on port 80 in the terminal, navigate to ‘Preview &gt; Port 3000’ in the menu. </p>
+
+<p>If the app is running on another port not found in the menu then you will need to change this within the address bar (e.g. http://ruby-21200.usw1-2.nitrousbox.com:8080).</p>
+
+<p>If you wish to use a custom domain, take a look at which <a href="https://www.nitrous.io/pricing">pricing plans</a> offer this feature.</p>
+
+<p>You can read more about previewing on the <a href="/preview/">preview guide</a>.</p>
+
+<h2 id="deploy">Deploy</h2>
+
+<p>Nitrous.IO is dedicated to bringing the best development and staging environments at this time. Although you could keep your Web App running by using <a href="/faq-disconnect/">Tmux</a> and a <a href="https://www.nitrous.io/pricing">paid plan</a>, we recommend deploying to one of the following services for your production app:</p>
+
+<ul>
+  <li><a href="/heroku">Heroku</a></li>
+  <li><a href="/app-engine">Google App Engine</a></li>
+  <li><a href="/azure-sites">Azure</a></li>
+  <li><a href="/nodejitsu">Nodejitsu</a></li>
+  <li><a href="/cloud66">Cloud 66</a></li>
+  <li><a href="/shelly-cloud">Shelly Cloud</a></li>
+</ul>
+
       </div>
     </div>
   </div>
 </div>
-</div>
-
   <footer>
     <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </footer>
-
-  <script>
+    <script src='/javascripts/smoothscroll.js'></script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -319,5 +364,7 @@
             ga('send', 'pageview');
 
 </script>
+  </footer>
 </body>
 </html>
+

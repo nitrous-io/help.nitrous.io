@@ -57,11 +57,10 @@
     </div>
   </nav>
 
-
 <div class="container">
   <div class="row">
-  <div class="col-md-3">
-    <hr>
+    <div class="col-md-3">
+      <hr>
   <form class="navbar-form" role="search" action="/search.html">
     <input type="text" name="q" class="form-control" placeholder="Search Docs">
   </form>
@@ -72,12 +71,18 @@
   </div>
   <ul class="snav hidden-sm hidden-xs">
   <li >
-    <a href="/categories/getting-started/">Getting Started</a>
+    <a href="/">Getting Started</a>
     <ul class="nav">
-      <li ><a href="/github-add-key">Connecting to Github</a></li>
-      <li ><a href="/ide-general">Web IDE Overview</a></li>
-      <li ><a href="/best-practices">Best Practices</a></li>
-      <li ><a href="/account-new">Creating an Account</a></li>
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
     </ul>
   </li>
 
@@ -189,130 +194,87 @@
   </li>
 </ul>
 
-  </div>
+    </div>
 
-  <div class="col-md-9">
-    <h1 class="article-title">Contributing to Autoparts</h1>
-    <h5 class="note">Last Updated on: 27 March 2014</h5>
-     
-    <h3 id='getting_started'>Getting Started</h3>
+    <div class="col-md-9">
+      <div class="container article">
+        <h1 class="article-title">Contributing to Autoparts</h1>
+<h5 class="note">Last Updated on: 27 March 2014</h5>
+<h3 id="getting-started">Getting Started</h3>
 
 <p>Before building a new part ensure you have updated the repo. Run <code>parts update</code> within your Nitrous box in order to do this.</p>
 
-<h3 id='package_guidelines'>Package Guidelines</h3>
+<h3 id="package-guidelines">Package Guidelines</h3>
 
-<p>Autoparts packages are located in the <a href='https://github.com/nitrous-io/autoparts'>Autoparts repo</a> under <code>lib/autoparts/packages</code>. Please follow the <a href='https://github.com/styleguide/ruby'>Ruby Styleguide</a> when building a part.</p>
+<p>Autoparts packages are located in the <a href="https://github.com/nitrous-io/autoparts">Autoparts repo</a> under <code>lib/autoparts/packages</code>. Please follow the <a href="https://github.com/styleguide/ruby">Ruby Styleguide</a> when building a part.</p>
 
 <p>In order to create a new package you will need to provide the following information when creating a pull request:</p>
 
 <ul>
-<li>Package Name</li>
-
-<li>Version</li>
-
-<li>Description</li>
-
-<li>Category (A list of categories can be found in the <a href='https://github.com/nitrous-io/autoparts'>Autoparts repo</a> within <a href='https://github.com/nitrous-io/autoparts/blob/master/lib/autoparts/category.rb'>lib/autoparts/category.rb</a>)</li>
-
-<li>Source URL (official release source which package will always be located at)</li>
-
-<li>Source filetype (the extension of the source file)</li>
-
-<li>SHA-1 hash of the source package (You can run <code>sha1sum</code> against the source file or <a href='http://hash.online-convert.com/sha1-generator'>generate</a> a SHA-1 hash with the source file)</li>
-
-<li>Dependencies (if any)</li>
-
-<li>Compile / Installation commands</li>
-
-<li>(Optional) Start/Stop commands. This is needed only if building a part for a database or another tool that runs as a service.</li>
+  <li>Package Name</li>
+  <li>Version</li>
+  <li>Description</li>
+  <li>Category (A list of categories can be found in the <a href="https://github.com/nitrous-io/autoparts">Autoparts repo</a> within <a href="https://github.com/nitrous-io/autoparts/blob/master/lib/autoparts/category.rb">lib/autoparts/category.rb</a>)</li>
+  <li>Source URL (official release source which package will always be located at)</li>
+  <li>Source filetype (the extension of the source file)</li>
+  <li>SHA-1 hash of the source package (You can run <code>sha1sum</code> against the source file or <a href="http://hash.online-convert.com/sha1-generator">generate</a> a SHA-1 hash with the source file)</li>
+  <li>Dependencies (if any)</li>
+  <li>Compile / Installation commands</li>
+  <li>(Optional) Start/Stop commands. This is needed only if building a part for a database or another tool that runs as a service.</li>
 </ul>
 
 <p>There are a few requirements if the part requires additional configuration:</p>
 
 <ul>
-<li>Post-installation setup tasks (e.g. creating conf file, generating empty database file) should be done in <code>post_install</code> method.</li>
-
-<li>Configuration files should be placed in <code>Path.etc</code> (e.g. <code>~/.parts/etc</code>) or <code>Path.etc + name</code> (e.g. <code>~/.parts/etc/postgresql</code>).</li>
-
-<li>Data files (e.g. database files) should be placed in <code>Path.var + name</code> (e.g. <code>~/.parts/var/postgresql</code>).</li>
-
-<li>Log files should be placed in <code>Path.var + &#39;log&#39; + &quot;#{name}.log&quot;</code> (e.g. <code>~/.parts/var/log/postgresql.log</code>).</li>
+  <li>Post-installation setup tasks (e.g. creating conf file, generating empty database file) should be done in <code>post_install</code> method.</li>
+  <li>Configuration files should be placed in <code>Path.etc</code> (e.g. <code>~/.parts/etc</code>) or <code>Path.etc + name</code> (e.g. <code>~/.parts/etc/postgresql</code>).</li>
+  <li>Data files (e.g. database files) should be placed in <code>Path.var + name</code> (e.g. <code>~/.parts/var/postgresql</code>).</li>
+  <li>Log files should be placed in <code>Path.var + 'log' + "#{name}.log"</code> (e.g. <code>~/.parts/var/log/postgresql.log</code>).</li>
 </ul>
 
-<h3 id='contributing_a_new_part'>Contributing a New Part</h3>
+<h3 id="contributing-a-new-part">Contributing a New Part</h3>
 
-<p>Within the <a href='https://github.com/nitrous-io/autoparts'>Autoparts repo</a>, take a look at <a href='https://github.com/nitrous-io/autoparts/tree/master/docs/example-part.rb'>docs/example-part.rb</a> for details on how a package is built.</p>
+<p>Within the <a href="https://github.com/nitrous-io/autoparts">Autoparts repo</a>, take a look at <a href="https://github.com/nitrous-io/autoparts/tree/master/docs/example-part.rb">docs/example-part.rb</a> for details on how a package is built.</p>
 
 <p>Follow this workflow to contribute an Autoparts package:</p>
 
 <ol>
-<li>
-<p>Fork the <a href='https://github.com/nitrous-io/autoparts'>Autoparts repo</a> in GitHub.</p>
-</li>
-
-<li>
-<p>Create a new box in Nitrous.IO.</p>
-</li>
-
-<li>
-<p>cd to <code>~/.parts/autoparts</code></p>
-</li>
-
-<li>
-<p>Add the fork repo as a a git remote: <code>git remote add myfork git@github.com:YOUR-USERNAME/autoparts.git</code></p>
-</li>
-
-<li>
-<p>Create the new package file in <code>~/.parts/autoparts/lib/autoparts/packages/mypackage.rb</code></p>
-</li>
-
-<li>
-<p>Open a new console tab and check if the package works as expected.</p>
-
-<ul>
-<li>parts search (see if the new package you created is listed)</li>
-
-<li>parts install mypackage</li>
-
-<li>parts start (if applicable)</li>
-
-<li>parts stop</li>
-
-<li>parts uninstall mypackage</li>
-</ul>
-</li>
-
-<li>
-<p>Reload the IDE and see if the above actions also works via the UI.</p>
-</li>
-
-<li>
-<p>After you&#8217;re confident that the package works, commit and push the change to your fork.</p>
-
-<ul>
-<li>git commit -m &#8220;Added MyPackage.&#8221;</li>
-
-<li>git push myfork master</li>
-</ul>
-</li>
-
-<li>
-<p>Last, open a pull request via GitHub with a <a href='http://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message'>descriptive commit message</a>. We will quickly review the part to be merged.</p>
-</li>
+  <li>Fork the <a href="https://github.com/nitrous-io/autoparts">Autoparts repo</a> in GitHub.</li>
+  <li>Create a new box in Nitrous.IO.</li>
+  <li>cd to <code>~/.parts/autoparts</code></li>
+  <li>Add the fork repo as a a git remote: <code>git remote add myfork git@github.com:YOUR-USERNAME/autoparts.git</code></li>
+  <li>Create the new package file in <code>~/.parts/autoparts/lib/autoparts/packages/mypackage.rb</code></li>
+  <li>Open a new console tab and check if the package works as expected.
+    <ul>
+      <li>parts search (see if the new package you created is listed)</li>
+      <li>parts install mypackage</li>
+      <li>parts start (if applicable)</li>
+      <li>parts stop</li>
+      <li>parts uninstall mypackage</li>
+    </ul>
+  </li>
+  <li>Reload the IDE and see if the above actions also works via the UI.</li>
+  <li>After you’re confident that the package works, commit and push the change to your fork.
+    <ul>
+      <li>git commit -m “Added MyPackage.”</li>
+      <li>git push myfork master</li>
+    </ul>
+  </li>
+  <li>Last, open a pull request via GitHub with a <a href="http://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message">descriptive commit message</a>. We will quickly review the part to be merged.</li>
 </ol>
+
+
+      </div>
+    </div>
   </div>
 </div>
-
-</div>
-
   <footer>
     <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </footer>
-
-  <script>
+    <script src='/javascripts/smoothscroll.js'></script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -323,5 +285,7 @@
             ga('send', 'pageview');
 
 </script>
+  </footer>
 </body>
 </html>
+

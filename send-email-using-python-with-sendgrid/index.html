@@ -57,11 +57,10 @@
     </div>
   </nav>
 
-
 <div class="container">
   <div class="row">
-  <div class="col-md-3">
-    <hr>
+    <div class="col-md-3">
+      <hr>
   <form class="navbar-form" role="search" action="/search.html">
     <input type="text" name="q" class="form-control" placeholder="Search Docs">
   </form>
@@ -72,12 +71,18 @@
   </div>
   <ul class="snav hidden-sm hidden-xs">
   <li >
-    <a href="/categories/getting-started/">Getting Started</a>
+    <a href="/">Getting Started</a>
     <ul class="nav">
-      <li ><a href="/github-add-key">Connecting to Github</a></li>
-      <li ><a href="/ide-general">Web IDE Overview</a></li>
-      <li ><a href="/best-practices">Best Practices</a></li>
-      <li ><a href="/account-new">Creating an Account</a></li>
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
     </ul>
   </li>
 
@@ -189,78 +194,84 @@
   </li>
 </ul>
 
-  </div>
+    </div>
 
-  <div class="col-md-9">
-    <h1 class="article-title">Send Email with Python Using SendGrid</h1>
-    <h5 class="note">Last Updated on: 25 April 2014</h5>
-     
-    <p><em>SendGrid&#8217;s cloud-based email infrastructure relieves businesses of the cost and complexity of maintaining custom email systems. SendGrid provides reliable delivery, scalability and real-time analytics along with flexible API&#8217;s that make custom integration a breeze.</em></p>
+    <div class="col-md-9">
+      <div class="container article">
+        <h1 class="article-title">Send Email with Python Using SendGrid</h1>
+<h5 class="note">Last Updated on: 25 April 2014</h5>
+<p><em>SendGrid’s cloud-based email infrastructure relieves businesses of the cost and complexity of maintaining custom email systems.
+SendGrid provides reliable delivery, scalability and real-time analytics along with flexible API’s that make custom integration a breeze.</em></p>
 
-<p>In this tutorial we’ll use the <a href='https://github.com/sendgrid/sendgrid-python-django-sample-app'>SendGrid Django Sample App</a> to show how easy it is to send email. You’ll want to <a href='http://sendgrid.com/partners/nitrous-io'>create a free SendGrid account</a> and follow these steps:</p>
+<p>In this tutorial we’ll use the <a href="https://github.com/sendgrid/sendgrid-python-django-sample-app">SendGrid Django Sample App</a> to show how easy it is to send email. You’ll want to <a href="http://sendgrid.com/partners/nitrous-io">create a free SendGrid account</a> and follow these steps:</p>
 
-<h3 id='create_an_account'>Create an Account</h3>
+<h3 id="create-an-account">Create an Account</h3>
 
-<p>From the <a href='https://www.nitrous.io/app#/boxes/new/?utm_source=sendgrid&amp;utm_campaign=partnership&amp;utm_medium=blog'>Nitrous New Boxes Page</a>, create a new box using Python/Django.</p>
+<p>From the <a href="https://www.nitrous.io/app#/boxes/new/?utm_source=sendgrid&amp;utm_campaign=partnership&amp;utm_medium=blog">Nitrous New Boxes Page</a>, create a new box using Python/Django.</p>
 
-<p><img alt='Create Python Box' src='/images/articles/sendgrid/create-new-python-box.png' /></p>
+<p><img src="/images/articles/sendgrid/create-new-python-box.png" alt="Create Python Box" /></p>
 
 <p>Launch the IDE and go to the workspace folder in the Nitrous.IO terminal console.</p>
 
-<pre><code>cd ~/workspace</code></pre>
+<pre><code>cd ~/workspace
+</code></pre>
 
-<h3 id='clone_and_configure_the_sample_app'>Clone and Configure the Sample App</h3>
+<h3 id="clone-and-configure-the-sample-app">Clone and Configure the Sample App</h3>
 
 <p>Clone the SendGrid sample application:</p>
 
-<pre><code>git clone https://github.com/sendgrid/sendgrid-python-django-sample-app.git</code></pre>
+<pre><code>git clone https://github.com/sendgrid/sendgrid-python-django-sample-app.git
+</code></pre>
 
 <p>Install the SendGrid Python Library:</p>
 
-<pre><code>pip install --user sendgrid==0.3.1</code></pre>
+<pre><code>pip install --user sendgrid==0.3.1
+</code></pre>
 
 <blockquote>
-<p>The Python package manager will already be installed because Nitrous.IO pre-configures the boxes with software needed for each environment.</p>
+  <p>The Python package manager will already be installed because Nitrous.IO pre-configures the boxes with software needed for each environment.</p>
 </blockquote>
 
 <p>In the Nitrous.IO file browser, open <code>~/workspace/sendgrid-python-django-sample-app/SGapp/settings.py</code> and change the username/password data to be your SendGrid credentials.</p>
 
-<h3 id='run_the_app'>Run the App</h3>
+<h3 id="run-the-app">Run the App</h3>
 
 <p>In the console go to <code>~/workspace/sendgrid-python-django-sample-app</code> folder:</p>
 
-<pre><code>cd sendgrid-python-django-sample-app</code></pre>
+<pre><code>cd sendgrid-python-django-sample-app
+</code></pre>
 
 <p>Now you can start the Python server:</p>
 
-<pre><code>python manage.py runserver 0.0.0.0:8080</code></pre>
+<pre><code>python manage.py runserver 0.0.0.0:8080
+</code></pre>
 
 <p>Go to ‘Preview’ menu and select <code>Port 8080</code> and the sample application will be opened in your browser.</p>
 
-<p><img alt='Preview Port 8080' src='/images/articles/sendgrid/preview-port-8080.png' /></p>
+<p><img src="/images/articles/sendgrid/preview-port-8080.png" alt="Preview Port 8080" /></p>
 
-<p><img alt='SendGrid form' src='/images/articles/sendgrid/sendgrid-form.png' /></p>
+<p><img src="/images/articles/sendgrid/sendgrid-form.png" alt="SendGrid form" /></p>
 
 <p>Send your first email through SendGrid/Nitrous.IO by filling out the form. Now go check your email.</p>
 
-<p><img alt='SendGrid Email' src='/images/articles/sendgrid/sendgrid-email.png' /></p>
+<p><img src="/images/articles/sendgrid/sendgrid-email.png" alt="SendGrid Email" /></p>
 
-<p>Your message will be there, waiting for you. This is obviously a simple example application which utilizes SendGrid&#8217;s SMTP relay services. When you use SendGrid in your production Python apps, you’ll likely be sending social notifications, password resets and other <a href='sendgrid.com/transactional-email/'>transactional email</a>. Use this project as a starting point or reference for sending email with SendGrid in Python on Nitrous.IO.</p>
+<p>Your message will be there, waiting for you. This is obviously a simple example application which utilizes SendGrid’s SMTP relay services. When you use SendGrid in your production Python apps, you’ll likely be sending social notifications, password resets and other <a href="sendgrid.com/transactional-email/">transactional email</a>. Use this project as a starting point or reference for sending email with SendGrid in Python on Nitrous.IO.</p>
 
-<p><strong>Getting started is simple. Sign up with a free <a href='sendgrid.com/partners/nitrous-io'>SendGrid</a> account and claim your free cloud dev environment in 60 seconds with a <a href='https://www.nitrous.io/?utm_source=sendgrid&amp;utm_campaign=partnership&amp;utm_medium=blog'>Nitrous.IO account</a>.</strong></p>
+<p><strong>Getting started is simple. Sign up with a free <a href="sendgrid.com/partners/nitrous-io">SendGrid</a> account and claim your free cloud dev environment in 60 seconds with a <a href="https://www.nitrous.io/?utm_source=sendgrid&amp;utm_campaign=partnership&amp;utm_medium=blog">Nitrous.IO account</a>.</strong></p>
+
+
+      </div>
+    </div>
   </div>
 </div>
-
-</div>
-
   <footer>
     <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </footer>
-
-  <script>
+    <script src='/javascripts/smoothscroll.js'></script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -271,5 +282,7 @@
             ga('send', 'pageview');
 
 </script>
+  </footer>
 </body>
 </html>
+

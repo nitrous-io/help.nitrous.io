@@ -57,11 +57,10 @@
     </div>
   </nav>
 
-
 <div class="container">
   <div class="row">
-  <div class="col-md-3">
-    <hr>
+    <div class="col-md-3">
+      <hr>
   <form class="navbar-form" role="search" action="/search.html">
     <input type="text" name="q" class="form-control" placeholder="Search Docs">
   </form>
@@ -72,12 +71,18 @@
   </div>
   <ul class="snav hidden-sm hidden-xs">
   <li >
-    <a href="/categories/getting-started/">Getting Started</a>
+    <a href="/">Getting Started</a>
     <ul class="nav">
-      <li ><a href="/github-add-key">Connecting to Github</a></li>
-      <li ><a href="/ide-general">Web IDE Overview</a></li>
-      <li ><a href="/best-practices">Best Practices</a></li>
-      <li ><a href="/account-new">Creating an Account</a></li>
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
     </ul>
   </li>
 
@@ -189,68 +194,69 @@
   </li>
 </ul>
 
-  </div>
+    </div>
 
-  <div class="col-md-9">
-    <h1 class="article-title">Connecting to MySQL with a SQL Database Management App</h1>
-    <h5 class="note">Last Updated on: 18 October 2013</h5>
-     
-    <p>This guide will walk you through the steps to connect <a href='http://www.sequelpro.com/'>Sequel Pro</a> to your MySQL database created via <a href='/autoparts/'>Autoparts</a>.</p>
+    <div class="col-md-9">
+      <div class="container article">
+        <h1 class="article-title">Connecting to MySQL with a SQL Database Management App</h1>
+<h5 class="note">Last Updated on: 18 October 2013</h5>
+<p>This guide will walk you through the steps to connect <a href="http://www.sequelpro.com/">Sequel Pro</a> to your MySQL database created via <a href="/autoparts/">Autoparts</a>.</p>
 
-<h3 id='prerequisites'>Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 
 <ul>
-<li>A Nitrous.IO box with a MySQL database created. View the <a href='/mysql/'>MySQL Guide</a> if you have not done this already.</li>
-
-<li>A Database Management App. <a href='http://www.sequelpro.com/'>Sequel Pro</a> is a great tool for Mac users.</li>
+  <li>A Nitrous.IO box with a MySQL database created. View the <a href="/mysql/">MySQL Guide</a> if you have not done this already.</li>
+  <li>A Database Management App. <a href="http://www.sequelpro.com/">Sequel Pro</a> is a great tool for Mac users.</li>
 </ul>
 
-<h3 id='setting_up_port_forwarding'>Setting up Port Forwarding</h3>
+<h3 id="setting-up-port-forwarding">Setting up Port Forwarding</h3>
 
-<h4 id='if_you_are_using_the_nitrous_mac_app'>If you are using the Nitrous <a href='http://www.nitrous.io/mac'>Mac App</a>:</h4>
+<h4 id="if-you-are-using-the-nitrous-mac-apphttpwwwnitrousiomac">If you are using the Nitrous <a href="http://www.nitrous.io/mac">Mac App</a>:</h4>
 
-<p>Within the Menu Bar, open up the App Preferences, navigate to <code>Port Forwarding</code>, and check the box <code>Enable Port Forwarding</code>.</p>
+<p>Within the Menu Bar, open up the App Preferences, navigate to <code>Port Forwarding</code>, and check the box <code>Enable Port Forwarding</code>. </p>
 
 <p>From here, add port 3306 to the list of forwarded ports as this is the default port for MySQL.</p>
 
-<p><img alt='Enable Port Forwarding' src='/images/articles/port-forwarding-port-3306.png' /></p>
+<p><img src="/images/articles/port-forwarding-port-3306.png" alt="Enable Port Forwarding" /></p>
 
-<h4 id='if_you_are_not_using_the_nitrous_app'>If you are not using the Nitrous App:</h4>
+<h4 id="if-you-are-not-using-the-nitrous-app">If you are not using the Nitrous App:</h4>
 
 <p>Within your local console, run the following command to establish SSH tunneling between your local port and the remote port:</p>
 
-<pre><code>ssh -N -p &lt;box_port&gt; action@&lt;box_host&gt; -L &lt;local_port&gt;/localhost/&lt;remote_port&gt;</code></pre>
+<pre><code>ssh -N -p &lt;box_port&gt; action@&lt;box_host&gt; -L &lt;local_port&gt;/localhost/&lt;remote_port&gt;
+</code></pre>
 
 <p>When running this command, replace the variables with the actual values found on your boxes page. This is an example command which would be used for the box information seen in the image below:</p>
 
-<pre><code>ssh -N -p 71717 action@usw1.actionbox.io -L 3306/localhost/3306</code></pre>
+<pre><code>ssh -N -p 71717 action@usw1.actionbox.io -L 3306/localhost/3306
+</code></pre>
 
-<p><img alt='Nitrous Box Connection Info' src='/images/articles/nitrous-box-connection-info.png' /></p>
+<p><img src="/images/articles/nitrous-box-connection-info.png" alt="Nitrous Box Connection Info" /></p>
 
 <blockquote>
-<p>Tip: You can check which port your database is running on by running <code>netstat -anp | grep -i mysql</code> within your Nitrous console.</p>
+  <p>Tip: You can check which port your database is running on by running <code>netstat -anp | grep -i mysql</code> within your Nitrous console.</p>
 </blockquote>
 
-<h3 id='connecting_with_sequel_pro'>Connecting with Sequel Pro</h3>
+<h3 id="connecting-with-sequel-pro">Connecting with Sequel Pro</h3>
 
-<p>Once you have installed <a href='http://www.sequelpro.com/'>Sequel Pro</a>, open up the app and connect to host <code>127.0.0.1</code> on port <code>3306</code>.</p>
+<p>Once you have installed <a href="http://www.sequelpro.com/">Sequel Pro</a>, open up the app and connect to host <code>127.0.0.1</code> on port <code>3306</code>.</p>
 
-<p><img alt='Sequel Pro Connection Details' src='/images/articles/sequel-pro.png' /></p>
+<p><img src="/images/articles/sequel-pro.png" alt="Sequel Pro Connection Details" /></p>
 
 <p>You should now be connected to the database hosted on Nitrous.IO.</p>
+
+
+      </div>
+    </div>
   </div>
 </div>
-
-</div>
-
   <footer>
     <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </footer>
-
-  <script>
+    <script src='/javascripts/smoothscroll.js'></script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -261,5 +267,7 @@
             ga('send', 'pageview');
 
 </script>
+  </footer>
 </body>
 </html>
+

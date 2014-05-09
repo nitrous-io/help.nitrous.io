@@ -57,11 +57,10 @@
     </div>
   </nav>
 
-
 <div class="container">
   <div class="row">
-  <div class="col-md-3">
-    <hr>
+    <div class="col-md-3">
+      <hr>
   <form class="navbar-form" role="search" action="/search.html">
     <input type="text" name="q" class="form-control" placeholder="Search Docs">
   </form>
@@ -72,12 +71,18 @@
   </div>
   <ul class="snav hidden-sm hidden-xs">
   <li >
-    <a href="/categories/getting-started/">Getting Started</a>
+    <a href="/">Getting Started</a>
     <ul class="nav">
-      <li ><a href="/github-add-key">Connecting to Github</a></li>
-      <li ><a href="/ide-general">Web IDE Overview</a></li>
-      <li ><a href="/best-practices">Best Practices</a></li>
-      <li ><a href="/account-new">Creating an Account</a></li>
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
     </ul>
   </li>
 
@@ -189,60 +194,60 @@
   </li>
 </ul>
 
-  </div>
+    </div>
 
-  <div class="col-md-9">
-    <h1 class="article-title">Create a Box</h1>
-    <h5 class="note">Last Updated on: 28 June 2013</h5>
-     
-    <p>Development Boxes or &#8220;boxes&#8221; are the heart and soul of the Nitrous.IO experience. Many of you will only have one box, though the more mature polyglot programmer might have 10 or even 20 different boxes for each of their projects.</p>
+    <div class="col-md-9">
+      <div class="container article">
+        <h1 class="article-title">Create a Box</h1>
+<h5 class="note">Last Updated on: 28 June 2013</h5>
+<p>Development Boxes or “boxes” are the heart and soul of the Nitrous.IO experience. Many of you will only have one box, though the more mature polyglot programmer might have 10 or even 20 different boxes for each of their projects.</p>
 
-<p>Basic, free boxes come with stock setups: Rails, Python, Node.js, and Go. We include most everything else you need to start developing, like imagemagick and more.</p>
+<p>Basic, free boxes come with stock setups: Rails, Python, Node.js, and Go.  We include most everything else you need to start developing, like imagemagick and more.</p>
 
-<h2 id='free_boxes'>Free boxes</h2>
+<h2 id="free-boxes">Free boxes</h2>
 
-<p>To create a new free box, just click the &#8220;New Box&#8221; button on your dashboard after signing in.</p>
+<p>To create a new free box, just click the “New Box” button on your dashboard after signing in.</p>
 
-<p><img alt='New Box Button' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/new-box-button.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/new-box-button.png" alt="New Box Button" /></p>
 
-<h3 id='1_pick_a_box_template'>1. Pick a box template</h3>
+<h3 id="pick-a-box-template">1. Pick a box template</h3>
 
-<p>Select which default stock development environments you prefer to start coding on. We support Ruby/Rails &amp; Node.js, but are adding boxes quickly. <a href='mailto:support@nitrous.io?subject=Box%20Template%20Suggestion'>Shoot us an email</a> if you want us to support a different stack.</p>
+<p>Select which default stock development environments you prefer to start coding on. We support Ruby/Rails &amp; Node.js, but are adding boxes quickly. <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#110;&#105;&#116;&#114;&#111;&#117;&#115;&#046;&#105;&#111;&#063;&#115;&#117;&#098;&#106;&#101;&#099;&#116;&#061;&#066;&#111;&#120;&#037;&#050;&#048;&#084;&#101;&#109;&#112;&#108;&#097;&#116;&#101;&#037;&#050;&#048;&#083;&#117;&#103;&#103;&#101;&#115;&#116;&#105;&#111;&#110;">Shoot us an email</a> if you want us to support a different stack.</p>
 
-<p><img alt='Box Templates' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/box-templates.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/box-templates.png" alt="Box Templates" /></p>
 
-<h3 id='2_enter_a_unique_name'>2. Enter a unique name</h3>
+<h3 id="enter-a-unique-name">2. Enter a unique name</h3>
 
-<p>Pick a descriptive box name, the best practice here is to describe the stack or the project (if you&#8217;re only going to keep one project on each box, that&#8217;s up to you).</p>
+<p>Pick a descriptive box name, the best practice here is to describe the stack or the project (if you’re only going to keep one project on each box, that’s up to you).</p>
 
-<h3 id='3_pick_a_region'>3. Pick a region</h3>
+<h3 id="pick-a-region">3. Pick a region</h3>
 
-<p>We will default the region to whichever is closest to your current IP address, though if you&#8217;re travelling and want the box closer to your hometown, then just pick the region closest to you.</p>
+<p>We will default the region to whichever is closest to your current IP address, though if you’re travelling and want the box closer to your hometown, then just pick the region closest to you.</p>
 
 <p><em>Why do I need to pick a region?</em></p>
 
-<p>One of the reasons typing on an Nitrous.IO box is lightning fast, is because we utilize AWS Global Availability zones to setup boxes all around the globe. So, instead of every character you type travelling round trip all the way around the world, your fingers and the commands you&#8217;re sending are just going to your local neighborhood, saving priceless milliseconds on response time and convincing your eyes that the server is responding as if the code were executed locally.</p>
+<p>One of the reasons typing on an Nitrous.IO box is lightning fast, is because we utilize AWS Global Availability zones to setup boxes all around the globe. So, instead of every character you type travelling round trip all the way around the world, your fingers and the commands you’re sending are just going to your local neighborhood, saving priceless milliseconds on response time and convincing your eyes that the server is responding as if the code were executed locally.</p>
 
-<h3 id='provisioning'>Provisioning</h3>
+<h3 id="provisioning">Provisioning</h3>
 
-<p>Once you&#8217;ve clicked &#8220;Create Box&#8221;, you&#8217;ll need to wait a few seconds while we provision the box. This is typically pretty speedy, but might take up to a minute.</p>
+<p>Once you’ve clicked “Create Box”, you’ll need to wait a few seconds while we provision the box. This is typically pretty speedy, but might take up to a minute.</p>
 
-<p>After the box is provisioned, you&#8217;ll be kicked into the box information page. To start coding, simple click the &#8220;IDE&#8221; button and you&#8217;re ready to code!</p>
+<p>After the box is provisioned, you’ll be kicked into the box information page.  To start coding, simple click the “IDE” button and you’re ready to code!</p>
 
-<p><img alt='Box Templates' src='https://raw.github.com/action-io/action-assets/master/support/screenshots/ide-button.png' /></p>
+<p><img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/ide-button.png" alt="Box Templates" /></p>
+
+
+      </div>
+    </div>
   </div>
 </div>
-
-</div>
-
   <footer>
     <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </footer>
-
-  <script>
+    <script src='/javascripts/smoothscroll.js'></script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -253,5 +258,7 @@
             ga('send', 'pageview');
 
 </script>
+  </footer>
 </body>
 </html>
+

@@ -289,18 +289,6 @@
   </url>
   
   <url>
-      <loc>http://help.nitrous.io/getting-started</loc>
-      <lastmod>2013-08-23</lastmod>
-      <changefreq>monthly</changefreq>
-  </url>
-  
-  <url>
-      <loc>http://help.nitrous.io/best-practices</loc>
-      <lastmod>2013-08-23</lastmod>
-      <changefreq>monthly</changefreq>
-  </url>
-  
-  <url>
       <loc>http://help.nitrous.io/memcachier</loc>
       <lastmod>2013-08-20</lastmod>
       <changefreq>monthly</changefreq>

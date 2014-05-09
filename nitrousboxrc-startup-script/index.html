@@ -57,11 +57,10 @@
     </div>
   </nav>
 
-
 <div class="container">
   <div class="row">
-  <div class="col-md-3">
-    <hr>
+    <div class="col-md-3">
+      <hr>
   <form class="navbar-form" role="search" action="/search.html">
     <input type="text" name="q" class="form-control" placeholder="Search Docs">
   </form>
@@ -72,12 +71,18 @@
   </div>
   <ul class="snav hidden-sm hidden-xs">
   <li >
-    <a href="/categories/getting-started/">Getting Started</a>
+    <a href="/">Getting Started</a>
     <ul class="nav">
-      <li ><a href="/github-add-key">Connecting to Github</a></li>
-      <li ><a href="/ide-general">Web IDE Overview</a></li>
-      <li ><a href="/best-practices">Best Practices</a></li>
-      <li ><a href="/account-new">Creating an Account</a></li>
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
     </ul>
   </li>
 
@@ -189,29 +194,30 @@
   </li>
 </ul>
 
-  </div>
+    </div>
 
-  <div class="col-md-9">
-    <h1 class="article-title">Startup Scripts (.nitrousboxrc)</h1>
-    <h5 class="note">Last Updated on: 07 April 2014</h5>
-     
-    <p><em>The <code>.nitrousboxrc</code> file allows you to run scripts in non-interactive mode when the Nitrous box starts. This means if your Nitrous box is ever restarted in any scenario (including automatic restarts after maintenance), you can ensure these scripts will start back up.</em></p>
+    <div class="col-md-9">
+      <div class="container article">
+        <h1 class="article-title">Startup Scripts (.nitrousboxrc)</h1>
+<h5 class="note">Last Updated on: 07 April 2014</h5>
+<p><em>The <code>.nitrousboxrc</code> file allows you to run scripts in non-interactive mode when the Nitrous box starts. This means if your Nitrous box is ever restarted in any scenario (including automatic restarts after maintenance), you can ensure these scripts will start back up.</em></p>
 
-<h3 id='creating_nitrousboxrc'>Creating .nitrousboxrc</h3>
+<h3 id="creating-nitrousboxrc">Creating .nitrousboxrc</h3>
 
 <p>To use this file, run the following commands in your terminal:</p>
 
-<pre><code>cp ~/.nitrousboxrc.sample ~/.nitrousboxrc &amp;&amp; chmod +x ~/.nitrousboxrc</code></pre>
+<pre><code>cp ~/.nitrousboxrc.sample ~/.nitrousboxrc &amp;&amp; chmod +x ~/.nitrousboxrc
+</code></pre>
 
 <p>You can view this file in the file tree by clicking <strong>Show Hidden</strong>:</p>
 
-<p><img alt='Show Hidden Files' src='/images/articles/show-hidden-files.png' /></p>
+<p><img src="/images/articles/show-hidden-files.png" alt="Show Hidden Files" /></p>
 
 <p>From there you should see the <code>.nitrousboxrc</code> file you just created. If not, click the <strong>refresh</strong> icon at the top of the file tree.</p>
 
-<p><img alt='Nitrousboxrc Filetree' src='/images/articles/nitrousboxrc_file_tree.png' /></p>
+<p><img src="/images/articles/nitrousboxrc_file_tree.png" alt="Nitrousboxrc Filetree" /></p>
 
-<h3 id='usage'>Usage</h3>
+<h3 id="usage">Usage</h3>
 
 <p>Use <code>.nitrousboxrc</code> to run commands (start daemons, etc) when your box is started/restarted. The results of running this script will be appended to <code>/home/action/.nitrousboxrc.log</code>.</p>
 
@@ -224,24 +230,25 @@
 # The line below is recommended so that any errors will stop the script.
 set -e
 
-# Add your commands here</code></pre>
+# Add your commands here
+</code></pre>
 
 <blockquote>
-<p>Note: If you are wanting to keep processes running for an extended period of time, consider signing up for a <a href='https://www.nitrous.io/pricing'>paid plan</a> to keep the box on at all times.</p>
+  <p>Note: If you are wanting to keep processes running for an extended period of time, consider signing up for a <a href="https://www.nitrous.io/pricing">paid plan</a> to keep the box on at all times.</p>
 </blockquote>
+
+
+      </div>
+    </div>
   </div>
 </div>
-
-</div>
-
   <footer>
     <script src='/javascripts/jquery/jquery-1.10.2.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </footer>
-
-  <script>
+    <script src='/javascripts/smoothscroll.js'></script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -252,5 +259,7 @@ set -e
             ga('send', 'pageview');
 
 </script>
+  </footer>
 </body>
 </html>
+
