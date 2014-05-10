@@ -404,3 +404,10 @@ code {
     }
   }
 }
+
+@media (max-width: 767px) {
+  .form-control {
+    width: 95%;
+    margin: auto;
+  }
+}
