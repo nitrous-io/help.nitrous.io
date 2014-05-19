@@ -35,3 +35,4 @@ The following people have helped us keep Nitrous.IO safe for everyone.  We appre
 * [Sebastian Neef](https://twitter.com/internetwache)
 * [Nakul Mohan](https://twitter.com/Nakul_Mohan_Cia)
 * [Guillermo Gabarrín](https://twitter.com/ggabarrin9)
+* [Madhu Akula](https://twitter.com/madhuakula)
