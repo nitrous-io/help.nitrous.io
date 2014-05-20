@@ -27,12 +27,24 @@
   }
 }
 
+body, body p{
+  font-size: 1.5rem;
+  line-height: 1.45em;
+  font-family: 'Open Sans', sans-serif;
+}
+
 h1,h2,h3 {
   margin: 12px 0;
 
   .logo {
     margin: 13px 0;
   }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  line-height: 1.45em;
 }
 
 .article {
