@@ -3,9 +3,10 @@ layout: article
 title: Preview Static HTML Pages
 published: true
 category: previewing
+mitem: static
 ---
 
-**In situations where you just need to preview a static file without running a web server, try this.**
+*In situations where you just need to preview a static file without running a web server, try this out.*
 
 With Python you can run a small HTTP server in the project directory or your choice, allowing you to quickly preview any HTML file needed. 
 
