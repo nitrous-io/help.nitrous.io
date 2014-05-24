@@ -52,13 +52,13 @@ mitem: keyboard
 
 **Fold**
 
-    Windows: Control + [
+    Windows: Shift + Control + [
 
     Mac: Command + Option + [
 
 **Unfold**
 
-    Windows: Ctrl + ]
+    Windows: Shift + Ctrl + ]
 
     Mac: Command + Option + ]
 
