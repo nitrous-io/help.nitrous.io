@@ -204,7 +204,7 @@
     <div class="col-md-9">
       <div class="container article">
         <h1 class="article-title">Setting up MongoDB with Autoparts</h1>
-<h5 class="note">Last Updated on: 15 September 2013</h5>
+<h5 class="note">Last Updated on: 28 May 2014</h5>
 <p>This guide walks through how you can setup a MongoDB database on your Nitrous.IO box.</p>
 
 <h3 id="prerequisites">Prerequisites</h3>
@@ -220,7 +220,34 @@
 <pre><code>parts install mongodb
 </code></pre>
 
-<h3 id="configuring-mongodb-for-a-rails-app">Configuring MongoDB for a Rails App</h3>
+<h3 id="configuration">Configuration</h3>
+
+<p>To connect to MongoDB you will need to first start the database:</p>
+
+<pre><code>parts start mongodb
+</code></pre>
+
+<p>You can launch the console client by running the following command:</p>
+
+<pre><code>mongo
+</code></pre>
+
+<p>If this didn’t work immediately after starting mongodb, try again in a few seconds. The MongoDB process may still be starting up.</p>
+
+<p>Once you are connected you can configure your web app to utilize MongoDB. Here are the default configuration in order to get started:</p>
+
+<ul>
+  <li>Mongodb.conf location: <code>~/.parts/etc/mongodb.conf</code></li>
+  <li>Username: <code>action</code></li>
+  <li>Host: <code>127.0.0.1</code></li>
+  <li>Port: <code>27017</code></li>
+</ul>
+
+<blockquote>
+  <p>If you are wanting to connect to an external database, please view the guide on <a href="/connecting-to-mongolabs">Connecting to MongoLabs</a>.</p>
+</blockquote>
+
+<h3 id="connecting-to-mongodb-with--rails">Connecting to MongoDB with  Rails</h3>
 
 <p>Before making configuration, start up MongoDB with the following command:</p>
 
@@ -248,9 +275,39 @@ gem 'bson_ext'
 <pre><code>rails g mongoid:config
 </code></pre>
 
-<blockquote>
-  <p>If you are wanting to connect to an external database, please view the guide on <a href="/connecting-to-mongolabs">Connecting to MongoLabs</a>.</p>
-</blockquote>
+<h3 id="connecting-to-mongodb-with-nodejs">Connecting to MongoDB with Node.JS</h3>
+
+<p>Before making configuration, start up MongoDB with the following command:</p>
+
+<pre><code>parts start mongodb
+</code></pre>
+
+<p>Use the package manager NPM to install the driver:</p>
+
+<p>npm install mongodb</p>
+
+<p>Next we will write some code that will allow our Node.JS app to connect to MongoDB.</p>
+
+<p>Create a new file titled <code>app.js</code>, and add the following contents:</p>
+
+<pre><code>var MongoClient = require('mongodb').MongoClient
+    , format = require('util').format;
+MongoClient.connect('mongodb://127.0.0.1:27017/test', function (err, db) {
+    if (err) {
+        throw err;
+    } else {
+        console.log("successfully connected to the database");
+    }
+    db.close();
+});
+</code></pre>
+
+<p>Save the file and try running it with Node:</p>
+
+<pre><code>node app.js
+</code></pre>
+
+<p>If everything went smoothly you should see the output “successfully connected to the database”.</p>
 
 
       </div>
