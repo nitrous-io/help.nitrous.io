@@ -7,6 +7,12 @@
   </url>
   
   <url>
+      <loc>http://help.nitrous.io/quick-open</loc>
+      <lastmod>2014-05-29</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
       <loc>http://help.nitrous.io/mongodb</loc>
       <lastmod>2014-05-28</lastmod>
       <changefreq>monthly</changefreq>
