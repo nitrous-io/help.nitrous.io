@@ -18,7 +18,7 @@ mitem: keyboard
 
     Mac: Command + v
 
-**File Finder**
+**Quick Open**
 
     Shift + Control + P
 
