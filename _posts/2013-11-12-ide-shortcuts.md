@@ -18,6 +18,10 @@ mitem: keyboard
 
     Mac: Command + v
 
+**File Finder**
+
+    Shift + Control + P
+
 **Find**
 
     Windows: Control + F
