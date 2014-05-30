@@ -365,7 +365,7 @@ blockquote{
 
 pre{
   margin: 14px 0;
-  padding: 0;
+  padding: 1rem;
   border: 0;
 
   code{
@@ -374,7 +374,10 @@ pre{
 }
 
 code {
-    border-radius: 1px;
+  color: #333;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  font-size: 100%;
 }
 
 .btn {
