@@ -54,18 +54,6 @@ mitem: keyboard
 
     Mac: Command + /
 
-**Fold**
-
-    Windows: Shift + Control + [
-
-    Mac: Command + Option + [
-
-**Unfold**
-
-    Windows: Shift + Ctrl + ]
-
-    Mac: Command + Option + ]
-
 **Show completions**
 
     Ctrl + Space
