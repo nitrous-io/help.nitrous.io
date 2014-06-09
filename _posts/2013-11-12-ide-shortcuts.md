@@ -85,3 +85,23 @@ mitem: keyboard
 **Toggle full-screen console**
 
     Control + Shift + F
+
+**Split Selection into Lines**
+
+    Control + Shift + L
+
+**Multiple selections**
+
+    Windows: Control + select with mouse
+
+    Mac: Command + select with mouse
+
+**Rectangular(column) selections**
+
+    ALT + select with mouse
+
+**Undo a selection**
+
+    Windows: Control + U
+
+    Mac: Command + U
