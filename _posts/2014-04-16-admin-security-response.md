@@ -37,3 +37,4 @@ The following people have helped us keep Nitrous.IO safe for everyone.  We appre
 * [Guillermo Gabarrín](https://twitter.com/ggabarrin9)
 * [Madhu Akula](https://twitter.com/madhuakula)
 * [Aditya Agrawal](https://twitter.com/exploitprotocol)
+* [Shahee Mirza](https://twitter.com/shaheemirza)
