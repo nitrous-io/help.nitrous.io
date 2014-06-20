@@ -96,6 +96,12 @@ mitem: keyboard
 
     Mac: Command + select with mouse
 
+**Quick Add Next (Multiple Selections)**
+
+    Windows: Control + D
+    
+    Mac: Command + D
+
 **Rectangular(column) selections**
 
     ALT + select with mouse
