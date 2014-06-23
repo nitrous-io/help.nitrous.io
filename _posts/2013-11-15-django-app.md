@@ -13,21 +13,27 @@ This article covers building a Django application on [Nitrous.IO](http://www.nit
 * A [Nitrous.IO account](https://www.nitrous.io)
 * A [Python Box](http://help.action.io/customer/portal/articles/802603-create-a-box) on Nitrous.IO.
 
-### Creating a isolated environment with Virtualenv
+### Setting up an Isolated Environment with Virtualenv
 
 Virtualenv allows you to create an isolated environment in order to install specific versions and dependencies.
+
+First, check to see if you have Virtualenv and MySQL installed by running `virtualenv -v` and `mysql --version` in the terminal. If you see information about the version then it is all ready to go. If not then you can quickly install Virtualenv and MySQL with [Autoparts](/autoparts):
+
+    $ parts install virtualenv
+    $ parts install mysql
 
 To view the available versions of Python available, run `ls /usr/bin/python*`. Create a new environment with Python 2.7 by running the following command:
 
     $ virtualenv -p /usr/bin/python2.7 py27env
 
 You will now want to connect to this environment:
-    
+
     $ source py27env/bin/activate
 
-Since you are in a isolated environment, you will need to install Django and any other dependencies that were available outside of your environment. You can check which modules are installed with `pip freeze`, and you will want to install Django if not available:
+Since you are in a isolated environment, you will need to install Django and any other dependencies that were available outside of your environment. You can check which modules are installed with `pip freeze`, and you will want to install Django along with the MySQL package if not already installed:
 
     $ pip install django
+    $ pip install mysql-python
 
 >If you decide you want to disconnect from this environment at any point, type `deactivate` in the console.
 
@@ -100,7 +106,7 @@ If all runs smoothly you should see the following lines after running the comman
 
 ### Creating an App
 
-You already have the project `mysite` setup, along with an established database. This section will summarize part 1 and 2 of [Djangoproject's tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/) to help you get started with it on Nitrous, but we strongly encourage you to follow that tutorial for the best learning experience. 
+You already have the project `mysite` setup, along with an established database. This section will summarize part 1 and 2 of [Djangoproject's tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/) to help you get started with it on Nitrous, but we strongly encourage you to follow that tutorial for the best learning experience.
 
 Let's create a polls app by navigating into the `/mysite` folder and running the following command:
 
@@ -176,7 +182,7 @@ Once you are in the Admin section, click **Questions** within the Polls section.
 
 ![Django Poll Admin](/images/articles/django-poll-admin.png)
 
-You have now built your fist question within the app. 
+You have now built your fist question within the app.
 
 At this point you have configured an app which utilizes [MySQL](/mysql/) and has the admin section established. You should be familiar with [Autoparts](/autoparts/), Virtualenv, and how to [preview](/preview/) your app on Nitrous. To learn about the next steps on creating the public interface, jump back to [part 3](https://docs.djangoproject.com/en/dev/intro/tutorial03/) of DjangoProject's guide.
 
