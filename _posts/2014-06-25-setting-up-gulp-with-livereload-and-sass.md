@@ -1,20 +1,19 @@
 ---
 layout: article
-title: Getting Start With SassSetting up Livereload and Sass Using Gulp.JS
+title: Setting Up Gulp With LiveReload, Sass, and Other Tasks
 published: true
 category: tutorials
-mitem: Gulp
+mitem: gulp
 ---
 
-*In this tutorial we will setup Gulp.JS to utilize Livereload and automate Sass file generation.
+*In this tutorial we will create an Express app while automating tasks with Gulp.JS. The Gulp plugins that you will install include Sass, Minify, Autoprefix, and LiveReload.*
 
-[Gulp.JS](http://gulpjs.com/) is a task runner which automates frontend processes. This is similar to the task runner [Grunt.JS](http://gruntjs.com/) but there are some key differences. Unlike Grunt, Gulp focuses on code over configuration.*
+*[Gulp.JS](http://gulpjs.com/) is a task runner which automates frontend processes. This is similar to the task runner [Grunt.JS](http://gruntjs.com/) but there are some key differences. Unlike Grunt, Gulp focuses on code over configuration.*
 
 ### Prerequisites
 
 * A [Nitrous.IO Account](https://www.nitrous.io)
 * A [Nitrous.IO Box](https://www.nitrous.io/app#/boxes) on Nitrous.IO.
-* [Nitrous Desktop](https://www.nitrous.io/desktop). This is needed in order to run Livereload.
 
 ### Installation
 
@@ -60,15 +59,15 @@ Now we are ready to configure Gulp to start up Express. Create the file `Gulpfil
 In `~/workspace/gulp/Gulpfile.js`:
 
     var gulp = require('gulp');
-    
+
     function startExpress() {
-     
+
       var express = require('express');
       var app = express();
       app.use(express.static(__dirname));
       app.listen(4000);
     }
-     
+
     gulp.task('default', function () {
       startExpress();
     });
@@ -98,9 +97,9 @@ Once Gulp is running, navigate to **Preview > Port 4000** in the menubar. This w
 
 #### Preperation
 
-Now that we have have Express running we can start adding tasks which simplify the development process. In this step we will add tasks to compile sass files, autoprefix the CSS with vendor prefixes, and then minify them. 
+Now that we have have Express running, we can start adding tasks which simplify the development process. In this step we will add tasks to compile sass files, autoprefix the CSS with vendor prefixes, and then minify them.
 
-For Sass compilation we will need to install the Sass gem with Ruby (Ruby is included on all Nitrous boxes):
+Install the Sass gem with Ruby for Sass file generation (Ruby is included on all Nitrous boxes):
 
     gem install sass
 
@@ -108,13 +107,13 @@ Next, run the following command within the project folder to install the plugins
 
     npm install gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-rename --save-dev
 
-You should now see a "node_modules" folder within your project. This will contain all of the packages which we just installed.
+You should now see a `node_modules/` folder within your project. This will contain all of the packages which we just installed.
 
 ![Gulp Project Directory](/images/articles/gulp-project-directory.png)
 
 #### Setting up Tasks
 
-You will need to create a file within the root directory of your project called `gulpfile.js`, and include all the variables of the plugins we just installed. Below that we will create the task called "styles". 
+You will need to create a file within the root directory of your project called `gulpfile.js`, and include all the variables of the plugins we just installed. Below that we will create the task called "styles".
 
 Add the following into `gulpfile.js`:
 
@@ -123,7 +122,7 @@ Add the following into `gulpfile.js`:
         autoprefixer = require('gulp-autoprefixer'),
         minifycss = require('gulp-minify-css'),
         rename = require('gulp-rename');
-    
+
     gulp.task('styles', function() {
       return gulp.src('sass/*.scss')
         .pipe(sass({ style: 'expanded' }))
@@ -143,7 +142,7 @@ In the second block of code we accessed the Gulp API many times. **gulp.task** c
 Now that we have our first task created let's test it out. Create two folders in your project directory, `css/` and `sass/`. Create `styles.scss` within your `sass/` folder and add the following content:
 
     $color: blue;
-    
+
     #container {
       color : $color;
       box-sizing: border-box;
@@ -187,23 +186,21 @@ You will now need to update the default task within `Gulpfile.js` to include tin
 
     var tinylr;
     function startLiveReload() {
-     
+
       tinylr = require('tiny-lr')();
-      tinylr.listen(1337);
+      tinylr.listen(35729);
     }
-    
+
     gulp.task('default', function () {
     startExpress();
     startLiveReload();
     gulp.watch('sass/*.scss', ['styles']);
     });
 
->LiveReload generally utilizes port 35729, but we have changed this to 1337 for the Nitrous tutorial. The Nitrous boxes currently have ports 1024-10,000 open so we chose our favorite number within that range.
-
 Next, update the Express function to include the connect-livereload middleware by placing it before the **static()** config. This will inject JavaScript at the end of the body section of each page served by express, allowing you to use LiveReload without a browser plugin.
 
     function startExpress() {
-     
+
       var express = require('express');
       var app = express();
       app.use(require('connect-livereload')());
@@ -211,16 +208,16 @@ Next, update the Express function to include the connect-livereload middleware b
       app.listen(4000);
     }
 
-To watch for changes within `html` and `css` files we will need to add one more `gulp.watch` method within the default task. Edit your `Gulpfile.js` file to include this. After making the last update to the file it should look like this:
+To watch for changes within `html` and `css` files we will need to add one more `gulp.watch` method within the default task. Edit your `Gulpfile.js` file to match the code below:
 
-In ~/workspace/gulp/Gulpfile.js:
+In `~/workspace/gulp/Gulpfile.js`:
 
     var gulp = require('gulp'),
         sass = require('gulp-ruby-sass'),
         autoprefixer = require('gulp-autoprefixer'),
         minifycss = require('gulp-minify-css'),
         rename = require('gulp-rename');
-    
+
     function startExpress() {
       var express = require('express');
       var app = express();
@@ -228,23 +225,23 @@ In ~/workspace/gulp/Gulpfile.js:
       app.use(express.static(__dirname));
       app.listen(4000);
     }
-    
+
     var tinylr;
     function startLiveReload() {
       tinylr = require('tiny-lr')();
-      tinylr.listen(1337);
+      tinylr.listen(35729);
     }
-    
+
     function notifyLiveReload(event) {
       var fileName = require('path').relative(__dirname, event.path);
-    
+
       tinylr.changed({
         body: {
           files: [fileName]
         }
       });
     }
-    
+
     gulp.task('styles', function() {
           return gulp.src('sass/*.scss')
             .pipe(sass({ style: 'expanded' }))
@@ -254,7 +251,7 @@ In ~/workspace/gulp/Gulpfile.js:
             .pipe(minifycss())
             .pipe(gulp.dest('css'));
     });
-    
+
     gulp.task('default', function () {
       startExpress();
       startLiveReload();
@@ -262,3 +259,17 @@ In ~/workspace/gulp/Gulpfile.js:
       gulp.watch('sass/*.scss', ['styles']);
     });
 
+That's it! LiveReload is looking for any changes in your HTML/CSS files, and when you save any changed then the page will automatically refresh.
+
+Use this Gulp setup to make development a breeze.
+
+### Download a Sample App
+
+If you want to jump to the chase and run the app immediately, click this button to download a sample app:
+
+[![Hack nitrous-examples/gulp-sample-app on
+Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=nodejs&repo=nitrous-examples%2Fgulp-sample-app&file_to_open=README.md)
+
+### Recommended Articles
+
+* [Setting up MongoDB with Autoparts](/mongodb/)
