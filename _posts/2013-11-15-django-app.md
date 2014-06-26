@@ -30,6 +30,8 @@ You will now want to connect to this environment:
 
     $ source venv/bin/activate
 
+>If you want to ever exit out of the Virtualenv session, run `deactivate` in the command line to exit the session.
+
 Since you are in a isolated environment, you will need to install Django and any other dependencies that were available outside of your environment. You can check which modules are installed with `pip freeze`, and you will want to install Django along with the MySQL package if not already installed:
 
     $ pip install django
