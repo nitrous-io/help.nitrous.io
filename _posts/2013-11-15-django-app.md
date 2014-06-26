@@ -24,11 +24,11 @@ First, check to see if you have Virtualenv and MySQL installed by running `virtu
 
 To view the available versions of Python available, run `ls /usr/bin/python*`. Create a new environment with Python 2.7 by running the following command:
 
-    $ virtualenv -p /usr/bin/python2.7 py27env
+    $ virtualenv venv
 
 You will now want to connect to this environment:
 
-    $ source py27env/bin/activate
+    $ source venv/bin/activate
 
 Since you are in a isolated environment, you will need to install Django and any other dependencies that were available outside of your environment. You can check which modules are installed with `pip freeze`, and you will want to install Django along with the MySQL package if not already installed:
 
