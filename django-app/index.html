@@ -235,6 +235,10 @@ $ parts install mysql
 <pre><code>$ source venv/bin/activate
 </code></pre>
 
+<blockquote>
+  <p>If you want to ever exit out of the Virtualenv session, run <code>deactivate</code> in the command line to exit the session.</p>
+</blockquote>
+
 <p>Since you are in a isolated environment, you will need to install Django and any other dependencies that were available outside of your environment. You can check which modules are installed with <code>pip freeze</code>, and you will want to install Django along with the MySQL package if not already installed:</p>
 
 <pre><code>$ pip install django
