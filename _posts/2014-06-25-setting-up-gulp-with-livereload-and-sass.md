@@ -188,7 +188,7 @@ You will now need to update the default task within `Gulpfile.js` to include tin
     function startLiveReload() {
 
       tinylr = require('tiny-lr')();
-      tinylr.listen(35729);
+      tinylr.listen(4002);
     }
 
     gulp.task('default', function () {
@@ -197,16 +197,19 @@ You will now need to update the default task within `Gulpfile.js` to include tin
     gulp.watch('sass/*.scss', ['styles']);
     });
 
+>Changing the LiveReload port: In the function above we have specified to use the port 35729 instead of the default 4002 that LiveReload generally uses. Currently the Nitrous boxes only have ports 1024 - 9999 open over HTTP, which is why we made this change.
+
 Next, update the Express function to include the connect-livereload middleware by placing it before the **static()** config. This will inject JavaScript at the end of the body section of each page served by express, allowing you to use LiveReload without a browser plugin.
 
     function startExpress() {
 
       var express = require('express');
       var app = express();
-      app.use(require('connect-livereload')());
+      app.use(require('connect-livereload')({port: 4002}));
       app.use(express.static(__dirname));
       app.listen(4000);
     }
+
 
 To watch for changes within `html` and `css` files we will need to add one more `gulp.watch` method within the default task. Edit your `Gulpfile.js` file to match the code below:
 
@@ -221,7 +224,7 @@ In `~/workspace/gulp/Gulpfile.js`:
     function startExpress() {
       var express = require('express');
       var app = express();
-      app.use(require('connect-livereload')());
+      app.use(require('connect-livereload')({port: 4002}));
       app.use(express.static(__dirname));
       app.listen(4000);
     }
@@ -229,7 +232,7 @@ In `~/workspace/gulp/Gulpfile.js`:
     var tinylr;
     function startLiveReload() {
       tinylr = require('tiny-lr')();
-      tinylr.listen(35729);
+      tinylr.listen(4002);
     }
 
     function notifyLiveReload(event) {
