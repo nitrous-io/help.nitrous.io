@@ -420,7 +420,7 @@ gulp.watch('sass/*.scss', ['styles']);
 </code></pre>
 
 <blockquote>
-  <p>Changing the LiveReload port: In the function above we have specified to use the port 35729 instead of the default 4002 that LiveReload generally uses. Currently the Nitrous boxes only have ports 1024 - 9999 open over HTTP, which is why we made this change.</p>
+  <p><strong>Changing the LiveReload port:</strong> In the function above we have specified the port <code>4002</code> instead of the port <code>35729</code> which LiveReload uses by default. Currently the Nitrous boxes only have ports 1024 - 9999 open over HTTP, which is why we made this change.</p>
 </blockquote>
 
 <p>Next, update the Express function to include the connect-livereload middleware by placing it before the <strong>static()</strong> config. This will inject JavaScript at the end of the body section of each page served by express, allowing you to use LiveReload without a browser plugin.</p>
