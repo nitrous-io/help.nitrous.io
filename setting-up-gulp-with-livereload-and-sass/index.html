@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Setting Up Gulp With LiveReload, Sass, and Other Tasks</title>
+  <meta name="author" content="Nitrous.IO" />
+  <link href="http://feeds.feedburner.com/actionioblog" rel="alternate" title="Nitrous.IO Blog" type="application/atom+xml" />
+  <meta content='Nitrous.IO Support Documentation. Tutorials, FAQ, and other guides for building your apps directly on Nitrous.IO' name='description'>
+  <meta content='Nitrous.IO' name='author'>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600italic,600' rel='stylesheet' type='text/css'>
+
+  <link rel='stylesheet' href='/css/bootstrap3/css/bootstrap.css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="/css/action.css" media="screen, projection" rel="stylesheet">
+  <link href="/css/highlight.js/github.css" media="screen, projection" rel="stylesheet">
+  <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+</head>
+<body>
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <h1>
+          <a id="logo" href="https://www.nitrous.io">Nitrous<span>.IO</span></a>
+        </h1>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav pull-right">
+         <li class="show-xs hidden-sm hidden-md hidden-lg"><a href="/categories/boxes/" >Boxes</a></li>
+          <li class="show-xs hidden-sm hidden-md hidden-lg"><a href="/categories/usage/" >Usage</a></li>
+          <li class="show-xs hidden-sm hidden-md hidden-lg"><a href="/categories/databases/" >Databases</a></li>
+          <li class="show-xs hidden-sm hidden-md hidden-lg"><a href="/categories/deployment/" >Deploy</a></li>
+          <li>
+            <a href="/discussions" class="stack-exchange" >
+              <i class="fa fa-stack-exchange"></i>Discuss
+            </a>
+          </li>
+          <li><a href="http://www.nitrous.io/chat" >Group Chat</a>
+          </li>
+          <li><a href="mailto:support@nitrous.io">Contact Support</a></li>
+          <li class="break hidden-xs"><a href="https://nitrous.io/users/sign_in">Sign in</a></li>
+          <li>
+            <a href="https://www.nitrous.io" class="signup">
+              <i class="fa fa-plus"></i>Sign up
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="mast" id="promo-main">
+      <div class="container header-title">
+        <h2><a href="/">Documentation</a></h2>
+      </div>
+    </div>
+  </nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <hr>
+  <form class="navbar-form" role="search" action="/search.html">
+    <input type="text" name="q" class="form-control" placeholder="Search Docs">
+  </form>
+  <div class="docs hidden-sm hidden-xs">
+    <h3>
+      Guides
+    </h3>
+  </div>
+  <ul class="snav hidden-sm hidden-xs">
+  <li >
+    <a href="/">Getting Started</a>
+    <ul class="nav">
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/ssh/">SSH Keys</a>
+    <ul class="nav">
+      <li ><a href="/ssh-add/">Adding SSH Keys (Mac)</a></li>
+      <li ><a href="/ssh-windows/">Adding SSH Keys (Windows)</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/boxes/">Boxes</a>
+    <ul class="nav">
+      <li ><a href="/box-new">Create a Box</a></li>
+      <li ><a href="/box-settings/">Box Memory & Storage</a></li>
+      <li ><a href="/box-templates/">Box Templates</a></li>
+      <li ><a href="/box-interpreters-and-tools/">Included Tools</a></li>
+      <li ><a href="/upgrade-box">Update Box</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/usage/">Usage</a>
+    <ul class="nav">
+      <li ><a href="/autoparts/">Autoparts Package Manager</a></li>
+      <li ><a href="/nitrous-desktop-win/">Nitrous Desktop (Windows)</a></li>
+      <li ><a href="/nitrous-desktop/">Nitrous Desktop (Mac)</a></li>
+      <li ><a href="/ide-shortcuts/">Keyboard Shortcuts</a></li>
+      <li ><a href="/new-file/">Create New File</a></li>
+      <li ><a href="/ide-file-uploads/">Uploading via Web IDE</a></li>
+      <li ><a href="/collab">Collaboration</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/databases/">Databases</a>
+    <ul class="nav">
+      <li ><a href="/memcached/">Memcached</a></li>
+      <li ><a href="/mongodb/">MongoDB</a></li>
+      <li ><a href="/mysql/">MySQL</a></li>
+      <li ><a href="/postgresql/">PostgreSQL</a></li>
+      <li ><a href="/redis/">Redis</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/previewing/">Preview</a>
+    <ul class="nav">
+      <li ><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
+      <li ><a href="/custom-domains">Custom Domains</a></li>
+      <li ><a href="/preview">Preview Your App</a></li>
+      <li ><a href="/preview-static-pages">Preview Static Pages</a></li>
+      <li ><a href="/faq-localhost">Preview Issues</a></li>
+      <li ><a href="/ssl">SSL</a></li>
+      <li ><a href="/websockets">Websockets</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/faq/">Frequently Asked Questions</a>
+    <ul class="nav">
+      <li ><a href="/faq-adding-project">Add an Existing Project</a></li>
+      <li ><a href="/faq-disconnect">Nitrous.IO Keeps Disconnecting</a></li>
+      <li ><a href="/faq-browser-support">Browser Support</a></li>
+    </ul>
+  </li>
+
+  <li  class="active" >
+    <a href="/categories/tutorials/">Tutorials</a>
+    <ul class="nav">
+      <li ><a href="/django-app">Django</a></li>
+      <li ><a href="/meteor-app">Meteor</a></li>
+      <li  class="mi_active" ><a href="/setting-up-gulp-with-livereload-and-sass">Gulp</a></li>
+      <li ><a href="/php">PHP</a></li>
+      <li ><a href="/ruby">Ruby</a></li>
+      <li ><a href="/rails-app">Rails</a></li>
+      <li ><a href="/discourse-start">Discourse Forum</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/deployment/">Deployment</a>
+    <ul class="nav">
+      <li ><a href="/heroku/">Heroku</a></li>
+      <li ><a href="/app-engine">App Engine</a></li>
+      <li ><a href="/azure-sites">Azure Sites</a></li>
+      <li ><a href="/nodejitsu">Nodejitsu</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/billing/">Billing</a>
+    <ul class="nav">
+      <li ><a href="/billing-cycle/">Billing Cycle</a></li>
+      <li ><a href="/billing-payment-info/">Payment Information</a></li>
+      <li ><a href="/billing-change-plans/">Changing Subscription</a></li>
+      <li ><a href="/billing-n2o-renewal/">N2O Renewal</a></li>
+      <li ><a href="/billing-n2o-lifespan/">N2O Lifespan</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/resources/">Additional Resources</a>
+    <ul class="nav">
+      <li ><a href="/logos">Nitrous.IO Logos</a></li>
+      <li ><a href="/admin-aup">Acceptable Use Policy</a></li>
+      <li ><a href="/admin-privacy">Privacy &amp; Terms</a></li>
+      <li ><a href="/admin-security">Nitrous.IO Security</a></li>
+      <li ><a href="/admin-terms">Terms of Use</a></li>
+    </ul>
+  </li>
+</ul>
+
+    </div>
+
+    <div class="col-md-9">
+      <div class="container article">
+        <h1 class="article-title">Setting Up Gulp With LiveReload, Sass, and Other Tasks</h1>
+<h5 class="note">Last Updated on: 25 June 2014</h5>
+<p><em>In this tutorial we will create an Express app while automating tasks with Gulp.JS. The Gulp plugins that you will install include Sass, Minify, Autoprefix, and LiveReload.</em></p>
+
+<p><em><a href="http://gulpjs.com/">Gulp.JS</a> is a task runner which automates frontend processes. This is similar to the task runner <a href="http://gruntjs.com/">Grunt.JS</a> but there are some key differences. Unlike Grunt, Gulp focuses on code over configuration.</em></p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>A <a href="https://www.nitrous.io">Nitrous.IO Account</a></li>
+  <li>A <a href="https://www.nitrous.io/app#/boxes">Nitrous.IO Box</a> on Nitrous.IO.</li>
+</ul>
+
+<h3 id="installation">Installation</h3>
+
+<p>Node.JS is a JavaScript runtime environment which will allow us to run all of these wonderful tools. If you selected a Node.JS template when creating a Nitrous.IO box then you are all ready to go. If not then you will still need to install it with <a href="http://help.nitrous.io/autoparts">Autoparts</a>.</p>
+
+<p>Run the following command in the terminal to install Node.JS and npm:</p>
+
+<pre><code>parts install nodejs
+</code></pre>
+
+<p>Once Node is installed, install Gulp using npm:</p>
+
+<pre><code>npm install gulp -g
+</code></pre>
+
+<p>Gulp is now accessible from the command line.</p>
+
+<h3 id="create-a-new-project">Create a New Project</h3>
+
+<p>Let’s create a folder titled <code>gulp</code> within the <code>~/workspace/</code> folder to work with.</p>
+
+<pre><code>cd ~/workspace
+mkdir gulp &amp;&amp; cd gulp
+</code></pre>
+
+<p>With npm you can utilize the command line tool to declare which libraries you want to ue for your project. Scaffold a <code>package.json</code> file by running the following command:</p>
+
+<pre><code>npm init
+</code></pre>
+
+<p>From here you will be prompted to set project dependencies. You can press return to go through and use the default settings.</p>
+
+<p>Next, install Gulp within the project:</p>
+
+<pre><code>npm install gulp --save-dev
+</code></pre>
+
+<blockquote>
+  <p>Notice that we are using the tag <code>--save-dev</code>. This will add gulp as a <code>devDependency</code> within <code>package.json</code>. If you were to share your project with anyone else then they could simply run <code>npm install</code> to automatically install all devDependencies which you installed this way.</p>
+</blockquote>
+
+<h3 id="setting-up-express">Setting up Express</h3>
+
+<p>We will now setup the <a href="http://expressjs.com/">Express</a> framework with our project. Let’s install the dependency within our project:</p>
+
+<pre><code>npm install express --save-dev
+</code></pre>
+
+<p>Now we are ready to configure Gulp to start up Express. Create the file <code>Gulpfile.js</code> in the project directory and add in an Express function.</p>
+
+<p>In <code>~/workspace/gulp/Gulpfile.js</code>:</p>
+
+<pre><code>var gulp = require('gulp');
+
+function startExpress() {
+
+  var express = require('express');
+  var app = express();
+  app.use(express.static(__dirname));
+  app.listen(4000);
+}
+
+gulp.task('default', function () {
+  startExpress();
+});
+</code></pre>
+
+<p>Create a <code>index.html</code> file within your project directory for a landing page. Let’s keep it simple at this time with a simple hello world. Add the following HTML to <code>~/workspace/gulp/index.html</code>:</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  Hello World!
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>You can now run <code>gulp</code> in the console to run Express.</p>
+
+<p><img src="/images/articles/gulp-start.png" alt="Gulp Start" /></p>
+
+<p>Once Gulp is running, navigate to <strong>Preview &gt; Port 4000</strong> in the menubar. This will open up a new tab with “Hello World!” displaying at the top.</p>
+
+<p><img src="/images/articles/preview-port-4000.png" alt="Preview Port 4000" /></p>
+
+<h3 id="creating-tasks-to-compile-sass-autoprefix-and-minify">Creating Tasks to Compile Sass, Autoprefix, and Minify</h3>
+
+<h4 id="preperation">Preperation</h4>
+
+<p>Now that we have have Express running, we can start adding tasks which simplify the development process. In this step we will add tasks to compile sass files, autoprefix the CSS with vendor prefixes, and then minify them.</p>
+
+<p>Install the Sass gem with Ruby for Sass file generation (Ruby is included on all Nitrous boxes):</p>
+
+<pre><code>gem install sass
+</code></pre>
+
+<p>Next, run the following command within the project folder to install the plugins needed for the tasks:</p>
+
+<pre><code>npm install gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-rename --save-dev
+</code></pre>
+
+<p>You should now see a <code>node_modules/</code> folder within your project. This will contain all of the packages which we just installed.</p>
+
+<p><img src="/images/articles/gulp-project-directory.png" alt="Gulp Project Directory" /></p>
+
+<h4 id="setting-up-tasks">Setting up Tasks</h4>
+
+<p>You will need to create a file within the root directory of your project called <code>gulpfile.js</code>, and include all the variables of the plugins we just installed. Below that we will create the task called “styles”.</p>
+
+<p>Add the following into <code>gulpfile.js</code>:</p>
+
+<pre><code>var gulp = require('gulp'),
+    sass = require('gulp-ruby-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    minifycss = require('gulp-minify-css'),
+    rename = require('gulp-rename');
+
+gulp.task('styles', function() {
+  return gulp.src('sass/*.scss')
+    .pipe(sass({ style: 'expanded' }))
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+    .pipe(gulp.dest('css'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifycss())
+    .pipe(gulp.dest('css'));
+});
+</code></pre>
+
+<p>The first block of variables above will load all of our plugins, and the second block is our first task that we’ve created. The task is designed to take in all of the <code>.scss</code> files, compile them into CSS, and apply autoprefixing to them. The CSS files will be placed in the <code>css/</code> folder along within minified files using the <code>.min</code> suffix.</p>
+
+<p>In the second block of code we accessed the Gulp API many times. <strong>gulp.task</strong> creates the task, <strong>gulp.src</strong> defines the source files, <strong>.pipe()</strong> is used to pipe source files into a plugin, and <strong>gulp.dest</strong> is used to set the destination path(s). Full documentation on the Gulp API can be found in the <a href="https://github.com/gulpjs/gulp/blob/master/docs/API.md">API Documentation on Github</a>.</p>
+
+<h3 id="running-tasks-sass-autoprefix-minify">Running Tasks (Sass, Autoprefix, Minify)</h3>
+
+<p>Now that we have our first task created let’s test it out. Create two folders in your project directory, <code>css/</code> and <code>sass/</code>. Create <code>styles.scss</code> within your <code>sass/</code> folder and add the following content:</p>
+
+<pre><code>$color: blue;
+
+#container {
+  color : $color;
+  box-sizing: border-box;
+}
+</code></pre>
+
+<p>This contains Sass syntax along with the CSS property <code>box-sizing</code> which has not been prefixed yet. Run the <code>styles</code> task from the project root directory with the following command:</p>
+
+<pre><code>gulp styles
+</code></pre>
+
+<p>You should now see <code>css/styles.css</code> as well as  <code>css/styles.min.css</code>.</p>
+
+<p><img src="/images/articles/gulp-task-styles.png" alt="Gulp Task Styles" /></p>
+
+<p>Now that we have this task which we can call, how can we automate this task? It’s simple. All you need to do is add <code>gulp.watch</code> to the existing default task. Update the <code>default</code> task in <code>Gulpfile.js</code> to look like this:</p>
+
+<pre><code>gulp.task('default', function () {
+  startExpress();
+  gulp.watch('sass/*.scss', ['styles']);
+});
+</code></pre>
+
+<p>Since you don’t have to specify a task name for the default task, simply run <code>gulp</code> into the console. Once it is running, try modifying the <code>sass/styles.scss</code> file to include a different color property. You should see it working within the console, and new sass files will be generated.</p>
+
+<pre><code>action@ruby-27740:~/workspace/gulp $ gulp
+[gulp] Using gulpfile ~/workspace/tutorials/gulp/Gulpfile.js
+[gulp] Starting 'default'...
+[gulp] Finished 'default' after 126 ms
+[gulp] Starting 'styles'...
+[gulp] Finished 'styles' after 388 ms
+</code></pre>
+
+<p>Press <strong>Ctrl + C</strong> to kill the Gulp process.</p>
+
+<h3 id="set-up-livereload">Set Up LiveReload</h3>
+
+<p>Currently we have Express running along Sass, autoprefix, and minify tasks. The next step to simplifying development is to add LiveReload. First we will need to install the tiny-lr plugin along with the connect-livereload middleware which will inject JavaScript into the footer of your pages in order to communicate with Express.</p>
+
+<p>Install the dependencies with the following command:</p>
+
+<pre><code>npm install tiny-lr connect-livereload --save-dev
+</code></pre>
+
+<p>You will now need to update the default task within <code>Gulpfile.js</code> to include tinylr, and add a function to configure tinylr which will send notifications of file changes.</p>
+
+<pre><code>var tinylr;
+function startLiveReload() {
+
+  tinylr = require('tiny-lr')();
+  tinylr.listen(4002);
+}
+
+gulp.task('default', function () {
+startExpress();
+startLiveReload();
+gulp.watch('sass/*.scss', ['styles']);
+});
+</code></pre>
+
+<blockquote>
+  <p>Changing the LiveReload port: In the function above we have specified to use the port 35729 instead of the default 4002 that LiveReload generally uses. Currently the Nitrous boxes only have ports 1024 - 9999 open over HTTP, which is why we made this change.</p>
+</blockquote>
+
+<p>Next, update the Express function to include the connect-livereload middleware by placing it before the <strong>static()</strong> config. This will inject JavaScript at the end of the body section of each page served by express, allowing you to use LiveReload without a browser plugin.</p>
+
+<pre><code>function startExpress() {
+
+  var express = require('express');
+  var app = express();
+  app.use(require('connect-livereload')({port: 4002}));
+  app.use(express.static(__dirname));
+  app.listen(4000);
+}
+</code></pre>
+
+<p>To watch for changes within <code>html</code> and <code>css</code> files we will need to add one more <code>gulp.watch</code> method within the default task. Edit your <code>Gulpfile.js</code> file to match the code below:</p>
+
+<p>In <code>~/workspace/gulp/Gulpfile.js</code>:</p>
+
+<pre><code>var gulp = require('gulp'),
+    sass = require('gulp-ruby-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    minifycss = require('gulp-minify-css'),
+    rename = require('gulp-rename');
+
+function startExpress() {
+  var express = require('express');
+  var app = express();
+  app.use(require('connect-livereload')({port: 4002}));
+  app.use(express.static(__dirname));
+  app.listen(4000);
+}
+
+var tinylr;
+function startLiveReload() {
+  tinylr = require('tiny-lr')();
+  tinylr.listen(4002);
+}
+
+function notifyLiveReload(event) {
+  var fileName = require('path').relative(__dirname, event.path);
+
+  tinylr.changed({
+    body: {
+      files: [fileName]
+    }
+  });
+}
+
+gulp.task('styles', function() {
+      return gulp.src('sass/*.scss')
+        .pipe(sass({ style: 'expanded' }))
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+        .pipe(gulp.dest('css'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(minifycss())
+        .pipe(gulp.dest('css'));
+});
+
+gulp.task('default', function () {
+  startExpress();
+  startLiveReload();
+  gulp.watch('*.html/*.css', notifyLiveReload);
+  gulp.watch('sass/*.scss', ['styles']);
+});
+</code></pre>
+
+<p>That’s it! LiveReload is looking for any changes in your HTML/CSS files, and when you save any changed then the page will automatically refresh.</p>
+
+<p>Use this Gulp setup to make development a breeze.</p>
+
+<h3 id="download-a-sample-app">Download a Sample App</h3>
+
+<p>If you want to jump to the chase and run the app immediately, click this button to download a sample app:</p>
+
+<p><a href="https://www.nitrous.io/hack_button?source=embed&amp;runtime=nodejs&amp;repo=nitrous-examples%2Fgulp-sample-app&amp;file_to_open=README.md"><img src="https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png" alt="Hack nitrous-examples/gulp-sample-app on
+Nitrous.IO" /></a></p>
+
+<h3 id="recommended-articles">Recommended Articles</h3>
+
+<ul>
+  <li><a href="/mongodb/">Setting up MongoDB with Autoparts</a></li>
+</ul>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+  <footer>
+    <script src='/javascripts/jquery/jquery-2.1.1.min.js'></script>
+    <script type='text/javascript' src='/javascripts/smoothscroll.js'></script>
+    <script src='/css/bootstrap3/js/bootstrap.js'></script>
+    <script src='/javascripts/highlight.js/highlight.pack.js'></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43081980-1', 'nitrous.io');
+            ga('require', 'linkid', 'linkid.js');
+            ga('send', 'pageview');
+
+</script>
+  </footer>
+</body>
+</html>
+
