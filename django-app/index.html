@@ -220,13 +220,13 @@
 
 <p>Virtualenv allows you to create an isolated environment in order to install specific versions and dependencies.</p>
 
-<p>First, check to see if you have Virtualenv and MySQL installed by running <code>virtualenv -v</code> and <code>mysql --version</code> in the terminal. If you see information about the version then it is all ready to go. If not then you can quickly install Virtualenv and MySQL with <a href="/autoparts">Autoparts</a>:</p>
+<p>First, check to see if you have Virtualenv and MySQL installed by running <code>virtualenv -v</code> and <code>mysql --version</code> in the terminal. If you see information about the version then it is all ready to go. If not then you can quickly install MySQL with <a href="/autoparts">Autoparts</a>, and virtualenv with pip:</p>
 
-<pre><code>$ parts install virtualenv
-$ parts install mysql
+<pre><code>$ parts install mysql
+$ pip install virtualenv
 </code></pre>
 
-<p>To view the available versions of Python available, run <code>ls /usr/bin/python*</code>. Create a new environment with Python 2.7 by running the following command:</p>
+<p>Create a new environment with Python 2.7 by running the following command:</p>
 
 <pre><code>$ virtualenv venv
 </code></pre>
