@@ -17,12 +17,12 @@ This article covers building a Django application on [Nitrous.IO](http://www.nit
 
 Virtualenv allows you to create an isolated environment in order to install specific versions and dependencies.
 
-First, check to see if you have Virtualenv and MySQL installed by running `virtualenv -v` and `mysql --version` in the terminal. If you see information about the version then it is all ready to go. If not then you can quickly install Virtualenv and MySQL with [Autoparts](/autoparts):
+First, check to see if you have Virtualenv and MySQL installed by running `virtualenv -v` and `mysql --version` in the terminal. If you see information about the version then it is all ready to go. If not then you can quickly install MySQL with [Autoparts](/autoparts), and virtualenv with pip:
 
-    $ parts install virtualenv
     $ parts install mysql
+    $ pip install virtualenv
 
-To view the available versions of Python available, run `ls /usr/bin/python*`. Create a new environment with Python 2.7 by running the following command:
+Create a new environment with Python 2.7 by running the following command:
 
     $ virtualenv venv
 
