@@ -206,30 +206,44 @@
     <div class="col-md-9">
       <div class="container article">
         <h1 class="article-title">Preview Static HTML Pages</h1>
-<h5 class="note">Last Updated on: 21 May 2014</h5>
+<h5 class="note">Last Updated on: 23 July 2014</h5>
 <p><em>In situations where you just need to preview a static file without running a web server, try this out.</em></p>
 
-<p>With Python you can run a small HTTP server in the project directory or your choice, allowing you to quickly preview any HTML file needed. </p>
+<p>With Node.JS you can run a small HTTP server in the project directory or your choice, allowing you to quickly preview any HTML file needed.</p>
 
-<p>To get started, ensure Python has been installed with <a href="/autoparts">Autoparts</a>. Run the following command within your terminal if you need to install it:</p>
+<p>To get started, ensure Node.JS has been installed with <a href="/autoparts">Autoparts</a>. Run the following command within your terminal if you need to install it:</p>
 
-<pre><code>action@ruby-23453:~/ $ parts install python3
+<pre><code>$ parts install nodejs
 </code></pre>
 
-<p>Next, navigate to your project folder within the terminal and run <code>python -m SimpleHTTPServer 3000</code>.</p>
+<p>Install http-server next using NPM:</p>
 
-<pre><code>action@ruby-23453:~/ $ cd ~/workspace/tutorial
-action@ruby-23453:~/workspace/tutorial $ python -m SimpleHTTPServer 3000
-Serving HTTP on 0.0.0.0 port 3000 ...
+<pre><code>$ npm install http-server -g
 </code></pre>
 
-<p>If everything runs smoothly then you will see the “Serving HTTP on 0.0.0.0 port 3000 …” message. From here, Navigate to <strong>Preview &gt; Port 3000</strong> within the Web IDE menu bar in order to preview your project.</p>
+<p>Next, navigate to your project folder within the terminal and run the command <code>http-server -p 3000</code>.</p>
+
+<pre><code>action@ruby-27340:~/workspace/repos $ http-server -p 3000
+Starting up http-server, serving ./ on port: 3000
+Hit CTRL-C to stop the server
+</code></pre>
+
+<p>If everything runs smoothly then you will see the “Starting up http-server, serving ./ on port: 3000” message. From here, Navigate to <strong>Preview &gt; Port 3000</strong> within the Web IDE menu bar in order to preview your project.</p>
 
 <p><img src="/images/articles/preview-port-3000.png" alt="Preview Port 3000" /></p>
 
 <p>Click the file within the directory listing which you wish to view. Any referenced CSS/JavaScript will be loaded.</p>
 
-<p><img src="/images/articles/python-simpleHTTPServer.png" alt="Python SimpleHTTPServer" /></p>
+<p><img src="/images/articles/http-server-files.png" alt="HTTP Server Files" /></p>
+
+<pre><code>Available options for http-server:
+
+-p Port to listen for connections on (defaults to 8080)
+-a Address to bind to (defaults to 'localhost')
+-i Display AutoIndex (defaults to 'True')
+-s or --silent In silent mode, log messages aren not logged to the console.
+-h or --help Displays a list of commands and exits.
+</code></pre>
 
 
       </div>
