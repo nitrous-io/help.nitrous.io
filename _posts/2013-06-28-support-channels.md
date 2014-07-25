@@ -13,12 +13,8 @@ We encourage you to utilize the amazing [Stack Overflow](http://stackoverflow.co
 
 If you have an urgent question about stability or performance of your development box, please [send us an email](mailto:support@nitrous.io).
 
-### Chat Room
-
-We have a [public campfire chatroom](https://www.nitrous.io/chat) where many of the Nitrous.IO employees hang out. Our team is spread out around the world, so odds are there will be somebody here to answer your question. Please don't troll the forums, that's just not cool bro.
-
 ### Live 1-on-1 Chat
 
-We utilize the amazing [Olark](https://www.olark.com) service for 1-on-1 chat widget on our website. You can reach any of our personal employees by just clicking on the "Chat with us" tab on the bottom right-hand side of the screen.
+**Paid users** can utilize [Olark](https://www.olark.com) service for 1-on-1 chat widget on our website. You can reach any of our personal employees by just clicking on the "Chat with us" tab on the bottom right-hand side of the screen.
 
 Olark will tell us basic information about you, like your email (if you came from an invite or are logged-in) or the last page you visited, so don't freak out if we know some stuff about you, we're not north korean spies (though one of us is from korea).
