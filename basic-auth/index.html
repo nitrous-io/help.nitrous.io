@@ -244,10 +244,11 @@ end
   </li>
   <li>
     <p>Run the following command within the console to create the necessary database tables:</p>
-
-    <p>manage.py syncdb.</p>
   </li>
 </ol>
+
+<pre><code>manage.py syncdb.
+</code></pre>
 
 <blockquote>
   <p>The default settings.py file may already include ‘django.contrib.auth’ and ‘django.contrib.contenttypes’ in INSTALLED_APPS already. If your app already has this installed then running <code>manage.py syncdb</code> may not be necessary, although it won’t hurt to run the command again.</p>
