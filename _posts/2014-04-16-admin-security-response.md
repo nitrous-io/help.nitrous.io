@@ -39,3 +39,4 @@ The following people have helped us keep Nitrous.IO safe for everyone.  We appre
 * [Aditya Agrawal](https://twitter.com/exploitprotocol)
 * [Shahee Mirza](https://twitter.com/shaheemirza)
 * [Evan Ricafort](http://www.evanricafort.com/)
+* [Kalpesh Makwana](https://www.facebook.com/kalpesh.makwana.77398)
