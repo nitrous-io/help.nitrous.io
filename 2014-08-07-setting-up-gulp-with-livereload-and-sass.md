@@ -60,16 +60,15 @@ In `~/workspace/gulp/Gulpfile.js`:
 
     var gulp = require('gulp');
 
-    function startExpress() {
-
+    gulp.task('express', function() {
       var express = require('express');
       var app = express();
       app.use(express.static(__dirname));
       app.listen(4000);
-    }
+    });
 
-    gulp.task('default', function () {
-      startExpress();
+    gulp.task('default', ['express'], function() {
+
     });
 
 Create a `index.html` file within your project directory for a landing page. Let's keep it simple at this time with a simple hello world. Add the following HTML to `~/workspace/gulp/index.html`:
@@ -143,9 +142,8 @@ Now that we have our first task created let's test it out. Create two folders in
 
     $color: blue;
 
-    #container {
-      color : $color;
-      box-sizing: border-box;
+    body {
+      background-color : $color;
     }
 
 This contains Sass syntax along with the CSS property `box-sizing` which has not been prefixed yet. Run the `styles` task from the project root directory with the following command:
@@ -156,11 +154,14 @@ You should now see `css/styles.css` as well as  `css/styles.min.css`.
 
 ![Gulp Task Styles](/images/articles/gulp-task-styles.png)
 
-Now that we have this task which we can call, how can we automate this task? It's simple. All you need to do is add `gulp.watch` to the existing default task. Update the `default` task in `Gulpfile.js` to look like this:
+Now that we have this task which we can call, how can we automate this task? It's simple. All you need to do is add a new `gulp.watch` task, and trigger it with the existing default task. Update `Gulpfile.js` to include the new watch task, along with the modified default task:
 
-    gulp.task('default', function () {
-      startExpress();
+    gulp.task('watch', function() {
       gulp.watch('sass/*.scss', ['styles']);
+    });
+
+    gulp.task('default', ['express', 'watch'], function() {
+
     });
 
 Since you don't have to specify a task name for the default task, simply run `gulp` into the console. Once it is running, try modifying the `sass/styles.scss` file to include a different color property. You should see it working within the console, and new sass files will be generated.
@@ -182,58 +183,53 @@ Install the dependencies with the following command:
 
     npm install tiny-lr connect-livereload --save-dev
 
-You will now need to update the default task within `Gulpfile.js` to include tinylr, and add a function to configure tinylr which will send notifications of file changes.
+You will now need to update the default task within `Gulpfile.js` to include tinylr (which we will give the task name of livereload), and add a task to configure tinylr which will send notifications of file changes.
 
     var tinylr;
-    function startLiveReload() {
-
+    gulp.task('livereload', function() {
       tinylr = require('tiny-lr')();
       tinylr.listen(4002);
-    }
+    });
 
-    gulp.task('default', function () {
-    startExpress();
-    startLiveReload();
-    gulp.watch('sass/*.scss', ['styles']);
+    gulp.task('default', ['express', 'livereload', 'watch'], function() {
+
     });
 
 >**Changing the LiveReload port:** In the function above we have specified the port `4002` instead of the port `35729` which LiveReload uses by default. Currently the Nitrous boxes only have ports 1024 - 9999 open over HTTP, which is why we made this change.
 
-Next, update the Express function to include the connect-livereload middleware by placing it before the **static()** config. This will inject JavaScript at the end of the body section of each page served by express, allowing you to use LiveReload without a browser plugin.
+Next, update the Express task to include the connect-livereload middleware by placing it before the **static()** config. This will inject JavaScript at the end of the body section of each page served by express, allowing you to use LiveReload without a browser plugin.
 
-    function startExpress() {
-
+    gulp.task('express', function() {
       var express = require('express');
       var app = express();
       app.use(require('connect-livereload')({port: 4002}));
       app.use(express.static(__dirname));
       app.listen(4000);
-    }
+    });
 
-
-To watch for changes within `html` and `css` files we will need to add one more `gulp.watch` method within the default task. Edit your `Gulpfile.js` file to match the code below:
+To watch for changes within `html` and `css` files we will need to add one more `gulp.watch` method within the default task. After making your final changes to `Gulpfile.js` the file should match the code below:
 
 In `~/workspace/gulp/Gulpfile.js`:
 
     var gulp = require('gulp'),
-        sass = require('gulp-ruby-sass'),
-        autoprefixer = require('gulp-autoprefixer'),
-        minifycss = require('gulp-minify-css'),
-        rename = require('gulp-rename');
+            sass = require('gulp-ruby-sass'),
+            autoprefixer = require('gulp-autoprefixer'),
+            minifycss = require('gulp-minify-css'),
+            rename = require('gulp-rename');
 
-    function startExpress() {
+    gulp.task('express', function() {
       var express = require('express');
       var app = express();
       app.use(require('connect-livereload')({port: 4002}));
       app.use(express.static(__dirname));
       app.listen(4000);
-    }
+    });
 
     var tinylr;
-    function startLiveReload() {
+    gulp.task('livereload', function() {
       tinylr = require('tiny-lr')();
       tinylr.listen(4002);
-    }
+    });
 
     function notifyLiveReload(event) {
       var fileName = require('path').relative(__dirname, event.path);
@@ -255,11 +251,14 @@ In `~/workspace/gulp/Gulpfile.js`:
             .pipe(gulp.dest('css'));
     });
 
-    gulp.task('default', function () {
-      startExpress();
-      startLiveReload();
-      gulp.watch('*.html/*.css', notifyLiveReload);
+    gulp.task('watch', function() {
       gulp.watch('sass/*.scss', ['styles']);
+      gulp.watch('*.html', notifyLiveReload);
+      gulp.watch('css/*.css', notifyLiveReload);
+    });
+
+    gulp.task('default', ['styles', 'express', 'livereload', 'watch'], function() {
+
     });
 
 That's it! LiveReload is looking for any changes in your HTML/CSS files, and when you save any changed then the page will automatically refresh.
