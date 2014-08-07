@@ -206,7 +206,7 @@
     <div class="col-md-9">
       <div class="container article">
         <h1 class="article-title">Building a Meteor App</h1>
-<h5 class="note">Last Updated on: 02 January 2014</h5>
+<h5 class="note">Last Updated on: 07 August 2014</h5>
 <h3 id="prerequisites">Prerequisites</h3>
 
 <ul>
@@ -318,13 +318,13 @@ touch index.html style.css
      &lt;div class="container"&gt;
        &lt;h1&gt;Login to continue&lt;/h1&gt;
        &lt;p&gt;
-         {{loginButtons}}
+         {{&gt; loginButtons}}
        &lt;/p&gt;
     &lt;/div&gt;
 &lt;/body&gt;
 </code></pre>
 
-<p>Notice the block <code>{{loginButtons}}</code> within the code. Meteor supports Handlebars templating, which allows us to many things. In this case we are going to utilize this block to call the Meteor Accounts system. Run the following commands to install the login service:</p>
+<p>Notice the block <code>{{&gt; loginButtons}}</code> within the code. Meteor supports Handlebars templating, which allows us to many things. In this case we are going to utilize this block to call the Meteor Accounts system. Run the following commands to install the login service:</p>
 
 <pre><code>meteor add accounts-password
 meteor add accounts-ui
@@ -365,7 +365,7 @@ meteor add accounts-ui
      &lt;/div&gt;
      &lt;div class="container"&gt;
        &lt;h1&gt;Login to continue&lt;/h1&gt;
-       &lt;p&gt;{{loginButtons}}&lt;/p&gt;
+       &lt;p&gt;{{&gt; loginButtons}}&lt;/p&gt;
        &lt;p&gt;
          {{#if currentUser}}
            You are now logged in.
