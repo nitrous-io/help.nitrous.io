@@ -105,7 +105,7 @@ Next, edit `client/index.html` to include only the following code:
          </div>
          <div class="container">
            <h1>Login to continue</h1>
-           <p>{% assign loginButtons = '{{loginButtons}}' %}
+           <p>{% assign loginButtons = '{{> loginButtons}}' %}
              {{ loginButtons }}
            </p>
         </div>
