@@ -206,7 +206,7 @@
     <div class="col-md-9">
       <div class="container article">
         <h1 class="article-title">Setting Up Gulp With LiveReload, Sass, and Other Tasks</h1>
-<h5 class="note">Last Updated on: 25 June 2014</h5>
+<h5 class="note">Last Updated on: </h5>
 <p><em>In this tutorial we will create an Express app while automating tasks with Gulp.JS. The Gulp plugins that you will install include Sass, Minify, Autoprefix, and LiveReload.</em></p>
 
 <p><em><a href="http://gulpjs.com/">Gulp.JS</a> is a task runner which automates frontend processes. This is similar to the task runner <a href="http://gruntjs.com/">Grunt.JS</a> but there are some key differences. Unlike Grunt, Gulp focuses on code over configuration.</em></p>
@@ -271,16 +271,15 @@ mkdir gulp &amp;&amp; cd gulp
 
 <pre><code>var gulp = require('gulp');
 
-function startExpress() {
-
+gulp.task('express', function() {
   var express = require('express');
   var app = express();
   app.use(express.static(__dirname));
   app.listen(4000);
-}
+});
 
-gulp.task('default', function () {
-  startExpress();
+gulp.task('default', ['express'], function() {
+
 });
 </code></pre>
 
@@ -359,9 +358,8 @@ gulp.task('styles', function() {
 
 <pre><code>$color: blue;
 
-#container {
-  color : $color;
-  box-sizing: border-box;
+body {
+  background-color : $color;
 }
 </code></pre>
 
@@ -374,11 +372,14 @@ gulp.task('styles', function() {
 
 <p><img src="/images/articles/gulp-task-styles.png" alt="Gulp Task Styles" /></p>
 
-<p>Now that we have this task which we can call, how can we automate this task? It’s simple. All you need to do is add <code>gulp.watch</code> to the existing default task. Update the <code>default</code> task in <code>Gulpfile.js</code> to look like this:</p>
+<p>Now that we have this task which we can call, how can we automate this task? It’s simple. All you need to do is add a new <code>gulp.watch</code> task, and trigger it with the existing default task. Update <code>Gulpfile.js</code> to include the new watch task, along with the modified default task:</p>
 
-<pre><code>gulp.task('default', function () {
-  startExpress();
+<pre><code>gulp.task('watch', function() {
   gulp.watch('sass/*.scss', ['styles']);
+});
+
+gulp.task('default', ['express', 'watch'], function() {
+
 });
 </code></pre>
 
@@ -403,19 +404,16 @@ gulp.task('styles', function() {
 <pre><code>npm install tiny-lr connect-livereload --save-dev
 </code></pre>
 
-<p>You will now need to update the default task within <code>Gulpfile.js</code> to include tinylr, and add a function to configure tinylr which will send notifications of file changes.</p>
+<p>You will now need to update the default task within <code>Gulpfile.js</code> to include tinylr (which we will give the task name of livereload), and add a task to configure tinylr which will send notifications of file changes.</p>
 
 <pre><code>var tinylr;
-function startLiveReload() {
-
+gulp.task('livereload', function() {
   tinylr = require('tiny-lr')();
   tinylr.listen(4002);
-}
+});
 
-gulp.task('default', function () {
-startExpress();
-startLiveReload();
-gulp.watch('sass/*.scss', ['styles']);
+gulp.task('default', ['express', 'livereload', 'watch'], function() {
+
 });
 </code></pre>
 
@@ -423,41 +421,40 @@ gulp.watch('sass/*.scss', ['styles']);
   <p><strong>Changing the LiveReload port:</strong> In the function above we have specified the port <code>4002</code> instead of the port <code>35729</code> which LiveReload uses by default. Currently the Nitrous boxes only have ports 1024 - 9999 open over HTTP, which is why we made this change.</p>
 </blockquote>
 
-<p>Next, update the Express function to include the connect-livereload middleware by placing it before the <strong>static()</strong> config. This will inject JavaScript at the end of the body section of each page served by express, allowing you to use LiveReload without a browser plugin.</p>
+<p>Next, update the Express task to include the connect-livereload middleware by placing it before the <strong>static()</strong> config. This will inject JavaScript at the end of the body section of each page served by express, allowing you to use LiveReload without a browser plugin.</p>
 
-<pre><code>function startExpress() {
-
+<pre><code>gulp.task('express', function() {
   var express = require('express');
   var app = express();
   app.use(require('connect-livereload')({port: 4002}));
   app.use(express.static(__dirname));
   app.listen(4000);
-}
+});
 </code></pre>
 
-<p>To watch for changes within <code>html</code> and <code>css</code> files we will need to add one more <code>gulp.watch</code> method within the default task. Edit your <code>Gulpfile.js</code> file to match the code below:</p>
+<p>To watch for changes within <code>html</code> and <code>css</code> files we will need to add one more <code>gulp.watch</code> method within the default task. After making your final changes to <code>Gulpfile.js</code> the file should match the code below:</p>
 
 <p>In <code>~/workspace/gulp/Gulpfile.js</code>:</p>
 
 <pre><code>var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
-    rename = require('gulp-rename');
+        sass = require('gulp-ruby-sass'),
+        autoprefixer = require('gulp-autoprefixer'),
+        minifycss = require('gulp-minify-css'),
+        rename = require('gulp-rename');
 
-function startExpress() {
+gulp.task('express', function() {
   var express = require('express');
   var app = express();
   app.use(require('connect-livereload')({port: 4002}));
   app.use(express.static(__dirname));
   app.listen(4000);
-}
+});
 
 var tinylr;
-function startLiveReload() {
+gulp.task('livereload', function() {
   tinylr = require('tiny-lr')();
   tinylr.listen(4002);
-}
+});
 
 function notifyLiveReload(event) {
   var fileName = require('path').relative(__dirname, event.path);
@@ -479,11 +476,14 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('default', function () {
-  startExpress();
-  startLiveReload();
-  gulp.watch('*.html/*.css', notifyLiveReload);
+gulp.task('watch', function() {
   gulp.watch('sass/*.scss', ['styles']);
+  gulp.watch('*.html', notifyLiveReload);
+  gulp.watch('css/*.css', notifyLiveReload);
+});
+
+gulp.task('default', ['styles', 'express', 'livereload', 'watch'], function() {
+
 });
 </code></pre>
 
