@@ -64,11 +64,13 @@ Within the `/client` folder, create a `index.html` and `style.css` file.
     cd client
     touch index.html style.css
 
-### Add Twitter Bootstrap to Your Project
+### Adding a Layout and Login Form to Your Project
 
-You can stylize your app with Bootstrap by running the following command
+Next we will add Bootstrap and add a login form to our app. Install the following modules by running these commands:
 
     meteor add bootstrap
+    meteor add accounts-password
+    meteor add accounts-ui
 
 From here, edit your `style.css` file to include the following CSS:
 
@@ -111,10 +113,7 @@ Next, edit `client/index.html` to include only the following code:
         </div>
     </body>
 
-Notice the block `{{ loginButtons }}` within the code. Meteor supports Handlebars templating, which allows us to many things. In this case we are going to utilize this block to call the Meteor Accounts system. Run the following commands to install the login service:
-
-    meteor add accounts-password
-    meteor add accounts-ui
+Notice the block `{{ loginButtons }}` within the code. Meteor supports Handlebars templating, which allows us to many things. In this case we are going to utilize this block to call the Meteor Accounts system.
 
 If you still have the browser open then you should see the page refresh to look like the screenshot below:
 
