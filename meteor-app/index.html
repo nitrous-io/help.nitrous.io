@@ -274,11 +274,13 @@ mkdir server
 touch index.html style.css
 </code></pre>
 
-<h3 id="add-twitter-bootstrap-to-your-project">Add Twitter Bootstrap to Your Project</h3>
+<h3 id="adding-a-layout-and-login-form-to-your-project">Adding a Layout and Login Form to Your Project</h3>
 
-<p>You can stylize your app with Bootstrap by running the following command</p>
+<p>Next we will add Bootstrap and add a login form to our app. Install the following modules by running these commands:</p>
 
 <pre><code>meteor add bootstrap
+meteor add accounts-password
+meteor add accounts-ui
 </code></pre>
 
 <p>From here, edit your <code>style.css</code> file to include the following CSS:</p>
@@ -324,11 +326,7 @@ touch index.html style.css
 &lt;/body&gt;
 </code></pre>
 
-<p>Notice the block <code>{{&gt; loginButtons}}</code> within the code. Meteor supports Handlebars templating, which allows us to many things. In this case we are going to utilize this block to call the Meteor Accounts system. Run the following commands to install the login service:</p>
-
-<pre><code>meteor add accounts-password
-meteor add accounts-ui
-</code></pre>
+<p>Notice the block <code>{{&gt; loginButtons}}</code> within the code. Meteor supports Handlebars templating, which allows us to many things. In this case we are going to utilize this block to call the Meteor Accounts system.</p>
 
 <p>If you still have the browser open then you should see the page refresh to look like the screenshot below:</p>
 
