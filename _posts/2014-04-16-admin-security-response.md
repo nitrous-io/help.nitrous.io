@@ -40,4 +40,4 @@ The following people have helped us keep Nitrous.IO safe for everyone.  We appre
 * [Shahee Mirza](https://twitter.com/shaheemirza)
 * [Evan Ricafort](http://www.evanricafort.com/)
 * [Kalpesh Makwana](https://www.facebook.com/kalpesh.makwana.77398)
-* [Asim Shahzad](pk.linkedin.com/pub/m-asim-shahzad/a1/995/65a/)
+* [Asim Shahzad](https://pk.linkedin.com/pub/m-asim-shahzad/a1/995/65a/)
