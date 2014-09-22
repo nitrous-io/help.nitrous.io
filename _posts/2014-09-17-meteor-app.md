@@ -36,7 +36,7 @@ To start a new project, run the following command:
 Navigate into the project folder and run the app with these two commands:
 
     cd meteorapp
-    meteor -p 0.0.0.0:3000
+    meteor
 
 After a moment you should see that the app is running on port 3000. Navigate in the menu bar to **Preview > Port 3000**.
 
