@@ -12,7 +12,7 @@ Your application will need to run on 0.0.0.0 or a specific IP address. Listening
 
 ### Node.js example
 
-Setting up a hello world web server on port 3000 using node.js.
+Setting up a hello world web server on port 3000 using node.js. Create a file named `helloworld.js` and place the following code within it:
 
 <pre class="prettyprint lang-javascript">
   var http = require('http');
