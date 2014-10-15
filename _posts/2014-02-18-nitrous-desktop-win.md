@@ -31,7 +31,7 @@ Once the app is running, you will see an **N** icon in the taskbar. Right click 
 
 ### File Sync
 
-Nitrous Desktop will create a new folder on your local machine titled `Nitrous`, and will be found in your `/My Documents` folder. The content within your `~/workspace/` folder will be synced into the newly created Nitrous folder once enabled.
+Nitrous Desktop will create a new folder on your local machine titled `Nitrous`, and will be found in your `/Users/<username>/` folder. The content within your `~/workspace/` folder will be synced into the newly created Nitrous folder once enabled.
 
 **Enable**: To enable File Sync, open Nitrous Desktop by right clicking on the **N** icon within the taskbar, and selecting **Open Nitrous Desktop...**.
 
