@@ -137,6 +137,7 @@ Nitrous.IO is dedicated to bringing the best development and staging environment
 * [Heroku](/heroku)
 * [Google App Engine](/app-engine)
 * [Azure](/azure-sites)
+* [OpenShift](/openshift)
 * [Nodejitsu](/nodejitsu)
 * [Cloud 66](/cloud66)
 * [Shelly Cloud](/shelly-cloud)
