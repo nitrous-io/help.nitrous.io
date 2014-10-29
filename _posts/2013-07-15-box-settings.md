@@ -7,7 +7,7 @@ mitem: box-settings
 ---
 
 At any point you can change the memory/storage configuration of your
-boxes. After creating a box with 384MB of memory and you
+boxes. After creating a box with 512MB of memory and you
 realize that you need more memory for your (say) Java application, then you can upgrade the memory configuration of your box without having to create a new box.
 
 
