@@ -6,26 +6,14 @@ category: tutorials
 mitem: node
 ---
 
+This article covers how to build Meteor 1.0 based apps on Nitrous.IO.
+
 ### Prerequisites
 
-* A Node.JS box with a minimum of 1GB storage (see the [box settings
-  guide](/box-settings/) for information on how to add more space)
+* A [Nitrous.IO account](https://nitrous.io)
+* A [Meteor Box](http://help.action.io/customer/portal/articles/802603-create-a-box) on Nitrous.IO.
 
-### Installation
-
-Meteor can be installed on the Nitrous box via [Autoparts](http://help.nitrous.io/autoparts/). Within the console, run the following command:
-
-    parts install meteor
-
-This will setup a Meteor installation along with MongoDB.
-
-### Installing Meteorite
-
-Meteorite utilizes [Atmosphere](https://atmosphere.meteor.com/) which contains 3rd party packages which are not available within the Meteor core packages. To install Meteorite we will need to use NPM:
-
-    npm install -g meteorite
-
-Although this guide does not utilize Meteorite for getting started, it will be handy to have tools such as [Iron Router](https://github.com/EventedMind/iron-router) once you start developing your own web app.
+By default, all boxes will have 512MB RAM and 1.5GB storage. This is sufficient to build and run a Meteor app.
 
 ### Creating a New Meteor App
 
