@@ -19,7 +19,7 @@
     </a>
   </li>
   <li class="shareBtn" id="sbGoogle">
-    <a href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>" target="_blank" title="Share on Google+">
+    <a href="javascript:window.location=%22https://plus.google.com/share?url=%22+encodeURIComponent(document.location)" target="_blank" title="Share on Google+">
       <span class="sIcon icon-google-plus"></span>
       SHARE
     </a>
