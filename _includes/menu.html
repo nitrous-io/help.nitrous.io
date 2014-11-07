@@ -1,16 +1,16 @@
-<hr>
-  <form class="navbar-form" role="search" action="/search.html">
-    <input type="text" name="q" class="form-control" placeholder="Search Docs">
-  </form>
-  <div class="docs hidden-sm hidden-xs">
-    <h3>
-      Guides
-    </h3>
-  </div>
-  <ul class="snav hidden-sm hidden-xs">
+<div class="login">
+  <h4>
+    <a class="signin" href="https://nitrous.io/users/sign_in">Sign In</a>
+    <a class="signup" href="https://www.nitrous.io">Sign Up</a>
+  </h4>
+</div>
+<h3 class="menu-heading">
+  Guides
+</h3>
+<ul class="snav">
   <li {% if page.category contains 'getting-started' %} class="active" {% endif %}>
     <a href="/">Getting Started</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li><a href="#sign-up">Sign Up</a></li>
       <li><a href="#create-a-new-box">Create a New Box</a></li>
       <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
@@ -26,7 +26,7 @@
 
   <li {% if page.category contains 'ssh' %} class="active" {% endif %}>
     <a href="/categories/ssh/">SSH Keys</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li {% if page.mitem contains 'ssh-add' %} class="mi_active" {% endif %}><a href="/ssh-add/">Adding SSH Keys (Mac)</a></li>
       <li {% if page.mitem contains 'ssh-win' %} class="mi_active" {% endif %}><a href="/ssh-windows/">Adding SSH Keys (Windows)</a></li>
     </ul>
@@ -34,7 +34,7 @@
 
   <li {% if page.category contains 'boxes' %} class="active" {% endif %}>
     <a href="/categories/boxes/">Boxes</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li {% if page.mitem contains 'create-box' %} class="mi_active" {% endif %}><a href="/box-new">Create a Box</a></li>
       <li {% if page.mitem contains 'box-settings' %} class="mi_active" {% endif %}><a href="/box-settings/">Box Memory & Storage</a></li>
       <li {% if page.mitem contains 'box-templates' %} class="mi_active" {% endif %}><a href="/box-templates/">Box Templates</a></li>
@@ -45,7 +45,7 @@
 
   <li {% if page.category contains 'usage' or page.categories contains 'usage' %} class="active" {% endif %}>
     <a href="/categories/usage/">Usage</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li {% if page.mitem contains 'autoparts' %} class="mi_active" {% endif %}><a href="/autoparts/">Autoparts Package Manager</a></li>
       <li {% if page.mitem contains 'desktop-win' %} class="mi_active" {% endif %}><a href="/nitrous-desktop-win/">Nitrous Desktop (Windows)</a></li>
       <li {% if page.mitem contains 'desktop-mac' %} class="mi_active" {% endif %}><a href="/nitrous-desktop/">Nitrous Desktop (Mac)</a></li>
@@ -58,7 +58,7 @@
 
   <li {% if page.category contains 'databases' %} class="active" {% endif %}>
     <a href="/categories/databases/">Databases</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li {% if page.mitem contains 'memcached' %} class="mi_active" {% endif %}><a href="/memcached/">Memcached</a></li>
       <li {% if page.mitem contains 'mongodb' %} class="mi_active" {% endif %}><a href="/mongodb/">MongoDB</a></li>
       <li {% if page.mitem contains 'mysql' %} class="mi_active" {% endif %}><a href="/mysql/">MySQL</a></li>
@@ -69,7 +69,7 @@
 
   <li {% if page.category contains 'previewing' %} class="active" {% endif %}>
     <a href="/categories/previewing/">Preview</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li {% if page.mitem contains 'basicauth' %} class="mi_active" {% endif %}><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
       <li {% if page.mitem contains 'customdomains' %} class="mi_active" {% endif %}><a href="/custom-domains">Custom Domains</a></li>
       <li {% if page.mitem contains 'preview' %} class="mi_active" {% endif %}><a href="/preview">Preview Your App</a></li>
@@ -82,7 +82,7 @@
 
   <li {% if page.category contains 'faq' %} class="active" {% endif %}>
     <a href="/categories/faq/">Frequently Asked Questions</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li {% if page.mitem contains 'add-project' %} class="mi_active" {% endif %}><a href="/faq-adding-project">Add an Existing Project</a></li>
       <li {% if page.mitem contains 'disconnect' %} class="mi_active" {% endif %}><a href="/faq-disconnect">Nitrous.IO Keeps Disconnecting</a></li>
       <li {% if page.mitem contains 'browsers' %} class="mi_active" {% endif %}><a href="/faq-browser-support">Browser Support</a></li>
@@ -91,7 +91,7 @@
 
   <li {% if page.category contains 'tutorials' %} class="active" {% endif %}>
     <a href="/categories/tutorials/">Tutorials</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li {% if page.mitem contains 'django' %} class="mi_active" {% endif %}><a href="/django-app">Django</a></li>
       <li {% if page.mitem contains 'meteor' %} class="mi_active" {% endif %}><a href="/meteor-app">Meteor</a></li>
       <li {% if page.mitem contains 'gulp' %} class="mi_active" {% endif %}><a href="/setting-up-gulp-with-livereload-and-sass">Gulp</a></li>
@@ -104,7 +104,7 @@
 
   <li {% if page.category contains 'deployment' %} class="active" {% endif %}>
     <a href="/categories/deployment/">Deployment</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li {% if page.mitem contains 'heroku' %} class="mi_active" {% endif %}><a href="/heroku/">Heroku</a></li>
       <li {% if page.mitem contains 'appengine' %} class="mi_active" {% endif %}><a href="/app-engine">App Engine</a></li>
       <li {% if page.mitem contains 'azure' %} class="mi_active" {% endif %}><a href="/azure-sites">Azure Sites</a></li>
@@ -114,7 +114,7 @@
 
   <li {% if page.category contains 'billing' %} class="active" {% endif %}>
     <a href="/categories/billing/">Billing</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li {% if page.mitem contains 'cycle' %} class="mi_active" {% endif %}><a href="/billing-cycle/">Billing Cycle</a></li>
       <li {% if page.mitem contains 'payment' %} class="mi_active" {% endif %}><a href="/billing-payment-info/">Payment Information</a></li>
       <li {% if page.mitem contains 'changes' %} class="mi_active" {% endif %}><a href="/billing-change-plans/">Changing Subscription</a></li>
@@ -125,7 +125,7 @@
 
   <li {% if page.category contains 'resources' %} class="active" {% endif %}>
     <a href="/categories/resources/">Additional Resources</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li {% if page.mitem contains 'logos' %} class="mi_active" {% endif %}><a href="/logos">Nitrous.IO Logos</a></li>
       <li {% if page.mitem contains 'aup' %} class="mi_active" {% endif %}><a href="/admin-aup">Acceptable Use Policy</a></li>
       <li {% if page.mitem contains 'privacy' %} class="mi_active" {% endif %}><a href="/admin-privacy">Privacy &amp; Terms</a></li>

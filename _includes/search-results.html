@@ -1,0 +1,16 @@
+<section id="search-results">
+  <h1>Search Results</h1>
+  <ul class='entries'></ul>
+  {% raw %}
+  <script id="search-results-template" type="text/mustache">
+    {{#entries}}
+      <li>
+        <p>
+          <a href="{{url}}">{{title}}</a>
+          {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+       </p>
+      </li>
+    {{/entries}}
+  </script>
+  {% endraw %}
+</section>

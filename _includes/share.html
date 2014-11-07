@@ -1,0 +1,33 @@
+<ul class="social-sharing">
+  <li class="shareBtn sbMain">
+    <a class="share" href="#">
+      <i class="fa fa-share-square-o"></i>
+    </a>
+  </li>
+
+  <li class="shareBtn" id="sbTwitter">
+    <a href="javascript:window.location=%22https://twitter.com/share?url=%22+encodeURIComponent(document.location)+%22&text=%22+encodeURIComponent(document.title)" target="_blank" title="Share on Twitter">
+      <span class="sIcon icon-twitter"></span>
+      TWEET
+    </a>
+  </li>
+
+  <li class="shareBtn" id="sbFacebook">
+    <a href="javascript:window.location=%22http://www.facebook.com/sharer.php?u=%22+encodeURIComponent(document.location)+%22&#38;t=%22+encodeURIComponent(document.title)" target="_blank" title="Share on Facebook">
+      <span class="sIcon icon-facebook"></span>
+      SHARE
+    </a>
+  </li>
+  <li class="shareBtn" id="sbGoogle">
+    <a href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>" target="_blank" title="Share on Google+">
+      <span class="sIcon icon-google-plus"></span>
+      SHARE
+    </a>
+  </li>
+  <li class="shareBtn" id="sbYC">
+    <a href="javascript:window.location=%22http://news.ycombinator.com/submitlink?u=%22+encodeURIComponent(document.location)+%22&t=%22+encodeURIComponent(document.title)" title="Submit to Hacker News">
+      <span class="sIcon icon-hacker-news"></span>
+      SHARE
+    </a>
+  </li>
+</ul>

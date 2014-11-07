@@ -3,7 +3,36 @@
     <script type='text/javascript' src='/javascripts/smoothscroll.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
+    <script src='/javascripts/search.min.js' type='text/javascript' charset='utf-8'></script>
+    <script src='/javascripts/share.js' type='text/javascript' charset='utf-8'></script>
+    <script type="text/javascript">
+      $(function() {
+        $('#search-query').lunrSearch({
+          indexUrl: '/search.json',             // URL of the `search.json` index data for your site
+          results:  '#search-results',          // jQuery selector for the search results container
+          entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
+          template: '#search-results-template'  // jQuery selector for the Mustache.js template
+        });
+      });
+    </script>
     <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
     {% include ga.html %}
   </footer>
 </body>

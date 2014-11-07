@@ -1,0 +1,19 @@
+{% include head.html %}
+<div class="container">
+  <div class="col-md-3">
+    <div class="hidden-sm hidden-xs">
+      {% include menu.html %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 content">
+      <div class="container article">
+        <article>
+          {{ content }}
+          {% include share.html %}
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+{% include footer.html %}

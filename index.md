@@ -1,6 +1,6 @@
 ---
 title: Nitrous.IO Documentation
-layout: getting_started
+layout: default
 category: getting-started
 ---
 

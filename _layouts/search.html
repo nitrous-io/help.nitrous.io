@@ -1,17 +1,18 @@
----
-title: Nitrous.IO Support
-layout: default
----
-<script>
-  (function() {
-    var cx = '009198278762462778395:pwuaikni4bs';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:searchresults-only></gcse:searchresults-only>
+{% include search-head.html %}
+<div class="container">
+  <div class="col-md-3">
+    <div class="hidden-sm hidden-xs">
+      {% include menu.html %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 content">
+      <div class="container article">
+        <article>
+          {% include search-results.html %}
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+{% include footer.html %}

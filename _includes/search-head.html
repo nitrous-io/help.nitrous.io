@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>{{ page.title }}</title>
+  <meta content='Nitrous Support Documentation. Tutorials, FAQ, and other guides for building your apps directly on Nitrous' name='description'>
+  <meta content='Nitrous' name='author'>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600italic,600' rel='stylesheet' type='text/css'>
+
+  <link rel='stylesheet' href='/css/bootstrap3/css/bootstrap.css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="/css/action.css" media="screen, projection" rel="stylesheet">
+  <link href="/css/highlight.js/github.css" media="screen, projection" rel="stylesheet">
+  <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+</head>
+<body>
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+  <div class="sidebar" id="sidebar"> 
+    {% include menu.html %}
+  </div>
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+      <div>
+        <ul class="nav navbar-nav">
+          <li class="nav-btn logo hidden-xs">
+            <h1>
+              <a id="logo" href="https://www.nitrous.io">Nitrous</a>
+            </h1>
+          </li>
+          <li class="hidden-xs hidden-sm hidden-md show-lg">
+            <a href="/" {% if page.category contains 'overview' %} class="active" {% endif %}>
+              Overview
+            </a>
+          </li>
+          <li class="hidden-xs hidden-sm hidden-md show-lg"><a href="/getting-started/" {% if page.category contains 'getting-started' %} class="active" {% endif %}>
+              Getting Started
+            </a>
+          </li>
+          <li class="hidden-xs hidden-sm hidden-md show-lg"><a href="/categories/development/" {% if page.category != 'getting-started' and page.category != 'overview' %} class="active" {% endif %}>
+              Docs
+            </a>
+          </li>
+          <li class="show-sm searchbar">
+            <div id="search">
+              <form class="navbar-form" method="get" action="/search">
+                <input type="text" id="search-query" name="q" class="form-control" autocomplete="off">
+              </form>
+            </div>
+          </li>
+          <li class="hidden-xs hidden-sm hidden-md show-lg"><a href="https://nitrous.io/users/sign_in">Sign in</a></li>
+          <li class="hidden-xs hidden-sm show-md show-lg">
+            <a href="https://www.nitrous.io" class="signup">
+              Sign up
+            </a>
+          </li>
+          <li class="menu-btn show-xs show-sm hidden-md hidden-lg">
+            <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

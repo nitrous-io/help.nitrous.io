@@ -1,9 +1,11 @@
-name: Nitrous.IO Support
+name: Nitrous.IO Documentation
 highlighter: pygments
 permalink: /:title
 #category_links: change the category directory
 category_title_prefix: ''
-exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vendor']
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vendor', 'node_modules', 'gulpfile.js']
 sass:
     syntax: scss        # scss|sass
     style:  compressed  # nested|expanded|compact|compressed
+lunr_search:
+  excludes: [rss.xml, atom.xml, sitemap.xml, index.md, search/index.md]

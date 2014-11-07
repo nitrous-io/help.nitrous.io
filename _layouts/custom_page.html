@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html class="home index">
 {% include head.html %}
 <div class="container">
-   <div class="row">
-    <div class="col-md-3">
+  <div class="col-md-3">
+    <div class="hidden-sm hidden-xs">
       {% include menu.html %}
     </div>
-    <div class="col-md-9">
-      <a href="mailto:support@nitrous.io" class="btn ask pull-right hidden-sm hidden-xs" target="blank">Ask a question</a>
-      <a href="https://www.nitrous.io/chat" class="btn ask pull-right hidden-sm hidden-xs"  target="blank">Group chat</a>
-      <h1>{{ page.title | capitalize | replace: 'and', '&' | replace: 'Faq', 'FAQ' | replace: 'Ssh', 'SSH'}}</h1>
-      {{ content }}
+  </div>
+  <div class="row">
+    <div class="col-md-8 content">
+      <div class="container article">
+        <article>
+          
+          <h1>{{ page.title | capitalize | replace: 'and', '&' | replace: 'Faq', 'FAQ' | replace: 'Ssh', 'SSH'}}</h1>
+          {{ content }}
+        </article>
+      </div>
     </div>
-    {% include footer.html %}
   </div>
 </div>
-</body>
-</html>
+{% include footer.html %}
