@@ -527,8 +527,7 @@ ul.social-sharing #sbYC a:hover {
   width: 24rem;
   visibility: hidden;
   overflow-y: auto;
-  font-size: 0.875rem;
-  /* 15px */
+  font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.6);
   background-color: #202020;
   -webkit-transition: all 0.3s ease-in-out;
@@ -594,7 +593,7 @@ ul.social-sharing #sbYC a:hover {
 .sidebar-toggle {
   position: absolute;
   top: 2.55rem;
-  right: 2rem;
+  right: 1rem;
   display: block;
   width: 4.25rem;
   padding: 0 0.85rem;

@@ -17,7 +17,7 @@
 </head>
 <body>
   <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-  <div class="sidebar" id="sidebar"> 
+  <div class="sidebar" id="sidebar">
     {% include menu.html %}
   </div>
   <nav class="navbar navbar-inverse" role="navigation">
@@ -29,17 +29,13 @@
               <a id="logo" href="https://www.nitrous.io">Nitrous</a>
             </h1>
           </li>
-          <li class="hidden-xs hidden-sm hidden-md show-lg">
-            <a href="/" {% if page.category contains 'overview' %} class="active" {% endif %}>
-              Overview
-            </a>
-          </li>
-          <li class="hidden-xs hidden-sm hidden-md show-lg"><a href="/getting-started/" {% if page.category contains 'getting-started' %} class="active" {% endif %}>
+          <li class="hidden-xs hidden-sm hidden-md show-lg"><a href="/" {% if page.category contains 'getting-started' %} class="active" {% endif %}>
               Getting Started
             </a>
           </li>
-          <li class="hidden-xs hidden-sm hidden-md show-lg"><a href="/categories/development/" {% if page.category != 'getting-started' and page.category != 'overview' %} class="active" {% endif %}>
-              Docs
+          <li class="hidden-xs hidden-sm hidden-md show-lg">
+            <a href="mailto:support@nitrous.io" {% if page.category contains 'overview' %} class="active" {% endif %}>
+              Contact Support
             </a>
           </li>
           <li class="show-sm searchbar">
