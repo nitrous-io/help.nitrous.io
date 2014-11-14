@@ -1,5 +1,5 @@
 ---
-title: Using WebSockets on Nitrous.IO
+title: Using WebSockets on Nitrous
 published: true
 layout: article
 category: previewing

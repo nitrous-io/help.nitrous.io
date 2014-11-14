@@ -10,13 +10,13 @@ These instructions will help you deploy your [Python](https://www.djangoproject.
 
 ### Things you should know
 
-* Python basic concepts. Your Nitrous.IO box will come preinstalled with Python and App Engine.
+* Python basic concepts. Your Nitrous box will come preinstalled with Python and App Engine.
 
 ### Prerequisites
 
-* An [Nitrous.IO Account](https://www.nitrous.io)
+* An [Nitrous Account](https://www.nitrous.io)
 * A [Google Cloud Account](https://developers.google.com/appengine/)
-* A [Python box](https://www.nitrous.io/app#/boxes) on Nitrous.IO
+* A [Python box](https://www.nitrous.io/app#/boxes) on Nitrous
 * A project built for App Engine. View the [Google Cloud Github Repo](https://github.com/GoogleCloudPlatform/appengine-guestbook-python) for an example.
 
 ### Testing your Python app

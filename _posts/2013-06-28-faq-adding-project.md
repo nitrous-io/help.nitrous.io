@@ -6,11 +6,11 @@ category: faq
 mitem: add-project
 ---
 
-We get a lot of emails asking how to upload applications to an Nitrous.IO box. There are many ways to do this; using SCP, installing the [Mac App](https://www.nitrous.io/mac), and in this guide SFTP and Git.
+We get a lot of emails asking how to upload applications to an Nitrous box. There are many ways to do this; using SCP, installing the [Mac App](https://www.nitrous.io/mac), and in this guide SFTP and Git.
 
 ### Uploading your project via SFTP
 
-Uploading via SFTP requires that you have set up your public / private keypair on your machine and added your public key to Nitrous.IO. To do this, we recommend that you use PuttyGen. Visit this link and look for the PuttyGen download:
+Uploading via SFTP requires that you have set up your public / private keypair on your machine and added your public key to Nitrous. To do this, we recommend that you use PuttyGen. Visit this link and look for the PuttyGen download:
 
 [http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 
@@ -36,9 +36,9 @@ Name the public key something like **public_key.pub** and the private key **priv
 
 >You want to save these keys someplace safe because if someone were to find your private key, they could authenticate with any services where you utilize public key authentication.
 
-Okay, so now we have our keypairs set up, let's go ahead and add our public keys to Nitrous.IO.
+Okay, so now we have our keypairs set up, let's go ahead and add our public keys to Nitrous.
 
-1. Signin to your [Nitrous.IO](https://nitrous.io) account
+1. Signin to your [Nitrous](https://nitrous.io) account
 2. Click the "Public Keys" link in the top navigation
 3. Create a name for your public key -- something that identifies the machine. I'll use "AJ's Windows XP".
 4. Paste your public key in the text area.
@@ -65,7 +65,7 @@ Then we'll want to add the private key that we just created and put in our safe 
 
 Then click the **OK** button.
 
-### Setup site profile to connect to Nitrous.IO
+### Setup site profile to connect to Nitrous
 
 Ok, now that we've added the key to Filezilla, lets go ahead and add the connection details.
 
@@ -73,11 +73,11 @@ Ok, now that we've added the key to Filezilla, lets go ahead and add the connect
 
 ![filezilla site manager](https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-sitemanager.png)
 
-#### 2. Click the **New Site** button and name the connection profile. I'm going to name it the same as my box on Nitrous.IO
+#### 2. Click the **New Site** button and name the connection profile. I'm going to name it the same as my box on Nitrous
 
 ![filezilla new site](https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/filezilla-newsite.png)
 
-#### 3. Type in **action** as the username and the relevant **host** and **port** information from your box details page on Nitrous.IO:
+#### 3. Type in **action** as the username and the relevant **host** and **port** information from your box details page on Nitrous:
 
 ![filezilla box details](https://raw.github.com/action-io/action-assets/master/support/screenshots/sftp/box-details.png)
 
@@ -97,14 +97,14 @@ You'll see the connection details streaming in the filezilla status menu and the
 
 ### Uploading your project via Git
 
-If you have git installed on your machine, you can easily push a code repository to github (or another repository hosting service), then clone the repository on your Nitrous.IO box.
+If you have git installed on your machine, you can easily push a code repository to github (or another repository hosting service), then clone the repository on your Nitrous box.
 
 Prerequisites:
 
 * Installed [Git](http://git-scm.com/)
 * Working knowledge of [Git commands](http://try.github.com/levels/1/challenges/1)
 
-Read this article about how to connect your github account to Nitrous.IO:
+Read this article about how to connect your github account to Nitrous:
 
 **Mac:**
 [Adding your keys to Github](/github-add-key)
@@ -112,5 +112,5 @@ Read this article about how to connect your github account to Nitrous.IO:
 **Windows:**
 [Adding SSH Keys on Windows](/ssh-windows)
 
-Once you've successfully setup your SSH keys, you can easily clone repositories from Github to your Nitrous.IO boxes.
+Once you've successfully setup your SSH keys, you can easily clone repositories from Github to your Nitrous boxes.
 

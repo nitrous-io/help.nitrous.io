@@ -11,7 +11,7 @@ category: tutorials
 
 To install WordPress within your box you will need to use the package manager, [Autoparts](/autoparts). Navigate in the Menu to **Autoparts > Install Parts...**, and search for *WordPress*.
 
-![Installing WordPress with Nitrous.IO](/images/articles/wordpress-autoparts.png)
+![Installing WordPress with Nitrous](/images/articles/wordpress-autoparts.png)
 
 Installing WordPress will automatically install all dependencies if not yet installed (PHP5, Apache2, MySQL). Once installed, the WordPress installation can be found in `~/workspace/www/WordPress`.
 

@@ -9,7 +9,7 @@ This guide will walk you through the steps to connect [Sequel Pro](http://www.se
 
 ### Prerequisites
 
-* A Nitrous.IO box with a MySQL database created. View the [MySQL Guide](/mysql/) if you have not done this already.
+* A Nitrous box with a MySQL database created. View the [MySQL Guide](/mysql/) if you have not done this already.
 * A Database Management App. [Sequel Pro](http://www.sequelpro.com/) is a great tool for Mac users.
 
 ### Setting up Port Forwarding
@@ -42,4 +42,4 @@ Once you have installed [Sequel Pro](http://www.sequelpro.com/), open up the app
 
 ![Sequel Pro Connection Details](/images/articles/sequel-pro.png)
 
-You should now be connected to the database hosted on Nitrous.IO.
+You should now be connected to the database hosted on Nitrous.

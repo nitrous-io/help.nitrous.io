@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Hack on Nitrous.IO
+title: Hack on Nitrous
 published: true
 category: usage
 ---
@@ -37,9 +37,9 @@ To download a project to your own Nitrous box, start by clicking an existing 'Ha
 
 For example, the 'Hack' below button will download the [TelescopeJS/Telescope](https://github.com/TelescopeJS/Telescope) repository on Github:
 
-[![Hack TelescopeJS/Telescope on Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=nodejs&repo=TelescopeJS%2FTelescope&file_to_open=README.nitrous.md)
+[![Hack TelescopeJS/Telescope on Nitrous](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=nodejs&repo=TelescopeJS%2FTelescope&file_to_open=README.nitrous.md)
 
-Click on a 'Hack' button to download the project. If logged in to [Nitrous.IO](https://www.nitrous.io) you will be given the choice to download the project within a new box, or download the project to an existing box on your account.
+Click on a 'Hack' button to download the project. If logged in to [Nitrous](https://www.nitrous.io) you will be given the choice to download the project within a new box, or download the project to an existing box on your account.
 
 ![Embed Page](/images/articles/hack-button-download.png)
 

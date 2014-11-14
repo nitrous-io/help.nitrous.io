@@ -6,7 +6,7 @@ category: usage
 mitem: uploading
 ---
 
-*Uploading files to Nitrous.IO is quick and easy. There's no need to FTP or SCP files to your development box (although you can, and it is explained at the end of this guide).*
+*Uploading files to Nitrous is quick and easy. There's no need to FTP or SCP files to your development box (although you can, and it is explained at the end of this guide).*
 
 ### Uploading Individual Files
 
@@ -28,7 +28,7 @@ You'll see the status of each file uploaded via the progress bar to the right of
   We support .png, .jpeg, .gif, and .pdf file uploads
 </div>
 
-After each file is uploaded successfully, the modal will disapear and you'll be back in the Nitrous.IO IDE. The file browser should refresh automatically and you should see your uploaded files in the correct directory.
+After each file is uploaded successfully, the modal will disapear and you'll be back in the Nitrous IDE. The file browser should refresh automatically and you should see your uploaded files in the correct directory.
 
 ![File Directory](https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-4.png)
 
@@ -48,7 +48,7 @@ First, zip up your project using your favorite archving application. On later ve
 
 ![Compress](https://raw.github.com/action-io/action-assets/master/support/screenshots/compress-menu.png)
 
-Then, open up the IDE in your box on Nitrous.IO and below the file browser, click the "Upload Files" button.
+Then, open up the IDE in your box on Nitrous and below the file browser, click the "Upload Files" button.
 
 ![IDE Upload](https://raw.github.com/action-io/action-assets/master/support/screenshots/ide-upload.png)
 
@@ -74,7 +74,7 @@ If you are wanting to sync your projects locally or just use an app to upload la
 
 You can also upload and download content via SCP. To do this, you will need to [add an SSH Key](http://help.nitrous.io/ssh-add/) to your account.
 
-Next, run the command below on your local machine, replacing {PORT} with the port # assigned to your Nitrous.IO box, and also changing `usw1` with the proper region found in the SSH URI of your [boxes page](https://www.nitrous.io/app#/boxes).
+Next, run the command below on your local machine, replacing {PORT} with the port # assigned to your Nitrous box, and also changing `usw1` with the proper region found in the SSH URI of your [boxes page](https://www.nitrous.io/app#/boxes).
 
 To Upload:
 

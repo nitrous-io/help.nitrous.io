@@ -6,7 +6,7 @@ category: resources
 ---
 
 *There are many other introduction resources which may be
-helpful when introducing Nitrous.IO to a new audience.*
+helpful when introducing Nitrous to a new audience.*
 
 ### Printable Guides
 
@@ -16,6 +16,6 @@ helpful when introducing Nitrous.IO to a new audience.*
 
 ### Video Introduction
 
-**Thom Parkin's Introduction to Nitrous.IO**: [https://learnable.com/hub/play/47](https://learnable.com/hub/play/47)
+**Thom Parkin's Introduction to Nitrous**: [https://learnable.com/hub/play/47](https://learnable.com/hub/play/47)
 
 

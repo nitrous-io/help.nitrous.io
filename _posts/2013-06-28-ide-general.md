@@ -6,7 +6,7 @@ category: "getting started"
 mitem: ide-general
 ---
 
-The Nitrous.IO Web IDE is a powerful, one stop shop for (almost) all of your development needs.
+The Nitrous Web IDE is a powerful, one stop shop for (almost) all of your development needs.
 
 ### File Browser
 
@@ -49,9 +49,9 @@ To upload a file, simply click the "Upload Files" button at the bottom of the fi
 
 ![File Uploads](https://raw.github.com/action-io/action-assets/master/support/screenshots/file-uploads-1.png)
 
-### Nitrous.IO Console
+### Nitrous Console
 
-The Nitrous.IO Web IDE also provides a full shell at the bottom of the screen. This allows you to handle your command line tasks with your code editing all in one place.
+The Nitrous Web IDE also provides a full shell at the bottom of the screen. This allows you to handle your command line tasks with your code editing all in one place.
 
 _New Console Window_
 

@@ -6,12 +6,12 @@ category: tutorials
 mitem: node
 ---
 
-This article covers how to build Meteor 1.0 based apps on Nitrous.IO.
+This article covers how to build Meteor 1.0 based apps on Nitrous.
 
 ### Prerequisites
 
-* A [Nitrous.IO account](https://nitrous.io)
-* A [Meteor Box](http://help.action.io/customer/portal/articles/802603-create-a-box) on Nitrous.IO.
+* A [Nitrous account](https://nitrous.io)
+* A [Meteor Box](http://help.action.io/customer/portal/articles/802603-create-a-box) on Nitrous.
 
 By default, all boxes will have 512MB RAM and 1.5GB storage. This is sufficient to build and run a Meteor app.
 
@@ -71,7 +71,7 @@ Notice how there is no CSS from bootstrap in the main project directory. Meteor 
 Next, edit `client/index.html` to include only the following code:
 
      <head>
-       <title>Meteor on Nitrous.IO</title>
+       <title>Meteor on Nitrous</title>
      </head>
      <body>
      <div class="navbar navbar-inverse navbar-fixed-top">
@@ -114,7 +114,7 @@ At this point you should be able to test out the login form by clicking sign in,
 To test this further, let's add the following code to display only if a user is logged in. Update `client/index.html` to include the following code:
 
     <head>
-       <title>Meteor on Nitrous.IO</title>
+       <title>Meteor on Nitrous</title>
      </head>
      <body>
      <div class="navbar navbar-inverse navbar-fixed-top">

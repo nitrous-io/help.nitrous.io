@@ -39,7 +39,7 @@ Within the [Autoparts repo](https://github.com/nitrous-io/autoparts), take a loo
 Follow this workflow to contribute an Autoparts package:
 
 1. Fork the [Autoparts repo](https://github.com/nitrous-io/autoparts) in GitHub.
-2. Create a new box in Nitrous.IO.
+2. Create a new box in Nitrous.
 3. cd to `~/.parts/autoparts`
 4. Add the fork repo as a a git remote: `git remote add myfork git@github.com:YOUR-USERNAME/autoparts.git`
 5. Create the new package file in `~/.parts/autoparts/lib/autoparts/packages/mypackage.rb`

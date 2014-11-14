@@ -6,7 +6,7 @@ category: "getting started"
 mitem: github
 ---
 
-For those developers using [Github](http://github.com), Nitrous.IO lets you easily add your box's ssh keys so managing your repositories is a breeze.
+For those developers using [Github](http://github.com), Nitrous lets you easily add your box's ssh keys so managing your repositories is a breeze.
 
 ### 1. Connect your Github Account
 
@@ -20,11 +20,11 @@ On the Bonus page, click the "Connect to Github" button.
 
 You'll be redirected to the Github authentication page, where you can review the policies and select "Allow".
 
-You will then be redirected back to Nitrous.IO and you should see a message that you've authenticated successfully. If you're having trouble, send us an email.
+You will then be redirected back to Nitrous and you should see a message that you've authenticated successfully. If you're having trouble, send us an email.
 
 ### 2. Add Box SSH Key to Github
 
-Now that you've successfully authenticated your Github account, you'll be able to add your SSH keys from your Nitrous.IO to your Github account.  This will allow you to easily work with your repositories on Github.
+Now that you've successfully authenticated your Github account, you'll be able to add your SSH keys from your Nitrous to your Github account.  This will allow you to easily work with your repositories on Github.
 
 Navigate back to the Boxes page, by clicking the "Boxes" link in the top navigation.
 
@@ -42,6 +42,6 @@ If you want to confirm that your SSH key from your action box has been added to 
 
 _Account Settings >> SSH Keys_
 
-You should see the key you added via Nitrous.IO.
+You should see the key you added via Nitrous.
 
 ![Nitrous Box Key](https://raw.github.com/action-io/action-assets/master/support/screenshots/github-action-key.png)

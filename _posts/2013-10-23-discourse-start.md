@@ -16,7 +16,7 @@ Discourse is a robust application with a lot of moving parts.  Vagrant seems lik
 
 ### 1. Create a new box
 
-Discourse runs multiple services and consumes a fair bit of RAM and storage.  I'm going to boot up a box on [Nitrous.IO](https://www.nitrous.io) with 768MB of RAM and 1.5GB of storage to get me started.  Discourse recommends [2 GB of RAM](https://github.com/ajhit406/discourse/blob/master/docs/INSTALL-ubuntu.md) but I'll try this out for development. I can always allocate additional resources later.
+Discourse runs multiple services and consumes a fair bit of RAM and storage.  I'm going to boot up a box on [Nitrous](https://www.nitrous.io) with 768MB of RAM and 1.5GB of storage to get me started.  Discourse recommends [2 GB of RAM](https://github.com/ajhit406/discourse/blob/master/docs/INSTALL-ubuntu.md) but I'll try this out for development. I can always allocate additional resources later.
 
 ![New Box](/images/articles/discourse/new-box.png)
 
@@ -26,13 +26,13 @@ If you want to do any customizing of discourse (why wouldn't you?), you'll want 
 
 [Click here to Fork Discourse](https://github.com/discourse/discourse/fork)
 
-Once you've forked the repo, you can jump into the Nitrous.IO IDE and clone it to your box.
+Once you've forked the repo, you can jump into the Nitrous IDE and clone it to your box.
 
 ![Clone Discourse](/images/articles/discourse/cloned.png)
 
 ### 3. Install Dependencies
 
-Next we'll use the Nitrous.IO [Autoparts](http://blog.nitrous.io/2013/09/18/introducing-autoparts-for-nitrous-io.html) package manager to install redis & postgres.  This is as easy as running:
+Next we'll use the Nitrous [Autoparts](http://blog.nitrous.io/2013/09/18/introducing-autoparts-for-nitrous-io.html) package manager to install redis & postgres.  This is as easy as running:
 
     parts install redis
     parts start redis
@@ -51,7 +51,7 @@ This is probably going to be the most time consuming task of the entire post sin
 
 ### 5. Configure Postgres and Install Seed Data
 
-Next, we'll create the development and test databases.  We're going to just keep the legacy `vagrant` user, even though we're not using vagrant.  You can just copy and paste the following commands one-by-one into the terminal on your Nitrous.IO box:
+Next, we'll create the development and test databases.  We're going to just keep the legacy `vagrant` user, even though we're not using vagrant.  You can just copy and paste the following commands one-by-one into the terminal on your Nitrous box:
 
     createuser --createdb --superuser -U action vagrant
     psql -c "ALTER USER vagrant WITH PASSWORD 'password';"

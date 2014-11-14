@@ -10,13 +10,13 @@ These instructions will help you deploy your [node.js](http://nodejs.org/) appli
 
 ### Things you should know
 
-* Node.js basic concepts. Your Nitrous.IO box will come preinstalled with Node.js.
+* Node.js basic concepts. Your Nitrous box will come preinstalled with Node.js.
 
 ### Prerequisites
 
-* A [Nitrous.IO Account](https://www.nitrous.io)
+* A [Nitrous Account](https://www.nitrous.io)
 * A [Windows Azure Subscription](http://www.windowsazure.com/en-us/pricing/free-trial/?ref=nitrous.io)
-* A [Node.js box](https://www.nitrous.io/app#/boxes) on Nitrous.IO
+* A [Node.js box](https://www.nitrous.io/app#/boxes) on Nitrous
 * Any Node.js project with a git repo. We will use the snippet below for this excercise.
 
 ### Example Node.js App
@@ -28,7 +28,7 @@ These instructions will help you deploy your [node.js](http://nodejs.org/) appli
     var host = process.env.HOST || '0.0.0.0';
     http.createServer(function(req, res) {
       res.writeHead(200, { 'Content-Type': 'text/plain' });
-      res.end('Hello World from Nitrous.IO\n');
+      res.end('Hello World from Nitrous\n');
     }).listen(port, host);
     console.log("Server running at "+host+":"+port);
 
@@ -52,9 +52,9 @@ The app is now running and you will be able to preview it by navigating in the t
 
 ### Install Azure Command Line Interface (CLI)
 
-The [Azure CLI](http://www.windowsazure.com/en-us/manage/install-and-configure-cli/) allows you to manipulate your Azure Sites right from Nitrous.IO.
+The [Azure CLI](http://www.windowsazure.com/en-us/manage/install-and-configure-cli/) allows you to manipulate your Azure Sites right from Nitrous.
 
-Install it by running the following command in the Nitrous.IO IDE console:
+Install it by running the following command in the Nitrous IDE console:
 
     npm -g install azure-cli
 
@@ -70,7 +70,7 @@ Run the following command in the console to download your credentials from Azure
 Open a new browser window and go to the link that is returned by the previous command.
 After you login, a `.publishsettings` credentials file will be downloaded to your machine.
 
-Upload this file to you Nitrous.IO IDE using the [Upload Files button](http://help.nitrous.io/ide-file-uploads/) and run the following command replacing `pathto/mysubscription.pubishsettings` with the appropriate path to the credentials file:
+Upload this file to you Nitrous IDE using the [Upload Files button](http://help.nitrous.io/ide-file-uploads/) and run the following command replacing `pathto/mysubscription.pubishsettings` with the appropriate path to the credentials file:
 
     azure account import pathto/mysubscription.pubishsettings
 
@@ -87,7 +87,7 @@ You can confirm that this worked by going to the hostname returned by the comman
 
 ![New Azure App](/images/articles/azure-new-app.png)
 
-### Deploying From Nitrous.IO
+### Deploying From Nitrous
 
 To deploy simply push your committed code to Azure Sites with the following command:
 

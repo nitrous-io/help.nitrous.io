@@ -15,11 +15,11 @@ If you discovered a security vulnerability with the system, please [email us](ma
 
 Because the security vulnerability may affect other users, we ask that you please do not share the issue publicly.
 
-We appreciate your research for the improvement of the system, and will keep a list of individuals on this page who work to responsibly discover, report and solve security issues on Nitrous.IO.
+We appreciate your research for the improvement of the system, and will keep a list of individuals on this page who work to responsibly discover, report and solve security issues on Nitrous.
 
 ### White Hats
 
-The following people have helped us keep Nitrous.IO safe for everyone.  We appreciate their efforts!
+The following people have helped us keep Nitrous safe for everyone.  We appreciate their efforts!
 
 #### 2013
 

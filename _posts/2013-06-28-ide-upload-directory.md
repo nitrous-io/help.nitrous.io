@@ -13,7 +13,7 @@ First, zip up your project using your favorite archving application. On later ve
 
 ![Compress](https://raw.github.com/action-io/action-assets/master/support/screenshots/compress-menu.png)
 
-Then, open up the IDE in your box on Nitrous.IO and below the file browser, click the "Upload Files" button.
+Then, open up the IDE in your box on Nitrous and below the file browser, click the "Upload Files" button.
 
 ![IDE Upload](https://raw.github.com/action-io/action-assets/master/support/screenshots/ide-upload.png)
 

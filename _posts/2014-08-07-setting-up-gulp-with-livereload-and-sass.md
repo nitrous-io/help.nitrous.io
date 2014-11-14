@@ -12,12 +12,12 @@ mitem: gulp
 
 ### Prerequisites
 
-* A [Nitrous.IO Account](https://www.nitrous.io)
-* A [Nitrous.IO Box](https://www.nitrous.io/app#/boxes) on Nitrous.IO.
+* A [Nitrous Account](https://www.nitrous.io)
+* A [Nitrous Box](https://www.nitrous.io/app#/boxes) on Nitrous.
 
 ### Installation
 
-Node.JS is a JavaScript runtime environment which will allow us to run all of these wonderful tools. If you selected a Node.JS template when creating a Nitrous.IO box then you are all ready to go. If not then you will still need to install it with [Autoparts](http://help.nitrous.io/autoparts).
+Node.JS is a JavaScript runtime environment which will allow us to run all of these wonderful tools. If you selected a Node.JS template when creating a Nitrous box then you are all ready to go. If not then you will still need to install it with [Autoparts](http://help.nitrous.io/autoparts).
 
 Run the following command in the terminal to install Node.JS and npm:
 
@@ -270,7 +270,7 @@ Use this Gulp setup to make development a breeze.
 If you want to jump to the chase and run the app immediately, click this button to download a sample app:
 
 [![Hack nitrous-examples/gulp-sample-app on
-Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=nodejs&repo=nitrous-examples%2Fgulp-sample-app&file_to_open=README.md)
+Nitrous](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=nodejs&repo=nitrous-examples%2Fgulp-sample-app&file_to_open=README.md)
 
 ### Recommended Articles
 

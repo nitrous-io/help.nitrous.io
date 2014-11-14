@@ -19,7 +19,7 @@ Once the cache has been created, you will be provided with the cache's credentia
 
 ![Cache Configuration](/images/articles/memcachier-config.png)
 
-Grab the server, username, and password, and assign them to environment variables in your `~/.bashrc` file on your Nitrous.IO box. 
+Grab the server, username, and password, and assign them to environment variables in your `~/.bashrc` file on your Nitrous box. 
 
 It is good practice to namespace your environment variables variables with the environment that you want to use your database in (development or test), like so:
 

@@ -10,19 +10,19 @@ These instructions will help you deploy your [Node.js](http://nodejs.org/) appli
 
 ### Things you should know
 
-* Node.js basic concepts. Your Nitrous.IO box will come preinstalled with Node.js.
+* Node.js basic concepts. Your Nitrous box will come preinstalled with Node.js.
 
 ### Prerequisites
 
-* A [Nitrous.IO Account](https://www.nitrous.io)
+* A [Nitrous Account](https://www.nitrous.io)
 * A [Nodejitsu Account](https://www.nodejitsu.com/signup/?ref=nitrous.io) or sign up below.
-* A [Node.js box](https://www.nitrous.io/app#/boxes) on Nitrous.IO
+* A [Node.js box](https://www.nitrous.io/app#/boxes) on Nitrous
 * Any Node.js project. [See an Example here](/azure-sites/)
 
 ### Install the Jitsu Command Line Interface (CLI)
 
-The [Jitsu CLI](https://www.nodejitsu.com/documentation/jitsu/) allows you to connect to the Nodejitsu platform right from Nitrous.IO.
-Install it by running the following command in the Nitrous.IO console:
+The [Jitsu CLI](https://www.nodejitsu.com/documentation/jitsu/) allows you to connect to the Nodejitsu platform right from Nitrous.
+Install it by running the following command in the Nitrous console:
 
     npm -g install jitsu
 
@@ -38,7 +38,7 @@ Login with following command and enter your nodejitsu username and password:
 
     jitsu login
 
-### Deploying from Nitrous.IO
+### Deploying from Nitrous
 
 To deploy simply issue the following command:
 

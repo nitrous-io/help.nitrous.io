@@ -6,12 +6,12 @@ category: tutorials
 mitem: django-app
 ---
 
-This article covers building a Django application on [Nitrous.IO](http://www.nitrous.io) with Python 2.7, or any Python version you want to use.
+This article covers building a Django application on [Nitrous](http://www.nitrous.io) with Python 2.7, or any Python version you want to use.
 
 ### Prerequisites
 
-* A [Nitrous.IO account](https://www.nitrous.io)
-* A [Python Box](http://help.action.io/customer/portal/articles/802603-create-a-box) on Nitrous.IO.
+* A [Nitrous account](https://www.nitrous.io)
+* A [Python Box](http://help.action.io/customer/portal/articles/802603-create-a-box) on Nitrous.
 
 ### Setting up an Isolated Environment with Virtualenv
 
@@ -53,7 +53,7 @@ After a moment you should see that the app is running on port 3000. Navigate in 
 
 ![Preview Port 3000](/images/articles/preview-port-3000.png)
 
->Note: To preview apps on Nitrous.IO, you will need to ensure it is running with the host 0.0.0.0 instead of localhost/127.0.0.1. You can also run it on any port between 1024 - 9999.
+>Note: To preview apps on Nitrous, you will need to ensure it is running with the host 0.0.0.0 instead of localhost/127.0.0.1. You can also run it on any port between 1024 - 9999.
 
 ### Configuring MySQL (Optional)
 

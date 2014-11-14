@@ -1,16 +1,16 @@
 ---
 layout: article
-title: Security on Nitrous.IO
+title: Security on Nitrous
 published: true
 category: resources
 mitem: security
 ---
 
-### Nitrous.IO The Platform & Web Service
+### Nitrous The Platform & Web Service
 
-Nitrous.IO is a cloud application platform used by software developers and software companies of all sizes to optimize development workflow. Our platform allows developers to focus on development while Nitrous.IO focuses on infrastructure management, development box setup and configuration and stack dissemination amongst teams.
+Nitrous is a cloud application platform used by software developers and software companies of all sizes to optimize development workflow. Our platform allows developers to focus on development while Nitrous focuses on infrastructure management, development box setup and configuration and stack dissemination amongst teams.
 
-We are dedicated to protecting the security of the development resources that we provide, and protecting the trust of our customers is paramount to our definition of success. We build Nitrous.IO on top of the Nitrous.IO platform, so we are fully aware.
+We are dedicated to protecting the security of the development resources that we provide, and protecting the trust of our customers is paramount to our definition of success. We build Nitrous on top of the Nitrous platform, so we are fully aware.
 
 ### Reporting a Security Vulnerability
 
@@ -22,7 +22,7 @@ Because the security vulernability may affect other users, we ask that you pleas
 
 #### Data Centers / Infrastructure
 
-Nitrous.IO’s physical infrastructure is hosted and managed within Amazon’s secure data centers and utilize the Amazon Web Service (AWS) technology. Amazon continually manages risk and undergoes recurring assessments to ensure compliance with industry standards. Amazon’s data center operations have been accredited under:
+Nitrous’s physical infrastructure is hosted and managed within Amazon’s secure data centers and utilize the Amazon Web Service (AWS) technology. Amazon continually manages risk and undergoes recurring assessments to ensure compliance with industry standards. Amazon’s data center operations have been accredited under:
 
 * ISO 27001
 * SOC 1/SSAE 16/ISAE 3402 (Previously SAS 70 Type II)
@@ -31,11 +31,11 @@ Nitrous.IO’s physical infrastructure is hosted and managed within Amazon’s s
 * Sarbanes-Oxley (SOX)
 * PCI
 
-We use PCI compliant payment processor Stripe for encrypting and processing credit card payments. Nitrous.IO’s infrastructure provider is PCI Level 1 compliant.
+We use PCI compliant payment processor Stripe for encrypting and processing credit card payments. Nitrous’s infrastructure provider is PCI Level 1 compliant.
 
 ### Physical Security
 
-Nitrous.IO utilizes ISO 27001 and FISMA certified data centers managed by Amazon. Amazon has many years of experience in designing, constructing, and operating large-scale data centers. This experience has been applied to the AWS platform and infrastructure. AWS data centers are housed in nondescript facilities, and critical facilities have extensive setback and military grade perimeter control berms as well as other natural boundary protection. Physical access is strictly controlled both at the perimeter and at building ingress points by professional security staff utilizing video surveillance, state of the art intrusion detection systems, and other electronic means. Authorized staff must pass two-factor authentication no fewer than three times to access data center floors. All visitors and contractors are required to present identification and are signed in and continually escorted by authorized staff.
+Nitrous utilizes ISO 27001 and FISMA certified data centers managed by Amazon. Amazon has many years of experience in designing, constructing, and operating large-scale data centers. This experience has been applied to the AWS platform and infrastructure. AWS data centers are housed in nondescript facilities, and critical facilities have extensive setback and military grade perimeter control berms as well as other natural boundary protection. Physical access is strictly controlled both at the perimeter and at building ingress points by professional security staff utilizing video surveillance, state of the art intrusion detection systems, and other electronic means. Authorized staff must pass two-factor authentication no fewer than three times to access data center floors. All visitors and contractors are required to present identification and are signed in and continually escorted by authorized staff.
 
 Amazon only provides data center access and information to employees who have a legitimate business need for such privileges. When an employee no longer has a business need for these privileges, his or her access is immediately revoked, even if they continue to be an employee of Amazon or Amazon Web Services. All physical and electronic access to data centers by Amazon employees is logged and audited routinely.
 
@@ -75,7 +75,7 @@ Our infrastructure provides DDoS mitigation techniques including TCP Syn cookies
 
 #### Spoofing and Sniffing Protections
 
-Managed firewalls prevent IP, MAC, and ARP spoofing on the network and between virtual hosts to ensure spoofing is not possible. Packet sniffing is prevented by infrastructure including the hypervisor which will not deliver traffic to an interface which it is not addressed to.  Nitrous.IO utilizes box isolation, operating system restrictions, and encrypted connections to further ensure risk is mitigated at all levels.
+Managed firewalls prevent IP, MAC, and ARP spoofing on the network and between virtual hosts to ensure spoofing is not possible. Packet sniffing is prevented by infrastructure including the hypervisor which will not deliver traffic to an interface which it is not addressed to.  Nitrous utilizes box isolation, operating system restrictions, and encrypted connections to further ensure risk is mitigated at all levels.
 
 #### Port Scanning
 
@@ -85,7 +85,7 @@ Port scanning is prohibited and every reported instance is investigated by our i
 
 #### Customer Applications
 
-Each development box on Nitrous.IO runs within its own isolated environment and cannot interact with other applications or areas of the system. This restrictive operating environment is designed to prevent security and stability issues.  These self-contained environments isolate processes, memory, and the file system using LXC while host-based firewalls restrict applications from establishing local network connections.
+Each development box on Nitrous runs within its own isolated environment and cannot interact with other applications or areas of the system. This restrictive operating environment is designed to prevent security and stability issues.  These self-contained environments isolate processes, memory, and the file system using LXC while host-based firewalls restrict applications from establishing local network connections.
 
 ### System Security
 
@@ -95,49 +95,49 @@ System configuration and consistency is maintained through standard, up-to-date 
 
 #### Customer Application Isolation
 
-Applications on the Nitrous.IO platform run within their own isolated environment and cannot interact with other applications or areas of the system to prevent security and stability issues.  These self-contained environments isolate processes, memory, and the file system while host-based firewalls restrict applications from establishing local network connections.
+Applications on the Nitrous platform run within their own isolated environment and cannot interact with other applications or areas of the system to prevent security and stability issues.  These self-contained environments isolate processes, memory, and the file system while host-based firewalls restrict applications from establishing local network connections.
 
 #### System Authentication
 
-Operating system access is limited to Nitrous.IO staff and requires username and key authentication. Operating systems do not allow password authentication to prevent password brute force attacks, theft, and sharing.
+Operating system access is limited to Nitrous staff and requires username and key authentication. Operating systems do not allow password authentication to prevent password brute force attacks, theft, and sharing.
 
 #### Vulnerability Management
 
-Our vulnerability management process is designed to remediate risks without customer interaction or impact.  Nitrous.IO is notified of vulnerabilities through internal and external assessments, system patch monitoring, and third party mailing lists and services.  Each vulnerability is reviewed to determine if it is applicable to Nitrous.IO’s environment, ranked based on risk, and assigned to the appropriate team for resolution.
+Our vulnerability management process is designed to remediate risks without customer interaction or impact.  Nitrous is notified of vulnerabilities through internal and external assessments, system patch monitoring, and third party mailing lists and services.  Each vulnerability is reviewed to determine if it is applicable to Nitrous’s environment, ranked based on risk, and assigned to the appropriate team for resolution.
 
-New systems are deployed with the latest updates, security fixes, and Nitrous.IO configurations and existing systems are decommissioned as customers are migrated to the new instances. This process allows Nitrous.IO to keep the environment up-to-date. Since customer applications run in isolated environments, they are unaffected by these core system updates.
+New systems are deployed with the latest updates, security fixes, and Nitrous configurations and existing systems are decommissioned as customers are migrated to the new instances. This process allows Nitrous to keep the environment up-to-date. Since customer applications run in isolated environments, they are unaffected by these core system updates.
 
-To further mitigate risk, each component type is assigned to a unique network security group. These security groups are designed to only allow access to the ports and protocols required for the specific component type. For example, user applications running within an isolated box are denied access to the Nitrous.IO management infrastructure as each is within its own network security group and access is not allowed between the two.
+To further mitigate risk, each component type is assigned to a unique network security group. These security groups are designed to only allow access to the ports and protocols required for the specific component type. For example, user applications running within an isolated box are denied access to the Nitrous management infrastructure as each is within its own network security group and access is not allowed between the two.
 
-#### Nitrous.IO Application Security
+#### Nitrous Application Security
 
-We undergo penetration tests, vulnerability assessments, and source code reviews to assess the security of our application, architecture, and implementation. Our third party security assessments cover all areas of our platform including testing for OWASP Top 10 web application vulnerabilities and customer application isolation.  Nitrous.IO works closely with external security assessors to review the security of the Nitrous.IO platform and applications and apply best practices.
+We undergo penetration tests, vulnerability assessments, and source code reviews to assess the security of our application, architecture, and implementation. Our third party security assessments cover all areas of our platform including testing for OWASP Top 10 web application vulnerabilities and customer application isolation.  Nitrous works closely with external security assessors to review the security of the Nitrous platform and applications and apply best practices.
 
-Issues found in Nitrous.IO applications are risk ranked, prioritized, assigned to the responsible team for remediation, and Nitrous.IO’s security team reviews each remediation plan to ensure proper resolution.
+Issues found in Nitrous applications are risk ranked, prioritized, assigned to the responsible team for remediation, and Nitrous’s security team reviews each remediation plan to ensure proper resolution.
 
 ### Backups
 
 #### Development Boxes
 
-Development boxes on the Nitrous.IO platform are automatically backed up as part of the deployment process on secure, access controlled, and redundant storage.  We use these backups to activate your box on our platform and to automatically bring your development box back online in the event of an outage.
+Development boxes on the Nitrous platform are automatically backed up as part of the deployment process on secure, access controlled, and redundant storage.  We use these backups to activate your box on our platform and to automatically bring your development box back online in the event of an outage.
 
 #### Customer Configuration and Meta-information
 
 Your configuration and meta-information is backed up every minute to the same high-durability, redundant infrastructure used to store your database information.  These frequent backups allow capturing changes made to the running application configuration added after the initial deployment.
 
-#### Nitrous.IO Platform
+#### Nitrous Platform
 
-From our instance images to our databases, each component is backed up to secure, access-controlled, and redundant storage.  Our platform allows for recovering databases to within seconds of the last known state, restoring system instances from standard templates, and deploying customer applications and data.  In addition to standard backup practices, Nitrous.IO’s infrastructure is designed to scale and be fault tolerant by automatically replacing failed instances and reducing the likelihood of needing to restore from backup.
+From our instance images to our databases, each component is backed up to secure, access-controlled, and redundant storage.  Our platform allows for recovering databases to within seconds of the last known state, restoring system instances from standard templates, and deploying customer applications and data.  In addition to standard backup practices, Nitrous’s infrastructure is designed to scale and be fault tolerant by automatically replacing failed instances and reducing the likelihood of needing to restore from backup.
 
 ### Disaster Recovery
 
 #### Customer Applications and Databases
 
-Our platform automatically restores customer applications and Nitrous.IO Postgres databases in the case of an outage. The Nitrous.IO platform is designed to dynamically instantiate development boxes within the Nitrous.IO cloud, monitor for failures, and recover failed components including development boxes.
+Our platform automatically restores customer applications and Nitrous Postgres databases in the case of an outage. The Nitrous platform is designed to dynamically instantiate development boxes within the Nitrous cloud, monitor for failures, and recover failed components including development boxes.
 
-#### Nitrous.IO Platform
+#### Nitrous Platform
 
-The Nitrous.IO platform is designed for stability, performance and inherently mitigates common issues that lead to outages while maintaining recovery capabilities.  Our platform maintains redundancy to prevent single points of failure, is able to replace failed components, and utilizes multiple data centers designed for resiliency. In the case of an outage, the platform is deployed across multiple data centers using current system images and data is restored from backups. Nitrous.IO reviews platform issues to understand the root cause, impact to customers, and improve the platform and processes.
+The Nitrous platform is designed for stability, performance and inherently mitigates common issues that lead to outages while maintaining recovery capabilities.  Our platform maintains redundancy to prevent single points of failure, is able to replace failed components, and utilizes multiple data centers designed for resiliency. In the case of an outage, the platform is deployed across multiple data centers using current system images and data is restored from backups. Nitrous reviews platform issues to understand the root cause, impact to customers, and improve the platform and processes.
 
 #### Customer Data Retention and Destruction
 
@@ -149,13 +149,13 @@ For additional information see: https://aws.amazon.com/security
 
 ### Privacy
 
-Nitrous.IO has a published privacy policy that clearly defines what data is collected and how it is used.  Nitrous.IO is committed to customer privacy and transparency.
+Nitrous has a published privacy policy that clearly defines what data is collected and how it is used.  Nitrous is committed to customer privacy and transparency.
 
-We takes steps to protect the privacy of our customers and protect data stored within the platform. Some of the protections inherent to Nitrous.IO’s products include authentication, access controls, data transport encryption, HTTPS support for customer applications, and the ability for customers to encrypt stored data.
+We takes steps to protect the privacy of our customers and protect data stored within the platform. Some of the protections inherent to Nitrous’s products include authentication, access controls, data transport encryption, HTTPS support for customer applications, and the ability for customers to encrypt stored data.
 
 ### Access to Customer Data
 
-The Nitrous.IO staff does not access or interact with customer data or applications as part of normal operations. There may be cases where Nitrous.IO is requested to interact with customer data or applications at the request of the customer for support purposes or where required by law. Customer data is access controlled and all access by Nitrous.IO staff is accompanied by customer approval or government mandate, reason for access, actions taken by staff, and support start and end time.
+The Nitrous staff does not access or interact with customer data or applications as part of normal operations. There may be cases where Nitrous is requested to interact with customer data or applications at the request of the customer for support purposes or where required by law. Customer data is access controlled and all access by Nitrous staff is accompanied by customer approval or government mandate, reason for access, actions taken by staff, and support start and end time.
 
 ### Customer Security Best Practices
 
@@ -173,8 +173,8 @@ Apply development best practices for your chosen development language and framew
 
 #### Authentication
 
-To prevent unauthorized account access use a strong passphrase for both your Nitrous.IO user account and SSH keys, store SSH keys securely to prevent disclosure, replace keys if lost or disclosed, and use Nitrous.IO’s RBAC model to invite contributors rather than sharing user accounts.
+To prevent unauthorized account access use a strong passphrase for both your Nitrous user account and SSH keys, store SSH keys securely to prevent disclosure, replace keys if lost or disclosed, and use Nitrous’s RBAC model to invite contributors rather than sharing user accounts.
 
 #### Use of Third-Party Solutions
 
-In developing your application on Nitrous.IO you may choose to use third party services for added functionality such as Amazon S3, an email service provider, or one of our add-on partners. Be mindful of the data shared with these providers and their security practices just as you would be with Nitrous.IO.
+In developing your application on Nitrous you may choose to use third party services for added functionality such as Amazon S3, an email service provider, or one of our add-on partners. Be mindful of the data shared with these providers and their security practices just as you would be with Nitrous.

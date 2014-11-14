@@ -8,7 +8,7 @@ mitem: postgres
 
 ### Prerequisites
 
-* Nitrous.IO box with the package manager Autoparts installed. To ensure Autoparts is installed, run the command `parts` within the terminal. Take a look at the [Autoparts guide](/autoparts/) for installation instructions.
+* Nitrous box with the package manager Autoparts installed. To ensure Autoparts is installed, run the command `parts` within the terminal. Take a look at the [Autoparts guide](/autoparts/) for installation instructions.
 
 ### Install PostgreSQL
 
