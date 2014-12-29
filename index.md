@@ -73,7 +73,7 @@ To utilize SSH, you will first need to add your public key (`~/.ssh/id_rsa.pub`)
 For assistance on setting up SSH, take a look at one of the following guides:
 
 * [Mac](/ssh-add/)
-* [Windows](/ssh-add-win/)
+* [Windows](/ssh-windows/)
 
 #### Using iTerm2 with Mac
 
