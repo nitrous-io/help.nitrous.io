@@ -6,7 +6,9 @@ published: true
 category: usage
 ---
 
-This is a quick tutorial that shows you how you can use Nitrous.IO for the purposes of conducting coding lessons. Check out our blog post to find out what makes Nitrous.IO the ideal platform for coding lessons. You'd need a Nitrous account to execute these steps, [sign up for free](https://www.nitrous.io?{{page.utm}}) and get provisioned with a free development box.
+This is a quick tutorial that shows you how you can use Nitrous.IO for the purposes of conducting coding lessons. Check out our [blog post](http://blog.nitrous.io/2015/01/30/teach-coding-on-nitrous.html) to find out what makes Nitrous.IO the ideal platform for coding lessons. 
+
+You'd need a Nitrous account to execute these steps, [sign up for free](https://www.nitrous.io?{{page.utm}}) and get provisioned with a free development box.
 
 
 ###CREATE A BOX
