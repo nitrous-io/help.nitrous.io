@@ -24,7 +24,6 @@ Use SSH Key with passphrase
 
 If you’ve already added an SSH Key to Nitrous.IO without a passphrase, you’ll need to delete it and re-generate one with a passphrase.
 
-Use HTTPS authentication with Github
 Using HTTPS authentication with Github should prompt you for your password, thus restricting any abuse from collaborators (but they’re your friends, why would they do that?!). Better safe then sorry…my friends have done some evil things to my desktop background…and my forehead with a very, very permanent marker.
 
 Okay, back to business. In the IDE, Click the “Collaborate” menu item in the top navigation, and select “Manage Collaborators”:
@@ -81,5 +80,8 @@ Attach back to the session you’ve created if you happen to mistakenly exit you
 tmux attach -t my_session
 ````
 
-Now you can reap the benefits of pair programming no matter where you are, without being physically confined to a single workstation shared with your programming partner.  
+Now you can reap the benefits of pair programming no matter where you are, without being physically confined to a single workstation shared with your programming partner. You will unlock the benefits of cloud collaboration using Nitrous IO - [sign up](http://www.nitrous.io/?{{page.utm}}) for a free account. 
+
+Check out our featured [blog post](http://blog.nitrous.io/2015/02/06/pair-programming.html) for a brief introduction to this effective Agile Development practice, that has been used by companies like [Pivotal Labs](http://www.pivotallabs.com).
+
 
