@@ -8,7 +8,7 @@ category: usage
 
 Here's a quick tutorial that brings you up to speed with Pair Programming on Nitrous.IO's collaborative editor. [Sign up](http://www.nitrous.io/?{{page.utm}}) for a free account to unlock the benefits of cloud collaboration in real-time, if you don't already have one.
 
-Check out our featured [blog post](http://blog.nitrous.io/) for a brief introduction to this effective Agile Development practice, that has been used by companies like [Pivotal Labs](http://www.pivotallabs.com). 
+Check out our featured [blog post](http://blog.nitrous.io/2015/02/06/pair-programming.html) for a brief introduction to this effective Agile Development practice, that has been used by companies like [Pivotal Labs](http://www.pivotallabs.com). 
 
 ##Start the Web IDE
 Create a box on [Nitrous.IO](http://www.nitrous.io?{{page.utm}}), or you can use a box that you’ve already created. Pair programming works on any box template.
