@@ -4,10 +4,8 @@
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Secure Sockets Layer (SSL)</title>
-  <meta name="author" content="Nitrous.IO" />
-  <link href="http://feeds.feedburner.com/actionioblog" rel="alternate" title="Nitrous.IO Blog" type="application/atom+xml" />
-  <meta content='Nitrous.IO Support Documentation. Tutorials, FAQ, and other guides for building your apps directly on Nitrous.IO' name='description'>
-  <meta content='Nitrous.IO' name='author'>
+  <meta content='Nitrous Support Documentation. Tutorials, FAQ, and other guides for building your apps directly on Nitrous' name='description'>
+  <meta content='Nitrous' name='author'>
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600italic,600' rel='stylesheet' type='text/css'>
 
@@ -18,65 +16,21 @@
   <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
 </head>
 <body>
-  <nav class="navbar navbar-inverse" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <h1>
-          <a id="logo" href="https://www.nitrous.io">Nitrous<span>.IO</span></a>
-        </h1>
-      </div>
-
-      <div class="collapse navbar-collapse navbar-responsive-collapse">
-        <ul class="nav navbar-nav pull-right">
-         <li class="show-xs hidden-sm hidden-md hidden-lg"><a href="/categories/boxes/" >Boxes</a></li>
-          <li class="show-xs hidden-sm hidden-md hidden-lg"><a href="/categories/usage/" >Usage</a></li>
-          <li class="show-xs hidden-sm hidden-md hidden-lg"><a href="/categories/databases/" >Databases</a></li>
-          <li class="show-xs hidden-sm hidden-md hidden-lg"><a href="/categories/deployment/" >Deploy</a></li>
-          <li>
-            <a href="/discussions" class="stack-exchange" >
-              <i class="fa fa-stack-exchange"></i>Discuss
-            </a>
-          </li>
-          <li><a href="http://www.nitrous.io/chat" >Group Chat</a>
-          </li>
-          <li><a href="mailto:support@nitrous.io">Contact Support</a></li>
-          <li class="break hidden-xs"><a href="https://nitrous.io/users/sign_in">Sign in</a></li>
-          <li>
-            <a href="https://www.nitrous.io" class="signup">
-              <i class="fa fa-plus"></i>Sign up
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="mast" id="promo-main">
-      <div class="container header-title">
-        <h2><a href="/">Documentation</a></h2>
-      </div>
-    </div>
-  </nav>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-      <hr>
-  <form class="navbar-form" role="search" action="/search.html">
-    <input type="text" name="q" class="form-control" placeholder="Search Docs">
-  </form>
-  <div class="docs hidden-sm hidden-xs">
-    <h3>
-      Guides
-    </h3>
-  </div>
-  <ul class="snav hidden-sm hidden-xs">
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+  <div class="sidebar" id="sidebar"> 
+    <div class="login">
+  <h4>
+    <a class="signin" href="https://nitrous.io/users/sign_in">Sign In</a>
+    <a class="signup" href="https://www.nitrous.io">Sign Up</a>
+  </h4>
+</div>
+<h3 class="menu-heading">
+  Guides
+</h3>
+<ul class="snav">
   <li >
     <a href="/">Getting Started</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li><a href="#sign-up">Sign Up</a></li>
       <li><a href="#create-a-new-box">Create a New Box</a></li>
       <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
@@ -92,7 +46,7 @@
 
   <li >
     <a href="/categories/ssh/">SSH Keys</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li ><a href="/ssh-add/">Adding SSH Keys (Mac)</a></li>
       <li ><a href="/ssh-windows/">Adding SSH Keys (Windows)</a></li>
     </ul>
@@ -100,7 +54,7 @@
 
   <li >
     <a href="/categories/boxes/">Boxes</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li ><a href="/box-new">Create a Box</a></li>
       <li ><a href="/box-settings/">Box Memory & Storage</a></li>
       <li ><a href="/box-templates/">Box Templates</a></li>
@@ -111,7 +65,7 @@
 
   <li >
     <a href="/categories/usage/">Usage</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li ><a href="/autoparts/">Autoparts Package Manager</a></li>
       <li ><a href="/nitrous-desktop-win/">Nitrous Desktop (Windows)</a></li>
       <li ><a href="/nitrous-desktop/">Nitrous Desktop (Mac)</a></li>
@@ -124,7 +78,7 @@
 
   <li >
     <a href="/categories/databases/">Databases</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li ><a href="/memcached/">Memcached</a></li>
       <li ><a href="/mongodb/">MongoDB</a></li>
       <li ><a href="/mysql/">MySQL</a></li>
@@ -135,7 +89,7 @@
 
   <li  class="active" >
     <a href="/categories/previewing/">Preview</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li ><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
       <li ><a href="/custom-domains">Custom Domains</a></li>
       <li ><a href="/preview">Preview Your App</a></li>
@@ -148,7 +102,7 @@
 
   <li >
     <a href="/categories/faq/">Frequently Asked Questions</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li ><a href="/faq-adding-project">Add an Existing Project</a></li>
       <li ><a href="/faq-disconnect">Nitrous.IO Keeps Disconnecting</a></li>
       <li ><a href="/faq-browser-support">Browser Support</a></li>
@@ -157,7 +111,7 @@
 
   <li >
     <a href="/categories/tutorials/">Tutorials</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li ><a href="/django-app">Django</a></li>
       <li ><a href="/meteor-app">Meteor</a></li>
       <li ><a href="/setting-up-gulp-with-livereload-and-sass">Gulp</a></li>
@@ -170,7 +124,7 @@
 
   <li >
     <a href="/categories/deployment/">Deployment</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li ><a href="/heroku/">Heroku</a></li>
       <li ><a href="/app-engine">App Engine</a></li>
       <li ><a href="/azure-sites">Azure Sites</a></li>
@@ -180,7 +134,7 @@
 
   <li >
     <a href="/categories/billing/">Billing</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
       <li ><a href="/billing-cycle/">Billing Cycle</a></li>
       <li ><a href="/billing-payment-info/">Payment Information</a></li>
       <li ><a href="/billing-change-plans/">Changing Subscription</a></li>
@@ -191,7 +145,203 @@
 
   <li >
     <a href="/categories/resources/">Additional Resources</a>
-    <ul class="nav">
+    <ul class="nav sidebar-sub">
+      <li ><a href="/logos">Nitrous.IO Logos</a></li>
+      <li ><a href="/admin-aup">Acceptable Use Policy</a></li>
+      <li ><a href="/admin-privacy">Privacy &amp; Terms</a></li>
+      <li ><a href="/admin-security">Nitrous.IO Security</a></li>
+      <li ><a href="/admin-terms">Terms of Use</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+      <div>
+        <ul class="nav navbar-nav">
+          <li class="nav-btn logo hidden-xs">
+            <h1>
+              <a id="logo" href="https://www.nitrous.io">Nitrous</a>
+            </h1>
+          </li>
+          <li class="hidden-xs hidden-sm hidden-md show-lg"><a href="/" >
+              Getting Started
+            </a>
+          </li>
+          <li class="hidden-xs hidden-sm hidden-md show-lg">
+            <a href="mailto:support@nitrous.io" >
+              Contact Support
+            </a>
+          </li>
+          <li class="show-sm searchbar">
+            <div id="search">
+              <form class="navbar-form" method="get" action="/search">
+                <input type="text" id="search-query" name="q" class="form-control" autocomplete="off">
+              </form>
+              <section id="search-results" style="display: none;">
+                <ul class="entries"></ul>
+                <p>
+                  
+                  <script id="search-results-template" type="text/mustache">
+                    {{#entries}}
+                      <li>
+                        <p>
+                          <a href="{{url}}">{{title}}</a>
+                        </p>
+                      </li>
+                    {{/entries}}
+                  </script>
+                  
+                </p>
+              </section>
+            </div>
+          </li>
+          <li class="hidden-xs hidden-sm hidden-md show-lg"><a href="https://nitrous.io/users/sign_in">Sign in</a></li>
+          <li class="hidden-xs hidden-sm show-md show-lg">
+            <a href="https://www.nitrous.io" class="signup">
+              Sign up
+            </a>
+          </li>
+          <li class="menu-btn show-xs show-sm hidden-md hidden-lg">
+            <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container">
+  <div class="col-md-3">
+    <div class="hidden-sm hidden-xs">
+      <div class="login">
+  <h4>
+    <a class="signin" href="https://nitrous.io/users/sign_in">Sign In</a>
+    <a class="signup" href="https://www.nitrous.io">Sign Up</a>
+  </h4>
+</div>
+<h3 class="menu-heading">
+  Guides
+</h3>
+<ul class="snav">
+  <li >
+    <a href="/">Getting Started</a>
+    <ul class="nav sidebar-sub">
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/ssh/">SSH Keys</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/ssh-add/">Adding SSH Keys (Mac)</a></li>
+      <li ><a href="/ssh-windows/">Adding SSH Keys (Windows)</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/boxes/">Boxes</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/box-new">Create a Box</a></li>
+      <li ><a href="/box-settings/">Box Memory & Storage</a></li>
+      <li ><a href="/box-templates/">Box Templates</a></li>
+      <li ><a href="/box-interpreters-and-tools/">Included Tools</a></li>
+      <li ><a href="/upgrade-box">Update Box</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/usage/">Usage</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/autoparts/">Autoparts Package Manager</a></li>
+      <li ><a href="/nitrous-desktop-win/">Nitrous Desktop (Windows)</a></li>
+      <li ><a href="/nitrous-desktop/">Nitrous Desktop (Mac)</a></li>
+      <li ><a href="/ide-shortcuts/">Keyboard Shortcuts</a></li>
+      <li ><a href="/new-file/">Create New File</a></li>
+      <li ><a href="/ide-file-uploads/">Uploading via Web IDE</a></li>
+      <li ><a href="/collab">Collaboration</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/databases/">Databases</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/memcached/">Memcached</a></li>
+      <li ><a href="/mongodb/">MongoDB</a></li>
+      <li ><a href="/mysql/">MySQL</a></li>
+      <li ><a href="/postgresql/">PostgreSQL</a></li>
+      <li ><a href="/redis/">Redis</a></li>
+    </ul>
+  </li>
+
+  <li  class="active" >
+    <a href="/categories/previewing/">Preview</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
+      <li ><a href="/custom-domains">Custom Domains</a></li>
+      <li ><a href="/preview">Preview Your App</a></li>
+      <li ><a href="/preview-static-pages">Preview Static Pages</a></li>
+      <li ><a href="/faq-localhost">Preview Issues</a></li>
+      <li  class="mi_active" ><a href="/ssl">SSL</a></li>
+      <li ><a href="/websockets">Websockets</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/faq/">Frequently Asked Questions</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/faq-adding-project">Add an Existing Project</a></li>
+      <li ><a href="/faq-disconnect">Nitrous.IO Keeps Disconnecting</a></li>
+      <li ><a href="/faq-browser-support">Browser Support</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/tutorials/">Tutorials</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/django-app">Django</a></li>
+      <li ><a href="/meteor-app">Meteor</a></li>
+      <li ><a href="/setting-up-gulp-with-livereload-and-sass">Gulp</a></li>
+      <li ><a href="/php">PHP</a></li>
+      <li ><a href="/ruby">Ruby</a></li>
+      <li ><a href="/rails-app">Rails</a></li>
+      <li ><a href="/discourse-start">Discourse Forum</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/deployment/">Deployment</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/heroku/">Heroku</a></li>
+      <li ><a href="/app-engine">App Engine</a></li>
+      <li ><a href="/azure-sites">Azure Sites</a></li>
+      <li ><a href="/nodejitsu">Nodejitsu</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/billing/">Billing</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/billing-cycle/">Billing Cycle</a></li>
+      <li ><a href="/billing-payment-info/">Payment Information</a></li>
+      <li ><a href="/billing-change-plans/">Changing Subscription</a></li>
+      <li ><a href="/billing-n2o-renewal/">N2O Renewal</a></li>
+      <li ><a href="/billing-n2o-lifespan/">N2O Lifespan</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/resources/">Additional Resources</a>
+    <ul class="nav sidebar-sub">
       <li ><a href="/logos">Nitrous.IO Logos</a></li>
       <li ><a href="/admin-aup">Acceptable Use Policy</a></li>
       <li ><a href="/admin-privacy">Privacy &amp; Terms</a></li>
@@ -202,10 +352,12 @@
 </ul>
 
     </div>
-
-    <div class="col-md-9">
+  </div>
+  <div class="row">
+    <div class="col-md-8 content">
       <div class="container article">
-        <h1 class="article-title">Secure Sockets Layer (SSL)</h1>
+        <article>
+          <h1 class="article-title">Secure Sockets Layer (SSL)</h1>
 <h5 class="note">Last Updated on: 16 January 2014</h5>
 <p>SSL is a cryptographic protocol that is designed to provide communication security over the internet. Enabling SSL will ensure that all information is transmitted securely.</p>
 
@@ -220,6 +372,41 @@
 <p>The app will open in a new tab. To verify SSL is being utilized, ensure <code>https://</code> preceeds the domain.</p>
 
 
+          <ul class="social-sharing">
+  <li class="shareBtn sbMain">
+    <a class="share" href="#">
+      <i class="fa fa-share-square-o"></i>
+    </a>
+  </li>
+
+  <li class="shareBtn" id="sbTwitter">
+    <a href="javascript:window.location=%22https://twitter.com/share?url=%22+encodeURIComponent(document.location)+%22&text=%22+encodeURIComponent(document.title)" target="_blank" title="Share on Twitter">
+      <span class="sIcon icon-twitter"></span>
+      TWEET
+    </a>
+  </li>
+
+  <li class="shareBtn" id="sbFacebook">
+    <a href="javascript:window.location=%22http://www.facebook.com/sharer.php?u=%22+encodeURIComponent(document.location)+%22&#38;t=%22+encodeURIComponent(document.title)" target="_blank" title="Share on Facebook">
+      <span class="sIcon icon-facebook"></span>
+      SHARE
+    </a>
+  </li>
+  <li class="shareBtn" id="sbGoogle">
+    <a href="javascript:window.location=%22https://plus.google.com/share?url=%22+encodeURIComponent(document.location)" target="_blank" title="Share on Google+">
+      <span class="sIcon icon-google-plus"></span>
+      SHARE
+    </a>
+  </li>
+  <li class="shareBtn" id="sbYC">
+    <a href="javascript:window.location=%22http://news.ycombinator.com/submitlink?u=%22+encodeURIComponent(document.location)+%22&t=%22+encodeURIComponent(document.title)" title="Submit to Hacker News">
+      <span class="sIcon icon-hacker-news"></span>
+      SHARE
+    </a>
+  </li>
+</ul>
+
+        </article>
       </div>
     </div>
   </div>
@@ -229,19 +416,47 @@
     <script type='text/javascript' src='/javascripts/smoothscroll.js'></script>
     <script src='/css/bootstrap3/js/bootstrap.js'></script>
     <script src='/javascripts/highlight.js/highlight.pack.js'></script>
+    <script src='/javascripts/search.min.js' type='text/javascript' charset='utf-8'></script>
+    <script src='/javascripts/share.js' type='text/javascript' charset='utf-8'></script>
+    <script type="text/javascript">
+      $(function() {
+        $('#search-query').lunrSearch({
+          indexUrl: '/search.json',             // URL of the `search.json` index data for your site
+          results:  '#search-results',          // jQuery selector for the search results container
+          entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
+          template: '#search-results-template'  // jQuery selector for the Mustache.js template
+        });
+      });
+    </script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
 
-            ga('create', 'UA-43081980-1', 'nitrous.io');
-            ga('require', 'linkid', 'linkid.js');
-            ga('send', 'pageview');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43081980-1', 'auto');
+  ga('send', 'pageview');
 
 </script>
+
   </footer>
 </body>
 </html>
-

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>NITROUS.IO 101 - Teach Coding</title>
+  <meta content='Nitrous Support Documentation. Tutorials, FAQ, and other guides for building your apps directly on Nitrous' name='description'>
+  <meta content='Nitrous' name='author'>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600italic,600' rel='stylesheet' type='text/css'>
+
+  <link rel='stylesheet' href='/css/bootstrap3/css/bootstrap.css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="/css/action.css" media="screen, projection" rel="stylesheet">
+  <link href="/css/highlight.js/github.css" media="screen, projection" rel="stylesheet">
+  <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+</head>
+<body>
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+  <div class="sidebar" id="sidebar"> 
+    <div class="login">
+  <h4>
+    <a class="signin" href="https://nitrous.io/users/sign_in">Sign In</a>
+    <a class="signup" href="https://www.nitrous.io">Sign Up</a>
+  </h4>
+</div>
+<h3 class="menu-heading">
+  Guides
+</h3>
+<ul class="snav">
+  <li >
+    <a href="/">Getting Started</a>
+    <ul class="nav sidebar-sub">
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/ssh/">SSH Keys</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/ssh-add/">Adding SSH Keys (Mac)</a></li>
+      <li ><a href="/ssh-windows/">Adding SSH Keys (Windows)</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/boxes/">Boxes</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/box-new">Create a Box</a></li>
+      <li ><a href="/box-settings/">Box Memory & Storage</a></li>
+      <li ><a href="/box-templates/">Box Templates</a></li>
+      <li ><a href="/box-interpreters-and-tools/">Included Tools</a></li>
+      <li ><a href="/upgrade-box">Update Box</a></li>
+    </ul>
+  </li>
+
+  <li  class="active" >
+    <a href="/categories/usage/">Usage</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/autoparts/">Autoparts Package Manager</a></li>
+      <li ><a href="/nitrous-desktop-win/">Nitrous Desktop (Windows)</a></li>
+      <li ><a href="/nitrous-desktop/">Nitrous Desktop (Mac)</a></li>
+      <li ><a href="/ide-shortcuts/">Keyboard Shortcuts</a></li>
+      <li ><a href="/new-file/">Create New File</a></li>
+      <li ><a href="/ide-file-uploads/">Uploading via Web IDE</a></li>
+      <li ><a href="/collab">Collaboration</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/databases/">Databases</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/memcached/">Memcached</a></li>
+      <li ><a href="/mongodb/">MongoDB</a></li>
+      <li ><a href="/mysql/">MySQL</a></li>
+      <li ><a href="/postgresql/">PostgreSQL</a></li>
+      <li ><a href="/redis/">Redis</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/previewing/">Preview</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
+      <li ><a href="/custom-domains">Custom Domains</a></li>
+      <li ><a href="/preview">Preview Your App</a></li>
+      <li ><a href="/preview-static-pages">Preview Static Pages</a></li>
+      <li ><a href="/faq-localhost">Preview Issues</a></li>
+      <li ><a href="/ssl">SSL</a></li>
+      <li ><a href="/websockets">Websockets</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/faq/">Frequently Asked Questions</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/faq-adding-project">Add an Existing Project</a></li>
+      <li ><a href="/faq-disconnect">Nitrous.IO Keeps Disconnecting</a></li>
+      <li ><a href="/faq-browser-support">Browser Support</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/tutorials/">Tutorials</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/django-app">Django</a></li>
+      <li ><a href="/meteor-app">Meteor</a></li>
+      <li ><a href="/setting-up-gulp-with-livereload-and-sass">Gulp</a></li>
+      <li ><a href="/php">PHP</a></li>
+      <li ><a href="/ruby">Ruby</a></li>
+      <li ><a href="/rails-app">Rails</a></li>
+      <li ><a href="/discourse-start">Discourse Forum</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/deployment/">Deployment</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/heroku/">Heroku</a></li>
+      <li ><a href="/app-engine">App Engine</a></li>
+      <li ><a href="/azure-sites">Azure Sites</a></li>
+      <li ><a href="/nodejitsu">Nodejitsu</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/billing/">Billing</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/billing-cycle/">Billing Cycle</a></li>
+      <li ><a href="/billing-payment-info/">Payment Information</a></li>
+      <li ><a href="/billing-change-plans/">Changing Subscription</a></li>
+      <li ><a href="/billing-n2o-renewal/">N2O Renewal</a></li>
+      <li ><a href="/billing-n2o-lifespan/">N2O Lifespan</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/resources/">Additional Resources</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/logos">Nitrous.IO Logos</a></li>
+      <li ><a href="/admin-aup">Acceptable Use Policy</a></li>
+      <li ><a href="/admin-privacy">Privacy &amp; Terms</a></li>
+      <li ><a href="/admin-security">Nitrous.IO Security</a></li>
+      <li ><a href="/admin-terms">Terms of Use</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+      <div>
+        <ul class="nav navbar-nav">
+          <li class="nav-btn logo hidden-xs">
+            <h1>
+              <a id="logo" href="https://www.nitrous.io">Nitrous</a>
+            </h1>
+          </li>
+          <li class="hidden-xs hidden-sm hidden-md show-lg"><a href="/" >
+              Getting Started
+            </a>
+          </li>
+          <li class="hidden-xs hidden-sm hidden-md show-lg">
+            <a href="mailto:support@nitrous.io" >
+              Contact Support
+            </a>
+          </li>
+          <li class="show-sm searchbar">
+            <div id="search">
+              <form class="navbar-form" method="get" action="/search">
+                <input type="text" id="search-query" name="q" class="form-control" autocomplete="off">
+              </form>
+              <section id="search-results" style="display: none;">
+                <ul class="entries"></ul>
+                <p>
+                  
+                  <script id="search-results-template" type="text/mustache">
+                    {{#entries}}
+                      <li>
+                        <p>
+                          <a href="{{url}}">{{title}}</a>
+                        </p>
+                      </li>
+                    {{/entries}}
+                  </script>
+                  
+                </p>
+              </section>
+            </div>
+          </li>
+          <li class="hidden-xs hidden-sm hidden-md show-lg"><a href="https://nitrous.io/users/sign_in">Sign in</a></li>
+          <li class="hidden-xs hidden-sm show-md show-lg">
+            <a href="https://www.nitrous.io" class="signup">
+              Sign up
+            </a>
+          </li>
+          <li class="menu-btn show-xs show-sm hidden-md hidden-lg">
+            <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container">
+  <div class="col-md-3">
+    <div class="hidden-sm hidden-xs">
+      <div class="login">
+  <h4>
+    <a class="signin" href="https://nitrous.io/users/sign_in">Sign In</a>
+    <a class="signup" href="https://www.nitrous.io">Sign Up</a>
+  </h4>
+</div>
+<h3 class="menu-heading">
+  Guides
+</h3>
+<ul class="snav">
+  <li >
+    <a href="/">Getting Started</a>
+    <ul class="nav sidebar-sub">
+      <li><a href="#sign-up">Sign Up</a></li>
+      <li><a href="#create-a-new-box">Create a New Box</a></li>
+      <li><a href="#autoparts-package-manager">Autoparts Package Manager</a></li>
+      <li><a href="#connect-to-github">Connect to Github</a></li>
+      <li><a href="#connect-via-ssh">Connect via SSH</a></li>
+      <li><a href="#sync-with-nitrous-desktop">Sync w/ Nitrous Desktop</a></li>
+      <li><a href="#build-your-app">Build Your App</a></li>
+      <li><a href="#collaborate-with-others">Collaborate</a></li>
+      <li><a href="#preview-your-app">Preview</a></li>
+      <li><a href="#deploy">Deploy</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/ssh/">SSH Keys</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/ssh-add/">Adding SSH Keys (Mac)</a></li>
+      <li ><a href="/ssh-windows/">Adding SSH Keys (Windows)</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/boxes/">Boxes</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/box-new">Create a Box</a></li>
+      <li ><a href="/box-settings/">Box Memory & Storage</a></li>
+      <li ><a href="/box-templates/">Box Templates</a></li>
+      <li ><a href="/box-interpreters-and-tools/">Included Tools</a></li>
+      <li ><a href="/upgrade-box">Update Box</a></li>
+    </ul>
+  </li>
+
+  <li  class="active" >
+    <a href="/categories/usage/">Usage</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/autoparts/">Autoparts Package Manager</a></li>
+      <li ><a href="/nitrous-desktop-win/">Nitrous Desktop (Windows)</a></li>
+      <li ><a href="/nitrous-desktop/">Nitrous Desktop (Mac)</a></li>
+      <li ><a href="/ide-shortcuts/">Keyboard Shortcuts</a></li>
+      <li ><a href="/new-file/">Create New File</a></li>
+      <li ><a href="/ide-file-uploads/">Uploading via Web IDE</a></li>
+      <li ><a href="/collab">Collaboration</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/databases/">Databases</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/memcached/">Memcached</a></li>
+      <li ><a href="/mongodb/">MongoDB</a></li>
+      <li ><a href="/mysql/">MySQL</a></li>
+      <li ><a href="/postgresql/">PostgreSQL</a></li>
+      <li ><a href="/redis/">Redis</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/previewing/">Preview</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/basic-auth-preview">Basic Auth for Preview</a></li>
+      <li ><a href="/custom-domains">Custom Domains</a></li>
+      <li ><a href="/preview">Preview Your App</a></li>
+      <li ><a href="/preview-static-pages">Preview Static Pages</a></li>
+      <li ><a href="/faq-localhost">Preview Issues</a></li>
+      <li ><a href="/ssl">SSL</a></li>
+      <li ><a href="/websockets">Websockets</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/faq/">Frequently Asked Questions</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/faq-adding-project">Add an Existing Project</a></li>
+      <li ><a href="/faq-disconnect">Nitrous.IO Keeps Disconnecting</a></li>
+      <li ><a href="/faq-browser-support">Browser Support</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/tutorials/">Tutorials</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/django-app">Django</a></li>
+      <li ><a href="/meteor-app">Meteor</a></li>
+      <li ><a href="/setting-up-gulp-with-livereload-and-sass">Gulp</a></li>
+      <li ><a href="/php">PHP</a></li>
+      <li ><a href="/ruby">Ruby</a></li>
+      <li ><a href="/rails-app">Rails</a></li>
+      <li ><a href="/discourse-start">Discourse Forum</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/deployment/">Deployment</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/heroku/">Heroku</a></li>
+      <li ><a href="/app-engine">App Engine</a></li>
+      <li ><a href="/azure-sites">Azure Sites</a></li>
+      <li ><a href="/nodejitsu">Nodejitsu</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/billing/">Billing</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/billing-cycle/">Billing Cycle</a></li>
+      <li ><a href="/billing-payment-info/">Payment Information</a></li>
+      <li ><a href="/billing-change-plans/">Changing Subscription</a></li>
+      <li ><a href="/billing-n2o-renewal/">N2O Renewal</a></li>
+      <li ><a href="/billing-n2o-lifespan/">N2O Lifespan</a></li>
+    </ul>
+  </li>
+
+  <li >
+    <a href="/categories/resources/">Additional Resources</a>
+    <ul class="nav sidebar-sub">
+      <li ><a href="/logos">Nitrous.IO Logos</a></li>
+      <li ><a href="/admin-aup">Acceptable Use Policy</a></li>
+      <li ><a href="/admin-privacy">Privacy &amp; Terms</a></li>
+      <li ><a href="/admin-security">Nitrous.IO Security</a></li>
+      <li ><a href="/admin-terms">Terms of Use</a></li>
+    </ul>
+  </li>
+</ul>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 content">
+      <div class="container article">
+        <article>
+          <h1 class="article-title">NITROUS.IO 101 - Teach Coding</h1>
+<h5 class="note">Last Updated on: 30 January 2015</h5>
+<p>This is a quick tutorial that shows you how you can use Nitrous.IO for the purposes of conducting coding lessons. Check out our <a href="http://blog.nitrous.io/2015/01/30/teach-coding-on-nitrous.html">blog post</a> to find out what makes Nitrous.IO the ideal platform for coding lessons. </p>
+
+<p>You’d need a Nitrous account to execute these steps, <a href="https://www.nitrous.io?utm_source=nitrous.io&amp;utm_medium=tutorial&amp;utm_campaign=teach-coding">sign up for free</a> and get provisioned with a free development box.</p>
+
+<h3 id="create-a-box">CREATE A BOX</h3>
+
+<p>Development Boxes or “boxes” are the heart and soul of the Nitrous experience. Basic, free boxes come with stock setups: Rails, Python, Node.js, Go, PHP &amp; Meteor. We include most everything else you need to start teaching, like imagemagick and more.</p>
+
+<p>To create a new free box, just click the “New Box” button on your dashboard after signing in.
+<img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/new-box-button.png" alt="Create a Box" /></p>
+
+<h4 id="pick-a-box-template">1. Pick a box template</h4>
+<p>Select which default stock development environments you prefer to start coding on. We support the following setups. Shoot us an email if you want us to support a different stack.
+<img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/box-templates.png" alt="Template" /></p>
+
+<h4 id="enter-a-unique-name">2. Enter a unique name</h4>
+<p>Pick a descriptive box name, the best practice here is to describe the stack or the project (if you’re only going to keep one project on each box, that’s up to you).</p>
+
+<h4 id="pick-a-region">3. Pick a region</h4>
+<p>We will default the region to whichever is closest to your current IP address, though if you’re travelling and want the box closer to your hometown, then just pick the region closest to you.</p>
+
+<h4 id="provisioning">Provisioning</h4>
+<p>Once you’ve clicked “Create Box”, you’ll need to wait a few seconds while we provision the box. This is typically pretty speedy, but might take up to a minute.</p>
+
+<p>After the box is provisioned, you’ll be kicked into the box information page. Simply click the “IDE” button and you’re ready to start your coding lesson!
+<img src="https://raw.github.com/action-io/action-assets/master/support/screenshots/ide-button.png" alt="IDE button" /></p>
+
+<h3 id="teach">TEACH</h3>
+
+<p>You can create as many projects as you would like within a single Nitrous box. The only limitation to this is the amount of storage space you use, which not only counts the project files but also modules, different versions of Ruby installed, etc.</p>
+
+<p>Below you will see a screenshot of how you could setup your directories within Nitrous.IO. All projects should be placed within the ~/workspace folder, and configuration files can be placed in your home directory ~/.</p>
+
+<p><img src="http://help.nitrous.io/images/articles/directory-tree.png" alt="file directory" /></p>
+
+<p>Build your app just as you normally would on your local environment. If you find that you need to install additional packages/tools, you can easily get what you need using our <a href="http://help.nitrous.io/autoparts/">Autoparts Package Manager</a>.</p>
+
+<h4 id="collab-mode">COLLAB MODE</h4>
+
+<p>You can nudge on your students’ learning progress by having them add you as a Collaborator to their boxes. To do so, select Collaborate → Manage Collaborators from the dropdown menu.
+<img src="http://help.nitrous.io/images/articles/collab/collab-menu.png" alt="Add Collaborators" /></p>
+
+<p>Type your email address in the following field. 
+<img src="http://help.nitrous.io/images/articles/collab/collab-modal-email.png" alt="Email" /></p>
+
+<p>You’ll receive an email invite and your students’ boxes will appear in your list of boxes thereafter:
+<img src="http://help.nitrous.io/images/articles/collab/shared-box.png" alt="Box" /></p>
+
+<p>Now you can access any box to make necessary repairs/code-edits to aid your students’ learning. Simply pick the file you want to make changes to and select Collab Mode - your students will be able to see your changes live in realtime. 
+<img src="http://help.nitrous.io/images/articles/collab/collab-button2.png" alt="Collab mode" /></p>
+
+<h3 id="preview-app">PREVIEW APP</h3>
+
+<p>At the end of the lesson, students can preview and share their newly created web app on a public URL while it is running within their active session.</p>
+
+<p>The Preview menu in the Web IDE displays links to some common default ports, which you can click to open a new window in your browser.
+<img src="http://help.nitrous.io/images/articles/preview-menu.png" alt="Preview" /></p>
+
+<p>Ports 1024 - 10,000 are open for HTTP, and port 80 is forwarded to port 3000. If your app is running on port 80 in the terminal, navigate to ‘Preview &gt; Port 3000’ in the menu. </p>
+
+<p>If the app is running on another port not found in the menu then you will need to change this within the address bar (e.g. http://ruby-21200.usw1-2.nitrousbox.com:8080).</p>
+
+<p>With a public URL, students would have something to take home with from the lesson and share their learnings with friends and families. If they want to carry on learning independently, they can easily log back into their box while at home and continue from where they left off. </p>
+
+
+          <ul class="social-sharing">
+  <li class="shareBtn sbMain">
+    <a class="share" href="#">
+      <i class="fa fa-share-square-o"></i>
+    </a>
+  </li>
+
+  <li class="shareBtn" id="sbTwitter">
+    <a href="javascript:window.location=%22https://twitter.com/share?url=%22+encodeURIComponent(document.location)+%22&text=%22+encodeURIComponent(document.title)" target="_blank" title="Share on Twitter">
+      <span class="sIcon icon-twitter"></span>
+      TWEET
+    </a>
+  </li>
+
+  <li class="shareBtn" id="sbFacebook">
+    <a href="javascript:window.location=%22http://www.facebook.com/sharer.php?u=%22+encodeURIComponent(document.location)+%22&#38;t=%22+encodeURIComponent(document.title)" target="_blank" title="Share on Facebook">
+      <span class="sIcon icon-facebook"></span>
+      SHARE
+    </a>
+  </li>
+  <li class="shareBtn" id="sbGoogle">
+    <a href="javascript:window.location=%22https://plus.google.com/share?url=%22+encodeURIComponent(document.location)" target="_blank" title="Share on Google+">
+      <span class="sIcon icon-google-plus"></span>
+      SHARE
+    </a>
+  </li>
+  <li class="shareBtn" id="sbYC">
+    <a href="javascript:window.location=%22http://news.ycombinator.com/submitlink?u=%22+encodeURIComponent(document.location)+%22&t=%22+encodeURIComponent(document.title)" title="Submit to Hacker News">
+      <span class="sIcon icon-hacker-news"></span>
+      SHARE
+    </a>
+  </li>
+</ul>
+
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+  <footer>
+    <script src='/javascripts/jquery/jquery-2.1.1.min.js'></script>
+    <script type='text/javascript' src='/javascripts/smoothscroll.js'></script>
+    <script src='/css/bootstrap3/js/bootstrap.js'></script>
+    <script src='/javascripts/highlight.js/highlight.pack.js'></script>
+    <script src='/javascripts/search.min.js' type='text/javascript' charset='utf-8'></script>
+    <script src='/javascripts/share.js' type='text/javascript' charset='utf-8'></script>
+    <script type="text/javascript">
+      $(function() {
+        $('#search-query').lunrSearch({
+          indexUrl: '/search.json',             // URL of the `search.json` index data for your site
+          results:  '#search-results',          // jQuery selector for the search results container
+          entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
+          template: '#search-results-template'  // jQuery selector for the Mustache.js template
+        });
+      });
+    </script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43081980-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </footer>
+</body>
+</html>

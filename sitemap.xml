@@ -7,6 +7,54 @@
   </url>
   
   <url>
+      <loc>http://help.nitrous.io/coding-interview</loc>
+      <lastmod>2015-03-04</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/wordpress</loc>
+      <lastmod>2015-02-27</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/magento</loc>
+      <lastmod>2015-02-23</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/coding-on-ipad</loc>
+      <lastmod>2015-02-20</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/pair-programming</loc>
+      <lastmod>2015-02-06</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/teach-coding</loc>
+      <lastmod>2015-01-30</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/snapshots</loc>
+      <lastmod>2014-10-29</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
+      <loc>http://help.nitrous.io/openshift</loc>
+      <lastmod>2014-10-22</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+  
+  <url>
       <loc>http://help.nitrous.io/meteor-app</loc>
       <lastmod>2014-09-17</lastmod>
       <changefreq>monthly</changefreq>
@@ -123,12 +171,6 @@
   <url>
       <loc>http://help.nitrous.io/nitrous-desktop-win</loc>
       <lastmod>2014-02-18</lastmod>
-      <changefreq>monthly</changefreq>
-  </url>
-  
-  <url>
-      <loc>http://help.nitrous.io/wordpress</loc>
-      <lastmod>2014-02-10</lastmod>
       <changefreq>monthly</changefreq>
   </url>
   
