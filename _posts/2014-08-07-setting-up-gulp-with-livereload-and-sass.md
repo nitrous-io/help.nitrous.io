@@ -270,7 +270,7 @@ Use this Gulp setup to make development a breeze.
 If you want to jump to the chase and run the app immediately, click this button to download a sample app:
 
 [![Hack nitrous-examples/gulp-sample-app on
-Nitrous](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=nodejs&repo=nitrous-examples%2Fgulp-sample-app&file_to_open=README.md)
+Nitrous](/images/hack-on-nitrous.png)](https://www.nitrous.io/hack_button?source=embed&runtime=nodejs&repo=nitrous-examples%2Fgulp-sample-app&file_to_open=README.md)
 
 ### Recommended Articles
 
